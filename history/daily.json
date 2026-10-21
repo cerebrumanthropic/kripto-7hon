@@ -1,1 +1,17 @@
-{"schemaVersion":1,"points":[]}
+{
+  "schemaVersion": 1,
+  "points": [
+    {
+      "date": "2026-10-20",
+      "totalMarketCapUsd": 2801973527560.6455,
+      "totalVolume24hUsd": 79764624151.37672,
+      "btcDominancePct": 59.52797172067166,
+      "btcUsd": 83040,
+      "ethUsd": 2451.07,
+      "stablecoinsUsd": 305165239512.85004,
+      "defiTvlUsd": 89977433277,
+      "fearGreed": 63,
+      "usdMnt": 3580.035284
+    }
+  ]
+}
