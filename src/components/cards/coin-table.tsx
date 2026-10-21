@@ -28,11 +28,11 @@ function MobileRow({ c: coin }: { c: LiveCoin }) {
   const { c } = useTheme();
   const [open, setOpen] = useState(false);
   return (
-    <View style={{ borderBottomWidth: 1, borderBottomColor: c.border, paddingVertical: space.sm }}>
+    <View role="listitem" style={{ borderBottomWidth: 1, borderBottomColor: c.border, paddingVertical: space.sm }}>
       <Pressable
         onPress={() => setOpen((o) => !o)}
+        role="button"
         aria-expanded={open}
-        aria-label={`${coin.name} — ${open ? t.market.hide : t.market.details}`}
         style={{ flexDirection: 'row', alignItems: 'center', gap: space.sm }}>
         <CoinBadge symbol={coin.symbol} stable={coin.isStablecoin} />
         <View style={{ flex: 1, minWidth: 0 }}>

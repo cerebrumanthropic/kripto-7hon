@@ -3,9 +3,14 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
+import type { z } from 'zod';
+
 import { ResearchSchema, type Research } from '@/types/research';
 import {
+  DailyHistorySchema,
+  LiveMarketSchema,
   MergedReportSchema,
+  NewsFeedSchema,
   ReportIndexSchema,
   type MergedReport,
   type ReportIndexEntry,
@@ -27,6 +32,24 @@ export async function readReportIndex(): Promise<ReportIndexEntry[]> {
     if ((e as NodeJS.ErrnoException).code === 'ENOENT') return [];
     throw e;
   }
+}
+
+const FALLBACK = { market: LiveMarketSchema, news: NewsFeedSchema, daily: DailyHistorySchema } as const;
+type FallbackName = keyof typeof FALLBACK;
+
+/**
+ * Build үеийн амьд датаны snapshot (prepare-build → public/fallback/<name>.json, үгүй бол .sample.json).
+ * Статик HTML-д placeholder болгон шингээж, амьд дата ирэхэд контент үсрэхээс (CLS) сэргийлнэ.
+ */
+export async function readFallback<N extends FallbackName>(name: N): Promise<z.infer<(typeof FALLBACK)[N]> | null> {
+  for (const file of [`${name}.json`, `${name}.sample.json`]) {
+    try {
+      const raw = await readFile(path.join(root(), 'public', 'fallback', file), 'utf8');
+      const parsed = FALLBACK[name].safeParse(JSON.parse(raw));
+      if (parsed.success) return parsed.data as z.infer<(typeof FALLBACK)[N]>;
+    } catch {}
+  }
+  return null;
 }
 
 export async function readReport(week: string): Promise<MergedReport | null> {

@@ -1,3 +1,4 @@
+import { useLoaderData } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { TextInput, View } from 'react-native';
 
@@ -17,8 +18,15 @@ export function generateMetadata() {
   return pageMeta(t.news.title, t.news.lead, '/medee');
 }
 
+/** Build үеийн snapshot — амьд дата ирэх хүртэл placeholder (CLS) */
+export async function loader() {
+  const { readFallback } = await import('@/lib/server/content');
+  return { news: await readFallback('news') };
+}
+
 export default function News() {
-  const { data, isError } = useNews();
+  const snap = useLoaderData<typeof loader>();
+  const { data, isError, isPlaceholderData } = useNews(snap.news);
   const { c } = useTheme();
   const [f, setF] = useState<NewsFilter>(EMPTY_FILTER);
   const items = data?.data.items ?? [];
@@ -29,7 +37,9 @@ export default function News() {
     <Page
       title={t.news.title}
       lead={t.news.lead}
-      meta={<LiveStatus updatedAt={data?.data.updatedAt} origin={data?.origin} sources={data?.data.sources} />}>
+      meta={
+        <LiveStatus updatedAt={data?.data.updatedAt} origin={data?.origin} sources={data?.data.sources} pending={isPlaceholderData} />
+      }>
       <Card tone="surfaceAlt">
         <T v="small">{t.news.notice}</T>
       </Card>

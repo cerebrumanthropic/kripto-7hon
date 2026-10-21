@@ -1,3 +1,4 @@
+import { useLoaderData } from 'expo-router';
 import type { ReactNode } from 'react';
 import { View } from 'react-native';
 
@@ -21,6 +22,12 @@ import { useLayout, useTheme } from '@/theme/use-theme';
 
 export function generateMetadata() {
   return pageMeta(t.market.title, t.market.lead, '/zah-zeel');
+}
+
+/** Build үеийн snapshot — амьд дата ирэх хүртэл placeholder (CLS) */
+export async function loader() {
+  const { readFallback } = await import('@/lib/server/content');
+  return { market: await readFallback('market'), daily: await readFallback('daily') };
 }
 
 function Movers({ m }: { m: LiveMarket }) {
@@ -100,8 +107,9 @@ function HistoryCard({
 }
 
 export default function Market() {
-  const { data, isError } = useMarket();
-  const history = useHistory();
+  const snap = useLoaderData<typeof loader>();
+  const { data, isError, isPlaceholderData } = useMarket(snap.market);
+  const history = useHistory(snap.daily);
   const { c } = useTheme();
   const { cols, isDesktop } = useLayout();
   const m = data?.data;
@@ -111,7 +119,7 @@ export default function Market() {
     <Page
       title={t.market.title}
       lead={t.market.lead}
-      meta={<LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} />}>
+      meta={<LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} pending={isPlaceholderData} />}>
       {isError ? <LoadError /> : null}
       {m ? (
         <>

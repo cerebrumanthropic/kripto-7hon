@@ -9,6 +9,9 @@ import { useLayout, useTheme } from '@/theme/use-theme';
 
 const r = t.research;
 
+// Lighthouse target-size: дараалсан жижиг холбоос бүр ≥24px өндөртэй
+const LINK_TARGET = { paddingVertical: 3 } as const;
+
 export const SECTIONS = [
   { id: 'summary', title: r.summary },
   { id: 'examples', title: r.examples },
@@ -84,23 +87,24 @@ export function Toc() {
       </T>
       <View role="list" style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.sm }}>
         {SECTIONS.map((s, i) => (
-          <Pressable
-            key={s.id}
-            role="link"
-            onPress={() => scrollToSection(s.id)}
-            style={(st) => ({
-              borderRadius: radius.pill,
-              borderWidth: 1,
-              borderColor: webPress(st).hovered ? c.borderStrong : c.border,
-              paddingHorizontal: space.md,
-              paddingVertical: 4,
-              backgroundColor: c.surface,
-              outlineColor: c.brand,
-              outlineWidth: webPress(st).focused ? 2 : 0,
-              outlineStyle: 'solid',
-            })}>
-            <T v="small">{`${i + 1}. ${s.title}`}</T>
-          </Pressable>
+          <View key={s.id} role="listitem">
+            <Pressable
+              role="link"
+              onPress={() => scrollToSection(s.id)}
+              style={(st) => ({
+                borderRadius: radius.pill,
+                borderWidth: 1,
+                borderColor: webPress(st).hovered ? c.borderStrong : c.border,
+                paddingHorizontal: space.md,
+                paddingVertical: 4,
+                backgroundColor: c.surface,
+                outlineColor: c.brand,
+                outlineWidth: webPress(st).focused ? 2 : 0,
+                outlineStyle: 'solid',
+              })}>
+              <T v="small">{`${i + 1}. ${s.title}`}</T>
+            </Pressable>
+          </View>
         ))}
       </View>
     </Card>
@@ -154,7 +158,7 @@ export function ExamplesSection({ d }: { d: Research }) {
             <Field label={r.pricing}>{e.pricing}</Field>
             <View style={{ gap: 2 }}>
               {e.urls.map((u) => (
-                <ExtLink key={u.url} href={u.url} v="small">
+                <ExtLink key={u.url} href={u.url} v="small" style={LINK_TARGET}>
                   {u.label}
                 </ExtLink>
               ))}
@@ -177,7 +181,7 @@ export function RegulatorsSection({ d }: { d: Research }) {
             <Field label={r.frequency}>{g.frequency}</Field>
             <T v="small">{g.keyData}</T>
             {g.urls.map((u) => (
-              <ExtLink key={u.url} href={u.url} v="small">
+              <ExtLink key={u.url} href={u.url} v="small" style={LINK_TARGET}>
                 {u.label}
               </ExtLink>
             ))}
@@ -204,7 +208,7 @@ export function AdditionalSection({ d }: { d: Research }) {
             <T v="smallStrong">{g.category}</T>
             {g.items.map((i) =>
               i.url ? (
-                <ExtLink key={i.name} href={i.url} v="small">
+                <ExtLink key={i.name} href={i.url} v="small" style={LINK_TARGET}>
                   {i.name}
                 </ExtLink>
               ) : (
@@ -506,7 +510,7 @@ export function MongoliaSection({ d }: { d: Research }) {
 
       <View style={{ gap: 4 }}>
         {mn.links.map((l) => (
-          <ExtLink key={l.url} href={l.url} v="small">
+          <ExtLink key={l.url} href={l.url} v="small" style={LINK_TARGET}>
             {l.label}
           </ExtLink>
         ))}

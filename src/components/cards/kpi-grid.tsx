@@ -6,14 +6,15 @@ import { Grid, T } from '@/components/ui/primitives';
 import { useMarket } from '@/lib/data-client';
 import { groupDigits, mnt, pctPlain, price, usdCompact } from '@/lib/format';
 import { fearGreedMn, t } from '@/lib/i18n-mn';
+import type { LiveMarket } from '@/types/schemas';
 import { space } from '@/theme/tokens';
 import { useLayout } from '@/theme/use-theme';
 
 import { KpiCard } from './cards';
 
 /** Нүүрний 8 KPI карт (SPEC §8.1.2). */
-export function KpiGrid() {
-  const { data, isError } = useMarket();
+export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
+  const { data, isError, isPlaceholderData } = useMarket(snapshot);
   const { cols } = useLayout();
   if (isError) return <LoadError />;
 
@@ -24,7 +25,7 @@ export function KpiGrid() {
 
   return (
     <View style={{ gap: space.md }}>
-      <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} />
+      <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} pending={isPlaceholderData} />
       <Grid cols={cols}>
         {[
           <KpiCard

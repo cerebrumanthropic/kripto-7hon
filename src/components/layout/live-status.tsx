@@ -36,15 +36,25 @@ export function LiveStatus({
   updatedAt,
   origin,
   sources,
+  pending,
 }: {
   updatedAt?: string;
   origin?: DataOrigin;
   sources?: SourceStatus[];
+  /** Build үеийн snapshot харагдаж, амьд дата хүлээгдэж байна — туз харуулахгүй (CLS) */
+  pending?: boolean;
 }) {
   if (!updatedAt || !origin) {
     return (
       <T v="small" color="textMuted">
         {t.live.loading}
+      </T>
+    );
+  }
+  if (pending) {
+    return (
+      <T v="small" color="textMuted" num>
+        {t.live.updated}: {formatDateTime(updatedAt)}
       </T>
     );
   }

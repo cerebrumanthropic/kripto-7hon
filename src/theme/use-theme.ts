@@ -7,7 +7,7 @@ import { breakpoints, dark, light, type ThemeColors } from './tokens';
  * Статик HTML нь сервер дээр цайвар горим ба мобайл өргөнөөр үүснэ.
  * Hydration-ий дараа л бодит утгыг ашиглана (hydration mismatch-ээс сэргийлж).
  */
-function useHydrated(): boolean {
+export function useHydrated(): boolean {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
   return hydrated;

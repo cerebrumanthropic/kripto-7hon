@@ -69,7 +69,9 @@ async function snapshotLive() {
       writeJson(rel('public', 'fallback', dest), await res.json());
       console.log(`fallback: ${dest} ✓`);
     } catch (e) {
-      console.warn(`fallback: ${dest} татаж чадсангүй (${(e as Error).message}) — sample ашиглагдана`);
+      const msg = `fallback: ${DATA_BASE_URL}/${src} татаж чадсангүй (${(e as Error).message}) — sample ашиглагдана. DATA_BASE_URL зөв эсэхийг шалгана уу.`;
+      // GitHub Actions-ийн annotation — буруу DATA_BASE_URL run-ий хуудсанд шууд харагдана
+      console.warn(process.env.GITHUB_ACTIONS ? `::warning title=DATA_BASE_URL::${msg}` : msg);
     }
   }
 }

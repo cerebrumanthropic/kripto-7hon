@@ -2,7 +2,14 @@
 import { useQuery } from '@tanstack/react-query';
 import type { z } from 'zod';
 
-import { DailyHistorySchema, LiveMarketSchema, NewsFeedSchema } from '@/types/schemas';
+import {
+  DailyHistorySchema,
+  LiveMarketSchema,
+  NewsFeedSchema,
+  type DailyHistory,
+  type LiveMarket,
+  type NewsFeed,
+} from '@/types/schemas';
 
 import { DATA_BASE_URL, FETCH_TIMEOUT_MS, LIVE_REFETCH_MS } from './config';
 
@@ -68,26 +75,36 @@ const queryOptions = {
   retry: 1,
 } as const;
 
-export function useMarket() {
+/**
+ * `snapshot` — loader-оор статик HTML-д шингээсэн build үеийн дата. Амьд дата ирэх хүртэл placeholder
+ * болж харагдана (контент үсрэхгүй, CLS). `isPlaceholderData` үед хоцролтын туз харуулахгүй.
+ */
+const placeholder = <T,>(snapshot: T | null | undefined) =>
+  snapshot ? { data: snapshot, origin: 'fallback' as DataOrigin } : undefined;
+
+export function useMarket(snapshot?: LiveMarket | null) {
   return useQuery({
     queryKey: ['market'],
     queryFn: () => loadWithFallback(candidateUrls(DATASETS.market), LiveMarketSchema),
+    placeholderData: placeholder(snapshot),
     ...queryOptions,
   });
 }
 
-export function useNews() {
+export function useNews(snapshot?: NewsFeed | null) {
   return useQuery({
     queryKey: ['news'],
     queryFn: () => loadWithFallback(candidateUrls(DATASETS.news), NewsFeedSchema),
+    placeholderData: placeholder(snapshot),
     ...queryOptions,
   });
 }
 
-export function useHistory() {
+export function useHistory(snapshot?: DailyHistory | null) {
   return useQuery({
     queryKey: ['history'],
     queryFn: () => loadWithFallback(candidateUrls(DATASETS.history), DailyHistorySchema),
+    placeholderData: placeholder(snapshot),
     ...queryOptions,
   });
 }

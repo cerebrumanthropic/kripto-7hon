@@ -49,7 +49,8 @@ export const light: ThemeColors = {
   brand: '#2457C5',
   brandText: '#1D47A3',
   onBrand: '#FFFFFF',
-  accent: '#A8741F',
+  // #A8741F нь цаасан дэвсгэр дээр 3.7:1 байсан (Lighthouse) → AA (≥4.5) хангах бараан алт
+  accent: '#8A5D12',
   positiveText: '#15803D',
   negativeText: '#B91C1C',
   neutralText: '#475569',

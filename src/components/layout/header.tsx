@@ -19,9 +19,11 @@ const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> =
 function Logo() {
   const { c } = useTheme();
   return (
-    <Link href="/" aria-label={t.site.name} style={{ textDecorationLine: 'none' }}>
+    // Нэр нь харагдах текстээс («ВХ 7 хоног») — aria-label өөр байвал label-content-name-mismatch
+    <Link href="/" style={{ textDecorationLine: 'none' }}>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.sm }}>
         <View
+          aria-hidden
           style={{
             width: 34,
             height: 34,
@@ -111,6 +113,7 @@ export function Header() {
         ) : (
           <Pressable
             onPress={() => setOpen((o) => !o)}
+            role="button"
             aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={open}
             style={(s) => ({

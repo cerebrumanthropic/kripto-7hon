@@ -3,12 +3,12 @@ import type { ReactNode } from 'react';
 import { Pressable, View } from 'react-native';
 
 import { Badge, Card, Delta, ExtLink, T } from '@/components/ui/primitives';
-import { relativeTime, weekLabel } from '@/lib/dates';
+import { formatDateTime, relativeTime, weekLabel } from '@/lib/dates';
 import { int } from '@/lib/format';
 import { t } from '@/lib/i18n-mn';
 import type { NewsItem, ReportIndexEntry } from '@/types/schemas';
 import { radius, space } from '@/theme/tokens';
-import { useTheme } from '@/theme/use-theme';
+import { useHydrated, useTheme } from '@/theme/use-theme';
 
 export function KpiCard({
   label,
@@ -58,7 +58,8 @@ export function CoinBadge({ symbol, stable }: { symbol: string; stable?: boolean
   const { c } = useTheme();
   const s = symbol.toUpperCase();
   const bg = SYMBOL_COLORS[s] ?? (stable ? c.stable : c.surfaceAlt);
-  const fg = SYMBOL_COLORS[s] || stable ? '#FFFFFF' : c.text;
+  // Цагаан текст BTC/ETH/стейблкойны өнгөн дээр AA хангахгүй (2.3–3.7:1) → бараан текст
+  const fg = SYMBOL_COLORS[s] || stable ? '#14161B' : c.text;
   return (
     <View
       aria-hidden
@@ -78,6 +79,8 @@ export function CoinBadge({ symbol, stable }: { symbol: string; stable?: boolean
 /** Мэдээний мөр: гарчиг (гадагш), эх сурвалж, харьцангуй цаг, ангилал. */
 export function NewsRow({ item, now }: { item: NewsItem; now?: Date }) {
   const { c } = useTheme();
+  // «2 цагийн өмнө» нь build ба хөтчийн цагаас хамаардаг → hydration-ий дараа л (зөрүүгүй SSR)
+  const hydrated = useHydrated();
   return (
     <View
       role="listitem"
@@ -87,7 +90,7 @@ export function NewsRow({ item, now }: { item: NewsItem; now?: Date }) {
       </ExtLink>
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: space.sm }}>
         <T v="caption" color="textMuted">
-          {item.source} · {relativeTime(item.publishedAt, now)}
+          {item.source} · {hydrated ? relativeTime(item.publishedAt, now) : formatDateTime(item.publishedAt)}
         </T>
         {item.isMongolia ? <Badge label={t.news.mongoliaTag} tone="brand" /> : null}
         {item.tags.map((tag) => (
