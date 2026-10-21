@@ -8,11 +8,60 @@
 |---|---|---|
 | 0 | SPEC унших, зөрчил тодруулах | ✅ 2026.10.21 |
 | 1 | Суурь ба UI (жишээ датагаар) | ✅ 2026.10.21 — хүлээн авсан |
-| 2 | Дата скриптүүд | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
-| 3 | GitHub + Pages + клиент холболт | ⏳ Зөвшөөрөл хүлээж байна |
-| 4 | 7 хоногийн тайлан | — |
+| 2 | Дата скриптүүд | ✅ 2026.10.21 — хүлээн авсан |
+| 3 | GitHub + Pages + клиент холболт | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
+| 4 | 7 хоногийн тайлан | ⏳ Зөвшөөрөл хүлээж байна |
 | 5 | EAS Hosting deploy | — |
 | 6 | QA ба баримт | — |
+
+## 2026.10.21 — Үе шат 3: GitHub + Pages + клиент холболт
+
+### Хийсэн
+- Repo: https://github.com/cerebrumanthropic/kripto-7hon (public, default `main`).
+  - Хэрэглэгчийн зөвшөөрлөөр `gh repo create`-ээр үүсгэсэн.
+  - GitHub CLI 2.102.1-ийг хэрэглэгчийн хүсэлтээр winget-ээр суулгасан. Нэвтрэлтийг (`gh auth login`) хэрэглэгч өөрөө хийсэн.
+  - Push хийхээс өмнө бүх commit-ийг шалгасан: `.env*` файл, токен, жинхэнэ `CG-` түлхүүр байхгүй. Ганц таарсан мөр нь ZAAVAR.md дахь `CG-xxxx…` загвар.
+- `data-history` orphan branch (SPEC §10.5): `history/daily.json` (хоосон), `news/.gitkeep`, README.
+- `.github/workflows/live-data.yml` (SPEC §10.1): цаг бүрийн :07 + гараар ажиллуулах боломжтой.
+  - Алхмууд: checkout main + `data-history`→`store/` → Node 24 → `npm ci --ignore-scripts` → `npm run data:live` → store өөрчлөгдсөн бол `github-actions[bot]`-аар commit → `configure-pages` → `upload-pages-artifact` (`public-data`) → `deploy-pages`.
+  - `timeout-minutes: 10`, `concurrency: live-data`.
+- `.env` (commit-д орсон, ЗӨВХӨН нийтийн утга): `EXPO_PUBLIC_DATA_BASE_URL=https://cerebrumanthropic.github.io/kripto-7hon`.
+
+### Шалгалт
+- Гараар ажиллуулсан run [39568455658](https://github.com/cerebrumanthropic/kripto-7hon/actions/runs/39568455658) ✅ 51 сек.
+  - CoinGecko Demo түлхүүрээр 3 дуудлага хийж, 50 coin авсан. Үе шат 2-т шалгаж чадаагүй хэсэг баталгаажсан.
+  - 14 эх сурвалжаас 13 ✓. SEC нь `CONTACT_EMAIL`-гүй тул зориуд алгасагдсан.
+  - `data-history`-д `eb22230 data: daily snapshot 2026-10-21` commit үүссэн.
+- **RSS-ийг GitHub Actions-оос шалгасан үр дүн:** CoinDesk, Cointelegraph, Decrypt, The Block, Bitcoin Magazine, CryptoSlate, Ikon.mn бүгд ✓. Бот хаалт илрээгүй.
+- Pages: `live/market.json`, `live/news.json`, `live/status.json`, `history/daily.json`, `news/2026-W43.json` бүгд `HTTP 200`, `Access-Control-Allow-Origin: *`, `Cache-Control: max-age=600`.
+- Локал сайт (`npx expo start --web`): Pages-ээс `live/market.json`, `live/news.json`-ийг уншиж, origin = live, туз гараагүй.
+  - Нүүр хуудсанд BTC $83,040, нийт $2.80 их наяд харагдсан.
+  - Зах зээлийн хуудсанд бодит топ 20 харагдсан. Figure Heloc ($1.02) стейблкойн гэж андуурагдаагүй.
+
+### Хэрэглэгчийн тохиргооны төлөв (SPEC §11)
+| Тохиргоо | Төлөв |
+|---|---|
+| Pages Source = GitHub Actions | ✅ |
+| Secret `COINGECKO_DEMO_API_KEY` | ✅ |
+| Workflow permissions | Анхдагч «read» хэвээр. `live-data.yml` эрхээ тодорхой заадаг тул ажилласан. «Allow Actions to create and approve PRs» ✅ |
+| Variable `DATA_BASE_URL` | ❌ **тохируулаагүй** — үгүй бол цаг тутмын ажиллалт төлвөө зөвхөн өдрийн store-оос уншиж, «өмнөх утга» fallback ажиллахгүй |
+| Variable `CONTACT_EMAIL` | ❌ тохируулаагүй — SEC feed алгасагдана |
+| Variable `AUTO_PUBLISH` | ❌ тохируулаагүй — Үе шат 4-т хэрэгтэй (`false`) |
+| `SITE_URL`, `EXPO_TOKEN` | Үе шат 4–5 |
+
+### Нээлттэй асуулт 10 — үлдсэн хэсэг
+- GitHub-ийн баримт: «In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days.» «Идэвх»-д юу тооцогдохыг тодорхойлоогүй. `data-history`-д өдөр бүр хийх bot commit-ийг идэвх гэж тооцно гэж найдаж байна, баталгаагүй. Унтарвал ZAAVAR-ийн «Enable workflow» алхмаар сэргээнэ. Үе шат 6-д API-аар өөрийгөө идэвхжүүлэх keepalive-ийг судална.
+- Scheduled ажил ачаалал ихтэй үед саатаж эсвэл алгасагдаж болно (баримтад бий). UI-ийн 3 цагийн «хоцорсон» туз үүнийг харуулна.
+- Run-ий анхааруулга: `ubuntu-latest` нь 2026.10.19-өөс Ubuntu 26 руу шилжиж байна. Одоохондоо нөлөөгүй.
+
+### Техникийн шийдвэрүүд (Үе шат 3)
+| # | Шийдвэр |
+|---|---|
+| D32 | Action-ууд: `checkout@v7`, `setup-node@v7`, `configure-pages@v6`, `upload-pages-artifact@v5`, `deploy-pages@v5` (GitHub releases API, 2026.10.21). Node 24 (D11). |
+| D33 | Workflow бүр `permissions`-ээ тодорхой заана. Ингэснээр repo-ийн анхдагч workflow permission-ээс хамаарахгүй. |
+| D34 | `npm ci --ignore-scripts`: скриптэд суулгалтын script хэрэггүй. Хурдан бөгөөд supply-chain эрсдэл бага. Actions дээр ажилласан. |
+| D35 | `.env`-ийг repo-д оруулсан: зөвхөн `EXPO_PUBLIC_DATA_BASE_URL` (нийтийн). Нууц түлхүүр `.env.local`/Secrets-д үлдэнэ (CLAUDE.md дүрэм 2). |
+| D36 | `data-history`-ийг git worktree-ээр orphan болгон үүсгэсэн. Main-ийн ажлын хавтас хөндөгдөөгүй. |
 
 ## 2026.10.21 — Үе шат 2: Дата скриптүүд
 
