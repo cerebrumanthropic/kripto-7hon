@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-21T05:07:00Z",
+  "sources": [
+    {
+      "id": "coingecko",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "defillama",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "feargreed",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "fx",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    }
+  ],
+  "global": {
+    "totalMarketCapUsd": 2450000000000,
+    "totalVolume24hUsd": 98100000000,
+    "marketCapChange24hPct": -1.42,
+    "btcDominancePct": 57.8,
+    "ethDominancePct": 12.2,
+    "activeCryptocurrencies": 17842
+  },
+  "coins": [
+    {
+      "id": "bitcoin",
+      "symbol": "btc",
+      "name": "Bitcoin",
+      "rank": 1,
+      "priceUsd": 68450,
+      "priceMnt": 233585625,
+      "change24hPct": 1.21,
+      "change7dPct": 1.16,
+      "marketCapUsd": 1355000000000,
+      "volume24hUsd": 119507292014,
+      "isStablecoin": false
+    },
+    {
+      "id": "ethereum",
+      "symbol": "eth",
+      "name": "Ethereum",
+      "rank": 2,
+      "priceUsd": 2470,
+      "priceMnt": 8428875,
+      "change24hPct": 1.76,
+      "change7dPct": -5.4,
+      "marketCapUsd": 298000000000,
+      "volume24hUsd": 18513966206,
+      "isStablecoin": false
+    },
+    {
+      "id": "tether",
+      "symbol": "usdt",
+      "name": "Tether",
+      "rank": 3,
+      "priceUsd": 1,
+      "priceMnt": 3413,
+      "change24hPct": -0.02,
+      "change7dPct": 0.02,
+      "marketCapUsd": 182000000000,
+      "volume24hUsd": 16241310879,
+      "isStablecoin": true
+    },
+    {
+      "id": "ripple",
+      "symbol": "xrp",
+      "name": "XRP",
+      "rank": 4,
+      "priceUsd": 2.41,
+      "priceMnt": 8224,
+      "change24hPct": 0.18,
+      "change7dPct": -3.6,
+      "marketCapUsd": 141000000000,
+      "volume24hUsd": 12769623642,
+      "isStablecoin": false
+    },
+    {
+      "id": "binancecoin",
+      "symbol": "bnb",
+      "name": "BNB",
+      "rank": 5,
+      "priceUsd": 612,
+      "priceMnt": 2088450,
+      "change24hPct": 2.37,
+      "change7dPct": -2.23,
+      "marketCapUsd": 89000000000,
+      "volume24hUsd": 3184447326,
+      "isStablecoin": false
+    },
+    {
+      "id": "solana",
+      "symbol": "sol",
+      "name": "Solana",
+      "rank": 6,
+      "priceUsd": 142.6,
+      "priceMnt": 486623,
+      "change24hPct": 0.41,
+      "change7dPct": 6.88,
+      "marketCapUsd": 74000000000,
+      "volume24hUsd": 5094875719,
+      "isStablecoin": false
+    },
+    {
+      "id": "usd-coin",
+      "symbol": "usdc",
+      "name": "USDC",
+      "rank": 7,
+      "priceUsd": 1,
+      "priceMnt": 3413,
+      "change24hPct": -0.05,
+      "change7dPct": -0.01,
+      "marketCapUsd": 73000000000,
+      "volume24hUsd": 6350050567,
+      "isStablecoin": true
+    },
+    {
+      "id": "tron",
+      "symbol": "trx",
+      "name": "TRON",
+      "rank": 8,
+      "priceUsd": 0.3142,
+      "priceMnt": 1072.2075,
+      "change24hPct": -3.19,
+      "change7dPct": 4.62,
+      "marketCapUsd": 29800000000,
+      "volume24hUsd": 671186486,
+      "isStablecoin": false
+    },
+    {
+      "id": "dogecoin",
+      "symbol": "doge",
+      "name": "Dogecoin",
+      "rank": 9,
+      "priceUsd": 0.1834,
+      "priceMnt": 625.8525,
+      "change24hPct": -1.46,
+      "change7dPct": -8.12,
+      "marketCapUsd": 27100000000,
+      "volume24hUsd": 944573768,
+      "isStablecoin": false
+    },
+    {
+      "id": "cardano",
+      "symbol": "ada",
+      "name": "Cardano",
+      "rank": 10,
+      "priceUsd": 0.6123,
+      "priceMnt": 2089.4737,
+      "change24hPct": 2.67,
+      "change7dPct": 3.13,
+      "marketCapUsd": 22000000000,
+      "volume24hUsd": 487737552,
+      "isStablecoin": false
+    },
+    {
+      "id": "hyperliquid",
+      "symbol": "hype",
+      "name": "Hyperliquid",
+      "rank": 11,
+      "priceUsd": 38.4,
+      "priceMnt": 131040,
+      "change24hPct": -2.22,
+      "change7dPct": 10.62,
+      "marketCapUsd": 12900000000,
+      "volume24hUsd": 761347595,
+      "isStablecoin": false
+    },
+    {
+      "id": "chainlink",
+      "symbol": "link",
+      "name": "Chainlink",
+      "rank": 12,
+      "priceUsd": 15.82,
+      "priceMnt": 53986,
+      "change24hPct": 2.87,
+      "change7dPct": -1.93,
+      "marketCapUsd": 10700000000,
+      "volume24hUsd": 599110744,
+      "isStablecoin": false
+    },
+    {
+      "id": "ethena-usde",
+      "symbol": "usde",
+      "name": "Ethena USDe",
+      "rank": 13,
+      "priceUsd": 1,
+      "priceMnt": 3413,
+      "change24hPct": -0.05,
+      "change7dPct": -0.09,
+      "marketCapUsd": 10500000000,
+      "volume24hUsd": 677543815,
+      "isStablecoin": true
+    },
+    {
+      "id": "stellar",
+      "symbol": "xlm",
+      "name": "Stellar",
+      "rank": 14,
+      "priceUsd": 0.3311,
+      "priceMnt": 1129.8788,
+      "change24hPct": 1.17,
+      "change7dPct": -3.72,
+      "marketCapUsd": 10300000000,
+      "volume24hUsd": 738052189,
+      "isStablecoin": false
+    },
+    {
+      "id": "sui",
+      "symbol": "sui",
+      "name": "Sui",
+      "rank": 15,
+      "priceUsd": 2.87,
+      "priceMnt": 9794,
+      "change24hPct": -1.92,
+      "change7dPct": -2.31,
+      "marketCapUsd": 10100000000,
+      "volume24hUsd": 798806069,
+      "isStablecoin": false
+    },
+    {
+      "id": "bitcoin-cash",
+      "symbol": "bch",
+      "name": "Bitcoin Cash",
+      "rank": 16,
+      "priceUsd": 498.2,
+      "priceMnt": 1700108,
+      "change24hPct": 3.27,
+      "change7dPct": 2.59,
+      "marketCapUsd": 9900000000,
+      "volume24hUsd": 359718558,
+      "isStablecoin": false
+    },
+    {
+      "id": "avalanche-2",
+      "symbol": "avax",
+      "name": "Avalanche",
+      "rank": 17,
+      "priceUsd": 21.35,
+      "priceMnt": 72857,
+      "change24hPct": -1.33,
+      "change7dPct": -2.57,
+      "marketCapUsd": 9000000000,
+      "volume24hUsd": 233780133,
+      "isStablecoin": false
+    },
+    {
+      "id": "litecoin",
+      "symbol": "ltc",
+      "name": "Litecoin",
+      "rank": 18,
+      "priceUsd": 88.4,
+      "priceMnt": 301665,
+      "change24hPct": 1.68,
+      "change7dPct": 6.74,
+      "marketCapUsd": 6700000000,
+      "volume24hUsd": 505495230,
+      "isStablecoin": false
+    },
+    {
+      "id": "the-open-network",
+      "symbol": "ton",
+      "name": "Toncoin",
+      "rank": 19,
+      "priceUsd": 2.62,
+      "priceMnt": 8941,
+      "change24hPct": 3.82,
+      "change7dPct": -7.49,
+      "marketCapUsd": 6600000000,
+      "volume24hUsd": 630292210,
+      "isStablecoin": false
+    },
+    {
+      "id": "shiba-inu",
+      "symbol": "shib",
+      "name": "Shiba Inu",
+      "rank": 20,
+      "priceUsd": 0.00001134,
+      "priceMnt": 0.0387,
+      "change24hPct": -0.15,
+      "change7dPct": 13.02,
+      "marketCapUsd": 6680000000,
+      "volume24hUsd": 206972269,
+      "isStablecoin": false
+    },
+    {
+      "id": "dai",
+      "symbol": "dai",
+      "name": "Dai",
+      "rank": 21,
+      "priceUsd": 0.9998,
+      "priceMnt": 3411.8175,
+      "change24hPct": -0.04,
+      "change7dPct": -0.1,
+      "marketCapUsd": 5400000000,
+      "volume24hUsd": 263712536,
+      "isStablecoin": true
+    },
+    {
+      "id": "polkadot",
+      "symbol": "dot",
+      "name": "Polkadot",
+      "rank": 22,
+      "priceUsd": 3.41,
+      "priceMnt": 11637,
+      "change24hPct": 0.25,
+      "change7dPct": 5.09,
+      "marketCapUsd": 5200000000,
+      "volume24hUsd": 478216117,
+      "isStablecoin": false
+    },
+    {
+      "id": "uniswap",
+      "symbol": "uni",
+      "name": "Uniswap",
+      "rank": 23,
+      "priceUsd": 7.12,
+      "priceMnt": 24297,
+      "change24hPct": -2.98,
+      "change7dPct": 7.67,
+      "marketCapUsd": 4500000000,
+      "volume24hUsd": 426552384,
+      "isStablecoin": false
+    },
+    {
+      "id": "aave",
+      "symbol": "aave",
+      "name": "Aave",
+      "rank": 24,
+      "priceUsd": 254.1,
+      "priceMnt": 867116,
+      "change24hPct": -1.37,
+      "change7dPct": 7.36,
+      "marketCapUsd": 3900000000,
+      "volume24hUsd": 134042288,
+      "isStablecoin": false
+    }
+  ],
+  "trending": [
+    {
+      "id": "hyperliquid",
+      "symbol": "hype",
+      "name": "Hyperliquid",
+      "rank": 11
+    },
+    {
+      "id": "sui",
+      "symbol": "sui",
+      "name": "Sui",
+      "rank": 15
+    },
+    {
+      "id": "aave",
+      "symbol": "aave",
+      "name": "Aave",
+      "rank": 24
+    },
+    {
+      "id": "chainlink",
+      "symbol": "chai",
+      "name": "Chainlink",
+      "rank": 12
+    },
+    {
+      "id": "toncoin",
+      "symbol": "tonc",
+      "name": "Toncoin",
+      "rank": 19
+    },
+    {
+      "id": "ondo-finance",
+      "symbol": "ondo",
+      "name": "Ondo Finance",
+      "rank": 61
+    },
+    {
+      "id": "pepe",
+      "symbol": "pepe",
+      "name": "Pepe",
+      "rank": 33
+    }
+  ],
+  "fearGreed": {
+    "value": 34,
+    "labelEn": "Fear",
+    "labelMn": "Айдас",
+    "timestamp": "2026-10-21T00:00:00Z",
+    "history": [
+      {
+        "date": "2026-09-22",
+        "value": 52
+      },
+      {
+        "date": "2026-09-23",
+        "value": 55
+      },
+      {
+        "date": "2026-09-24",
+        "value": 47
+      },
+      {
+        "date": "2026-09-25",
+        "value": 55
+      },
+      {
+        "date": "2026-09-26",
+        "value": 50
+      },
+      {
+        "date": "2026-09-27",
+        "value": 53
+      },
+      {
+        "date": "2026-09-28",
+        "value": 48
+      },
+      {
+        "date": "2026-09-29",
+        "value": 49
+      },
+      {
+        "date": "2026-09-30",
+        "value": 46
+      },
+      {
+        "date": "2026-10-01",
+        "value": 48
+      },
+      {
+        "date": "2026-10-02",
+        "value": 44
+      },
+      {
+        "date": "2026-10-03",
+        "value": 48
+      },
+      {
+        "date": "2026-10-04",
+        "value": 43
+      },
+      {
+        "date": "2026-10-05",
+        "value": 44
+      },
+      {
+        "date": "2026-10-06",
+        "value": 47
+      },
+      {
+        "date": "2026-10-07",
+        "value": 45
+      },
+      {
+        "date": "2026-10-08",
+        "value": 47
+      },
+      {
+        "date": "2026-10-09",
+        "value": 46
+      },
+      {
+        "date": "2026-10-10",
+        "value": 41
+      },
+      {
+        "date": "2026-10-11",
+        "value": 41
+      },
+      {
+        "date": "2026-10-12",
+        "value": 38
+      },
+      {
+        "date": "2026-10-13",
+        "value": 35
+      },
+      {
+        "date": "2026-10-14",
+        "value": 41
+      },
+      {
+        "date": "2026-10-15",
+        "value": 36
+      },
+      {
+        "date": "2026-10-16",
+        "value": 40
+      },
+      {
+        "date": "2026-10-17",
+        "value": 41
+      },
+      {
+        "date": "2026-10-18",
+        "value": 32
+      },
+      {
+        "date": "2026-10-19",
+        "value": 36
+      },
+      {
+        "date": "2026-10-20",
+        "value": 38
+      },
+      {
+        "date": "2026-10-21",
+        "value": 34
+      }
+    ]
+  },
+  "stablecoins": {
+    "totalUsd": 312400000000,
+    "change7dPct": 0.8,
+    "top": [
+      {
+        "symbol": "USDT",
+        "name": "Tether",
+        "circulatingUsd": 182000000000,
+        "change7dPct": 0.6
+      },
+      {
+        "symbol": "USDC",
+        "name": "USDC",
+        "circulatingUsd": 73100000000,
+        "change7dPct": 1.4
+      },
+      {
+        "symbol": "USDe",
+        "name": "Ethena USDe",
+        "circulatingUsd": 10500000000,
+        "change7dPct": -2.1
+      },
+      {
+        "symbol": "USDS",
+        "name": "Sky Dollar",
+        "circulatingUsd": 8200000000,
+        "change7dPct": 0.3
+      },
+      {
+        "symbol": "DAI",
+        "name": "Dai",
+        "circulatingUsd": 5400000000,
+        "change7dPct": -0.4
+      }
+    ]
+  },
+  "defi": {
+    "tvlUsd": 118200000000,
+    "change7dPct": -2.3,
+    "dexVolume24hUsd": 6400000000,
+    "dexVolume7dUsd": 43100000000
+  },
+  "fx": {
+    "usdMnt": 3412.5,
+    "source": "exchangerate-api",
+    "asOf": "2026-10-21T00:02:31Z"
+  }
+}

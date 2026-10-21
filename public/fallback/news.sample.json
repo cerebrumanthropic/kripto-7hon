@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-21T05:07:00Z",
+  "sources": [
+    {
+      "id": "coindesk",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "cointelegraph",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "decrypt",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "theblock",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "cryptoslate",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    },
+    {
+      "id": "ussec",
+      "ok": true,
+      "fetchedAt": "2026-10-21T05:07:00Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "be52837d13d4",
+      "title": "[Жишээ] SEC opens comment period on new crypto custody rule",
+      "url": "https://www.coindesk.com/#sample-1",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-21T04:07:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2523d77ab45a",
+      "title": "[Жишээ] Spot bitcoin ETFs log third straight week of outflows",
+      "url": "https://cointelegraph.com/#sample-2",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-20T21:07:00.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "78f70a1354c9",
+      "title": "[Жишээ] DeFi lending protocol drained of $18M in oracle exploit",
+      "url": "https://decrypt.co/#sample-3",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-20T14:07:00.000Z",
+      "tags": [
+        "security",
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "28c04f6eafee",
+      "title": "[Жишээ] Fed minutes point to slower pace of rate cuts",
+      "url": "https://www.theblock.co/#sample-4",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-20T07:07:00.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "772d3508a8b0",
+      "title": "[Жишээ] Tether expands USDT supply on new chains",
+      "url": "https://cryptoslate.com/#sample-5",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-20T00:07:00.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "bbc9ba8c7e58",
+      "title": "[Жишээ] Uniswap governance approves fee switch pilot",
+      "url": "https://www.sec.gov/#sample-6",
+      "source": "U.S. SEC",
+      "sourceUrl": "https://www.sec.gov",
+      "publishedAt": "2026-10-19T17:07:00.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b88dfda0a5b2",
+      "title": "[Жишээ] Bitcoin hashrate hits record as miners upgrade fleets",
+      "url": "https://www.coindesk.com/#sample-7",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-19T10:07:00.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9bf2ec17aa9f",
+      "title": "[Жишээ] Bitcoin slips below $70,000 as risk appetite cools",
+      "url": "https://cointelegraph.com/#sample-8",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-19T03:07:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "25a82f908d0e",
+      "title": "[Жишээ] EU regulators publish MiCA stablecoin guidance",
+      "url": "https://decrypt.co/#sample-9",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-18T20:07:00.000Z",
+      "tags": [
+        "regulation",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7cb8ec6ea93c",
+      "title": "[Жишээ] Ethereum ETF inflows return after two-week pause",
+      "url": "https://www.theblock.co/#sample-10",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-18T13:07:00.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6d8e3c3b9ab0",
+      "title": "[Жишээ] Mongolian regulator updates virtual asset service provider registry",
+      "url": "https://cryptoslate.com/#sample-11",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-18T06:07:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": true
+    },
+    {
+      "id": "537482caca89",
+      "title": "[Жишээ] Phishing campaign targets hardware wallet users",
+      "url": "https://www.sec.gov/#sample-12",
+      "source": "U.S. SEC",
+      "sourceUrl": "https://www.sec.gov",
+      "publishedAt": "2026-10-17T23:07:00.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2a1fd1f455ad",
+      "title": "[Жишээ] Treasury yields climb, weighing on crypto prices",
+      "url": "https://www.coindesk.com/#sample-13",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-17T16:07:00.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9d88ca799086",
+      "title": "[Жишээ] Circle reports USDC circulation growth in Asia",
+      "url": "https://cointelegraph.com/#sample-14",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-17T09:07:00.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "04dabda8c479",
+      "title": "[Жишээ] Aave TVL rises as lending demand picks up",
+      "url": "https://decrypt.co/#sample-15",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-17T02:07:00.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8f432a6545b4",
+      "title": "[Жишээ] Solana network activity reaches monthly high",
+      "url": "https://www.theblock.co/#sample-16",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-16T19:07:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    }
+  ]
+}

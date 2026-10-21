@@ -1,0 +1,110 @@
+# PROGRESS — «Виртуал хөрөнгийн 7 хоног»
+
+Явц, шийдвэр, нээлттэй асуултын бүртгэл. Шинэ бичлэг дээрээ нэмэгдэнэ.
+
+## Төлөв
+
+| # | Үе шат | Төлөв |
+|---|---|---|
+| 0 | SPEC унших, зөрчил тодруулах | ✅ 2026.10.21 |
+| 1 | Суурь ба UI (жишээ датагаар) | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
+| 2 | Дата скриптүүд | ⏳ Зөвшөөрөл хүлээж байна |
+| 3 | GitHub + Pages + клиент холболт | — |
+| 4 | 7 хоногийн тайлан | — |
+| 5 | EAS Hosting deploy | — |
+| 6 | QA ба баримт | — |
+
+## 2026.10.21 — Үе шат 1: Суурь ба UI
+
+### Хийсэн
+- Expo SDK 58-ийн template-ээр (`create-expo-app@latest`, `src/app`) суурийг үүсгэсэн. `web.output: "static"`, typedRoutes, React Compiler идэвхтэй.
+- `src/lib`: `format` (USD/MNT компакт, үнэ, %, ▲▼), `dates` (УБ +8, ISO долоо хоног UTC, монгол дэс тооны нөхцөл «дугаар/дүгээр», харьцангуй цаг, хоцролт), `classify` (мэдээний ангилал), `data-client` (Pages → fallback → sample, react-query 10 мин), `i18n-mn` (бүх UI текст), `news-filter`, `coins`, `report-view`, `markdown-blocks`, `meta`, `config`.
+- `src/types/schemas.ts`: SPEC §6-ийн бүх Zod схем + `Editorial`, `MergedReport`, `ReportIndex`. `src/types/research.ts`: research.json-ийн схем.
+- Theme (`src/theme/tokens.ts`), толгой (≥1024px хэвтээ цэс, <1024px hamburger, идэвхтэй хуудас тодруулсан, гараар ашиглах боломжтой), хөл (иш татах + анхааруулга + Арга зүй), «skip to content».
+- `react-native-svg` дээрх графикууд: sparkline, шугам (индексжүүлсэн олон цуврал), F&G gauge, хэвтээ bar, heatmap.
+- 7 хуудас + 404: `/`, `/zah-zeel`, `/medee`, `/tailan`, `/tailan/[week]`, `/sudalgaa`, `/arga-zui`. Хуудас бүр `generateMetadata`-аар title/description/OG-тэй, `<html lang="mn">`.
+- Жишээ дата: `public/fallback/{market,news,daily}.sample.json`, `content/reports/2026-W42.{json,md}` (`npm run samples` дахин үүсгэнэ; бүх мэдээний гарчиг «[Жишээ]» угтвартай, холбоос нь эх сурвалжийн нүүр хуудас руу).
+- `scripts/prepare-build.ts` (`npm run prebuild:web`): тайлан нэгтгэх, `index.json`, fallback snapshot, sitemap/robots. Үе шат 4-т validate ба `--include-drafts`-ийн preview-тэй хамт өргөтгөнө.
+
+### Шалгалт (бүгд ногоон)
+- `npm run typecheck` ✅ · `npm test` ✅ 11 файл / 77 тест · `npx expo export -p web` ✅ (10 статик route, 6 loader).
+- `npx expo start --web`: бүх 7 хуудас + 404 нээгдсэн. 360px ба 1440px өргөнд `scrollWidth` = viewport (хэвтээ гүйлгээгүй), 360px-д hamburger ажилласан. Light/dark горимыг хоёуланг нь харсан.
+- Судалгааны 74 гадаад холбоос (`npm run check:links` + хөтөч): 66 нь шууд 2xx. Үлдсэн 8 нь скриптэд 403/429 эсвэл redirect loop өгсөн (бот хамгаалалт: CoinShares Medium, FATF, Messari, Grayscale, Dune, VanEck) боловч бодит хөтөч дээр бүгд нээгдсэн.
+- `dist/`: `CG-` олдоогүй. `sudalgaa.html`-ийн 105 гадаад холбоос бүгд `target="_blank" rel="noopener noreferrer"`-тэй.
+
+### Мэдэгдэж буй сул тал / дараа анхаарах
+- Статик HTML нь мобайл өргөн ба цайвар горимоор үүсдэг. Hydration-ий дараа бодит өргөн/горимд шилждэг тул desktop/dark хэрэглэгчид анхны ачаалалд богино шилжилт харагдана. Үе шат 6-д CSS media query-д суурилсан шийдлийг судална.
+- `entry` bundle ≈1.1 MB (React Native Web + router + zod + react-query). Lighthouse-ийн зорилтын (≥90) төлөө Үе шат 6-д оновчлол хийнэ (жишээ нь клиентэд `zod/mini`).
+- `tailan/[week]`-ийн `generateStaticParams` клиент bundle-аас хасагддаггүй тул `content-*.js` (4 KB) chunk нийтлэгдэнэ. Клиент дээр хэзээ ч ажиллахгүй, нууц агуулаагүй.
+- Инфографик, PNG татах, хэвлэх, «Текст хуулах» нь Үе шат 4-т (тайлангийн хуудсанд түр тэмдэглэгээ бий).
+- Жишээ W42 тайлангийн тоонууд дотооддоо бүрэн нийцээгүй (жишээ нь ETH-ийн 7 хоногийн %-ийг majors ба heatmap-д өөр утгаар харуулж байна). Бодит дата биш тул засаагүй.
+
+### Техникийн шийдвэрүүд (Үе шат 1)
+| # | Шийдвэр |
+|---|---|
+| D13 | D3-ыг SDK 58-ийн **data loader**-оор (`export async function loader` + `useLoaderData`) хэрэгжүүлсэн. Build үед ажиллаж, өгөгдлийг HTML/JSON-д шингээнэ. Файл уншдаг `src/lib/server/content.ts`-ийг зөвхөн loader дотроос динамик `import()`-оор дуудна. Ингэснээр клиент bundle-д `fs` орохгүй. |
+| D14 | `generateMetadata` (SDK 58) ашиглаж metadata-г статик HTML-д оруулсан (`<Head>`-ийг ашиглаагүй). `+html.tsx`-д `useServerDocumentContext` заавал (SDK 58). `ScrollViewStyleReset`-ийг ашиглаагүй: body өөрөө гүйлгэгдэнэ. |
+| D15 | Өнгө: SPEC-ийн `#16A34A`/`#DC2626` нь цагаан дээр жижиг текстэд AA хангахгүй (3.3:1). Тиймээс график/bar-д SPEC-ийн өнгийг, текстэд `#15803D`/`#B91C1C`-ийг (light) ашиглана. Heatmap-ийн өнгийг ≤60% тунгалагшуулсан тул текст үргэлж үндсэн өнгөөрөө уншигдана. |
+| D16 | Дизайны чиглэл (D12): «санхүүгийн сонины ledger» — цаасан дэвсгэр `#F6F4EF`, бэх хар текст, Монгол хөх брэнд `#2457C5`, алтан accent `#A8741F`-ийг зөвхөн шошго/тэмдэгт. 1px шугам, сүүдэргүй. «ВХ» монограмм лого. Inter + tabular-nums. |
+| D17 | `Link asChild` + функц хэлбэрийн `style` нь вэбд алга болдог (expo-router Slot). Цэс болон картанд статик style ашигласан. |
+| D18 | Asia/Ulaanbaatar-ийг тогтмол +8 офсетоор тооцно (2017 оноос хойш зуны цаггүй). Intl-ийн цагийн бүсийн өгөгдлөөс хамаарахгүй. |
+| D19 | Coin-ийн лого ашиглаагүй (SPEC §5.1): симболын өнгөт дугуй (BTC/ETH брэнд өнгө, стейблкойн ногоон). |
+| D20 | `topByRank`: топ 20-ийг эхлээд зах зээлийн үнэлгээний эрэмбээр тасалж, дараа нь тэр дотроо эрэмбэлнэ. Ингэснээр баганаар эрэмбэлэхэд топ 20-аас гадуурх хөрөнгө орж ирэхгүй. Хөтөч дээр шалгахдаа энэ алдааг олж засав. |
+| D21 | TS 6 нь `types`-ийг анхдагчаар хоосон болгодог тул `tsconfig.json`-д `"types": ["node"]`, `extends: "expo/tsconfig.base.json"` (vitest/vite `.json` өргөтгөлгүй замыг танихгүй). |
+| D22 | `npx expo start` нь `CI=1` үед файл ажиглахгүй тул локалд CI-гүйгээр ажиллуулна. |
+
+## 2026.10.21 — Үе шат 0: эхлэлийн шалгалт
+
+Уншсан: `CLAUDE.md`, `docs/SPEC.md` (v1.0), `content/research.json` (54 KB, `schemaVersion: 1`). `ZAAVAR.md`-г энэ удаа хянаагүй.
+
+### Анхны төлөв
+- Хавтас git repo биш. `package.json` болон Expo төсөл одоогоор алга.
+- `research.json`-ийн дээд түвшний түлхүүрүүд: `meta`, `summary`, `keyFindings`, `internationalExamples` (9, бүгд `verified2026: true`), `regulators` (4), `additionalReferences.groups` (8), `metricsMatrix` (6 нийтлэгч × 14 мөр), `coreMetrics`, `differentiatingMetrics`, `sectionOrder`, `headlineFormula`, `designPractices`, `dataSources` (16, үүнээс 4 нь `usedByPlatform: true`), `weeklyTemplate`, `productionSchedule` (8), `mongolia` (`legal`, `vasps` 12, `stats` 2023–2025 × 6 мөр, `marketShare2023`, `dataAvailability`, `links`), `glossary` (14), `caveats`, `sources` (42). Бүх `url` нь `https://`-ээр эхэлдэг. `additionalReferences` дахь зарим нэрийн `url` нь `null` (схемд зөвшөөрсөн).
+
+### SPEC-ийн нээлттэй асуултууд
+1. `content/reports/index.json`-ийг одоо `build-weekly` (ноорог үүсгэх үед) гаргаж байна. Харин редактор merge хийхэд `status`/`headline` өөрчлөгддөг. → D1
+2. `public/fallback/*.sample.json` нь repo-д байх ёстой (§4, §7.5.2), гэтэл §7.5.4 `public/fallback/`-ийг бүхэлд нь gitignore-д оруулж байна. → D2
+3. Тайлангийн хуудас runtime-д fetch хийвэл статик HTML-д текст орохгүй. → D3, D13
+4. AUTO_PUBLISH горимд дуудагдсан `deploy.yml` хуучин SHA-г checkout хийнэ. → D4
+5. Pages артефакт цаг бүр солигдох тул өмнөх 7 хоногуудын мэдээний архив алга болно. → D5
+6. `productionSchedule` ↔ `production_schedule`. → D6
+7. Нэр томьёо: «Шунал» ↔ «шунахай», «ETF/Сан» ↔ «БАС». → D7
+8. Нүүрний N, M. → D8
+9. Үе шат 1-д published тайлангүй үеийн `/tailan/[week]`. → D9
+10. Хуучирсан байж болзошгүй: Node 22 → D11. CoinGecko Demo-гийн хязгаар, EAS Free-ийн хязгаар ба retention, scheduled workflow-ийн 60 хоногийн дүрмийг Үе шат 2 ба 5-д эх сурвалжаас нь шалгана (**нээлттэй**).
+11. `frontend-design` skill байхгүй. → D12, D16
+
+## Шийдвэрүүд (Үе шат 0)
+
+2026.10.21-нд хэрэглэгч 1–9-р асуултын саналыг зөвшөөрсөн.
+
+| # | Шийдвэр |
+|---|---|
+| D1 | `content/reports/index.json`-ийг build-ийн бүтээгдэхүүн болгоно. `prepare-build.ts` үүнийг `status: published` бүхий `.md` + `<week>.json`-оос дахин үүсгэнэ, `.gitignore`-д орно. `build-weekly.ts` index бичихгүй. `generateStaticParams` нь `prepare-build`-ийн дараа уншина. |
+| D2 | `.gitignore`: `public/fallback/*` + `!public/fallback/*.sample.json`. Sample файлууд repo-д үлдэнэ. |
+| D3 | Тайлангийн хуудас өгөгдлөө build үед import хийнэ (статик HTML-д текст орно). Runtime-д fetch хийхгүй. `public/reports/<week>.json` нь зөвхөн PNG/хуваалцах зорилгоор нэмэлтээр үлдэж болно. |
+| D4 | AUTO_PUBLISH-ээр дуудагдах `deploy.yml`-ийн checkout-д `ref: main` заана. |
+| D5 | Pages артефакт цаг бүр бүхэлдээ солигддог тул `fetch-live.ts` нь өмнөх 7 хоногуудын `news/<week>.json`-ийг `store/`-оос (data-history) хуулж артефактад дахин оруулна. Pages = store-ийн толь + сүүлийн амьд файлууд. |
+| D6 | Кодонд `research.json`-ийн жинхэнэ түлхүүр `productionSchedule`-ийг ашиглана (SPEC-ийн `production_schedule` нь бичгийн алдаа). |
+| D7 | Нэр томьёо `research.json → glossary`-г дагана: «Айдас ба шунахайн индекс»; F&G шошго «Хэт айдас / Айдас / Төвийг сахисан / Шунахай / Хэт шунахай». ETF-ийг UI-д «ETF» гэж үлдээж, анх гарах газар/нэр томьёонд «биржийн арилжаалагддаг сан (БАС)» тайлбартай. Мэдээний ангилал «ETF/Сан». |
+| D8 | Нүүрний N = `internationalExamples.length` (9), M = `dataSources.length` (16). |
+| D9 | Үе шат 1-д `content/reports/2026-W42.{json,md}` жишээ тайланг (`status: published`, «ЖИШЭЭ ДАТА» тэмдэгтэй) оруулж `/tailan/[week]`-ийг шалгана. Үе шат 4-т бодит тайлангаар солих эсвэл устгана. |
+| D10 | ISO долоо хоногийг UTC-ээр тооцно (тасалбар Ням 23:59:59 UTC). Харуулах огноо `Asia/Ulaanbaatar`. |
+| D11 | Expo SDK 58 (`expo@58.0.16`, `npm view` 2026.10.21). Локал Node v24.15.0. Workflow-д Node 24 LTS-ийг ашиглана (SPEC-д 22 гэснийг шинэчлэв). |
+| D12 | `frontend-design` skill орчинд байхгүй тул дизайны чиглэлийг гараар тогтоож энд тэмдэглэнэ (→ D16). |
+
+## Dependency бүртгэл
+
+Template-ээс ирсэн (Expo SDK 58): expo, expo-router, react 19.3, react-native 0.88, react-native-web гэх мэт.
+
+| Пакет | Төрөл | Шалтгаан |
+|---|---|---|
+| `@tanstack/react-query` | app | Амьд датаг 10 мин тутам дахин уншиж кэшлэх (SPEC §3) |
+| `zod` 4 | app+scripts | Схем шалгалт, апп ба скрипт хуваалцана (SPEC §3) |
+| `react-native-svg` | app | Хөнгөн графикууд (SPEC §3) |
+| `@expo-google-fonts/inter` | app | Кирилл үсэгтэй Inter фонт (SPEC §3) |
+| `vitest` | dev | Тест (SPEC §3) |
+| `tsx` | dev | Скрипт ажиллуулах (SPEC §3) |
+| `prettier` | dev | Формат (SPEC §3) |
+| `gray-matter` | dev | Тайлангийн `.md` frontmatter (SPEC §3) |
+| `@types/node` 24 | dev | Скрипт ба build-ийн Node төрөл (TS 6, D21) |

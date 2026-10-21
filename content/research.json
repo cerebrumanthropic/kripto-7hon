@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Виртуал хөрөнгийн 7 хоног тутмын тоон мэдээллийн бүтээгдэхүүн: олон улсын жишээ, үзүүлэлт, дизайн, эх сурвалж ба Монголд хэрэгжүүлэх загвар",
+    "compiledAt": "2026-10-21",
+    "language": "mn",
+    "note": "Судалгааг 2026.10.21-ний байдлаар нэгтгэсэн. «verified2026: true» гэсэн жишээнүүдийн 2026 оны идэвхийг шалгасан; бусдыг ашиглахаасаа өмнө холбоосыг нээж шалгана.",
+    "disclaimer": "Энэхүү материал нь зөвхөн мэдээллийн зориулалттай бөгөөд хөрөнгө оруулалтын зөвлөгөө биш."
+  },
+  "summary": [
+    "Хамгийн тохиромжтой загвар бол CoinShares-ийн Даваа гарагийн сангийн урсгалын тайлан болон Glassnode-ийн Лхагва гарагийн on-chain тойм хоёрын хослол юм.",
+    "Бараг бүх бүтээгдэхүүнд давтагддаг цөм үзүүлэлтүүд: нийт зах зээлийн үнэлгээ, BTC/ETH-ийн 7 хоногийн өөрчлөлт, BTC давамгайлал, спот ETF/ETP урсгал, стейблкойны нийлүүлэлт, open interest, funding rate, ликвидаци, DeFi TVL, Fear & Greed индекс, макро хуанли.",
+    "Монгол хэлээр гардаг, тоонд суурилсан 7 хоног тутмын виртуал хөрөнгийн бүтээгдэхүүн одоогоор харагдахгүй байгаа нь зах зээлд нээлттэй орон зай юм."
+  ],
+  "keyFindings": [
+    {
+      "title": "7 хоногийн бүтээгдэхүүний «стандарт» тогтсон",
+      "text": "CoinShares Баасан гарагийн хаалтын датаг Даваа гарагт нийтэлдэг: нэг өгүүлбэрт гол тоогоо хэлсэн гарчиг, 3 bullet хураангуй, бүс нутаг, хөрөнгө, үйлчилгээ үзүүлэгч тус бүрийн хүснэгт. Энэ бүтцийг нэг хуудас инфографикт шууд ашиглаж болно."
+    },
+    {
+      "title": "«Data as of» тэмдэглэгээ — итгэлцлийн гол элемент",
+      "text": "Glassnode тайлангийн төгсгөлд дата тус бүрийн тасалбар огноог тусад нь бичдэг (үнэ, опцион, on-chain, ETF, стейблкойн), сүүлийн өдрийн өгөгдөл засварлагдаж болохыг анхааруулдаг. Binance Research график бүрийн доор эх сурвалж ба огноог бичдэг."
+    },
+    {
+      "title": "Формат хоорондоо холилдож байна",
+      "text": "K33 бичмэл тайлангаас гадна подкаст гаргадаг; Coin Metrics дашбоард ба newsletter-тэй; Glassnode Лхагва гарагийн тоймоо Даваа гарагийн богино «BTC Market Pulse»-аар нөхсөн."
+    },
+    {
+      "title": "Нэр, эзэмшлийн өөрчлөлтийг анхаарах",
+      "text": "CCData-ийн «Exchange Review» одоо «CoinDesk Data»-ийн нэрээр гарч байна. Coin Metrics-ийн «State of the Network» Talos-ын сайт дээр байрладаг болсон. VanEck-ийн сар тутмын бүтээгдэхүүн нь «Bitcoin ChainCheck» ба «NODE Monthly Commentary»."
+    },
+    {
+      "title": "Зохицуулагчдын статистик сар/хагас жил тутмынх",
+      "text": "JVCEA-ийн сарын статистик ~2 сарын хоцрогдолтой; Солонгосын FIU хагас жил тутам; FATF жил бүр. Иймээс 7 хоногийн бүтээгдэхүүнд эдгээрийг сар/улирлын тусгай хэсэг болгон оруулна."
+    }
+  ],
+  "internationalExamples": [
+    {
+      "id": "coinshares",
+      "name": "Digital Asset Fund Flows Weekly",
+      "publisher": "CoinShares (James Butterfill)",
+      "frequency": "7 хоног бүр, Даваа (Баасан гарагийн хаалтын дата)",
+      "format": "Вэб нийтлэл + PDF + Medium",
+      "metrics": ["ETP-ийн 7 хоногийн урсгал", "YTD урсгал", "AuM", "Улс, хөрөнгө, үйлчилгээ үзүүлэгчээр задаргаа", "Блокчэйн хувьцааны ETP"],
+      "structure": "Нэг өгүүлбэрийн гарчиг → 3 bullet → баганан график (7 хоногийн урсгал) → улсын хүснэгт → хөрөнгийн хүснэгт",
+      "design": "График бүрийн доор «Source: Bloomberg, CoinShares, data available as of close…»",
+      "distribution": "Вэб, имэйл, Medium (дугаарласан Volume), X",
+      "pricing": "Үнэгүй",
+      "verified2026": true,
+      "urls": [
+        { "label": "Жишээ дугаар", "url": "https://coinshares.com/insights/research-data/fund-flows-26-05-26/" },
+        { "label": "Судалгааны блог", "url": "https://researchblog.coinshares.com/" }
+      ]
+    },
+    {
+      "id": "glassnode",
+      "name": "The Week On-chain + BTC Market Pulse",
+      "publisher": "Glassnode",
+      "frequency": "Лхагва бүр (Pulse нь Даваа орчим)",
+      "format": "Вэб нийтлэл/newsletter (5–11 мин); Pulse 2–3 мин",
+      "metrics": ["On-chain өртгийн суурь (STH cost basis, True Market Mean)", "Realized Cap", "NRPL", "ETF урсгал", "Стейблкойн", "Спот/фьючерс урсгал", "Опционы IV/skew"],
+      "structure": "Executive Summary (4–6 bullet) → On-chain Insights → Off-chain Insights → «Data as-of» тэмдэглэл",
+      "design": "Нэр бүхий зохиогчид; дата тус бүрийн тасалбар огноо",
+      "distribution": "Вэб, имэйл, X",
+      "pricing": "Үнэгүй (Glassnode Studio/API төлбөртэй)",
+      "verified2026": true,
+      "urls": [
+        { "label": "Newsletter архив", "url": "https://research.glassnode.com/tag/newsletter/" },
+        { "label": "Жишээ: 2026 оны 37-р долоо хоног", "url": "https://research.glassnode.com/the-week-onchain-week-37-2026/" }
+      ]
+    },
+    {
+      "id": "k33",
+      "name": "Ahead of the Curve",
+      "publisher": "K33 Research",
+      "frequency": "7 хоног бүр, Даваа; подкаст Мягмар, Баасан",
+      "format": "Вэб/имэйл тайлан + подкаст (4–12 мин)",
+      "metrics": ["Дериватив (CME premium, funding, OI)", "ETF урсгал", "Зах зээлийн бүтэц", "Катализаторын хуанли"],
+      "structure": "Гарчиг + «In this week’s…» bullet жагсаалт → график бүхий хэсгүүд",
+      "design": "Дүгнэлт/зүйрлэл бүхий гарчиг",
+      "distribution": "Имэйл, вэб, Apple Podcasts, X",
+      "pricing": "Нэг хэсэг нь үнэгүй; K33 Research Pro төлбөртэй",
+      "verified2026": true,
+      "urls": [
+        { "label": "Ahead of the Curve", "url": "https://k33.com/research/ahead-of-the-curve" },
+        { "label": "Подкаст", "url": "https://podcast.k33.com/" }
+      ]
+    },
+    {
+      "id": "coinmetrics",
+      "name": "State of the Network",
+      "publisher": "Coin Metrics (одоо Talos)",
+      "frequency": "7 хоног бүр, Мягмар (#385 — 2026.10.13); сар/улирлын шинэчлэлт",
+      "format": "Substack newsletter + Talos вэб",
+      "metrics": ["Зах зээлийн үнэлгээ", "ETF урсгал", "Стейблкойн", "Open interest", "Ликвидаци", "On-chain үйл ажиллагаа"],
+      "structure": "«Key Takeaways» 3 bullet → Market Overview → Flows → Exchange Activity & Derivatives",
+      "design": "График бүрийн доор «Source: Coin Metrics…»",
+      "distribution": "Substack (24,000+ захиалагч гэж өөрсдөө бичсэн), вэб, X",
+      "pricing": "Үнэгүй",
+      "verified2026": true,
+      "urls": [
+        { "label": "Substack", "url": "https://coinmetrics.substack.com/" },
+        { "label": "Talos дээрх жишээ", "url": "https://www.talos.com/insights/state-of-the-network-370" }
+      ]
+    },
+    {
+      "id": "kaiko",
+      "name": "Data Debrief",
+      "publisher": "Kaiko Research",
+      "frequency": "7 хоног бүр, Даваа өглөө",
+      "format": "Имэйл + Kaiko Research апп",
+      "metrics": ["Биржийн хэмжээ", "Зах зээлийн гүн", "Funding", "Бүс нутгийн дата", "Стейблкойн"],
+      "structure": "Basic: 1 график + товч анализ; Premium: олон график, бүрэн анализ",
+      "design": "Нэг гол график дээр төвлөрсөн",
+      "distribution": "Имэйл, апп",
+      "pricing": "Basic үнэгүй; Premium сард $11.99 эсвэл жилд $100",
+      "verified2026": true,
+      "urls": [
+        { "label": "Kaiko Research Premium", "url": "https://research.kaiko.com/kaiko-research-premium" }
+      ]
+    },
+    {
+      "id": "coinbase",
+      "name": "Weekly Market Commentary",
+      "publisher": "Coinbase Institutional",
+      "frequency": "7 хоног бүр, Баасан",
+      "format": "Вэб тайлан (3–7 мин)",
+      "metrics": ["Макро", "BTC түвшин", "Дериватив", "Санхүүжилтийн хүү", "Опционы skew"],
+      "structure": "Key takeaways → Market View → Derivatives → Financing Rates",
+      "design": "Дугаарласан «Chart 1…6», текстэд графикаа иш татдаг",
+      "distribution": "Вэб, подкаст; институцийн харилцагчдад 7 хоногийн өмнө",
+      "pricing": "Олон нийтэд үнэгүй (7 хоногийн хоцрогдолтой)",
+      "verified2026": true,
+      "urls": [
+        { "label": "Жишээ: 2026.09.25", "url": "https://www.coinbase.com/institutional/research-insights/research/weekly-market-commentary/weekly-2026-09-25" }
+      ]
+    },
+    {
+      "id": "binance",
+      "name": "Monthly Market Insights",
+      "publisher": "Binance Research",
+      "frequency": "Сар бүр (жишээ нь 2026.10.06)",
+      "format": "12–15 хуудас PDF",
+      "metrics": ["Нийт зах зээлийн үнэлгээ", "BTC давамгайлал", "ETF урсгал", "DeFi TVL", "Стейблкойн", "RWA", "NFT", "Хакердалт", "Урьдчилсан хуанли"],
+      "structure": "Key takeaways → Market Performance → Thematic хэсгүүд → New Research",
+      "design": "«Figure N» гарчиг + «Source / As of» мөр",
+      "distribution": "Вэб, Telegram, X",
+      "pricing": "Үнэгүй",
+      "verified2026": true,
+      "urls": [
+        { "label": "2026 оны 10-р сарын PDF", "url": "https://public.bnbstatic.com/static/files/research/monthly-market-insights-2026-10.pdf" },
+        { "label": "Telegram", "url": "https://t.me/s/binanceresearch" }
+      ]
+    },
+    {
+      "id": "coindesk-data",
+      "name": "Exchange Review",
+      "publisher": "CoinDesk Data (хуучнаар CCData)",
+      "frequency": "Сар бүр",
+      "format": "PDF + вэб хураангуй",
+      "metrics": ["CEX спот ба деривативын хэмжээ", "Биржийн зах зээлийн хувь", "DEX хэмжээ", "CME", "RWA perp"],
+      "structure": "Report Summary bullet → биржийн ранк → сегментчилсэн графикууд",
+      "design": "Биржийн эрэмбийн хүснэгт, сегментийн график",
+      "distribution": "Вэб, имэйл",
+      "pricing": "Үнэгүй (бүртгэлтэй)",
+      "verified2026": true,
+      "urls": [
+        { "label": "2026 оны 7-р сарын тайлан", "url": "https://data.coindesk.com/reports/exchange-review-july-2026" },
+        { "label": "Тайлангийн жагсаалт", "url": "https://data.coindesk.com/reports/exchange-review" }
+      ]
+    },
+    {
+      "id": "vaneck",
+      "name": "Bitcoin ChainCheck / NODE Monthly Commentary",
+      "publisher": "VanEck",
+      "frequency": "Сар бүр (ChainCheck сарын дунд)",
+      "format": "Вэб нийтлэл",
+      "metrics": ["BTC үнэ ба 200 хоногийн MA", "Бодит хэлбэлзэл", "Опционы IV", "Funding", "Урт хугацааны эзэмшигчид", "Майнерын эдийн засаг"],
+      "structure": "Key takeaways → сэдэвчилсэн хэсгүүд → FAQ",
+      "design": "Сэдэвчилсэн график, FAQ",
+      "distribution": "Вэб",
+      "pricing": "Үнэгүй",
+      "verified2026": true,
+      "urls": [
+        { "label": "Bitcoin ChainCheck (2026.08 дунд)", "url": "https://www.vaneck.com/us/en/blogs/digital-assets/matthew-sigel-vaneck-mid-august-2026-bitcoin-chaincheck/" },
+        { "label": "NODE Monthly (2026.09)", "url": "https://www.vaneck.com/us/en/blogs/digital-assets/matthew-sigel-node-monthly-commentary-september-2026/" }
+      ]
+    }
+  ],
+  "regulators": [
+    {
+      "id": "fatf",
+      "name": "FATF — 7th Targeted Update on VAs/VASPs",
+      "frequency": "Жил бүр (2026.07.16)",
+      "keyData": "R.15-ын хэрэгжилт; 147 улсын судалгаа; лицензийн тогтолцоотой 114 улсын 39 нь (34%) offshore VASP-ыг хамруулдаг; эрсдэлийн үнэлгээ хийсэн улсын хувь 76%-иас 86% болсон; дэлхийн VA зах зээлийн ~97%-ийг хамарсан 69 «materially important» улсын хүснэгт.",
+      "urls": [
+        { "label": "FATF нийтлэл", "url": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/targeted-updated-virtualassets-vasps-2026.html" }
+      ]
+    },
+    {
+      "id": "korea-fiu",
+      "name": "Солонгосын FSC/FIU — Хагас жилийн ВХҮҮ-ийн судалгаа",
+      "frequency": "Хагас жил бүр (2026 оны эхний хагас: 2026.10.01)",
+      "keyData": "28 бүртгэлтэй ВХҮҮ-ийн 26 нь хамрагдсан (17 бирж, 9 хэтэвч/кастоди); орлого 576.8 тэрбум вон (−41%); үйл ажиллагааны ашиг 81.6 тэрбум вон (−78%); зах зээлийн үнэлгээ 58.9 их наяд вон (−33%); арилжаа 555 их наяд вон (өдөрт 3.1 их наяд); бүртгэлтэй 26.55 сая, KYC-тэй 11.175 сая данс. Анхааруулга: улсын баталсан албан статистик биш.",
+      "urls": [
+        { "label": "KoFIU", "url": "https://kofiu.go.kr" },
+        { "label": "Financial News (англи)", "url": "https://en.fnnews.com/news/202610010958301697" }
+      ]
+    },
+    {
+      "id": "jvcea",
+      "name": "JVCEA (Япон) — Сарын статистик",
+      "frequency": "Сар бүр (~2 сарын хоцрогдол) + жилийн тайлан (FY2025: 2026.09.30)",
+      "keyData": "30 гишүүн бирж; 2026.08 спот арилжаа 7,643.53 тэрбум иен (+13.4%); тохируулсан данс 14,471,551, идэвхтэй данс 8,975,519; маржин арилжаа; топ койнууд; залруулгын түүх.",
+      "urls": [
+        { "label": "JVCEA статистик", "url": "https://jvcea.or.jp/statistics/information/" }
+      ]
+    },
+    {
+      "id": "thai-sec",
+      "name": "Тайландын SEC — Сарын дижитал хөрөнгийн зах зээлийн тойм",
+      "frequency": "Сар бүр",
+      "keyData": "Дэлхийн зах зээлийн үнэлгээ ба хэмжээ, BTC/ETH давамгайлал, Тайландын биржүүдийн харилцагчийн хөрөнгө, өдрийн дундаж арилжаа, идэвхтэй данс, дотоод/гадаад хөрөнгө оруулагчийн харьцаа. Жишээ (2025.12): харилцагчийн хөрөнгө 79.56 тэрбум бат (−7.29%), өдрийн дундаж арилжаа 1.70 тэрбум бат (~−30%).",
+      "urls": [
+        { "label": "Тайландын SEC", "url": "https://www.sec.or.th" },
+        { "label": "Nation Thailand — Digital assets", "url": "https://www.nationthailand.com/category/business/digital-assets" }
+      ]
+    }
+  ],
+  "additionalReferences": {
+    "note": "Энэ жагсаалтын бүтээгдэхүүнүүдийн 2026 оны идэвх, давтамж, үнийг шалгаагүй. Загвар болгон ашиглахаас өмнө холбоосыг нээж шалгана.",
+    "groups": [
+      { "category": "Судалгааны компани", "items": [
+        { "name": "Messari", "url": "https://messari.io" },
+        { "name": "The Block Data", "url": "https://www.theblock.co/data" },
+        { "name": "Galaxy Research", "url": "https://www.galaxy.com/insights" },
+        { "name": "Chainalysis", "url": "https://www.chainalysis.com/blog" }
+      ] },
+      { "category": "Хөрөнгийн менежер", "items": [
+        { "name": "Bitwise", "url": null },
+        { "name": "Fidelity Digital Assets", "url": null },
+        { "name": "Grayscale Research", "url": "https://research.grayscale.com" },
+        { "name": "21Shares", "url": null }
+      ] },
+      { "category": "Дата/аналитик", "items": [
+        { "name": "Amberdata", "url": null },
+        { "name": "Santiment", "url": null },
+        { "name": "Nansen", "url": null },
+        { "name": "Token Terminal", "url": null },
+        { "name": "Artemis", "url": "https://www.artemis.xyz" },
+        { "name": "DefiLlama", "url": "https://defillama.com" }
+      ] },
+      { "category": "Арилжааны судалгаа", "items": [
+        { "name": "10x Research", "url": null },
+        { "name": "Matrixport", "url": null },
+        { "name": "QCP Capital", "url": null }
+      ] },
+      { "category": "Бирж", "items": [
+        { "name": "OKX", "url": null },
+        { "name": "Bybit", "url": null },
+        { "name": "Kraken", "url": null },
+        { "name": "Upbit", "url": null }
+      ] },
+      { "category": "Медиа newsletter", "items": [
+        { "name": "CoinDesk", "url": null },
+        { "name": "The Block", "url": null },
+        { "name": "Blockworks", "url": null },
+        { "name": "Decrypt", "url": null },
+        { "name": "The Defiant", "url": null },
+        { "name": "Bankless", "url": null },
+        { "name": "Milk Road", "url": null }
+      ] },
+      { "category": "Олон улсын байгууллага", "items": [
+        { "name": "FSB", "url": null },
+        { "name": "IMF", "url": null },
+        { "name": "BIS", "url": null },
+        { "name": "ESMA (TRV)", "url": null },
+        { "name": "EBA", "url": null },
+        { "name": "Bank of England", "url": null },
+        { "name": "CFTC", "url": null }
+      ] },
+      { "category": "Ази/Ойрх Дорнодын зохицуулагч", "items": [
+        { "name": "MAS (Сингапур)", "url": null },
+        { "name": "Hong Kong SFC", "url": null },
+        { "name": "Dubai VARA", "url": null },
+        { "name": "AFSA/AIFC (Казахстан)", "url": null },
+        { "name": "Филиппин, Турк, Австралийн зохицуулагчид", "url": null }
+      ] }
+    ]
+  },
+  "metricsMatrix": {
+    "legend": { "✔": "тогтмол", "○": "үе үе", "–": "байхгүй" },
+    "publishers": [
+      { "id": "coinshares", "label": "CoinShares" },
+      { "id": "glassnode", "label": "Glassnode" },
+      { "id": "k33", "label": "K33" },
+      { "id": "coinmetrics", "label": "Coin Metrics" },
+      { "id": "coinbase", "label": "Coinbase Inst." },
+      { "id": "binance", "label": "Binance (сар)" }
+    ],
+    "rows": [
+      { "metric": "Нийт зах зээлийн үнэлгээ", "values": ["–", "○", "○", "✔", "○", "✔"], "presentation": "Том тоо + % өөрчлөлт, шугаман график" },
+      { "metric": "BTC/ETH үнийн 7 хоног/сарын өөрчлөлт", "values": ["○", "✔", "✔", "✔", "✔", "✔"], "presentation": "KPI карт, лааны график" },
+      { "metric": "BTC давамгайлал", "values": ["–", "–", "○", "○", "–", "✔"], "presentation": "Хувь, хуваарилсан талбайн график" },
+      { "metric": "Спот ETF/ETP урсгал", "values": ["✔", "✔", "✔", "✔", "✔", "✔"], "presentation": "Өдөр/7 хоногийн баганан график (ногоон/улаан)" },
+      { "metric": "Стейблкойны нийлүүлэлт", "values": ["–", "✔", "○", "✔", "○", "✔"], "presentation": "Шугаман/талбайн график, USDT/USDC задаргаа" },
+      { "metric": "Open interest, funding, ликвидаци", "values": ["–", "✔", "✔", "✔", "✔", "○"], "presentation": "Давхар тэнхлэгтэй график, heatmap" },
+      { "metric": "Опционы IV, skew", "values": ["–", "✔", "✔", "○", "✔", "–"], "presentation": "Шугаман график, хугацааны бүтэц" },
+      { "metric": "On-chain (идэвхтэй хаяг, хураамж, Realized Cap)", "values": ["–", "✔", "○", "✔", "○", "○"], "presentation": "Индикатор график + түүхэн зурвас" },
+      { "metric": "DeFi TVL", "values": ["–", "–", "–", "○", "○", "✔"], "presentation": "Баганан/талбайн график (DefiLlama эх сурвалж)" },
+      { "metric": "Fear & Greed", "values": ["–", "○", "○", "–", "–", "✔"], "presentation": "Хэмжигч (gauge) 0–100" },
+      { "metric": "Макро хамаарал (Nasdaq, алт, хүү)", "values": ["○", "✔", "✔", "✔", "✔", "✔"], "presentation": "Корреляцийн матриц, давхцуулсан шугам" },
+      { "metric": "Зохицуулалтын мэдээ", "values": ["✔", "○", "✔", "○", "✔", "✔"], "presentation": "Текст bullet" },
+      { "metric": "Хакердалт/эксплойт", "values": ["–", "–", "–", "–", "○", "✔"], "presentation": "Сарын алдагдлын баганан график" },
+      { "metric": "Токен unlock, үйл явдлын хуанли", "values": ["–", "–", "✔", "–", "○", "✔"], "presentation": "Хүснэгт/хуанли" }
+    ]
+  },
+  "coreMetrics": [
+    "Нийт зах зээлийн үнэлгээ",
+    "BTC/ETH-ийн үнэ ба 7 хоногийн өөрчлөлт",
+    "BTC давамгайлал",
+    "Топ өсөлт/бууралт",
+    "Спот ETF урсгал",
+    "Стейблкойны нийлүүлэлт",
+    "Open interest ба funding rate",
+    "Ликвидаци",
+    "DeFi TVL",
+    "Айдас ба шунахайн индекс (Fear & Greed)"
+  ],
+  "differentiatingMetrics": [
+    "On-chain өртгийн суурь",
+    "Опционы skew",
+    "Биржийн хэмжээний зах зээлийн хувь",
+    "Хакердалтын алдагдал",
+    "Токен unlock"
+  ],
+  "sectionOrder": [
+    "Нэг өгүүлбэрийн гарчиг ба 3–5 гол санаа",
+    "Зах зээлийн тойм",
+    "Урсгал (ETF, стейблкойн)",
+    "Дериватив",
+    "On-chain/DeFi",
+    "Зохицуулалт, мэдээ",
+    "Ирэх 7 хоногийн хуанли",
+    "Эх сурвалж ба анхааруулга"
+  ],
+  "headlineFormula": {
+    "rule": "Тоо + чиглэл + шалтгаан",
+    "examples": [
+      { "source": "CoinShares", "text": "Outflows deepen to US$1.47B as risk-off broadens globally" },
+      { "source": "Glassnode", "text": "Breakdown into Thin Support" },
+      { "source": "K33", "text": "Few buyers, even fewer sellers" },
+      { "source": "Coinbase", "text": "Weekly: Vol Over Direction" }
+    ],
+    "mongolianExample": "ETF-ээс 1.5 тэрбум ам.доллар гарч, BTC 5 хувиар унав: эрсдэлээс зугтах хандлага өргөжив"
+  },
+  "designPractices": {
+    "infographicLayout": [
+      "Толгой: лого, «Виртуал хөрөнгийн 7 хоног», долоо хоногийн дугаар, дата тасалбар огноо",
+      "Гарчиг: нэг өгүүлбэр (тоо + чиглэл + шалтгаан)",
+      "4 KPI карт: нийт зах зээлийн үнэлгээ, BTC үнэ, BTC давамгайлал, Fear & Greed хэмжигч",
+      "ETF урсгал: 5 өдрийн баганан график (ногоон/улаан)",
+      "Хоёр багана: топ 5 өсөлт/бууралт; стейблкойн + DeFi TVL (sparkline)",
+      "Дериватив: OI, funding, ликвидаци",
+      "Монгол блок: USD/MNT, USDT/MNT, дотоодын биржийн арилжаа (боломжтой бол), СЗХ-ны мэдээ",
+      "Ирэх 7 хоног: FOMC, CPI, unlock, хууль",
+      "Хөл: эх сурвалжууд + «Энэ нь хөрөнгө оруулалтын зөвлөгөө биш»"
+    ],
+    "chartTypes": [
+      { "type": "Баганан график (ногоон эерэг, улаан сөрөг)", "use": "ETF/ETP урсгал" },
+      { "type": "KPI карт (том тоо + жижиг % + сум)", "use": "Гол тоонууд" },
+      { "type": "Шугаман/талбайн график", "use": "Зах зээлийн үнэлгээ, стейблкойн, TVL" },
+      { "type": "Хэмжигч (gauge)", "use": "Fear & Greed (0–100)" },
+      { "type": "Heatmap/treemap", "use": "Топ 20 койны 7 хоногийн өгөөж" },
+      { "type": "Дугаарласан график", "use": "Текстэд «(График 3)» гэж иш татах" }
+    ],
+    "color": [
+      "Эерэг/сөрөг чиглэлд ногоон/улаан өнгийг тогтмол хэрэглэх, өнгөний харалган уншигчийн төлөө ▲▼ тэмдэгт нэмэх",
+      "Хөрөнгө тус бүрд тогтмол өнгө (BTC — улбар шар, ETH — ягаан хөх, стейблкойн — ногоон)",
+      "Бараан фон нийгмийн сүлжээнд, цагаан фон PDF-д",
+      "Кирилл үсгийг бүрэн дэмждэг фонт (Inter, Roboto, Noto Sans, Montserrat)"
+    ],
+    "disclaimerExampleMn": "Энэхүү материал нь зөвхөн мэдээллийн зориулалттай бөгөөд хөрөнгө оруулалтын зөвлөгөө биш. Виртуал хөрөнгө өндөр эрсдэлтэй. СЗХ-нд бүртгэлгүй платформоор арилжаа хийхгүй байхыг анхаарна уу.",
+    "citation": "График бүрийн доор «Эх сурвалж: X; Боловсруулсан: [брэнд]; [огноо]-ны байдлаар». Тайлангийн төгсгөлд дата тус бүрийн тасалбар огноог жагсаана.",
+    "tools": [
+      { "name": "Datawrapper", "use": "Статик/интерактив график, embed", "url": "https://www.datawrapper.de" },
+      { "name": "Flourish", "use": "Интерактив график", "url": "https://flourish.studio" },
+      { "name": "Canva", "use": "Нэг хуудас загвар", "url": "https://www.canva.com" },
+      { "name": "Figma", "use": "Компонентод суурилсан загвар", "url": "https://www.figma.com" },
+      { "name": "TradingView", "use": "Үнийн график", "url": "https://www.tradingview.com" },
+      { "name": "Dune", "use": "On-chain дашбоард", "url": "https://dune.com" },
+      { "name": "Looker Studio", "use": "Google Sheets-ээс автомат тайлан", "url": "https://lookerstudio.google.com" }
+    ]
+  },
+  "dataSources": [
+    { "name": "CoinGecko API", "provides": "Үнэ, зах зээлийн үнэлгээ, давамгайлал, топ өсөлт/бууралт, биржүүд", "free": "Demo: сард 10,000 дуудлага, минутад 100", "paid": "Basic $35/сар ($29 жилээр), Analyst, Pro, Enterprise", "terms": "Demo: иш татах заавал, арилжааны лиценз биш", "url": "https://www.coingecko.com/en/api/pricing", "usedByPlatform": true },
+    { "name": "CoinMarketCap API", "provides": "Үнэ, зах зээлийн үнэлгээ, өөрийн Fear & Greed", "free": "Basic: сард 15,000 кредит, минутад 50", "paid": "Hobbyist-аас дээш", "terms": "Нөхцөлийг шууд шалгах", "url": "https://coinmarketcap.com/api/", "usedByPlatform": false },
+    { "name": "DefiLlama", "provides": "TVL, стейблкойн, DEX хэмжээ, хураамж, token unlock, хакердалт", "free": "Нийтийн API (түлхүүргүй) + бүх дашбоард", "paid": "Pro/API захиалга (үнэ эх сурвалжуудын хооронд зөрүүтэй — захиалгын хуудсаас шалгах)", "terms": "Нээлттэй эх; иш татах хэвшилтэй", "url": "https://defillama.com/subscription", "usedByPlatform": true },
+    { "name": "Alternative.me Fear & Greed", "provides": "0–100 сэтгэл зүйн индекс (2018 оноос)", "free": "Бүрэн үнэгүй, түлхүүргүй, JSON/CSV", "paid": "–", "terms": "Арилжаанд зөвшөөрөгдсөн; иш татах тэмдэглэгээг датаны яг хажууд", "url": "https://alternative.me/crypto/fear-and-greed-index/", "usedByPlatform": true },
+    { "name": "ExchangeRate-API (open.er-api.com)", "provides": "USD/MNT лавлах ханш (өдөрт 1 удаа)", "free": "Түлхүүргүй Open Access", "paid": "Түлхүүртэй хувилбарууд", "terms": "«Rates By Exchange Rate API» иш татах заавал", "url": "https://www.exchangerate-api.com/docs/free", "usedByPlatform": true },
+    { "name": "CoinShares Fund Flows", "provides": "ETP урсгал", "free": "Тайлан үнэгүй", "paid": "–", "terms": "Иш татан ашиглах (гараар)", "url": "https://coinshares.com/insights/research-data/", "usedByPlatform": false },
+    { "name": "Farside Investors / SoSoValue", "provides": "Спот BTC/ETH ETF-ийн өдөр тутмын урсгал", "free": "Вэб хүснэгт үнэгүй", "paid": "SoSoValue API", "terms": "Иш татах (гараар)", "url": "https://farside.co.uk", "usedByPlatform": false },
+    { "name": "Glassnode", "provides": "On-chain, дериватив, ETF", "free": "Studio-д хязгаарлагдмал", "paid": "Professional/API", "terms": "Графикийг иш татан ашиглах", "url": "https://studio.glassnode.com", "usedByPlatform": false },
+    { "name": "Coin Metrics (Talos)", "provides": "On-chain, Reference Rates", "free": "Community data", "paid": "Network Data Pro", "terms": "Community лицензийн нөхцөл", "url": "https://coinmetrics.io", "usedByPlatform": false },
+    { "name": "Kaiko", "provides": "Биржийн тик дата, гүн", "free": "Data Debrief Basic", "paid": "Институцийн API", "terms": "Гэрээгээр", "url": "https://www.kaiko.com", "usedByPlatform": false },
+    { "name": "CoinDesk Data (хуучнаар CCData)", "provides": "Биржийн хэмжээ, индекс", "free": "Хязгаарлагдмал", "paid": "Тийм", "terms": "Гэрээгээр", "url": "https://data.coindesk.com", "usedByPlatform": false },
+    { "name": "Dune", "provides": "On-chain SQL дашбоард", "free": "Үнэгүй үзэх, хязгаарлагдмал API", "paid": "Plus/Premium", "terms": "Дашбоардын зохиогчийг иш татах", "url": "https://dune.com", "usedByPlatform": false },
+    { "name": "Token Unlocks (Tokenomist)", "provides": "Токен unlock хуанли", "free": "Вэб үнэгүй", "paid": "API", "terms": "Иш татах", "url": "https://token.unlocks.app", "usedByPlatform": false },
+    { "name": "Rekt / DefiLlama Hacks", "provides": "Хакердалт, эксплойтын бүртгэл", "free": "Вэб үнэгүй", "paid": "DefiLlama Pro API", "terms": "Иш татах", "url": "https://defillama.com/hacks", "usedByPlatform": false },
+    { "name": "Монголбанк", "provides": "Албан ханш (USD/MNT)", "free": "Үнэгүй", "paid": "–", "terms": "Албан эх сурвалж (гараар)", "url": "https://www.mongolbank.mn", "usedByPlatform": false },
+    { "name": "Санхүүгийн зохицуулах хороо (СЗХ)", "provides": "ВХҮҮ-ийн бүртгэл, жилийн/улирлын статистик", "free": "Үнэгүй", "paid": "–", "terms": "Албан эх сурвалж (гараар)", "url": "https://www.frc.mn", "usedByPlatform": false }
+  ],
+  "weeklyTemplate": {
+    "formats": [
+      { "name": "Нэг хуудас инфографик", "schedule": "Даваа 12:00 (УБ)", "channel": "Нийгмийн сүлжээ + вэб", "size": "1080×1350 px" },
+      { "name": "Товч мэдээ / newsletter", "schedule": "Даваа 12:00 (УБ)", "channel": "Имэйл, Telegram, Facebook", "size": "400–600 үг, 2–3 минут унших" },
+      { "name": "Дэлгэрэнгүй PDF тайлан", "schedule": "Сар бүр", "channel": "Вэб", "size": "6–10 хуудас" }
+    ],
+    "briefSections": [
+      "Гарчиг (тоо + чиглэл + шалтгаан)",
+      "7 хоногийн 3 гол санаа (bullet бүр тоотой)",
+      "Зах зээл тоогоор: 6–8 мөр хүснэгт, өмнөх 7 хоногтой харьцуулсан ▲▼",
+      "Монгол: төгрөгөөр BTC үнэ, USDT/MNT, СЗХ-ны мэдээ",
+      "Ирэх 7 хоногт анхаарах 3–5 үйл явдал",
+      "Эх сурвалж, анхааруулга"
+    ],
+    "monthlyAddOns": [
+      "Сарын 1 дэх 7 хоног: CEX/DEX хэмжээ (CoinDesk Data), Binance сарын тойм",
+      "JVCEA, Тайландын SEC-ийн сарын тоо гарсан 7 хоног: «Азийн зохицуулагчдын тоо» хүснэгт",
+      "Хагас жил бүр: Солонгосын FIU-ийн судалгаа, СЗХ-ны жилийн тайлангийн ВХҮҮ хэсэг"
+    ]
+  },
+  "productionSchedule": [
+    { "timeUb": "Пүрэв – Баасан", "task": "Ирэх 7 хоногийн хуанли, мэдээний жагсаалт, гарчгийн санаа", "owner": "Редактор" },
+    { "timeUb": "Бямба өглөө", "task": "АНУ-ын спот ETF-ийн Баасан гарагийн урсгалыг (Farside/SoSoValue) тэмдэглэх", "owner": "Шинжээч" },
+    { "timeUb": "Даваа 07:55", "task": "Автомат ноорог (тоо, график, санал болгосон өгүүлбэр) Pull Request хэлбэрээр ирнэ", "owner": "Автомат (GitHub Actions)" },
+    { "timeUb": "Даваа 08:00–10:00", "task": "Гарчиг, 3 гол санаа, ETF урсгал, Монгол хэсэг, хуанлийг бичих", "owner": "Шинжээч + редактор" },
+    { "timeUb": "Даваа 10:00–11:00", "task": "QA: тоог 2 эх сурвалжаар тулгах, ▲▼, огноо, нэгж, эх сурвалж, анхааруулга, үг үсэг", "owner": "Редактор (4 нүдний зарчим)" },
+    { "timeUb": "Даваа 12:00", "task": "PR merge → сайт автоматаар шинэчлэгдэнэ; инфографикийг PNG-ээр татаж нийгмийн сүлжээнд, товч мэдээг Telegram/Facebook-т", "owner": "Контент менежер" },
+    { "timeUb": "Мягмар", "task": "Хариу, алдааг засах; залруулгыг тайланд тэмдэглэх", "owner": "Редактор" },
+    { "timeUb": "Сар бүр", "task": "Сарын PDF тайлан, Азийн зохицуулагчдын хавсралт", "owner": "Бүх баг" }
+  ],
+  "mongolia": {
+    "legal": [
+      "Улсын Их Хурал 2021 оны 12-р сарын 17-нд Виртуал хөрөнгийн үйлчилгээ үзүүлэгчийн тухай хуулийг баталсан.",
+      "СЗХ 2022 оны 6-р сараас ВХҮҮ бүртгэж эхэлсэн; өмнө нь үйл ажиллагаа явуулж байсан этгээдүүд гурван сарын шилжилтийн хугацаанд бүртгүүлэх ёстой байв.",
+      "СЗХ зөвхөн платформыг бүртгэдэг, койныг бүртгэдэггүй.",
+      "Монголбанк криптог хууль ёсны төлбөрийн хэрэгсэл гэж хүлээн зөвшөөрдөггүй.",
+      "СЗХ-ны 2025 оны жилийн тайланд хууль нэмэлт, өөрчлөлтгүй гэж тэмдэглэгдсэн. Журмууд шинэчлэгдсэн: үйл ажиллагааны журмыг 2024 оны 657 тоот тогтоолоор баталж, 2025 оны 74 тоот тогтоолоор дахин баталсан; бүртгэлийн журамд 2023 оны 253 тоот тогтоолоор өөрчлөлт оруулсан."
+    ],
+    "vasps": {
+      "note": "СЗХ-ны 2024, 2025 оны жилийн тайлангаар 12 ВХҮҮ бүртгэлтэй. Нэрсийн хамгийн сүүлийн нийтлэгдсэн жагсаалт нь 2023 оных. Нийтлэхээсээ өмнө license.frc.mn дээр шалгана.",
+      "sourceUrl": "https://www.frc.mn/resources/Images/Document/202404/cRk75/%D0%9D%D1%8D%D0%B3%D1%82%D0%B3%D1%8D%D0%BB-final-2023.04.pdf",
+      "verifyUrl": "https://license.frc.mn/",
+      "items": [
+        { "no": 1, "company": "Дижитал эксчэйнж Монголиа ХХК", "platform": "Trade.mn", "registeredAt": "2022-09-21" },
+        { "no": 2, "company": "Койнхаб ХХК", "platform": "Coinhub.mn", "registeredAt": "2022-09-21" },
+        { "no": 3, "company": "Ай Дакс ХХК", "platform": "Idax.exchange", "registeredAt": "2022-09-21" },
+        { "no": 4, "company": "Нэшнл Трэжэр Бит Секюрити ХХК", "platform": "Ncx.mn", "registeredAt": "2022-10-10" },
+        { "no": 5, "company": "Корекс ХХК", "platform": "Corex.mn", "registeredAt": "2022-10-10" },
+        { "no": 6, "company": "Икс-Мета ХХК", "platform": "X-meta.com", "registeredAt": "2022-10-10" },
+        { "no": 7, "company": "Комплекс Дижитал Экосистем ХХК", "platform": "Complex.mn", "registeredAt": "2022-10-10" },
+        { "no": 8, "company": "Чойжин Алтекс ХХК", "platform": "Altex.mn", "registeredAt": "2022-10-10" },
+        { "no": 9, "company": "Зоос Дижитал Эксчэйнж ХХК", "platform": "Zoos.digital", "registeredAt": "2022-10-10" },
+        { "no": 10, "company": "Капекс Капитал ХХК", "platform": "Capex.mn", "registeredAt": "2022-11-25" },
+        { "no": 11, "company": "Анд Дэнөүд ХХК", "platform": "Denode.io", "registeredAt": "2022-11-25" },
+        { "no": 12, "company": "Паверд АДМ ХХК", "platform": "Octagon.mn", "registeredAt": "2023-01-13" }
+      ]
+    },
+    "stats": {
+      "source": "СЗХ-ны жилийн тайлангууд (2024, 2025) ба 2023 оны салбарын нэгдсэн тайлан",
+      "columns": ["2023 оны эцэс", "2024", "2025"],
+      "rows": [
+        { "metric": "Бүртгэлтэй ВХҮҮ", "values": ["12", "12", "12"] },
+        { "metric": "Бүртгэлтэй хэрэглэгч", "values": ["921,022", "921,022*", "709,567"] },
+        { "metric": "Идэвхтэй арилжаачин", "values": ["15,170", "14,011 (1.5%)", "18,463 (2.6%)"] },
+        { "metric": "Арилжаалагдаж буй виртуал хөрөнгө", "values": ["–", "645 (дотоодын 42)", "770 (дотоодын 37)"] },
+        { "metric": "Дотоодын VA-ийн зах зээлийн үнэлгээ", "values": ["241.9 тэрбум ₮", "258.3 тэрбум ₮", "250.0 тэрбум ₮"] },
+        { "metric": "Салбарын нийт хөрөнгө", "values": ["55.1 тэрбум ₮", "77.9 тэрбум ₮", "53.9 тэрбум ₮"] }
+      ],
+      "footnotes": [
+        "* СЗХ-ны 2026–2029 оны стратеги төлөвлөгөөнд хэрэглэгчийн цуврал 837,341 / 921,022 / 932,252 / 709,567 гэж өгөгдсөн тул 2024 оны тоо 932,252 байж болзошгүй — эх сурвалжуудын хооронд зөрүүтэй.",
+        "2023 онд дотоодын виртуал хөрөнгийн арилжаа 136.6 тэрбум ₮ (өдөрт 150.1 сая ₮), гадаадын виртуал хөрөнгийн арилжаа 1.12 их наяд ₮ гэж мэдээлэгдсэн. Анхаар: жилийн нийт дүн ба өдрийн дундаж хоорондоо нийцэхгүй байгаа тул (150.1 сая × 365 ≈ 54.8 тэрбум) нийтлэхээсээ өмнө эх баримтаас тулгаж шалгана.",
+        "Стратеги төлөвлөгөөнд дотоодын виртуал хөрөнгийн арилжааг 80.8 тэрбум ₮ (өдөрт 221.4 сая ₮) гэж тэмдэглэсэн, оныг нь тодорхой заагаагүй.",
+        "Монцамэ 2023 оны 10-р сард 912,238 хэрэглэгч, өдөрт 128 сая ₮ арилжаа гэж мэдээлсэн."
+      ]
+    },
+    "marketShare2023": {
+      "note": "Дотоодын арилжааны зах зээлийн хувь (2023)",
+      "items": [
+        { "platform": "IDAX", "sharePct": 42.1 },
+        { "platform": "Coinhub", "sharePct": 33.5 },
+        { "platform": "X-Meta", "sharePct": 19.1 }
+      ],
+      "top3SharePct": 94
+    },
+    "dataAvailability": [
+      "СЗХ ВХҮҮ-ээс өдөр тутмын арилжаа, ханшийн датаг API-аар хүлээн авч, 7 хоног/сар бүр хянадаг ч энэ нь дотоод хэрэгцээнд зориулагдсан, нийтэд нээлттэй биш.",
+      "СЗХ-ны тогтмол нийтлэлд Power BI дашбоард, статистикийн бюллетень, 7 хоног тутмын зах зээлийн мэдээ, сар/улирлын тойм багтдаг ч тусдаа улирлын ВХҮҮ-ийн статистик цуврал олдсонгүй.",
+      "Монголбанкны Санхүүгийн мэдээллийн алба виртуал хөрөнгийн тогтмол статистик нийтэлдэг нь олдсонгүй.",
+      "Монгол хэлээр гардаг, 7 хоног тутмын, тоонд суурилсан виртуал хөрөнгийн бүтээгдэхүүн одоогоор харагдахгүй байна.",
+      "Дотоодын дата авах арга: (1) бүртгэлтэй платформуудын нийтэд нээлттэй үнэ, арилжааны мэдээллийг тэдний зөвшөөрлөөр ашиглах; (2) СЗХ-той дата хуваалцах/нийтлэх талаар хамтрах; (3) салбарын холбоотой хамтрах."
+    ],
+    "links": [
+      { "label": "СЗХ-ны 2025 оны жилийн тайлан", "url": "https://www.frc.mn/resources/Image/Document/202606/PWPKV/SZHoroo-2025-06-02edit-idml.pdf" },
+      { "label": "СЗХ-ны 2024 оны жилийн тайлан", "url": "https://www.frc.mn/resources/Image/Document/202504/3HWf4/Annual-Report-2024.pdf" },
+      { "label": "Виртуал хөрөнгийн үйлчилгээ үзүүлэгчийн тухай хууль", "url": "https://legalinfo.mn/mn/detail?lawId=16390242606091" },
+      { "label": "СЗХ — тусгай зөвшөөрөл, бүртгэлийн сан", "url": "https://license.frc.mn/" },
+      { "label": "СЗХ — 2023 оны салбарын нэгдсэн тайлан (ВХҮҮ-ийн жагсаалт)", "url": "https://www.frc.mn/resources/Images/Document/202404/cRk75/%D0%9D%D1%8D%D0%B3%D1%82%D0%B3%D1%8D%D0%BB-final-2023.04.pdf" }
+    ]
+  },
+  "glossary": [
+    { "mn": "Виртуал хөрөнгийн үйлчилгээ үзүүлэгч (ВХҮҮ)", "en": "VASP" },
+    { "mn": "Нийт зах зээлийн үнэлгээ", "en": "Total market capitalization" },
+    { "mn": "Биткойны давамгайлал", "en": "BTC dominance" },
+    { "mn": "Арилжааны хэмжээ (спот / дериватив)", "en": "Trading volume (spot / derivatives)" },
+    { "mn": "Биржийн арилжаалагддаг сан (БАС)-ийн урсгал: орох / гарах", "en": "ETF inflows / outflows" },
+    { "mn": "Тогтвортой койн (стейблкойн)-ы нийлүүлэлт", "en": "Stablecoin supply" },
+    { "mn": "Нээлттэй позиц", "en": "Open interest (OI)" },
+    { "mn": "Санхүүжилтийн хүү", "en": "Funding rate" },
+    { "mn": "Албадан хаалт (ликвидаци)", "en": "Liquidations" },
+    { "mn": "DeFi-д түгжигдсэн нийт үнэ цэнэ", "en": "Total value locked (TVL)" },
+    { "mn": "Айдас ба шунахайн индекс", "en": "Fear & Greed Index" },
+    { "mn": "Хэлхээн доторх (on-chain) үзүүлэлт", "en": "On-chain metrics" },
+    { "mn": "Токены түгжээ тайлалт", "en": "Token unlock" },
+    { "mn": "Дата тасалбар огноо", "en": "Data as of / cut-off" }
+  ],
+  "caveats": [
+    "Нэмэлт лавлах жагсаалтын байгууллагуудын 2026 оны идэвх, давтамж, үнийг шалгаагүй.",
+    "Зарим үнийн мэдээлэл (жишээ нь DefiLlama-гийн Pro/API) эх сурвалжуудын хооронд зөрүүтэй; албан ёсны хуудаснаас шалгана.",
+    "Монголын тоонууд жил тутмын, хоцрогдолтой; 2024 оны хэрэглэгчийн тоо эх сурвалжуудын хооронд зөрүүтэй (921,022 ба 932,252).",
+    "Солонгосын FIU-ийн судалгааны тоонууд нь улсын баталсан статистик биш, компаниудын ирүүлсэн мэдээлэл.",
+    "Энэхүү судалгаа нь хөрөнгө оруулалтын зөвлөгөө биш."
+  ],
+  "sources": [
+    { "title": "CoinShares — Digital Asset Fund Flows (2026.05.26)", "url": "https://coinshares.com/insights/research-data/fund-flows-26-05-26/" },
+    { "title": "CoinShares — Fund Flows (2026.05.05)", "url": "https://coinshares.com/insights/research-data/fund-flows-05-05-26/" },
+    { "title": "CoinShares — Volume 287 (Medium)", "url": "https://researchblog.coinshares.com/volume-287-digital-asset-fund-flows-weekly-report-e12b92aa9cbd" },
+    { "title": "CoinShares — Weekly Fund Flows PDF (Mondo Visione)", "url": "https://mondovisione.com/_assets/files/Weekly-Fund-Flows-NEW1_08Apr26.pdf" },
+    { "title": "Glassnode — The Week On-chain, 2026 оны 37-р долоо хоног", "url": "https://research.glassnode.com/the-week-onchain-week-37-2026/" },
+    { "title": "Glassnode — The Week On-chain, 2026 оны 25-р долоо хоног", "url": "https://research.glassnode.com/the-week-onchain-week-25-2026/" },
+    { "title": "Glassnode — The Week On-chain, 2026 оны 1-р долоо хоног", "url": "https://research.glassnode.com/the-week-onchain-week-01-2026/" },
+    { "title": "Glassnode — Newsletter архив", "url": "https://research.glassnode.com/tag/newsletter/" },
+    { "title": "K33 — Ahead of the Curve", "url": "https://k33.com/research/ahead-of-the-curve" },
+    { "title": "K33 — Markets keep climbing on ETF anticipation", "url": "https://k33.com/research/articles/markets-keep-climbing-on-etf-anticipation" },
+    { "title": "Coin Metrics — State of the Network #370 (Substack)", "url": "https://coinmetrics.substack.com/p/state-of-the-network-issue-370" },
+    { "title": "Talos — State of the Network 370", "url": "https://www.talos.com/insights/state-of-the-network-370" },
+    { "title": "Kaiko Research Premium", "url": "https://research.kaiko.com/kaiko-research-premium" },
+    { "title": "Kaiko — Үнэгүй судалгаа", "url": "https://www.kaiko.com/products/instantly-access-kaiko-crypto-and-blockchain-research-for-free" },
+    { "title": "Coinbase Institutional — Weekly 2026.09.25", "url": "https://www.coinbase.com/institutional/research-insights/research/weekly-market-commentary/weekly-2026-09-25" },
+    { "title": "Coinbase Institutional — Weekly 2026.08.28", "url": "https://www.coinbase.com/institutional/research-insights/research/weekly-market-commentary/weekly-2026-08-28" },
+    { "title": "Binance Research — Monthly Market Insights 2026.10", "url": "https://public.bnbstatic.com/static/files/research/monthly-market-insights-2026-10.pdf" },
+    { "title": "Binance Research — Monthly Market Insights 2026.04", "url": "https://public.bnbstatic.com/static/files/research/monthly-market-insights-2026-04.pdf" },
+    { "title": "Binance Research — Telegram", "url": "https://t.me/s/binanceresearch" },
+    { "title": "CoinDesk Data — Exchange Review (2026.07)", "url": "https://data.coindesk.com/reports/exchange-review-july-2026" },
+    { "title": "VanEck — Bitcoin ChainCheck (2026.08 дунд)", "url": "https://www.vaneck.com/us/en/blogs/digital-assets/matthew-sigel-vaneck-mid-august-2026-bitcoin-chaincheck/" },
+    { "title": "VanEck — NODE Monthly Commentary (2026.09)", "url": "https://www.vaneck.com/us/en/blogs/digital-assets/matthew-sigel-node-monthly-commentary-september-2026/" },
+    { "title": "FATF — Targeted Update on VAs/VASPs 2026", "url": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/targeted-updated-virtualassets-vasps-2026.html" },
+    { "title": "Financial News — Солонгосын ВХҮҮ-ийн судалгаа (2026.10.01)", "url": "https://en.fnnews.com/news/202610010958301697" },
+    { "title": "Asia Economy — Солонгосын ВХҮҮ-ийн судалгаа", "url": "https://view.asiae.co.kr/en/article/2026100110174931339" },
+    { "title": "JVCEA — Статистик", "url": "https://jvcea.or.jp/statistics/information/" },
+    { "title": "Nation Thailand — Digital assets", "url": "https://www.nationthailand.com/category/business/digital-assets" },
+    { "title": "CoinGecko API — Үнэ ба төлөвлөгөө", "url": "https://www.coingecko.com/en/api/pricing" },
+    { "title": "CoinMarketCap — Free crypto API comparison 2026", "url": "https://coinmarketcap.com/academy/article/best-free-crypto-api-in-2026-free-tier-comparison" },
+    { "title": "DefiLlama — Захиалга", "url": "https://defillama.com/subscription" },
+    { "title": "Alternative.me — Fear & Greed Index", "url": "https://alternative.me/crypto/fear-and-greed-index/" },
+    { "title": "ExchangeRate-API — Open Access", "url": "https://www.exchangerate-api.com/docs/free" },
+    { "title": "СЗХ — 2025 оны жилийн тайлан", "url": "https://www.frc.mn/resources/Image/Document/202606/PWPKV/SZHoroo-2025-06-02edit-idml.pdf" },
+    { "title": "СЗХ — 2024 оны жилийн тайлан", "url": "https://www.frc.mn/resources/Image/Document/202504/3HWf4/Annual-Report-2024.pdf" },
+    { "title": "СЗХ — 2024 оны жилийн тайлан (монгол)", "url": "https://www.frc.mn/resources/Image/Document/202504/GfGys/AR2024-mgl.pdf" },
+    { "title": "СЗХ — 2023 оны салбарын нэгдсэн тайлан", "url": "https://www.frc.mn/resources/Images/Document/202404/cRk75/%D0%9D%D1%8D%D0%B3%D1%82%D0%B3%D1%8D%D0%BB-final-2023.04.pdf" },
+    { "title": "СЗХ — ВХҮҮ-ийн орон нутгийн төлөөлөгч (2023)", "url": "https://www.frc.mn/resources/Images/Document/202310/hLwhU/%D0%92%D0%A5%D2%AE%D2%AE-%D0%BE%D1%80%D0%BE%D0%BD-%D0%BD%D1%83%D1%82%D0%B3%D0%B8%D0%B9%D0%BD-%D1%82%D3%A9%D0%BB%D3%A9%D3%A9%D0%BB%D3%A9%D0%B3%D1%87.pdf" },
+    { "title": "Виртуал хөрөнгийн үйлчилгээ үзүүлэгчийн тухай хууль", "url": "https://legalinfo.mn/mn/detail?lawId=16390242606091" },
+    { "title": "Монцамэ — ВХҮҮ-ийн хэрэглэгчид (2023)", "url": "https://www.montsame.mn/ru/read/329200" },
+    { "title": "Өнөөдөр — Виртуал хөрөнгө", "url": "https://www.unuudur.mn/a/249207" },
+    { "title": "Ikon.mn — Виртуал хөрөнгө", "url": "https://ikon.mn/n/2n04" },
+    { "title": "Elliptic — Mongolia country guide", "url": "https://www.elliptic.co/country-guides/mongolia/" }
+  ]
+}
