@@ -11,8 +11,65 @@
 | 2 | Дата скриптүүд | ✅ 2026.10.21 — хүлээн авсан |
 | 3 | GitHub + Pages + клиент холболт | ✅ 2026.10.21 — хүлээн авсан |
 | 4 | 7 хоногийн тайлан | ✅ 2026.10.21 — хүлээн авсан |
-| 5 | EAS Hosting deploy | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
-| 6 | QA ба баримт | ⏳ Зөвшөөрөл хүлээж байна |
+| 5 | EAS Hosting deploy | ✅ 2026.10.21 — хүлээн авсан |
+| 6 | QA ба баримт | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
+
+## 2026.10.21 — Үе шат 6: QA ба баримт
+
+### Хийсэн
+- **Lighthouse-ийн засварууд** (`900b050`, `f9ef658`):
+  - CLS: `/`, `/zah-zeel`, `/medee` хуудсууд build үеийн fallback snapshot-ийг loader-оор авч, react-query-д `placeholderData` болгон өгдөг (D49). Ингэснээр статик HTML-д бодит тоо орж, hydration-ий дараа хуудас үсрэхгүй. Snapshot харагдаж байх үед `LiveStatus` нь туз гаргахгүй (`pending`).
+  - Мэдээний «N минутын өмнө»-г hydration-ий дараа л харуулна (өмнө нь огноо). Статик HTML ба клиентийн текст ижил байна.
+  - Фонт: Inter-ийг hydration-ий дараа `loadAsync` + `display: optional`-оор ачаална (D50).
+  - Хүртээмж: ARIA role (`listitem`, `button`, `aria-expanded`), логоны давхар нэр, жижиг холбоосны дарах талбай (`paddingVertical: 3`), өнгөний тодрол (D51).
+- **Брэнд зураг** (`0a49510`): `public/og.png` (1200×630), `assets/images/favicon.png` (48), `assets/images/icon.png` (1024). `scripts/dev/make-brand-images.ps1`-ээр Inter фонтоор үүсгэнэ (D52).
+- **Баримт:** `README.md` (архитектур, командууд, GitHub тохиргоо, засвар үйлчилгээ), `docs/EDITOR.md` (техникийн бус редакторын заавар: долоо хоногийн хуваарь, PR дээр ноорог засах, QA, нийтлэх, PNG/хэвлэх, залруулга, асуудал шийдэх).
+- sitemap.xml ба robots.txt-ийг Үе шат 1-ээс `prepare-build` гаргадаг. Production дээр 200 (Үе шат 5).
+
+### Lighthouse (mobile, lighthouse 13.5.0, production)
+| Хуудас | Өмнө: Perf / A11y / BP / SEO | Дараа: Perf / A11y / BP / SEO | Дараа: CLS · TBT |
+|---|---|---|---|
+| `/` | 87 / 90 / 96 / 100 | **93** / 100 / 100 / 100 | 0.030 · 308 ms |
+| `/zah-zeel` | 72 / 80 / 96 / 100 | **89** / 100 / 100 / 100 | 0.035 · 414 ms |
+| `/medee` | 72 / 91 / 96 / 100 (CLS 0.706) | **93** / 100 / 100 / 100 | 0.035 · 290 ms |
+| `/tailan` | 96 / 88 / 100 / 100 | **94** / 100 / 100 / 100 | 0 · 274 ms |
+| `/sudalgaa` | 93 / 77 / 100 / 100 | **88** / 100 / 100 / 100 | 0 · 271 ms |
+| `/arga-zui` | 96 / 83 / 100 / 100 | **96** / 100 / 100 / 100 | 0 · 234 ms |
+
+- A11y, Best Practices, SEO бүх хуудсанд 100.
+- **Performance ≥90 зорилт `/zah-zeel` ба `/sudalgaa`-д хангагдаагүй.** Давтан хэмжихэд zah-zeel 82–89, sudalgaa 86–88. Шалтгаан:
+  - React Native Web-ийн hydration-ий TBT (330–450 ms). Entry bundle 1.1 MB (React Native Web + router + zod + react-query).
+  - sudalgaa-гийн HTML том (448 KB, шахсанаар 32 KB).
+- Туршсан боловч буцаасан: `useFonts` + `optional` нь статик HTML-д 4 TTF preload (≈630 KB) нэмж, Chrome анхны дүрслэлийг хүлээлгэсэн (LCP 8–9 сек). → D50.
+
+### SPEC §13.2 техникийн шалгалт
+| # | Шалгалт | Үр дүн |
+|---|---|---|
+| 1 | Клиент bundle/HTML-д нууц түлхүүр байхгүй | ✅ `dist/`-д `CG-` алга |
+| 2 | Гадаад холбоос `rel="noopener noreferrer"` | ✅ 222 холбоос бүгд |
+| 3 | Иш татах (CoinGecko, DefiLlama, Alternative.me, ExchangeRate-API) + анхааруулга | ✅ 6 хуудас бүгд |
+| 4 | Мэдээнд зөвхөн гарчиг, эх сурвалж, огноо, холбоос, шошго | ✅ |
+| 5 | Pages унасан үед fallback | ✅ `EXPO_PUBLIC_DATA_BASE_URL=https://pages-down.invalid/…`-ээр build хийж локал сервер дээр шалгасан: саарал «Түр хадгалсан өгөгдөл» туз, build үеийн бодит дата харагдсан |
+| 6 | 360px-д хэвтээ гүйлгээгүй | ✅ Production-ийн `/`, `/zah-zeel`, `/medee`, `/tailan`, `/sudalgaa`, `/arga-zui`, 404 бүгд `scrollWidth = 360` |
+| 7 | Lighthouse ≥90 | ⚠️ 4/6 хуудас. zah-zeel 89, sudalgaa 88 (дээрх хүснэгт) |
+
+- Typecheck ✅ · 162 тест ✅ · `expo export` ✅. Push бүрийн deploy run ногоон.
+
+### Мэдэгдэж буй сул тал / анхаарах
+- Дээрх хоёр хуудасны Performance 90-ээс бага. Цаашид сайжруулах бол: клиентэд `zod/mini`, судалгааны хэсгүүдийг хуваах, коин хүснэгтийг hydration-ий дараа зурах.
+- Dark горимтой хэрэглэгчид: `+html.tsx` нь дэвсгэрийг media query-ээр бараан болгодог. Контент нь hydration хүртэл цайвар өнгөөр харагдана (Үе шат 1-ийн тэмдэглэл, засаагүй).
+- EAS хадгалах сан: deploy бүр ≈9 MB. Production deployment устахгүй тул ≈1–1.5 жилд 1 GB-д хүрнэ. README-д хянах ба `eas deploy:delete` заавар бий (Нээлттэй асуулт 10-ын үлдэгдэл).
+- Scheduled workflow-ийн 60 хоногийн дүрэм: API-аар өөрийгөө идэвхжүүлэх keepalive хийгээгүй. `data-history`-ийн өдөр бүрийн commit-д найдаж, унтарвал сэргээх заавар README-д бий.
+- Хуучин хоосон EAS төсөл `@cerebrumanthropic/kripto-7hon`-ийг expo.dev-ээс устгаж болно.
+- Хэвлэх харилцах цонх ба clipboard-ийг автоматаар шалгаагүй (Үе шат 4). `AUTO_PUBLISH=true` гинжийг ажиллуулж шалгаагүй (Үе шат 5).
+
+### Техникийн шийдвэрүүд (Үе шат 6)
+| # | Шийдвэр |
+|---|---|
+| D49 | Амьд дата бүхий хуудсууд build үеийн snapshot-ийг (`readFallback`) loader-оор авч, `useMarket`/`useNews`/`useHistory`-д `placeholderData` болгон өгнө. Pages-ийн хариу ирэхэд солигдоно. |
+| D50 | Inter-ийг `RootLayout`-ийн `useEffect` дотор `loadAsync`-оор, `FontDisplay.OPTIONAL`-тай ачаална. `useFonts` нь preload нэмж анхны дүрслэлийг хаадаг. Анхны ачаалалд fallback фонт харагдаж болно, дараагийн хуудсанд кэшээс Inter. |
+| D51 | Цайвар горимын accent `#A8741F` → `#8A5D12` (AA 4.5:1). BTC/ETH/стейблкойн тэмдэгт дээр бараан текст `#14161B`. D16-г шинэчилнэ. |
+| D52 | og/favicon/icon-ийг `scripts/dev/make-brand-images.ps1` (System.Drawing + Inter) үүсгэнэ. Файл UTF-8 BOM-тэй байх ёстой (PowerShell 5.1 кирилл). Жин бүрийг тусдаа `PrivateFontCollection`-д ачаална. |
 
 ## 2026.10.21 — Үе шат 5: EAS Hosting deploy
 
