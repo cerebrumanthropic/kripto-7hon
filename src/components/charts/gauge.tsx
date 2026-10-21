@@ -25,6 +25,34 @@ function arc(cx: number, cy: number, r: number, from: number, to: number): strin
   return `M ${x0} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y1}`;
 }
 
+/** Хагас тойргийн SVG (утга/шошгогүй) — инфографикт өөрийн өнгөөр. */
+export function GaugeArc({ value, size, ink, label }: { value: number; size: number; ink: string; label: string }) {
+  const h = size / 2 + 14;
+  const cx = size / 2;
+  const cy = size / 2;
+  const r = size / 2 - 14;
+  const a = gaugeAngle(value);
+  return (
+    <View role="img" aria-label={`${label}: ${value}`}>
+      <Svg width={size} height={h}>
+        {BANDS.map((b) => (
+          <Path key={b.from} d={arc(cx, cy, r, b.from + 0.6, b.to - 0.6)} stroke={b.color} strokeWidth={size / 16} fill="none" />
+        ))}
+        <Line
+          x1={cx}
+          y1={cy}
+          x2={cx + (r - 14) * Math.cos(a)}
+          y2={cy - (r - 14) * Math.sin(a)}
+          stroke={ink}
+          strokeWidth={3}
+          strokeLinecap="round"
+        />
+        <Circle cx={cx} cy={cy} r={5} fill={ink} />
+      </Svg>
+    </View>
+  );
+}
+
 /** Айдас ба шунахайн индексийн хагас тойрог хэмжигч. */
 export function Gauge({ value, label, size = 220 }: { value: number; label: string; size?: number }) {
   const { c } = useTheme();

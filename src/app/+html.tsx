@@ -13,7 +13,13 @@ html, body { margin: 0; background: #F6F4EF; color: #14161B; }
 [id] { scroll-margin-top: 84px; }
 .skip { position: absolute; left: -9999px; top: 8px; z-index: 100; padding: 8px 12px; background: #2457C5; color: #fff; border-radius: 6px; font-family: system-ui, sans-serif; }
 .skip:focus { left: 8px; }
-@media print { [role="banner"], [role="contentinfo"] { display: none !important; } }
+@media print {
+  [role="banner"], [role="contentinfo"], .skip,
+  #report-actions, #copy-text, #infographic-controls, #report-nav { display: none !important; }
+  html, body { background: #fff !important; }
+  [role="img"], [role="table"] { break-inside: avoid; }
+  @page { margin: 14mm; }
+}
 `;
 
 export default function Root({ children }: PropsWithChildren) {

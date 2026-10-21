@@ -1,0 +1,109 @@
+# 7 хоногийн тайлангийн ноорог (SPEC §10.2). Ням 23:55 UTC = Даваа 07:55 УБ.
+# AUTO_PUBLISH != 'true' → Pull Request (редактор засаад merge хийнэ).
+# AUTO_PUBLISH == 'true' → main руу шууд commit (deploy job Үе шат 5-д deploy.yml-тэй хамт нэмэгдэнэ).
+name: weekly-report
+
+on:
+  schedule:
+    - cron: "55 23 * * 0"
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Жишээ нь 2026-W43 (хоосон бол автоматаар)"
+        required: false
+      dry_run:
+        description: "Зөвхөн шалгах (файл бичихгүй, PR үүсгэхгүй)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-report
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      COINGECKO_DEMO_API_KEY: ${{ secrets.COINGECKO_DEMO_API_KEY }}
+      DATA_BASE_URL: ${{ vars.DATA_BASE_URL }}
+      CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+      SITE_URL: ${{ vars.SITE_URL }}
+      WEEK_INPUT: ${{ inputs.week }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Checkout data-history → store/
+        uses: actions/checkout@v7
+        with:
+          ref: data-history
+          path: store
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Resolve week
+        id: week
+        run: |
+          if [ -n "$WEEK_INPUT" ]; then W="$WEEK_INPUT"; else W="$(npx tsx scripts/build-weekly.ts --print-week)"; fi
+          echo "week=$W" >> "$GITHUB_OUTPUT"
+          echo "7 хоног: $W"
+
+      # PR branch аль хэдийн байвал редакторын .md-г авна — build-weekly үүнийг дарж бичихгүй (CLAUDE.md дүрэм 6)
+      - name: Keep editor's draft from existing PR branch
+        env:
+          WEEK: ${{ steps.week.outputs.week }}
+        run: |
+          if git ls-remote --exit-code --heads origin "report/$WEEK" >/dev/null; then
+            git fetch origin "report/$WEEK"
+            git checkout "origin/report/$WEEK" -- "content/reports/$WEEK.md" 2>/dev/null && echo "report/$WEEK-ийн .md-г хадгалав" || true
+          fi
+
+      - name: Build weekly draft
+        env:
+          WEEK: ${{ steps.week.outputs.week }}
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+          AUTO: ${{ vars.AUTO_PUBLISH == 'true' && '--auto-publish' || '' }}
+        run: npm run report:draft -- --week "$WEEK" $DRY_RUN $AUTO
+
+      - name: Validate
+        if: ${{ !inputs.dry_run }}
+        run: npm run validate
+
+      - name: Open / update draft PR
+        if: ${{ !inputs.dry_run && vars.AUTO_PUBLISH != 'true' }}
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: report/${{ steps.week.outputs.week }}
+          title: "Тайлан ${{ steps.week.outputs.week }} — ноорог"
+          commit-message: "report: draft ${{ steps.week.outputs.week }}"
+          add-paths: |
+            content/reports/${{ steps.week.outputs.week }}.json
+            content/reports/${{ steps.week.outputs.week }}.md
+          body-path: .github/report-qa.md
+          delete-branch: true
+
+      - name: Publish directly (AUTO_PUBLISH)
+        if: ${{ !inputs.dry_run && vars.AUTO_PUBLISH == 'true' }}
+        env:
+          WEEK: ${{ steps.week.outputs.week }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "content/reports/$WEEK.json" "content/reports/$WEEK.md"
+          git diff --cached --quiet && { echo "өөрчлөлтгүй"; exit 0; }
+          git commit -m "report: publish $WEEK (auto)"
+          git push origin HEAD:main

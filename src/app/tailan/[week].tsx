@@ -1,18 +1,23 @@
 import { useLoaderData } from 'expo-router';
-import type { ReactNode } from 'react';
+import { useRef, useState, type ReactNode } from 'react';
 import { View } from 'react-native';
 
 import { BarList } from '@/components/charts/bar-list';
 import { Heatmap } from '@/components/charts/heatmap';
 import { LineChart } from '@/components/charts/line-chart';
 import { Page } from '@/components/layout/page';
+import type { InfographicVariant, ViewRef } from '@/components/report/infographic';
+import { InfographicFrame } from '@/components/report/infographic-frame';
+import { CopyTextButton, PngPrintActions } from '@/components/report/report-actions';
 import { Attribution } from '@/components/ui/attribution';
-import { Badge, Bullet, Card, Delta, ExtLink, Grid, InLink, SectionHeader, T } from '@/components/ui/primitives';
+import { Badge, Bullet, Card, Chip, Delta, ExtLink, Grid, InLink, SectionHeader, T } from '@/components/ui/primitives';
+import { SITE_URL } from '@/lib/config';
 import { formatDateTime, formatDay, weekLabel } from '@/lib/dates';
 import { direction, groupDigits, mnt, usdCompact } from '@/lib/format';
 import { t } from '@/lib/i18n-mn';
 import { pageMeta } from '@/lib/meta';
 import { byNumbers } from '@/lib/report-view';
+import { buildShareText } from '@/lib/share-text';
 import type { MergedReport } from '@/types/schemas';
 import { space } from '@/theme/tokens';
 import { useLayout, useTheme } from '@/theme/use-theme';
@@ -43,10 +48,10 @@ export async function generateMetadata(_request: unknown, params: Record<string,
   return pageMeta(r.editorial.headline || weekLabel(week), r.editorial.summary || t.reports.lead, `/tailan/${week}`);
 }
 
-function Block({ title, children, id }: { title: string; children: ReactNode; id?: string }) {
+function Block({ title, children, id, kicker }: { title: string; children: ReactNode; id?: string; kicker?: string }) {
   return (
     <View style={{ gap: space.md }}>
-      <SectionHeader title={title} id={id} />
+      <SectionHeader title={title} id={id} kicker={kicker} />
       {children}
     </View>
   );
@@ -63,20 +68,19 @@ function NumbersTable({ r }: { r: MergedReport }) {
           <T v="caption" color="textMuted" style={{ flex: 1.6, fontWeight: '600' }} role="columnheader">
             {t.reports.indicator}
           </T>
-          <T v="caption" color="textMuted" style={[cell, { fontWeight: '600' }]} role="columnheader">
-            {t.reports.thisWeek}
-          </T>
-          <T v="caption" color="textMuted" style={[cell, { fontWeight: '600' }]} role="columnheader">
-            {t.reports.prevWeek}
-          </T>
-          <T v="caption" color="textMuted" style={[cell, { fontWeight: '600' }]} role="columnheader">
-            {t.reports.change}
-          </T>
+          {[t.reports.thisWeek, t.reports.prevWeek, t.reports.change].map((h) => (
+            <T key={h} v="caption" color="textMuted" style={[cell, { fontWeight: '600' }]} role="columnheader">
+              {h}
+            </T>
+          ))}
         </View>
         {rows.map((row) => {
           const d = direction(row.change);
           return (
-            <View key={row.key} role="row" style={{ flexDirection: 'row', gap: space.sm, paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, alignItems: 'center' }}>
+            <View
+              key={row.key}
+              role="row"
+              style={{ flexDirection: 'row', gap: space.sm, paddingVertical: space.sm, borderBottomWidth: 1, borderBottomColor: c.border, alignItems: 'center' }}>
               <T v="small" style={{ flex: 1.6 }} role="rowheader">
                 {row.label}
               </T>
@@ -117,13 +121,76 @@ function LinkList({ items }: { items: Array<{ text: string; url: string }> }) {
   );
 }
 
-function Report({ r, newer, older }: { r: MergedReport; newer: string | null; older: string | null }) {
-  const { c } = useTheme();
-  const { cols, isDesktop } = useLayout();
+function Calendar({ r }: { r: MergedReport }) {
+  return (
+    <Card style={{ gap: space.sm }}>
+      {r.editorial.calendar.map((ev) => (
+        <View key={ev.date + ev.event} style={{ flexDirection: 'row', gap: space.lg }}>
+          <T v="smallStrong" num color="accent" style={{ width: 92 }}>
+            {formatDay(ev.date)}
+          </T>
+          <T v="small" style={{ flex: 1 }}>
+            {ev.event}
+          </T>
+        </View>
+      ))}
+    </Card>
+  );
+}
+
+function MongoliaNumbers({ r }: { r: MergedReport }) {
   const a = r.auto;
   const e = r.editorial;
   const btc = a.majors.find((m) => m.symbol === 'BTC');
+  return (
+    <View style={{ gap: space.xs }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.xl }}>
+        <View>
+          <T v="small" color="textMuted">
+            {t.reports.btcMnt}
+          </T>
+          <T v="h3" num>
+            {mnt(btc?.priceMnt)}
+          </T>
+        </View>
+        {a.fx ? (
+          <View>
+            <T v="small" color="textMuted">
+              {t.reports.refRate}
+            </T>
+            <T v="h3" num>
+              {groupDigits(a.fx.usdMnt, 2)} ₮
+            </T>
+          </View>
+        ) : null}
+        {e.mongolbank_usd_mnt != null ? (
+          <View>
+            <T v="small" color="textMuted">
+              {t.reports.mongolbank}
+            </T>
+            <T v="h3" num>
+              {groupDigits(e.mongolbank_usd_mnt, 2)} ₮
+            </T>
+          </View>
+        ) : null}
+      </View>
+      <T v="caption" color="textMuted">
+        {t.kpi.usdMntNote}
+      </T>
+      <Attribution sources={['exchangerate']} />
+    </View>
+  );
+}
+
+function Report({ r, newer, older }: { r: MergedReport; newer: string | null; older: string | null }) {
+  const { c } = useTheme();
+  const { cols, isDesktop } = useLayout();
+  const [variant, setVariant] = useState<InfographicVariant>('light');
+  const nodeRef = useRef<ViewRef>(null);
+  const a = r.auto;
+  const e = r.editorial;
   const picks = a.newsCandidates.filter((n) => e.news_picks.includes(n.url));
+  const g = t.infographic;
 
   return (
     <Page
@@ -134,6 +201,7 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
         <View style={{ gap: space.sm }}>
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.md, alignItems: 'center' }}>
             {r.sample ? <Badge label={t.reports.sample} tone="warn" /> : null}
+            {e.status === 'draft' ? <Badge label={t.reports.draft} tone="warn" /> : null}
             <T v="small" color="textMuted" num>
               {t.reports.published}: {formatDateTime(r.publishedAt)}
               {e.author ? ` · ${t.reports.author}: ${e.author}` : ''}
@@ -146,30 +214,65 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
           ) : null}
         </View>
       }>
-      <Card tone="surfaceAlt">
-        <T v="small" color="textMuted">
-          {t.reports.infographicLater}
-        </T>
-      </Card>
+      {/* 1. Инфографик */}
+      <View style={{ gap: space.md, alignItems: 'flex-start' }}>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.sm, alignItems: 'center' }} nativeID="infographic-controls">
+          <T v="label" color="textMuted">
+            {g.variant}
+          </T>
+          <Chip label={g.light} selected={variant === 'light'} onPress={() => setVariant('light')} />
+          <Chip label={g.dark} selected={variant === 'dark'} onPress={() => setVariant('dark')} />
+        </View>
+        <InfographicFrame r={r} variant={variant} siteUrl={SITE_URL} nodeRef={nodeRef} />
+        <PngPrintActions
+          getNode={() => nodeRef.current as unknown as HTMLElement | null}
+          filename={`vh7hon-${a.week}${variant === 'dark' ? '-dark' : ''}.png`}
+        />
+      </View>
 
-      <Block title={t.reports.takeaways}>
-        <View style={{ gap: space.sm, maxWidth: 820 }}>
-          {e.takeaways.map((x, i) => (
-            <View key={x} style={{ flexDirection: 'row', gap: space.md }}>
-              <T v="h2" color="accent" num style={{ width: 24 }}>
-                {i + 1}
+      {/* 2. Товч мэдээ */}
+      <Block title={t.reports.brief} id="brief">
+        <View style={{ gap: space.lg, maxWidth: 860 }}>
+          <View style={{ gap: space.sm }}>
+            <T v="label" color="textMuted">
+              {t.reports.takeaways}
+            </T>
+            {e.takeaways.map((x, i) => (
+              <View key={x + i} style={{ flexDirection: 'row', gap: space.md }}>
+                <T v="h2" color="accent" num style={{ width: 24 }}>
+                  {i + 1}
+                </T>
+                <T style={{ flex: 1 }}>{x}</T>
+              </View>
+            ))}
+          </View>
+          <View style={{ gap: space.sm }}>
+            <T v="label" color="textMuted">
+              {t.reports.byNumbers}
+            </T>
+            <NumbersTable r={r} />
+          </View>
+          <View style={{ gap: space.sm }}>
+            <T v="label" color="textMuted">
+              {t.reports.mongolia}
+            </T>
+            <MongoliaNumbers r={r} />
+            {e.mongolia.length > 0 ? <LinkList items={e.mongolia} /> : null}
+          </View>
+          {e.calendar.length > 0 ? (
+            <View style={{ gap: space.sm }}>
+              <T v="label" color="textMuted">
+                {t.reports.calendar}
               </T>
-              <T style={{ flex: 1 }}>{x}</T>
+              <Calendar r={r} />
             </View>
-          ))}
+          ) : null}
+          <Attribution sources={['coingecko', 'defillama', 'alternative', 'exchangerate']} />
+          <CopyTextButton text={buildShareText(r, SITE_URL)} />
         </View>
       </Block>
 
-      <Block title={t.reports.byNumbers}>
-        <NumbersTable r={r} />
-        <Attribution sources={['coingecko', 'defillama', 'alternative']} />
-      </Block>
-
+      {/* 3. Дэлгэрэнгүй */}
       <Block title={t.reports.overview}>
         <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.md }}>
           <Card style={{ flex: isDesktop ? 3 : undefined, gap: space.sm }}>
@@ -285,13 +388,13 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
               <T v="h3" num>
                 {usdCompact(a.defi.dexVolume7dUsd)}
               </T>
-              <Delta value={a.defi.dexChange7dPct} suffix={t.kpi.change7d} />
+              {a.defi.dexChange7dPct != null ? <Delta value={a.defi.dexChange7dPct} suffix={t.kpi.change7d} /> : null}
               {a.hacks && a.hacks.length > 0 ? (
-                <View style={{ marginTop: space.sm }}>
+                <View style={{ marginTop: space.sm, gap: 2 }}>
                   <T v="label" color="textMuted">
                     {t.reports.hacks}
                   </T>
-                  {a.hacks.map((h) => (
+                  {a.hacks.slice(0, 5).map((h) => (
                     <T key={h.name + h.date} v="small" num>
                       {formatDay(h.date)} · {h.name} · {usdCompact(h.amountUsd)}
                     </T>
@@ -334,46 +437,6 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
         </Block>
       ) : null}
 
-      <Block title={t.reports.mongolia}>
-        <Card style={{ gap: space.sm }}>
-          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.xl }}>
-            <View>
-              <T v="small" color="textMuted">
-                {t.reports.btcMnt}
-              </T>
-              <T v="h3" num>
-                {mnt(btc?.priceMnt)}
-              </T>
-            </View>
-            {a.fx ? (
-              <View>
-                <T v="small" color="textMuted">
-                  {t.reports.refRate}
-                </T>
-                <T v="h3" num>
-                  {groupDigits(a.fx.usdMnt, 2)} ₮
-                </T>
-              </View>
-            ) : null}
-            {e.mongolbank_usd_mnt != null ? (
-              <View>
-                <T v="small" color="textMuted">
-                  {t.reports.mongolbank}
-                </T>
-                <T v="h3" num>
-                  {groupDigits(e.mongolbank_usd_mnt, 2)} ₮
-                </T>
-              </View>
-            ) : null}
-          </View>
-          <T v="caption" color="textMuted">
-            {t.kpi.usdMntNote}
-          </T>
-          <Attribution sources={['exchangerate']} />
-          {e.mongolia.length > 0 ? <LinkList items={e.mongolia} /> : null}
-        </Card>
-      </Block>
-
       {picks.length > 0 ? (
         <Block title={t.reports.picks}>
           <View style={{ gap: space.xs }}>
@@ -387,23 +450,6 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
               </Bullet>
             ))}
           </View>
-        </Block>
-      ) : null}
-
-      {e.calendar.length > 0 ? (
-        <Block title={t.reports.calendar}>
-          <Card style={{ gap: space.sm }}>
-            {e.calendar.map((ev) => (
-              <View key={ev.date + ev.event} style={{ flexDirection: 'row', gap: space.lg }}>
-                <T v="smallStrong" num color="accent" style={{ width: 92 }}>
-                  {formatDay(ev.date)}
-                </T>
-                <T v="small" style={{ flex: 1 }}>
-                  {ev.event}
-                </T>
-              </View>
-            ))}
-          </Card>
         </Block>
       ) : null}
 
@@ -435,6 +481,7 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
         </Block>
       ) : null}
 
+      {/* 4. Арга зүй ба эх сурвалж */}
       <Block title={t.reports.methodology}>
         <Card tone="surfaceAlt" style={{ gap: space.xs }}>
           <T v="small" num>
@@ -463,7 +510,8 @@ function Report({ r, newer, older }: { r: MergedReport; newer: string | null; ol
         </Card>
       </Block>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: space.md, flexWrap: 'wrap' }}>
+      {/* 5. Навигаци */}
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: space.md, flexWrap: 'wrap' }} nativeID="report-nav">
         {older ? (
           <InLink href={`/tailan/${older}`} v="bodyStrong">
             {t.reports.prev}

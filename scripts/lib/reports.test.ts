@@ -6,7 +6,7 @@ import { WeeklyAutoSchema } from '../../src/types/schemas';
 
 import { indexEntry, mergeReport, parseEditorial, publishedAtFor, sortIndex } from './reports';
 
-const dir = path.join(process.cwd(), 'content', 'reports');
+const dir = path.join(process.cwd(), 'scripts', '__fixtures__', 'reports');
 
 describe('reports', () => {
   it('publishedAtFor: Даваа 12:00 УБ', () => {

@@ -50,7 +50,8 @@ function readLocal<S extends z.ZodType>(file: string, schema: S): z.infer<S> | n
   return parsed.success ? parsed.data : null;
 }
 
-async function loadOne<S extends z.ZodType>(
+/** Нэг файлыг Pages → store/ → локал гаралтаас ачаална. */
+export async function loadOne<S extends z.ZodType>(
   rel: string,
   schema: S,
   cfg: StateConfig,

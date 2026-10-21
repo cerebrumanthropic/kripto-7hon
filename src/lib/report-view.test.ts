@@ -7,7 +7,7 @@ import { WeeklyAutoSchema } from '@/types/schemas';
 import { byNumbers, prevFromPct } from './report-view';
 
 const auto = WeeklyAutoSchema.parse(
-  JSON.parse(readFileSync(path.join(process.cwd(), 'content', 'reports', '2026-W42.json'), 'utf8')),
+  JSON.parse(readFileSync(path.join(process.cwd(), 'scripts', '__fixtures__', 'reports', '2026-W42.json'), 'utf8')),
 );
 const labels = { mcap: 'M', btc: 'B', eth: 'E', dominance: 'D', stable: 'S', tvl: 'T', fg: 'F' };
 

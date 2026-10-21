@@ -1,5 +1,5 @@
 // Үе шат 1-ийн ЖИШЭЭ дата үүсгэгч (PROGRESS D9). Бодит API дуудахгүй.
-// Гаралт: public/fallback/{market,news,daily}.sample.json, content/reports/2026-W42.json
+// Гаралт: public/fallback/{market,news,daily}.sample.json, scripts/__fixtures__/reports/2026-W42.json
 // Ажиллуулах: npx tsx scripts/dev/make-samples.ts
 import { createHash } from 'node:crypto';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -304,4 +304,5 @@ function write(rel: string, data: unknown) {
 write('public/fallback/market.sample.json', market);
 write('public/fallback/news.sample.json', news);
 write('public/fallback/daily.sample.json', history);
-write(`content/reports/${week}.json`, report);
+// Тестийн fixture (scripts/__fixtures__/reports/2026-W42.md-тэй хамт)
+write(`scripts/__fixtures__/reports/${week}.json`, report);

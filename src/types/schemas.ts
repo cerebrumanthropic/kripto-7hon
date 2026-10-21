@@ -203,12 +203,15 @@ export const WeeklyAutoSchema = z.object({
         change7dPct: z.number().nullable(),
       }),
     ),
+    // SPEC §6-аас нэмэлт (сонголттой): инфографикийн sparkline (SPEC §8.8.5)
+    series30d: z.array(z.object({ date: day, value: z.number() })).optional(),
   }),
   defi: z.object({
     tvlUsd: z.number(),
     change7dPct: z.number().nullable(),
     dexVolume7dUsd: z.number().nullable(),
     dexChange7dPct: z.number().nullable(),
+    series30d: z.array(z.object({ date: day, value: z.number() })).optional(),
   }),
   fearGreed: z.object({
     value: z.number().min(0).max(100),

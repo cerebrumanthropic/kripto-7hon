@@ -4,7 +4,7 @@
 // 3) DATA_BASE_URL байвал амьд JSON-ийг public/fallback/-д хадгална (үгүй бол sample ашиглагдана)
 // 4) sitemap.xml, robots.txt
 // Сонголт: --include-drafts (зөвхөн preview, SPEC §10.4)
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { WeeklyAutoSchema, type ReportIndexEntry } from '../src/types/schemas';
@@ -26,6 +26,8 @@ function writeJson(file: string, data: unknown) {
 function buildReports(): ReportIndexEntry[] {
   const dir = rel('content', 'reports');
   const entries: ReportIndexEntry[] = [];
+  // Нийтлэлээс буцаасан/устгасан тайлан үлдэхгүйн тулд өмнөх build-ийн гаралтыг цэвэрлэнэ
+  rmSync(rel('public', 'reports'), { recursive: true, force: true });
   for (const file of readdirSync(dir).filter((f) => /^\d{4}-W\d{2}\.md$/.test(f))) {
     const week = file.replace(/\.md$/, '');
     const jsonFile = path.join(dir, `${week}.json`);
