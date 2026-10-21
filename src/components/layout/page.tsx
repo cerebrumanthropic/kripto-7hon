@@ -1,52 +1,86 @@
 import type { ReactNode } from 'react';
 import { View } from 'react-native';
 
+import { Band } from '@/components/layout/band';
 import { T } from '@/components/ui/primitives';
-import { maxWidth, space } from '@/theme/tokens';
+import { maxWidth, space, type } from '@/theme/tokens';
+import { useLayout } from '@/theme/use-theme';
 
-/** Хуудасны контейнер: max-width 1200, гарчиг + оршил. */
+/**
+ * Хуудасны контейнер: бараан хөх тууз (kicker, гарчиг, оршил, meta, `band`) + max-width 1200 агуулга.
+ * `size="hero"` — нүүрний том гарчиг. `titleAccent` — гарчгийн алтан өнгөөр тодрох хэсэг.
+ */
 export function Page({
   title,
+  titleAccent,
   lead,
   kicker,
   meta,
+  band,
+  size = 'page',
   children,
 }: {
   title: string;
+  titleAccent?: string;
   lead?: string;
-  kicker?: string;
+  kicker?: ReactNode;
   meta?: ReactNode;
+  /** Туузны доод хэсэгт (гарчгийн блокоос өргөн) — нүүрний KPI */
+  band?: ReactNode;
+  size?: 'hero' | 'page';
   children: ReactNode;
 }) {
+  const { isDesktop } = useLayout();
+  const big = size === 'hero';
+  const titleStyle = big ? (isDesktop ? type.heroLg : type.hero) : isDesktop ? type.display : type.h1;
+  const at = titleAccent ? title.lastIndexOf(titleAccent) : -1;
+
   return (
-    <View
-      role="main"
-      nativeID="main"
-      style={{
-        width: '100%',
-        maxWidth,
-        alignSelf: 'center',
-        paddingHorizontal: space.lg,
-        paddingTop: space.xl,
-        gap: space.xxl,
-      }}>
-      <View style={{ gap: space.sm, maxWidth: 820 }}>
-        {kicker ? (
-          <T v="label" color="accent">
-            {kicker}
-          </T>
-        ) : null}
-        <T v="h1" role="heading" aria-level={1}>
-          {title}
-        </T>
-        {lead ? (
-          <T v="body" color="textMuted">
-            {lead}
-          </T>
-        ) : null}
-        {meta}
+    <View role="main" nativeID="main" style={{ width: '100%' }}>
+      <Band pattern style={{ paddingTop: big ? space.xxxl : space.xxl, paddingBottom: big ? space.xxxl : space.xxl }}>
+        <View style={{ width: '100%', maxWidth, alignSelf: 'center', paddingHorizontal: space.lg, gap: space.xxl }}>
+          <View style={{ gap: space.md, maxWidth: 860 }}>
+            {typeof kicker === 'string' ? (
+              <T v="label" color="accent">
+                {kicker}
+              </T>
+            ) : (
+              kicker
+            )}
+            <T role="heading" aria-level={1} style={titleStyle}>
+              {at > 0 && titleAccent ? (
+                <>
+                  {title.slice(0, at)}
+                  <T color="accent" style={titleStyle}>
+                    {titleAccent}
+                  </T>
+                  {title.slice(at + titleAccent.length)}
+                </>
+              ) : (
+                title
+              )}
+            </T>
+            {lead ? (
+              <T v={big ? 'lead' : 'body'} color="textMuted">
+                {lead}
+              </T>
+            ) : null}
+            {meta}
+          </View>
+          {band}
+        </View>
+      </Band>
+      <View
+        style={{
+          width: '100%',
+          maxWidth,
+          alignSelf: 'center',
+          paddingHorizontal: space.lg,
+          paddingTop: space.xxl,
+          gap: space.xxl,
+        }}>
+        {children}
       </View>
-      {children}
     </View>
   );
 }

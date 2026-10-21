@@ -1,6 +1,7 @@
 import { Link, type Href } from 'expo-router';
 import type { ReactNode } from 'react';
 import {
+  Platform,
   Pressable,
   type PressableStateCallbackType,
   Text,
@@ -20,6 +21,12 @@ type ColorKey = keyof ThemeColors;
 /** react-native-web Pressable-ийн нэмэлт төлөв (RN-ийн төрөлд байхгүй). */
 export type WebPressState = PressableStateCallbackType & { hovered?: boolean; focused?: boolean };
 export const webPress = (s: PressableStateCallbackType) => s as WebPressState;
+
+/**
+ * `data-*` атрибут (react-native-web `dataSet`). `+html.tsx`-ийн CSS hover/print дүрэмд:
+ * `lift` — hover-т дээш хөдөлнө, `band` — бараан тууз, `news` — мэдээний мөр.
+ */
+export const dataAttrs = (d: Record<string, string>): object => (Platform.OS === 'web' ? { dataSet: d } : {});
 
 type TProps = TextProps & {
   v?: TypeVariant;
@@ -89,6 +96,31 @@ export function InLink({
   );
 }
 
+/** Товч хэлбэртэй дотоод холбоос: `primary` — алтан дэвсгэр, бусад нь хүрээтэй. */
+export function ButtonLink({ href, label, primary }: { href: Href; label: string; primary?: boolean }) {
+  const { c } = useTheme();
+  return (
+    <Link
+      href={href}
+      {...dataAttrs({ lift: '' })}
+      style={[
+        type.bodyStrong,
+        {
+          color: primary ? c.onBrand : c.text,
+          backgroundColor: primary ? c.accent : 'transparent',
+          borderWidth: 1,
+          borderColor: primary ? c.accent : c.borderStrong,
+          borderRadius: radius.md,
+          paddingVertical: 11,
+          paddingHorizontal: 20,
+          textDecorationLine: 'none',
+        },
+      ]}>
+      {label}
+    </Link>
+  );
+}
+
 export function Card({
   children,
   style,
@@ -108,6 +140,7 @@ export function Card({
           borderWidth: 1,
           borderRadius: radius.lg,
           padding: space.lg,
+          boxShadow: c.shadow,
         },
         style,
       ]}>
@@ -128,6 +161,7 @@ export function SectionHeader({
   id?: string;
   right?: ReactNode;
 }) {
+  const { c } = useTheme();
   return (
     <View
       nativeID={id}
@@ -145,9 +179,12 @@ export function SectionHeader({
             {kicker}
           </T>
         ) : null}
-        <T v="h2" role="heading" aria-level={2}>
-          {title}
-        </T>
+        <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: space.sm }}>
+          <View aria-hidden style={{ width: 4, height: 20, marginTop: 4, borderRadius: 2, backgroundColor: c.accent }} />
+          <T v="h2" role="heading" aria-level={2} style={{ flexShrink: 1 }}>
+            {title}
+          </T>
+        </View>
       </View>
       {right}
     </View>
@@ -171,6 +208,63 @@ export function Delta({
       {arrow(value)} {pct(value)}
       {suffix ? ` ${suffix}` : ''}
     </T>
+  );
+}
+
+/** KPI картын ▲ +4.2% pill + саарал тайлбар («24 цаг»). */
+export function DeltaPill({ value, suffix }: { value: number | null | undefined; suffix?: string }) {
+  const { c } = useTheme();
+  const d = direction(value);
+  const [bg, fg] = d === 'up' ? [c.upBg, c.upFg] : d === 'down' ? [c.downBg, c.downFg] : [c.surfaceAlt, c.neutralText];
+  return (
+    <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 }}>
+      <View style={{ backgroundColor: bg, borderRadius: radius.pill, paddingHorizontal: 8, paddingVertical: 2 }}>
+        <T v="smallStrong" num style={{ color: fg }}>
+          {arrow(value)} {pct(value)}
+        </T>
+      </View>
+      {suffix ? (
+        <T v="caption" color="textMuted">
+          {suffix}
+        </T>
+      ) : null}
+    </View>
+  );
+}
+
+/**
+ * 0–100 хэмжүүр. `fearGreed` — улаан→ногоон шугам дээр тэмдэг; бусад нь өнгөөр дүүргэнэ.
+ * Утга нь картад текстээр бичигдсэн тул чимэг (aria-hidden).
+ */
+export function Meter({ value, fill }: { value: number | null | undefined; fill: 'fearGreed' | string }) {
+  const { c } = useTheme();
+  if (value == null) return null;
+  const v = Math.max(0, Math.min(100, value));
+  const track = { height: 6, borderRadius: 3, marginVertical: 6, backgroundColor: c.surfaceAlt } as const;
+  if (fill === 'fearGreed') {
+    return (
+      <View aria-hidden style={[track, { backgroundImage: 'linear-gradient(90deg, #DC2626, #F59E0B 50%, #16A34A)' }]}>
+        <View
+          style={{
+            position: 'absolute',
+            left: `${v}%`,
+            top: -4,
+            width: 14,
+            height: 14,
+            marginLeft: -7,
+            borderRadius: 7,
+            backgroundColor: c.text,
+            borderWidth: 3,
+            borderColor: c.bg,
+          }}
+        />
+      </View>
+    );
+  }
+  return (
+    <View aria-hidden style={[track, { overflow: 'hidden' }]}>
+      <View style={{ width: `${v}%`, height: '100%', borderRadius: 3, backgroundColor: fill }} />
+    </View>
   );
 }
 

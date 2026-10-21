@@ -26,7 +26,8 @@ export function Attribution({ sources }: { sources: SourceKey[] }) {
         {t.common.sourceLabel}:
       </T>
       {sources.map((k, i) => (
-        <View key={k} style={{ flexDirection: 'row' }}>
+        // flexShrink — 2 баганат мобайл KPI картад урт нэр («Rates By Exchange Rate API») мөр шилжинэ
+        <View key={k} style={{ flexDirection: 'row', flexShrink: 1, maxWidth: '100%' }}>
           <ExtLink href={SOURCES[k].url} v="caption" color="textMuted">
             {SOURCES[k].label}
           </ExtLink>

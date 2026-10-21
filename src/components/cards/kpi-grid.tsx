@@ -2,13 +2,13 @@ import { View } from 'react-native';
 
 import { LiveStatus, LoadError } from '@/components/layout/live-status';
 import { Attribution } from '@/components/ui/attribution';
-import { Grid, T } from '@/components/ui/primitives';
+import { Grid, Meter, T } from '@/components/ui/primitives';
 import { useMarket } from '@/lib/data-client';
 import { groupDigits, mnt, pctPlain, price, usdCompact } from '@/lib/format';
 import { fearGreedMn, t } from '@/lib/i18n-mn';
 import type { LiveMarket } from '@/types/schemas';
 import { space } from '@/theme/tokens';
-import { useLayout } from '@/theme/use-theme';
+import { useLayout, useTheme } from '@/theme/use-theme';
 
 import { KpiCard } from './cards';
 
@@ -16,6 +16,7 @@ import { KpiCard } from './cards';
 export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
   const { data, isError, isPlaceholderData } = useMarket(snapshot);
   const { cols } = useLayout();
+  const { c } = useTheme();
   if (isError) return <LoadError />;
 
   const m = data?.data;
@@ -26,7 +27,8 @@ export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
   return (
     <View style={{ gap: space.md }}>
       <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} pending={isPlaceholderData} />
-      <Grid cols={cols}>
+      {/* Мобайлд 2 багана — 8 карт нэг дэлгэцэнд ойр багтана */}
+      <Grid cols={cols === 1 ? 2 : cols}>
         {[
           <KpiCard
             key="mcap"
@@ -51,12 +53,18 @@ export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
             delta={eth?.change24hPct ?? null}
             deltaLabel={k.change24h}
           />,
-          <KpiCard key="dom" label={k.btcDominance} value={pctPlain(m?.global?.btcDominancePct)} />,
+          <KpiCard
+            key="dom"
+            label={k.btcDominance}
+            value={pctPlain(m?.global?.btcDominancePct)}
+            meter={<Meter value={m?.global?.btcDominancePct} fill={c.btc} />}
+          />,
           <KpiCard
             key="fg"
             label={k.fearGreed}
             value={m?.fearGreed ? String(m.fearGreed.value) : '—'}
             sub={m?.fearGreed ? fearGreedMn(m.fearGreed.labelEn) : undefined}
+            meter={<Meter value={m?.fearGreed?.value} fill="fearGreed" />}
             footer={<Attribution sources={['alternative']} />}
           />,
           <KpiCard

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { createContext, createElement, useContext, useEffect, useState, type ReactNode } from 'react';
 import { useColorScheme, useWindowDimensions } from 'react-native';
 
 import { breakpoints, dark, light, type ThemeColors } from './tokens';
@@ -13,9 +13,18 @@ export function useHydrated(): boolean {
   return hydrated;
 }
 
+const Forced = createContext<ThemeColors | null>(null);
+
+/** Дотор нь `useTheme` заасан палитрыг буцаана (бараан хөх тууз — `ink`). SSR ба клиентэд ижил. */
+export function ThemeScope({ colors, children }: { colors: ThemeColors; children: ReactNode }) {
+  return createElement(Forced.Provider, { value: colors }, children);
+}
+
 export function useTheme(): { c: ThemeColors; scheme: 'light' | 'dark' } {
+  const forced = useContext(Forced);
   const hydrated = useHydrated();
   const scheme = useColorScheme();
+  if (forced) return { c: forced, scheme: 'dark' };
   const isDark = hydrated && scheme === 'dark';
   return { c: isDark ? dark : light, scheme: isDark ? 'dark' : 'light' };
 }

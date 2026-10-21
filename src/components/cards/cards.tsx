@@ -2,13 +2,19 @@ import { Link } from 'expo-router';
 import type { ReactNode } from 'react';
 import { Pressable, View } from 'react-native';
 
-import { Badge, Card, Delta, ExtLink, T } from '@/components/ui/primitives';
+import { Badge, Card, dataAttrs, Delta, DeltaPill, ExtLink, T } from '@/components/ui/primitives';
 import { formatDateTime, relativeTime, weekLabel } from '@/lib/dates';
 import { int } from '@/lib/format';
 import { t } from '@/lib/i18n-mn';
 import type { NewsItem, ReportIndexEntry } from '@/types/schemas';
 import { radius, space } from '@/theme/tokens';
-import { useHydrated, useTheme } from '@/theme/use-theme';
+import { useHydrated, useLayout, useTheme } from '@/theme/use-theme';
+
+/** «$2.80 их наяд» → том тоо + жижиг нэгж (2 баганат мобайл картад багтаахын тулд). */
+function splitUnit(value: string): [string, string | null] {
+  const i = value.indexOf(' ');
+  return i > 0 ? [value.slice(0, i), value.slice(i + 1)] : [value, null];
+}
 
 export function KpiCard({
   label,
@@ -17,6 +23,7 @@ export function KpiCard({
   deltaLabel,
   sub,
   note,
+  meter,
   footer,
 }: {
   label: string;
@@ -25,22 +32,32 @@ export function KpiCard({
   deltaLabel?: string;
   sub?: string;
   note?: string;
+  /** Тооны доорх хэмжүүр (`Meter`) */
+  meter?: ReactNode;
   footer?: ReactNode;
 }) {
+  const { isDesktop } = useLayout();
+  const [num, unit] = splitUnit(value);
   return (
-    <Card style={{ gap: space.xs, height: '100%' }}>
-      <T v="small" color="textMuted" numberOfLines={2}>
+    <Card style={{ gap: space.xs, height: '100%', padding: 14 }}>
+      <T v={isDesktop ? 'small' : 'caption'} color="textMuted" numberOfLines={2}>
         {label}
       </T>
-      <T v="kpi" num>
-        {value}
+      <T v="kpi" num style={{ fontSize: isDesktop ? 28 : 24, lineHeight: isDesktop ? 34 : 30 }}>
+        {num}
+        {unit ? (
+          <T v="smallStrong" color="textMuted">
+            {` ${unit}`}
+          </T>
+        ) : null}
       </T>
       {sub ? (
         <T v="small" color="textMuted" num>
           {sub}
         </T>
       ) : null}
-      {delta != null ? <Delta value={delta} suffix={deltaLabel} /> : null}
+      {meter}
+      {delta != null ? <DeltaPill value={delta} suffix={deltaLabel} /> : null}
       {note ? (
         <T v="caption" color="textMuted">
           {note}
@@ -84,6 +101,7 @@ export function NewsRow({ item, now }: { item: NewsItem; now?: Date }) {
   return (
     <View
       role="listitem"
+      {...dataAttrs({ news: '' })}
       style={{ paddingVertical: space.md, borderBottomWidth: 1, borderBottomColor: c.border, gap: 6 }}>
       <ExtLink href={item.url} v="bodyStrong" color="text" style={{ textDecorationLine: 'none' }}>
         {item.title}
@@ -108,11 +126,15 @@ export function ReportCard({ entry, takeaways }: { entry: ReportIndexEntry; take
     // `Link asChild` + функц style вэбд алга болдог тул статик style
     <Link href={`/tailan/${entry.week}`} asChild>
       <Pressable
+        {...dataAttrs({ lift: '' })}
         style={{
           borderRadius: radius.lg,
           borderWidth: 1,
           borderColor: c.border,
+          borderTopWidth: 3,
+          borderTopColor: c.accent,
           backgroundColor: c.surface,
+          boxShadow: c.shadow,
           padding: space.lg,
           gap: space.sm,
         }}>

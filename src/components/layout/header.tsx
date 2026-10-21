@@ -2,6 +2,8 @@ import { Link, usePathname, type Href } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Pressable, View } from 'react-native';
 
+import { Band } from '@/components/layout/band';
+import { BrandMark } from '@/components/ui/brand-mark';
 import { T, webPress } from '@/components/ui/primitives';
 import { t } from '@/lib/i18n-mn';
 import { fonts, maxWidth, radius, space, type } from '@/theme/tokens';
@@ -16,33 +18,29 @@ const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> =
   { href: '/arga-zui', label: t.nav.method, match: (p) => p.startsWith('/arga-zui') },
 ];
 
-function Logo() {
+/** Хэлтсийн нэр + «7 хоногийн мэдээ» (PROGRESS D53). Мобайлд нэр 2 мөрт орно. */
+export function BrandLockup({ compact }: { compact?: boolean }) {
   const { c } = useTheme();
   return (
-    // Нэр нь харагдах текстээс («ВХ 7 хоног») — aria-label өөр байвал label-content-name-mismatch
-    <Link href="/" style={{ textDecorationLine: 'none' }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.sm }}>
-        <View
-          aria-hidden
-          style={{
-            width: 34,
-            height: 34,
-            borderRadius: radius.sm,
-            backgroundColor: c.brand,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <T style={{ fontFamily: fonts.bold, fontSize: 15, color: c.onBrand, letterSpacing: -0.5 }}>
-            {t.site.monogram}
-          </T>
-        </View>
-        <View>
-          <T v="bodyStrong" style={{ lineHeight: 18 }}>
-            {t.site.short}
-          </T>
-          <View style={{ height: 2, width: 22, backgroundColor: c.accent, marginTop: 3 }} />
-        </View>
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md, flexShrink: 1 }}>
+      <BrandMark size={compact ? 38 : 42} />
+      <View style={{ flexShrink: 1 }}>
+        <T style={{ fontFamily: fonts.bold, fontSize: compact ? 13 : 14, lineHeight: compact ? 16 : 18, color: c.text }}>
+          {t.site.org}
+        </T>
+        <T style={{ fontFamily: fonts.semibold, fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
+          {t.site.edition}
+        </T>
       </View>
+    </View>
+  );
+}
+
+function Logo({ compact }: { compact: boolean }) {
+  return (
+    // Нэр нь харагдах текстээс — aria-label өөр байвал label-content-name-mismatch
+    <Link href="/" style={{ textDecorationLine: 'none', flexShrink: 1 }}>
+      <BrandLockup compact={compact} />
     </Link>
   );
 }
@@ -58,13 +56,13 @@ function NavLink({ href, label, active, onPress }: { href: Href; label: string; 
       style={[
         type.smallStrong,
         {
-          color: active ? c.brandText : c.text,
+          color: active ? c.text : c.textMuted,
           paddingVertical: space.sm,
           paddingHorizontal: space.md,
           borderRadius: radius.md,
           backgroundColor: active ? c.surfaceAlt : 'transparent',
           borderBottomWidth: 2,
-          borderBottomColor: active ? c.brand : 'transparent',
+          borderBottomColor: active ? c.accent : 'transparent',
           textDecorationLine: 'none',
         },
       ]}>
@@ -73,8 +71,47 @@ function NavLink({ href, label, active, onPress }: { href: Href; label: string; 
   );
 }
 
-export function Header() {
+function MenuButton({ open, onPress }: { open: boolean; onPress: () => void }) {
   const { c } = useTheme();
+  return (
+    <Pressable
+      onPress={onPress}
+      role="button"
+      aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+      aria-expanded={open}
+      style={(s) => ({
+        width: 44,
+        height: 44,
+        flexShrink: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: radius.md,
+        borderWidth: 1,
+        borderColor: c.borderStrong,
+        outlineColor: c.accent,
+        outlineWidth: webPress(s).focused ? 2 : 0,
+        outlineStyle: 'solid',
+      })}>
+      <View style={{ gap: 4 }}>
+        {[0, 1, 2].map((i) => (
+          <View
+            key={i}
+            style={{
+              width: 18,
+              height: 2,
+              backgroundColor: c.text,
+              opacity: open && i === 1 ? 0 : 1,
+              transform:
+                open && i !== 1 ? [{ translateY: i === 0 ? 6 : -6 }, { rotate: i === 0 ? '45deg' : '-45deg' }] : [],
+            }}
+          />
+        ))}
+      </View>
+    </Pressable>
+  );
+}
+
+export function Header() {
   const { isDesktop } = useLayout();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -82,12 +119,11 @@ export function Header() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <View
+    <Band
       role="banner"
       style={{
-        backgroundColor: c.surface,
         borderBottomWidth: 1,
-        borderBottomColor: c.border,
+        borderBottomColor: 'rgba(255,255,255,0.08)',
         position: 'sticky' as 'relative',
         top: 0,
         zIndex: 10,
@@ -102,48 +138,17 @@ export function Header() {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
+          gap: space.md,
         }}>
-        <Logo />
+        <Logo compact={!isDesktop} />
         {isDesktop ? (
-          <View role="navigation" aria-label={t.nav.label} style={{ flexDirection: 'row', gap: space.xs }}>
+          <View role="navigation" aria-label={t.nav.label} style={{ flexDirection: 'row', gap: space.xs, flexShrink: 0 }}>
             {NAV.map((n) => (
               <NavLink key={n.label} href={n.href} label={n.label} active={n.match(pathname)} />
             ))}
           </View>
         ) : (
-          <Pressable
-            onPress={() => setOpen((o) => !o)}
-            role="button"
-            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
-            aria-expanded={open}
-            style={(s) => ({
-              width: 44,
-              height: 44,
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: radius.md,
-              borderWidth: 1,
-              borderColor: c.border,
-              outlineColor: c.brand,
-              outlineWidth: webPress(s).focused ? 2 : 0,
-              outlineStyle: 'solid',
-            })}>
-            <View style={{ gap: 4 }}>
-              {[0, 1, 2].map((i) => (
-                <View
-                  key={i}
-                  style={{
-                    width: 18,
-                    height: 2,
-                    backgroundColor: c.text,
-                    opacity: open && i === 1 ? 0 : 1,
-                    transform:
-                      open && i !== 1 ? [{ translateY: i === 0 ? 6 : -6 }, { rotate: i === 0 ? '45deg' : '-45deg' }] : [],
-                  }}
-                />
-              ))}
-            </View>
-          </Pressable>
+          <MenuButton open={open} onPress={() => setOpen((o) => !o)} />
         )}
       </View>
       {!isDesktop && open ? (
@@ -162,6 +167,6 @@ export function Header() {
           ))}
         </View>
       ) : null}
-    </View>
+    </Band>
   );
 }

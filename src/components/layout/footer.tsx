@@ -1,26 +1,25 @@
 import { View } from 'react-native';
 
+import { Band } from '@/components/layout/band';
+import { BrandLockup } from '@/components/layout/header';
 import { SOURCES } from '@/components/ui/attribution';
 import { ExtLink, InLink, T } from '@/components/ui/primitives';
 import { t } from '@/lib/i18n-mn';
 import { maxWidth, space } from '@/theme/tokens';
-import { useTheme } from '@/theme/use-theme';
 
 export function Footer() {
-  const { c } = useTheme();
   return (
-    <View
-      role="contentinfo"
-      style={{ backgroundColor: c.surface, borderTopWidth: 1, borderTopColor: c.border, marginTop: space.xxxl }}>
+    <Band role="contentinfo" style={{ marginTop: space.xxxl }}>
       <View
         style={{
           width: '100%',
           maxWidth,
           alignSelf: 'center',
           paddingHorizontal: space.lg,
-          paddingVertical: space.xl,
-          gap: space.md,
+          paddingVertical: space.xxl,
+          gap: space.lg,
         }}>
+        <BrandLockup />
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: space.sm }}>
           <T v="label" color="textMuted">
             {t.footer.attribution}
@@ -43,6 +42,6 @@ export function Footer() {
           </T>
         </View>
       </View>
-    </View>
+    </Band>
   );
 }

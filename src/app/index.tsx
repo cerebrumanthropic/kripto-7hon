@@ -5,13 +5,13 @@ import { NewsRow, ReportCard } from '@/components/cards/cards';
 import { KpiGrid } from '@/components/cards/kpi-grid';
 import { LoadError } from '@/components/layout/live-status';
 import { Page } from '@/components/layout/page';
-import { Card, InLink, SectionHeader, T } from '@/components/ui/primitives';
+import { ButtonLink, Card, InLink, SectionHeader, T } from '@/components/ui/primitives';
 import { useNews } from '@/lib/data-client';
 import { t } from '@/lib/i18n-mn';
 import { pageMeta } from '@/lib/meta';
 import type { NewsFeed } from '@/types/schemas';
-import { space } from '@/theme/tokens';
-import { useLayout } from '@/theme/use-theme';
+import { fonts, radius, space } from '@/theme/tokens';
+import { useLayout, useTheme } from '@/theme/use-theme';
 
 export async function loader() {
   const { readResearch, readReportIndex, readReport, readFallback } = await import('@/lib/server/content');
@@ -35,16 +35,89 @@ export function generateMetadata() {
   return pageMeta(t.site.name, t.site.tagline, '/');
 }
 
+/** «● Амьд дата» — цэг нь `+html.tsx`-ийн `#live-dot` CSS-ээр долгилно (reduced-motion үед зогсоно). */
+function LivePill() {
+  const { c } = useTheme();
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: space.sm,
+        alignSelf: 'flex-start',
+        paddingVertical: 5,
+        paddingHorizontal: space.md,
+        borderRadius: radius.pill,
+        backgroundColor: c.upBg,
+        borderWidth: 1,
+        borderColor: 'rgba(74,222,128,0.35)',
+      }}>
+      <View nativeID="live-dot" style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: '#4ADE80' }} />
+      <T v="smallStrong" style={{ color: c.upFg }}>
+        {t.home.livePill}
+      </T>
+    </View>
+  );
+}
+
 function LatestNews({ snapshot }: { snapshot: NewsFeed | null }) {
   const { data, isError } = useNews(snapshot);
   if (isError) return <LoadError />;
   const items = data?.data.items.slice(0, 8) ?? [];
   return (
-    <View role="list">
-      {items.map((item) => (
-        <NewsRow key={item.id} item={item} />
-      ))}
-    </View>
+    <Card style={{ paddingVertical: space.xs }}>
+      <View role="list">
+        {items.map((item) => (
+          <NewsRow key={item.id} item={item} />
+        ))}
+      </View>
+    </Card>
+  );
+}
+
+function NoReport() {
+  const { c } = useTheme();
+  return (
+    <Card style={{ gap: space.sm, borderStyle: 'dashed', borderColor: c.borderStrong }}>
+      <T v="label" color="accent">
+        {t.home.noReportKicker}
+      </T>
+      <T v="h3">{t.home.noReport}</T>
+      <T v="small" color="textMuted">
+        {t.home.noReportHint}
+      </T>
+      <InLink href="/arga-zui" v="smallStrong">
+        {t.home.methodLink}
+      </InLink>
+    </Card>
+  );
+}
+
+function ResearchTeaser({ examples, dataSources }: { examples: number; dataSources: number }) {
+  const { c } = useTheme();
+  const stats: Array<[number, string]> = [
+    [examples, t.home.researchStats.examples],
+    [dataSources, t.home.researchStats.sources],
+  ];
+  return (
+    <Card style={{ gap: space.md }}>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.xxl }}>
+        {stats.map(([n, label]) => (
+          <View key={label}>
+            <T num style={{ fontFamily: fonts.bold, fontSize: 44, lineHeight: 48, letterSpacing: -1, color: c.brandText }}>
+              {n}
+            </T>
+            <T v="small" color="textMuted">
+              {label}
+            </T>
+          </View>
+        ))}
+      </View>
+      <T>{t.home.researchMore}</T>
+      <InLink href="/sudalgaa" v="bodyStrong">
+        {t.home.researchLink}
+      </InLink>
+    </Card>
   );
 }
 
@@ -53,38 +126,47 @@ export default function Home() {
   const { isDesktop } = useLayout();
 
   return (
-    <Page title={t.home.heroTitle} lead={t.home.heroLead}>
-      <View style={{ gap: space.md }}>
-        <SectionHeader title={t.home.kpiTitle} />
-        <KpiGrid snapshot={d.market} />
-      </View>
+    <Page
+      size="hero"
+      kicker={<LivePill />}
+      title={t.home.heroTitle}
+      titleAccent={t.home.heroTitleAccent}
+      lead={t.home.heroLead}
+      meta={
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.md, marginTop: space.sm }}>
+          <ButtonLink href="/tailan" label={t.home.ctaReports} primary />
+          <ButtonLink href="/zah-zeel" label={t.home.ctaMarket} />
+        </View>
+      }
+      band={
+        <View>
+          <SectionHeader title={t.home.kpiTitle} />
+          <KpiGrid snapshot={d.market} />
+        </View>
+      }>
+      <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.xxl, alignItems: 'flex-start' }}>
+        <View style={{ flex: isDesktop ? 5 : undefined, width: isDesktop ? undefined : '100%', gap: space.xxl }}>
+          <View>
+            <SectionHeader title={t.home.latestReport} />
+            {d.latest ? (
+              <View style={{ gap: space.md }}>
+                <ReportCard entry={d.latest} takeaways={d.takeaways} />
+                <InLink href={`/tailan/${d.latest.week}`} v="bodyStrong">
+                  {t.home.readReport}
+                </InLink>
+              </View>
+            ) : (
+              <NoReport />
+            )}
+          </View>
 
-      <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.xl, alignItems: 'flex-start' }}>
-        <View style={{ flex: isDesktop ? 5 : undefined, width: isDesktop ? undefined : '100%', gap: space.md }}>
-          <SectionHeader title={t.home.latestReport} />
-          {d.latest ? (
-            <>
-              <ReportCard entry={d.latest} takeaways={d.takeaways} />
-              <InLink href={`/tailan/${d.latest.week}`} v="bodyStrong">
-                {t.home.readReport}
-              </InLink>
-            </>
-          ) : (
-            <T color="textMuted">{t.home.noReport}</T>
-          )}
-
-          <View style={{ marginTop: space.lg, gap: space.md }}>
+          <View>
             <SectionHeader title={t.home.researchTitle} />
-            <Card tone="surfaceAlt" style={{ gap: space.sm }}>
-              <T>{t.home.researchTeaser(d.examples, d.dataSources)}</T>
-              <InLink href="/sudalgaa" v="bodyStrong">
-                {t.home.researchLink}
-              </InLink>
-            </Card>
+            <ResearchTeaser examples={d.examples} dataSources={d.dataSources} />
           </View>
         </View>
 
-        <View style={{ flex: isDesktop ? 7 : undefined, width: isDesktop ? undefined : '100%', gap: space.sm }}>
+        <View style={{ flex: isDesktop ? 7 : undefined, width: isDesktop ? undefined : '100%' }}>
           <SectionHeader title={t.home.latestNews} right={<InLink href="/medee" v="smallStrong">{t.home.allNews}</InLink>} />
           <LatestNews snapshot={d.news} />
         </View>

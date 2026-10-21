@@ -1,6 +1,7 @@
 // Дизайны токенууд (SPEC §9, PROGRESS D12).
 // Чиглэл: «санхүүгийн сонины ledger» — цаасан дэвсгэр, бэх хар текст, Монгол хөх брэнд,
 // сойомбын алтан өнгө зөвхөн долоо хоногийн шошго ба онцлох тэмдэгт. Сүүдэр бараг үгүй, 1px шугам.
+// Толгой, hero, хөл нь бараан хөх тууз (`ink`) — анхаарал татах хүрээ (PROGRESS D54).
 import { Platform } from 'react-native';
 
 export const palette = {
@@ -35,6 +36,13 @@ export type ThemeColors = {
   infoText: string;
   heatUp: string;
   heatDown: string;
+  /** ▲▼ pill (KPI карт): дэвсгэр ба AA хангах текст */
+  upBg: string;
+  upFg: string;
+  downBg: string;
+  downFg: string;
+  /** Картын сүүдэр (CSS box-shadow) */
+  shadow: string;
 } & typeof palette;
 
 export const light: ThemeColors = {
@@ -60,6 +68,11 @@ export const light: ThemeColors = {
   infoText: '#3F444F',
   heatUp: '#15803D',
   heatDown: '#B91C1C',
+  upBg: 'rgba(22,163,74,0.10)',
+  upFg: '#166534',
+  downBg: 'rgba(220,38,38,0.09)',
+  downFg: '#991B1B',
+  shadow: '0 1px 2px rgba(20,22,27,0.05), 0 6px 20px rgba(20,22,27,0.06)',
 };
 
 export const dark: ThemeColors = {
@@ -84,6 +97,42 @@ export const dark: ThemeColors = {
   infoText: '#C5CEE0',
   heatUp: '#15803D',
   heatDown: '#B91C1C',
+  upBg: 'rgba(74,222,128,0.14)',
+  upFg: '#86EFAC',
+  downBg: 'rgba(248,113,113,0.14)',
+  downFg: '#FCA5A5',
+  shadow: 'none',
+};
+
+/**
+ * Бараан хөх тууз (толгой, hero, хөл) — сайтын горимоос үл хамаарна (PROGRESS D54).
+ * Карт нь тунгалаг цагаан давхарга; текстийн тодрол туузны хамгийн цайвар хэсэгт ч ≥4.5:1.
+ */
+export const ink: ThemeColors = {
+  ...dark,
+  bg: '#0B1A3D',
+  surface: 'rgba(255,255,255,0.06)',
+  surfaceAlt: 'rgba(255,255,255,0.10)',
+  border: 'rgba(255,255,255,0.12)',
+  borderStrong: 'rgba(255,255,255,0.30)',
+  text: '#F4F6FB',
+  textMuted: '#B6C2DA',
+  brand: '#7FA6FF',
+  brandText: '#A9C4FF',
+  onBrand: '#0B1A3D',
+  accent: '#F2C46B',
+};
+
+/** Туузны дэвсгэр: хөх/алтан туяа + бүдэг тор (зөвхөн вэб CSS). */
+export const inkBand = {
+  color: ink.bg,
+  image: [
+    'repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 44px)',
+    'repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 44px)',
+    'radial-gradient(900px 420px at 88% -12%, rgba(91,140,255,0.26), transparent 62%)',
+    'radial-gradient(700px 320px at -8% 112%, rgba(242,196,107,0.12), transparent 60%)',
+    'linear-gradient(180deg, #0B1A3D 0%, #0F2453 100%)',
+  ].join(', '),
 };
 
 export const space = { xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 32, xxxl: 48 } as const;
@@ -103,10 +152,13 @@ export const fonts = {
 } as const;
 
 export const type = {
+  heroLg: { fontFamily: fonts.bold, fontSize: 54, lineHeight: 60, letterSpacing: -1.4 },
+  hero: { fontFamily: fonts.bold, fontSize: 34, lineHeight: 40, letterSpacing: -0.8 },
   display: { fontFamily: fonts.bold, fontSize: 40, lineHeight: 46, letterSpacing: -0.8 },
   h1: { fontFamily: fonts.bold, fontSize: 30, lineHeight: 36, letterSpacing: -0.5 },
   h2: { fontFamily: fonts.semibold, fontSize: 22, lineHeight: 28, letterSpacing: -0.3 },
   h3: { fontFamily: fonts.semibold, fontSize: 17, lineHeight: 24 },
+  lead: { fontFamily: fonts.regular, fontSize: 18, lineHeight: 28 },
   body: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 25 },
   bodyStrong: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 25 },
   small: { fontFamily: fonts.regular, fontSize: 14, lineHeight: 20 },

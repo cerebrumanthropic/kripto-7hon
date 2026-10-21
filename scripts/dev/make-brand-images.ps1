@@ -30,10 +30,18 @@ function NewCanvas($w, $h) {
   $g.SmoothingMode = 'AntiAlias'; $g.TextRenderingHint = 'AntiAliasGridFit'; $g.InterpolationMode = 'HighQualityBicubic'
   return @($bmp, $g)
 }
+# Брэнд тэмдэг: хөх градиент дөрвөлжин + өсөх 3 багана (сүүлчийнх алтан) — src/components/ui/brand-mark.tsx-тэй ижил харьцаа
 function Monogram($g, $x, $y, $size) {
-  RoundRect $g (Brush '#2457C5') $x $y $size $size ([int]($size * 0.18))
-  $sf = New-Object System.Drawing.StringFormat; $sf.Alignment = 'Center'; $sf.LineAlignment = 'Center'
-  $g.DrawString('ВХ', (Font $bold ($size * 0.42)), [System.Drawing.Brushes]::White, (New-Object System.Drawing.RectangleF($x, ($y + $size * 0.02), $size, $size)), $sf)
+  $grad = New-Object System.Drawing.Drawing2D.LinearGradientBrush((New-Object System.Drawing.PointF($x, $y)), (New-Object System.Drawing.PointF(($x + $size), ($y + $size))), (Color '#4C7DF0'), (Color '#1D47A3'))
+  RoundRect $g $grad $x $y $size $size ([int]($size * 0.26))
+  $bw = $size * 0.14; $gap = $size * 0.08; $base = $y + $size * 0.78
+  $x0 = $x + ($size - (3 * $bw + 2 * $gap)) / 2
+  $i = 0
+  foreach ($bar in @(@(0.26, '#FFFFFF'), @(0.40, '#FFFFFF'), @(0.56, '#F2C46B'))) {
+    $h = $size * $bar[0]
+    RoundRect $g (Brush $bar[1]) ($x0 + $i * ($bw + $gap)) ($base - $h) $bw $h ([Math]::Max(1, $size * 0.03))
+    $i++
+  }
 }
 
 # --- og.png ---

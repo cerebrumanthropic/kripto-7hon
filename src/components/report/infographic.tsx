@@ -6,6 +6,7 @@ import Svg, { Line, Polyline, Rect } from 'react-native-svg';
 
 import { linePoints } from '@/components/charts/scale';
 import { GaugeArc } from '@/components/charts/gauge';
+import { BrandMark } from '@/components/ui/brand-mark';
 import { formatDay, weekShortLabel } from '@/lib/dates';
 import { arrow, direction, groupDigits, mnt, pct, pctPlain, price, usdCompact } from '@/lib/format';
 import { t } from '@/lib/i18n-mn';
@@ -129,9 +130,7 @@ export function Infographic({
       {/* 1. Толгой */}
       <View style={{ height: 96, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderBottomWidth: 3, borderBottomColor: c.accent }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 16 }}>
-          <View style={{ width: 60, height: 60, borderRadius: 8, backgroundColor: c.brand, alignItems: 'center', justifyContent: 'center' }}>
-            <Text style={txt(26, 'bold', c.onBrand)}>{t.site.monogram}</Text>
-          </View>
+          <BrandMark size={60} />
           <Text style={[txt(30, 'bold'), { letterSpacing: 1.5 }]}>{g.title}</Text>
         </View>
         <View style={{ alignItems: 'flex-end', gap: 4 }}>
