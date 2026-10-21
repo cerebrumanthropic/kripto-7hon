@@ -65,9 +65,13 @@ const COMPILED = RULES.map((r) => ({
 
 const MONGOLIA_RE = /\b(mongolia|mongolian|ulaanbaatar)\b|монгол|улаанбаатар/i;
 
+// «Bitcoin Treasury Company», «crypto treasury» — компанийн нөөцийн стратеги, АНУ-ын Сангийн яам биш
+const CORPORATE_TREASURY = /\b(bitcoin|btc|crypto|ether|ethereum|eth|sol|solana|digital[- ]asset|corporate)\s+treasur(y|ies)\b/gi;
+
 /** Гарчгаас ангиллын жагсаалт; аль нь ч таарахгүй бол ['market']. */
 export function classify(title: string): NewsTag[] {
-  const tags = COMPILED.filter((r) => r.re.test(title)).map((r) => r.tag);
+  const text = title.replace(CORPORATE_TREASURY, '$1 reserve');
+  const tags = COMPILED.filter((r) => r.re.test(text)).map((r) => r.tag);
   return tags.length > 0 ? tags : ['market'];
 }
 

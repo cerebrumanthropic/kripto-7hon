@@ -1,7 +1,7 @@
 // `npm run report:draft -- [--week 2026-W43] [--auto-publish] [--dry-run] [--now ISO] [--print-week]` (SPEC §7.3)
 // Гаралт: content/reports/<week>.json (дарж бичнэ), content/reports/<week>.md (ЗӨВХӨН байхгүй үед).
 // index.json-ийг бичихгүй — prepare-build үүсгэнэ (PROGRESS D1).
-import { appendFileSync, existsSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { isoWeek, weekRange } from '../src/lib/dates';
@@ -124,6 +124,7 @@ async function main(): Promise<number> {
   } else {
     writeJson(jsonFile, auto, true);
     console.log(`[write] ${path.relative(process.cwd(), jsonFile)}`);
+    mkdirSync(reportsDir, { recursive: true });
     if (mdExists) {
       console.log(`[keep] ${path.relative(process.cwd(), mdFile)} байна — редакторын текстийг дарж бичихгүй`);
     } else {

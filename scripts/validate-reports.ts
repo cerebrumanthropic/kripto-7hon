@@ -11,7 +11,8 @@ const dir = path.join(process.cwd(), 'content', 'reports');
 let errorCount = 0;
 let checked = 0;
 
-for (const file of readdirSync(dir).filter((f) => /^\d{4}-W\d{2}\.md$/.test(f)).sort()) {
+const files = existsSync(dir) ? readdirSync(dir) : [];
+for (const file of files.filter((f) => /^\d{4}-W\d{2}\.md$/.test(f)).sort()) {
   const week = file.replace(/\.md$/, '');
   let editorial;
   try {

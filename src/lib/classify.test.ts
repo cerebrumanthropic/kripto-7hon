@@ -26,6 +26,12 @@ describe('classify', () => {
     expect(classify('HACKERS STEAL FUNDS')).toEqual(['security']);
   });
 
+  it('«Bitcoin Treasury» компани нь макро биш, АНУ-ын Treasury нь макро', () => {
+    expect(classify('Bitcoin Treasury Strive Debuts New Preferred Stock')).toEqual(['market']);
+    expect(classify('What Is Strategy (MSTR)? The Bitcoin Treasury Company')).toEqual(['market']);
+    expect(classify('Treasury yields climb as dollar strengthens')).toEqual(['macro']);
+  });
+
   it('монгол гарчиг (кирилл дэд мөр)', () => {
     expect(classify('СЗХ виртуал хөрөнгийн тухай хуулийн төсөл')).toEqual(['regulation']);
     expect(classify('Крипто луйврын хэрэг илэрлээ')).toEqual(['security']);

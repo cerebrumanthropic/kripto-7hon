@@ -28,6 +28,7 @@ function buildReports(): ReportIndexEntry[] {
   const entries: ReportIndexEntry[] = [];
   // Нийтлэлээс буцаасан/устгасан тайлан үлдэхгүйн тулд өмнөх build-ийн гаралтыг цэвэрлэнэ
   rmSync(rel('public', 'reports'), { recursive: true, force: true });
+  mkdirSync(dir, { recursive: true });
   for (const file of readdirSync(dir).filter((f) => /^\d{4}-W\d{2}\.md$/.test(f))) {
     const week = file.replace(/\.md$/, '');
     const jsonFile = path.join(dir, `${week}.json`);
