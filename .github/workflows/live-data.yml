@@ -1,0 +1,77 @@
+# Цаг тутам амьд дата татаж GitHub Pages-д нийтэлнэ (SPEC §10.1).
+# Өдрийн цэг өөрчлөгдсөн үед data-history branch-д commit хийнэ (өдөрт ~1 удаа) —
+# энэ нь public repo-д scheduled workflow 60 хоног идэвхгүй болж унтрахаас сэргийлнэ.
+name: live-data
+
+on:
+  schedule:
+    - cron: "7 * * * *" # цаг бүрийн 7 дахь минут (цагийн эхний ачааллаас зайлсхийх)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # data-history руу push
+  pages: write
+  id-token: write
+
+concurrency:
+  group: live-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+
+      - name: Checkout data-history → store/
+        uses: actions/checkout@v7
+        with:
+          ref: data-history
+          path: store
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Fetch live data
+        run: npm run data:live
+        env:
+          COINGECKO_DEMO_API_KEY: ${{ secrets.COINGECKO_DEMO_API_KEY }}
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          DATA_BASE_URL: ${{ vars.DATA_BASE_URL }}
+
+      - name: Commit daily snapshot to data-history (if changed)
+        working-directory: store
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "store: өөрчлөлтгүй"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "data: daily snapshot $(date -u +%F)"
+          git push origin HEAD:data-history
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: public-data
+
+      - name: Deploy to Pages
+        id: deploy
+        uses: actions/deploy-pages@v5
