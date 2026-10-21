@@ -10,9 +10,56 @@
 | 1 | Суурь ба UI (жишээ датагаар) | ✅ 2026.10.21 — хүлээн авсан |
 | 2 | Дата скриптүүд | ✅ 2026.10.21 — хүлээн авсан |
 | 3 | GitHub + Pages + клиент холболт | ✅ 2026.10.21 — хүлээн авсан |
-| 4 | 7 хоногийн тайлан | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
-| 5 | EAS Hosting deploy | ⏳ Зөвшөөрөл хүлээж байна |
-| 6 | QA ба баримт | — |
+| 4 | 7 хоногийн тайлан | ✅ 2026.10.21 — хүлээн авсан |
+| 5 | EAS Hosting deploy | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
+| 6 | QA ба баримт | ⏳ Зөвшөөрөл хүлээж байна |
+
+## 2026.10.21 — Үе шат 5: EAS Hosting deploy
+
+### Хийсэн
+- **Сайт:** https://vaspfrcweekly.expo.app (EAS төсөл [@cerebrumanthropic/vaspfrcweekly](https://expo.dev/accounts/cerebrumanthropic/projects/vaspfrcweekly)).
+  - Анхны төсөл `kripto-7hon` дээрх анхны deploy-ийн оролдлого Terminal-ийн асуулт дээр зогссон. Гэвч энэ оролдлого `kripto-7hon.expo.app` хаягийг тэр төсөлд бүртгэсэн бөгөөд хаягийг `eas deploy`-ээр солих боломжгүй («Globally unique prefix tied to your project»).
+  - Хэрэглэгч `vaspfrcweekly` нэрийг сонгосон тул шинэ төсөл үүсгэж (`slug: vaspfrcweekly`), анхны production deploy-г `--non-interactive --dev-domain vaspfrcweekly`-ээр хийсэн.
+  - Хуучин хоосон төсөл `@cerebrumanthropic/kripto-7hon` дансанд үлдсэн. Хэрэглэгч хүсвэл expo.dev-ээс устгана.
+- `eas.json` (хамгийн бага агуулгатай).
+- `.github/actions/build-web` (composite): `npm ci` → нийтийн env (vars хоосон бол тохируулахгүй, тэгвэл `.env`-ийн утга ашиглагдана) → typecheck → test → validate → prepare-build → `expo export` → `fix-static-index`.
+- `deploy.yml`:
+  - Өдөөгч: main руу push (paths), `workflow_call`, гараар, cron `0 3 1,15 * *` (keepalive).
+  - Үргэлж `ref: main`-ийг checkout хийнэ (D4). `expo/expo-github-action@v9` ашиглан `eas deploy --prod --non-interactive` хийнэ.
+- `ci.yml`: PR бүрд build-web ажиллана. `report/*` PR дээр draft-ийг оруулан `eas deploy --json` хийж, `.url`-ийг PR-д comment болгоно (`gh pr comment --edit-last --create-if-none`).
+- `weekly-report.yml`: `AUTO_PUBLISH=true` үед `uses: ./.github/workflows/deploy.yml` (`secrets: inherit`).
+- `scripts/fix-static-index.ts`: EAS нь `/tailan`-ийг `tailan.html`-ээс хайдаг. Тиймээс `dist/<dir>/index.html` бүрийн хажууд `<dir>.html` хуулбар үүсгэнэ.
+- `prepare-build` нь `.env`/`.env.local`-ийг уншдаг болсон. Ингэснээр локал fallback snapshot бодит Pages датаг авна.
+- Анхдагч `SITE_URL` → `https://vaspfrcweekly.expo.app` (`.env`, config, prepare-build, bot UA).
+
+### Шалгалт
+- Анхны production deploy (локал, non-interactive) ✅.
+- Push → [deploy run 39602842548](https://github.com/cerebrumanthropic/kripto-7hon/actions/runs/39602842548) ✅ 2 мин 10 сек.
+  - Production дээр `/`, `/tailan`, `/tailan/`, `/zah-zeel`, `/medee`, `/sudalgaa`, `/arga-zui`, `/sitemap.xml`, `/robots.txt` бүгд 200.
+  - sitemap нь шинэ хаягтай. `lang="mn"`. OG url зөв. HTML-д `CG-` алга.
+- Туршилтын [PR #2](https://github.com/cerebrumanthropic/kripto-7hon/pull/2) (`report/2026-W42`, draft) → [ci run 39603247750](https://github.com/cerebrumanthropic/kripto-7hon/actions/runs/39603247750) ✅.
+  - Preview URL comment-оор ирсэн.
+  - Preview хуудсанд draft тайлан «НООРОГ» тэмдэгтэй харагдсан. Production дээр тэр тайлан 404 (draft production-д гараагүй).
+  - Туршилтын дараа PR-ийг хааж, branch-ийг устгасан.
+- Typecheck ✅ · 162 тест ✅.
+
+### Нээлттэй асуулт 10 — EAS (expo.dev/pricing, 2026.10.21)
+- Free хязгаар: 100k хүсэлт/сар, 1M CPU-ms, 1 GB, 10 CPU-ms/хүсэлт, 10 subrequest, 5 alias, custom domain байхгүй, deployment retention 30 хоног. SPEC-тэй таарч байна. Starter нь $19/сар.
+- Зөвхөн production биш, alias оноогоогүй deployment л 30 хоногийн дараа устдаг. Keepalive cron-ийг SPEC-ийн дагуу үлдээсэн.
+- Production deployment-ууд устахгүй хуримтлагдаж магадгүй (deploy бүр ≈ хэдэн MB). 1 GB хүрэхээс өмнө `eas deploy:delete`-ээр цэвэрлэх шаардлагатай эсэхийг Үе шат 6-д шалгана.
+
+### Шалгаагүй / анхаарах
+- `AUTO_PUBLISH=true` үеийн `weekly-report → deploy` гинжийг ажиллуулж шалгаагүй (AUTO_PUBLISH=false). YAML бүтэц нь шалгагдсан.
+- Keepalive cron-ийн анхны ажиллалт 11.01 03:00 UTC-д болно.
+- Дээрх асуудал засагдахаас өмнө инфографик статик HTML-д ороогүй (хэмжигдсэний дараа клиент дээр зурагддаг). Энэ нь хүлээгдэж байсан үр дүн.
+
+### Техникийн шийдвэрүүд (Үе шат 5)
+| # | Шийдвэр |
+|---|---|
+| D45 | Production хаяг `vaspfrcweekly.expo.app` (хэрэглэгчийн сонголт). EAS төслийн slug `vaspfrcweekly`. Repo-ийн нэр `kripto-7hon` хэвээр. |
+| D46 | Нийтийн env-ийг vars хоосон бол тохируулахгүй. Хоосон утга нь `.env`-ийг дарж бичихээс сэргийлнэ. |
+| D47 | `src/app/tailan.tsx` болгож зөөхөд Expo-гийн loader гаралт `tailan/[week]`-тэй зөрчилдсөн (EISDIR). Тиймээс route-ийг хэвээр үлдээж, export-ийн дараа `fix-static-index` ажиллуулдаг. |
+| D48 | Build workflow-д `npm ci`-г scripts-тэй ажиллуулна (Expo-гийн export-д). live/weekly-д `--ignore-scripts` хэвээр. |
 
 ## 2026.10.21 — Үе шат 4: 7 хоногийн тайлан
 
