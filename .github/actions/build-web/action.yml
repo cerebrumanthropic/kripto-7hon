@@ -45,4 +45,5 @@ runs:
       shell: bash
       run: |
         npx expo export --platform web
+        npx tsx scripts/paint-first.ts
         npx tsx scripts/fix-static-index.ts

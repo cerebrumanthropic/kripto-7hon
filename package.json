@@ -49,7 +49,7 @@
     "report:draft": "tsx scripts/build-weekly.ts",
     "validate": "tsx scripts/validate-reports.ts",
     "prebuild:web": "tsx scripts/prepare-build.ts",
-    "export:web": "npm run prebuild:web && expo export -p web && tsx scripts/fix-static-index.ts",
+    "export:web": "npm run prebuild:web && expo export -p web && tsx scripts/paint-first.ts && tsx scripts/fix-static-index.ts",
     "samples": "tsx scripts/dev/make-samples.ts",
     "check:links": "tsx scripts/dev/check-links.ts",
     "fixtures:capture": "tsx scripts/dev/capture-fixtures.ts",

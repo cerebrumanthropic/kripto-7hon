@@ -123,12 +123,13 @@ export const ink: ThemeColors = {
   accent: '#F2C46B',
 };
 
-/** Туузны дэвсгэр: хөх/алтан туяа + бүдэг тор (зөвхөн вэб CSS). */
+/**
+ * Туузны дэвсгэр: хөх/алтан туяа (зөвхөн вэб CSS). Торон `repeating-linear-gradient` нь анхны
+ * frame-ийг ≈60ms удаашруулж Lighthouse FCP-г унагасан тул хассан (PROGRESS D57).
+ */
 export const inkBand = {
   color: ink.bg,
   image: [
-    'repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 44px)',
-    'repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 44px)',
     'radial-gradient(900px 420px at 88% -12%, rgba(91,140,255,0.26), transparent 62%)',
     'radial-gradient(700px 320px at -8% 112%, rgba(242,196,107,0.12), transparent 60%)',
     'linear-gradient(180deg, #0B1A3D 0%, #0F2453 100%)',
