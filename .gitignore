@@ -38,6 +38,10 @@ yarn-error.*
 
 example
 
+# eas deploy --dry-run
+deploy.tar.gz
+deploy.json
+
 # build artefacts (SPEC §7.5, PROGRESS D1/D2)
 public/reports/
 public/fallback/*

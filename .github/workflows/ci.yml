@@ -1,0 +1,58 @@
+# Pull request бүрд шалгана (SPEC §10.4). report/* PR дээр draft-ийг оруулан preview deploy хийж URL-ийг comment болгоно.
+# Анхаар: GITHUB_TOKEN-оор нээгдсэн PR (weekly-report) нь энэ workflow-г өдөөдөггүй —
+# редактор PR дээр анхны засвараа commit хийхэд л ажиллана.
+name: ci
+
+on:
+  pull_request: {}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      DATA_BASE_URL: ${{ vars.DATA_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build (preview-д draft тайланг оруулна)
+        uses: ./.github/actions/build-web
+        with:
+          include-drafts: ${{ startsWith(github.head_ref, 'report/') }}
+
+      - name: Setup EAS
+        if: ${{ startsWith(github.head_ref, 'report/') }}
+        uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Preview deploy (--prod-гүй)
+        id: preview
+        if: ${{ startsWith(github.head_ref, 'report/') }}
+        run: |
+          eas deploy --json --non-interactive > deploy.json
+          echo "url=$(jq -r '.url' deploy.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Comment preview URL
+        if: ${{ startsWith(github.head_ref, 'report/') && steps.preview.outputs.url != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          URL: ${{ steps.preview.outputs.url }}
+          PR: ${{ github.event.pull_request.number }}
+          WEEK_PATH: ${{ github.head_ref }}
+        run: |
+          WEEK="${WEEK_PATH#report/}"
+          BODY="🔍 **Урьдчилан харах:** ${URL}/tailan/${WEEK}
+
+          Инфографик, PNG татах, товч мэдээг нийтлэхээсээ өмнө шалгаарай. (commit: ${GITHUB_SHA::7})"
+          gh pr comment "$PR" --body "$BODY" --edit-last --create-if-none

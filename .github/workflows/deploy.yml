@@ -1,0 +1,52 @@
+# EAS Hosting руу production deploy (SPEC §10.3).
+# main руу push / weekly-report-оос workflow_call (AUTO_PUBLISH) / гараар / keepalive cron.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "content/**"
+      - "public/**"
+      - "package.json"
+      - "package-lock.json"
+      - "app.json"
+      - "scripts/**"
+  workflow_call: {}
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 3 1,15 * *" # keepalive: сард 2 удаа шинэ production deploy
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      DATA_BASE_URL: ${{ vars.DATA_BASE_URL }}
+    steps:
+      # weekly-report (AUTO_PUBLISH)-оос дуудагдахад шинээр push хийсэн commit-ийг авахын тулд үргэлж main (PROGRESS D4)
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Build
+        uses: ./.github/actions/build-web
+
+      - name: Setup EAS
+        uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Deploy (production)
+        run: eas deploy --prod --non-interactive

@@ -1,6 +1,7 @@
 # 7 хоногийн тайлангийн ноорог (SPEC §10.2). Ням 23:55 UTC = Даваа 07:55 УБ.
 # AUTO_PUBLISH != 'true' → Pull Request (редактор засаад merge хийнэ).
-# AUTO_PUBLISH == 'true' → main руу шууд commit (deploy job Үе шат 5-д deploy.yml-тэй хамт нэмэгдэнэ).
+# AUTO_PUBLISH == 'true' → main руу шууд commit + deploy.yml-ийг шууд дуудна
+# (GITHUB_TOKEN-оор хийсэн push бусад workflow-г өдөөдөггүй).
 name: weekly-report
 
 on:
@@ -107,3 +108,11 @@ jobs:
           git diff --cached --quiet && { echo "өөрчлөлтгүй"; exit 0; }
           git commit -m "report: publish $WEEK (auto)"
           git push origin HEAD:main
+
+  deploy:
+    needs: draft
+    if: ${{ !inputs.dry_run && vars.AUTO_PUBLISH == 'true' }}
+    permissions:
+      contents: read
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit

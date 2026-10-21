@@ -1,0 +1,46 @@
+# deploy.yml ба ci.yml хуваалцдаг: суулгах → шалгах → prepare-build → expo export.
+name: build-web
+description: Install, check, prepare and export the static web build
+inputs:
+  include-drafts:
+    description: "prepare-build --include-drafts (зөвхөн preview)"
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v7
+      with:
+        node-version: 24
+        cache: npm
+
+    - name: Install
+      shell: bash
+      run: npm ci --no-audit --no-fund
+
+    # vars хоосон бол EXPO_PUBLIC_*-ийг огт тохируулахгүй — тэгвэл repo-ийн .env-ийн утга ашиглагдана
+    - name: Public env (SITE_URL, DATA_BASE_URL)
+      shell: bash
+      run: |
+        if [ -n "$SITE_URL" ]; then echo "EXPO_PUBLIC_SITE_URL=$SITE_URL" >> "$GITHUB_ENV"; fi
+        if [ -n "$DATA_BASE_URL" ]; then echo "EXPO_PUBLIC_DATA_BASE_URL=$DATA_BASE_URL" >> "$GITHUB_ENV"; fi
+
+    - name: Typecheck
+      shell: bash
+      run: npm run typecheck
+
+    - name: Test
+      shell: bash
+      run: npm test
+
+    - name: Validate reports
+      shell: bash
+      run: npm run validate
+
+    - name: Prepare build
+      shell: bash
+      run: npx tsx scripts/prepare-build.ts ${{ inputs.include-drafts == 'true' && '--include-drafts' || '' }}
+
+    - name: Export web
+      shell: bash
+      run: npx expo export --platform web
