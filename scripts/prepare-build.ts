@@ -11,6 +11,13 @@ import { WeeklyAutoSchema, type ReportIndexEntry } from '../src/types/schemas';
 
 import { indexEntry, mergeReport, sortIndex } from './lib/reports';
 
+// expo export-ийн адилаар нийтийн утгыг .env-ээс уншина (CI-д env/vars давуу эрхтэй — loadEnvFile дарж бичихгүй)
+for (const f of ['.env.local', '.env']) {
+  try {
+    process.loadEnvFile(f);
+  } catch {}
+}
+
 const ROOT = process.cwd();
 const includeDrafts = process.argv.includes('--include-drafts');
 const SITE_URL = (process.env.EXPO_PUBLIC_SITE_URL ?? process.env.SITE_URL ?? 'https://kripto-7hon.expo.app').replace(/\/+$/, '');
