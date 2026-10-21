@@ -1,11 +1,6 @@
-import {
-  Inter_400Regular,
-  Inter_500Medium,
-  Inter_600SemiBold,
-  Inter_700Bold,
-  useFonts,
-} from '@expo-google-fonts/inter';
+import { Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { FontDisplay, useFonts } from 'expo-font';
 import { Slot } from 'expo-router';
 import { useState } from 'react';
 import { View } from 'react-native';
@@ -16,7 +11,15 @@ import { useTheme } from '@/theme/use-theme';
 
 export default function RootLayout() {
   // Вэбд фонт ачаалагдтал fallback stack-аар зурна (tokens.fonts) — хүлээлгэхгүй.
-  useFonts({ Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold });
+  // `optional`: ~100ms-д бэлэн биш бол тухайн ачаалалд fallback үлдэнэ — текст дахин урсахгүй (CLS),
+  // дараагийн хуудсанд кэшээс Inter.
+  const optional = (uri: number) => ({ uri, display: FontDisplay.OPTIONAL });
+  useFonts({
+    Inter_400Regular: optional(Inter_400Regular),
+    Inter_500Medium: optional(Inter_500Medium),
+    Inter_600SemiBold: optional(Inter_600SemiBold),
+    Inter_700Bold: optional(Inter_700Bold),
+  });
   const [queryClient] = useState(() => new QueryClient());
   const { c } = useTheme();
 
