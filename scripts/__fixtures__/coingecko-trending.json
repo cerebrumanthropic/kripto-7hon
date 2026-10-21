@@ -1,0 +1,81 @@
+{
+  "coins": [
+    {
+      "item": {
+        "id": "pearl-2",
+        "coin_id": 102173580,
+        "name": "Pearl",
+        "symbol": "PEARL",
+        "market_cap_rank": 90,
+        "slug": "pearl-research",
+        "score": 0
+      }
+    },
+    {
+      "item": {
+        "id": "pudgy-penguins",
+        "coin_id": 52622,
+        "name": "Pudgy Penguins",
+        "symbol": "PENGU",
+        "market_cap_rank": 112,
+        "slug": "pudgy-penguins",
+        "score": 1
+      }
+    },
+    {
+      "item": {
+        "id": "collector-crypt",
+        "coin_id": 68728,
+        "name": "Collector Crypt",
+        "symbol": "CARDS",
+        "market_cap_rank": 138,
+        "slug": "collector-crypt",
+        "score": 2
+      }
+    },
+    {
+      "item": {
+        "id": "sui",
+        "coin_id": 26375,
+        "name": "Sui",
+        "symbol": "SUI",
+        "market_cap_rank": 28,
+        "slug": "sui",
+        "score": 3
+      }
+    },
+    {
+      "item": {
+        "id": "venice-token",
+        "coin_id": 54023,
+        "name": "Venice Token",
+        "symbol": "VVV",
+        "market_cap_rank": 71,
+        "slug": "venice-token",
+        "score": 4
+      }
+    },
+    {
+      "item": {
+        "id": "zcash",
+        "coin_id": 486,
+        "name": "Zcash",
+        "symbol": "ZEC",
+        "market_cap_rank": 10,
+        "slug": "zcash",
+        "score": 5
+      }
+    },
+    {
+      "item": {
+        "id": "worldcoin-wld",
+        "coin_id": 31069,
+        "name": "Worldcoin",
+        "symbol": "WLD",
+        "market_cap_rank": 47,
+        "slug": "worldcoin",
+        "score": 6
+      }
+    }
+  ]
+}

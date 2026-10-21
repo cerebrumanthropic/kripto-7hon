@@ -1,0 +1,278 @@
+{
+  "breakdown24h": null,
+  "breakdown30d": null,
+  "chain": null,
+  "total24h": 8773678664.050003,
+  "total48hto24h": 7589024297.160001,
+  "total7d": 56215119547.39998,
+  "total14dto7d": 56734900608.569984,
+  "total30d": 270427162930.36987,
+  "total60dto30d": 311557772129.56976,
+  "total1y": 3396879388767.4067,
+  "total7DaysAgo": 9659445257.760008,
+  "total30DaysAgo": 9665655632.839994,
+  "totalAllTime": 14278237684131.07,
+  "change_1d": 15.61,
+  "change_7d": -9.17,
+  "change_1m": -9.23,
+  "change_7dover7d": -0.92,
+  "change_30dover30d": -13.2,
+  "protocols": [
+    {
+      "total24h": 11676030,
+      "total48hto24h": 62863557,
+      "total7d": 489514851,
+      "total14dto7d": 587330638,
+      "total30d": 2718072693,
+      "total60dto30d": 3456499643,
+      "total1y": 70043267043,
+      "annualized1y": 70043267043,
+      "total7DaysAgo": 83299473,
+      "total30DaysAgo": 59192415,
+      "totalAllTime": 353359387839,
+      "average1y": 191899361.76164383,
+      "monthlyAverage1y": 5841416572.024438,
+      "change_1d": -81.43,
+      "change_7d": -85.98,
+      "change_1m": -80.27,
+      "change_7dover7d": -16.65,
+      "change_30dover30d": -21.36,
+      "breakdown24h": {
+        "ethereum": {
+          "Curve DEX": 52307036
+        },
+        "optimism": {
+          "Curve DEX": 192150
+        },
+        "base": {
+          "Curve DEX": 573329
+        },
+        "bsc": {
+          "Curve DEX": 284516
+        },
+        "polygon": {
+          "Curve DEX": 263941
+        },
+        "arbitrum": {
+          "Curve DEX": 4047331
+        },
+        "xdai": {
+          "Curve DEX": 2029056
+        },
+        "fraxtal": {
+          "Curve DEX": 37465
+        },
+        "hyperliquid": {
+          "Curve DEX": 12088
+        },
+        "sonic": {
+          "Curve DEX": 43775
+        },
+        "celo": {
+          "Curve DEX": 2141
+        },
+        "unichain": {
+          "Curve DEX": 0.15
+        },
+        "mantle": {
+          "Curve DEX": 0
+        },
+        "ink": {
+          "Curve DEX": 209
+        },
+        "robinhood": {
+          "Curve DEX": 8879
+        },
+        "plasma": {
+          "Curve DEX": 570716
+        },
+        "monad": {
+          "Curve DEX": 1241981
+        },
+        "avax": {
+          "Curve DEX": 4974
+        },
+        "stable": {
+          "Curve DEX": 0
+        }
+      },
+      "breakdown30d": {
+        "ethereum": {
+          "Curve DEX": 2516084691
+        },
+        "arbitrum": {
+          "Curve DEX": 67833954
+        },
+        "optimism": {
+          "Curve DEX": 8439436
+        },
+        "bsc": {
+          "Curve DEX": 612991
+        },
+        "polygon": {
+          "Curve DEX": 6071118
+        },
+        "base": {
+          "Curve DEX": 19665160
+        },
+        "fraxtal": {
+          "Curve DEX": 1734006
+        },
+        "sonic": {
+          "Curve DEX": 247045
+        },
+        "hyperliquid": {
+          "Curve DEX": 579611
+        },
+        "xdai": {
+          "Curve DEX": 30584455
+        },
+        "stable": {
+          "Curve DEX": 0.08
+        },
+        "unichain": {
+          "Curve DEX": 25048.04
+        },
+        "ink": {
+          "Curve DEX": 4220
+        },
+        "mantle": {
+          "Curve DEX": 0
+        },
+        "celo": {
+          "Curve DEX": 177215
+        },
+        "robinhood": {
+          "Curve DEX": 450733
+        },
+        "plasma": {
+          "Curve DEX": 7603304
+        },
+        "monad": {
+          "Curve DEX": 57387724
+        },
+        "avax": {
+          "Curve DEX": 571983
+        }
+      },
+      "defillamaId": "3",
+      "name": "Curve DEX",
+      "displayName": "Curve DEX",
+      "module": "curve",
+      "category": "Dexs",
+      "logo": "https://icons.llamao.fi/icons/protocols/curve",
+      "chains": [
+        "Ethereum",
+        "OP Mainnet",
+        "Gnosis",
+        "Avalanche",
+        "Polygon",
+        "Arbitrum",
+        "Fantom",
+        "Fraxtal",
+        "Celo",
+        "Base",
+        "Sonic",
+        "Hyperliquid L1",
+        "Plasma",
+        "Mantle",
+        "Ink",
+        "Unichain",
+        "Monad",
+        "Stable",
+        "Robinhood Chain",
+        "BSC",
+        "Etherlink"
+      ],
+      "protocolType": "protocol",
+      "methodologyURL": "https://github.com/DefiLlama/dimension-adapters/blob/master/dexs/curve",
+      "methodology": {
+        "UserFees": "Swap fees paid by traders.",
+        "Fees": "Swap fees paid by traders, set per pool (roughly 0.01% on stable pools, up to a few percent on volatile pools).",
+        "Revenue": "The share of swap fees taken by the protocol rather than paid to liquidity providers - usually half of the fee.",
+        "ProtocolRevenue": "10% of the protocol's share, sent to the Curve DAO treasury.",
+        "HoldersRevenue": "90% of the protocol's share, distributed to veCRV holders.",
+        "SupplySideRevenue": "The share of swap fees paid to liquidity providers - usually half of the fee.",
+        "Volume": "Value swapped in Curve pools, counting one side of each trade. Deposits and withdrawals are not counted as volume."
+      },
+      "parentProtocol": "parent#curve-finance",
+      "slug": "curve-dex",
+      "linkedProtocols": [
+        "Curve Finance",
+        "Curve DEX",
+        "Curve LlamaLend"
+      ],
+      "id": "3"
+    },
+    {
+      "total24h": 68543,
+      "total48hto24h": 45716,
+      "total7d": 414544,
+      "total14dto7d": 597135,
+      "total30d": 3595176,
+      "total60dto30d": 12449947,
+      "total1y": 205415436,
+      "annualized1y": 212398396.99716714,
+      "total7DaysAgo": 64791,
+      "total30DaysAgo": 57278,
+      "totalAllTime": 7236624645,
+      "average1y": 581913.4164305949,
+      "monthlyAverage1y": 17713444.396147307,
+      "change_1d": 49.93,
+      "change_7d": 5.79,
+      "change_1m": 19.67,
+      "change_7dover7d": -30.58,
+      "change_30dover30d": -71.12,
+      "breakdown24h": {
+        "ethereum": {
+          "Balancer V1": 63267
+        }
+      },
+      "breakdown30d": {
+        "ethereum": {
+          "Balancer V1": 3595176
+        }
+      },
+      "defillamaId": "116",
+      "name": "Balancer V1",
+      "displayName": "Balancer V1",
+      "module": "balancer-v1",
+      "category": "Dexs",
+      "logo": "https://icons.llamao.fi/icons/protocols/balancer-v1",
+      "chains": [
+        "Ethereum"
+      ],
+      "protocolType": "protocol",
+      "methodologyURL": "https://github.com/DefiLlama/dimension-adapters/blob/master/dexs/balancer-v1.ts",
+      "methodology": {
+        "UserFees": "Trading fees paid by users, set per pool by the pool creator (0.0001% to 10%)",
+        "Fees": "Swap fees paid by traders on the counted swaps, at each pool's own swap fee",
+        "Revenue": "Balancer V1 takes no protocol fee, so protocol revenue is zero",
+        "ProtocolRevenue": "Balancer V1 takes no protocol fee, so protocol revenue is zero",
+        "HoldersRevenue": "Money going to governance token holders",
+        "SupplySideRevenue": "All swap fees are distributed to pool liquidity providers",
+        "Volume": "Value of swaps in Balancer V1 pools, counted on the side that is WETH, DAI, USDC, USDT, WBTC or BAL; swaps between two other tokens and wash trades are not counted"
+      },
+      "parentProtocol": "parent#balancer",
+      "slug": "balancer-v1",
+      "linkedProtocols": [
+        "Balancer",
+        "Balancer V1",
+        "Balancer V2",
+        "Balancer V3"
+      ],
+      "breakdownMethodology": {
+        "UserFees": {
+          "Token Swap Fees": "Swap fees paid by users on each trade"
+        },
+        "Fees": {
+          "Token Swap Fees": "Swap fees paid by traders on the counted swaps, at each pool's own swap fee"
+        },
+        "SupplySideRevenue": {
+          "Token Swap Fees To LPs": "100% of swap fees are distributed to pool liquidity providers"
+        }
+      },
+      "id": "116"
+    }
+  ]
+}

@@ -42,7 +42,26 @@ export const t = {
     loading: 'Ачаалж байна…',
     error: 'Өгөгдөл ачаалж чадсангүй. Дараа дахин оролдоно уу.',
     sourceStale: 'хоцорсон',
+    staleSources: 'Хоцорсон эх сурвалж (өмнөх утгаар)',
+    noData: 'Энэ эх сурвалжийн өгөгдөл одоогоор алга.',
   },
+
+  sourceNames: {
+    coingecko: 'CoinGecko',
+    'defillama-tvl': 'DefiLlama (TVL)',
+    'defillama-stablecoins': 'DefiLlama (стейблкойн)',
+    'defillama-dexs': 'DefiLlama (DEX)',
+    feargreed: 'Alternative.me',
+    fx: 'Exchange Rate API',
+    coindesk: 'CoinDesk',
+    cointelegraph: 'Cointelegraph',
+    decrypt: 'Decrypt',
+    theblock: 'The Block',
+    bitcoinmagazine: 'Bitcoin Magazine',
+    cryptoslate: 'CryptoSlate',
+    sec: 'U.S. SEC',
+    ikon: 'Ikon.mn',
+  } as Record<string, string>,
 
   kpi: {
     totalMcap: 'Нийт зах зээлийн үнэлгээ',

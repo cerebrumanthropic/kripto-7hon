@@ -1,0 +1,141 @@
+[
+  {
+    "date": 1792368000,
+    "name": "AlpsCon AI Trade Hub",
+    "classification": "Token & Share Accounting",
+    "technique": "Incorrect Share Accounting",
+    "amount": 152809.36,
+    "chain": [
+      "BSC"
+    ],
+    "bridgeHack": false,
+    "targetType": "DeFi Protocol",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": null,
+    "language": "Solidity"
+  },
+  {
+    "date": 1792281600,
+    "name": "Coffer",
+    "classification": "Token & Share Accounting",
+    "technique": "Rounding Error",
+    "amount": 0.7,
+    "chain": [
+      "Solana"
+    ],
+    "bridgeHack": false,
+    "targetType": "DeFi Protocol",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": "7798",
+    "language": null
+  },
+  {
+    "date": 1792195200,
+    "name": "Qubic",
+    "classification": "Key Compromise",
+    "technique": "Weak Key Generation",
+    "amount": 1300000,
+    "chain": [
+      "Qubic"
+    ],
+    "bridgeHack": false,
+    "targetType": "Wallet",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": "chain#qubic",
+    "language": "JavaScript"
+  },
+  {
+    "date": 1792108800,
+    "name": "Pirate Chain",
+    "classification": "Token & Share Accounting",
+    "technique": "Unbacked Mint",
+    "amount": null,
+    "chain": [
+      "Pirate Chain"
+    ],
+    "bridgeHack": false,
+    "targetType": "Chain",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": null,
+    "language": null
+  },
+  {
+    "date": 1792108800,
+    "name": "Affluent",
+    "classification": "Token & Share Accounting",
+    "technique": "Unbacked Mint",
+    "amount": 1053000,
+    "chain": [
+      "TON"
+    ],
+    "bridgeHack": false,
+    "targetType": "DeFi Protocol",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": "5726",
+    "language": null
+  },
+  {
+    "date": 1791936000,
+    "name": "UNCX Network V2",
+    "classification": "Token & Share Accounting",
+    "technique": "Incorrect Share Accounting",
+    "amount": 86000,
+    "chain": [
+      "Ethereum",
+      "Base",
+      "BSC",
+      "Robinhood Chain"
+    ],
+    "bridgeHack": false,
+    "targetType": "DeFi Protocol",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": "1765",
+    "parentProtocolId": "parent#uncx-network",
+    "language": "Solidity"
+  },
+  {
+    "date": 1791849600,
+    "name": "Gamdom",
+    "classification": "Frontend & Infrastructure",
+    "technique": "Key Leaked via Infrastructure",
+    "amount": 4208000,
+    "chain": [
+      "Ethereum",
+      "BSC",
+      "Polygon",
+      "Arbitrum",
+      "Optimism",
+      "Solana",
+      "TRON",
+      "Bitcoin"
+    ],
+    "bridgeHack": false,
+    "targetType": "Gambling Platform",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": null,
+    "language": null
+  },
+  {
+    "date": 1791590400,
+    "name": "Papertrade",
+    "classification": "Oracle Manipulation",
+    "technique": "Spot Price Manipulation",
+    "amount": 1280000,
+    "chain": [
+      "Hyperliquid L1"
+    ],
+    "bridgeHack": false,
+    "targetType": "DeFi Protocol",
+    "source": "",
+    "returnedFunds": null,
+    "defillamaId": "9065",
+    "language": "Solidity"
+  }
+]

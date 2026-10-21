@@ -7,12 +7,81 @@
 | # | Үе шат | Төлөв |
 |---|---|---|
 | 0 | SPEC унших, зөрчил тодруулах | ✅ 2026.10.21 |
-| 1 | Суурь ба UI (жишээ датагаар) | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
-| 2 | Дата скриптүүд | ⏳ Зөвшөөрөл хүлээж байна |
-| 3 | GitHub + Pages + клиент холболт | — |
+| 1 | Суурь ба UI (жишээ датагаар) | ✅ 2026.10.21 — хүлээн авсан |
+| 2 | Дата скриптүүд | ✅ 2026.10.21 — хэрэглэгчийн хүлээн авалтыг хүлээж байна |
+| 3 | GitHub + Pages + клиент холболт | ⏳ Зөвшөөрөл хүлээж байна |
 | 4 | 7 хоногийн тайлан | — |
 | 5 | EAS Hosting deploy | — |
 | 6 | QA ба баримт | — |
+
+## 2026.10.21 — Үе шат 2: Дата скриптүүд
+
+### Хийсэн
+- `scripts/lib/`:
+  - `http`: 15 сек timeout, 2 удаа давтах, exponential backoff, 429-д 60 сек хүлээх, UA.
+  - `budget`: CoinGecko ≤5 дуудлага/ажиллалт.
+  - `state`: Pages → store → локал → хоосон.
+  - `history`: өдрийн хаалтын цэг, provisional.
+  - `assemble`: market.json нэгтгэх, stale fallback.
+  - `stablecoins`: стейблкойн илрүүлэлт.
+- `scripts/sources/`: `coingecko`, `defillama`, `feargreed`, `fx`, `rss`, `feeds`. Бүгд Zod `looseObject`-оор (passthrough) шалгана.
+- `scripts/fetch-live.ts` (`npm run data:live`) гаргадаг файлууд:
+  - `public-data/live/{market,news,status}.json`
+  - `public-data/history/daily.json` (өнөөдрийн provisional цэгтэй)
+  - `public-data/news/<week>.json`
+  - store/-д зөвхөн өдрийн цэг өөрчлөгдсөн үед бичнэ.
+  - Сонголт: `--fail id,...` (эх сурвалжийг хүчээр унагах), `--now`, `--out`, `--store`.
+- `scripts/__fixtures__/`: 11 endpoint-ийн бодит хариу (2026.10.21, хэмжээг багасгасан). `npm run fixtures:capture` дахин авна.
+- UI: эх сурвалж тус бүрийн «Хоцорсон эх сурвалж (өмнөх утгаар): X (огноо)» туз (CLAUDE.md дүрэм 8). Утгагүй үед KPI-ийн өөрчлөлтийг нуудаг. CoinGecko-гийн дата байхгүй бол хүснэгтийн оронд мессеж гаргана.
+
+### Шалгалт
+- `npm run typecheck` ✅ · `npm test` ✅ 19 файл / 136 тест · `npx expo export -p web` ✅.
+- `npm run data:live` (локал, түлхүүргүй): схемд тэнцсэн 6 файл (`market`, `news`, `status`, `daily`, `news/2026-W43`, `news/2026-W42`), exit 0.
+  - 14 эх сурвалжаас 12 ✓. CoinGecko нь `COINGECKO_DEMO_API_KEY`-гүй, SEC нь `CONTACT_EMAIL`-гүй тул ✗.
+  - 131 шинэ мэдээ ирсэн, давхардлын дараа 60 харагдана.
+- Хүчээр унагах (`--fail feargreed,fx,coindesk`): бусад нь ажиллаж, унасан 3 нь өмнөх утга + `stale:true` + өмнөх `fetchedAt`-тай гарсан. Өдрийн цэг рүү хоцорсон утга ороогүй (`null`).
+- Бүх зах зээлийн эх сурвалж унахад exit 1 өгч, store/-д бичихгүй.
+- Хоёр дахь ажиллалт төлвийг store/ ба локал гаралтаас ачаалсан, store өөрчлөгдөөгүй.
+- Хөтөч дээр бодит гаралтыг fallback болгон харуулахад нүүр ба мэдээний хуудас (60 мэдээ, холбоос `noopener noreferrer`) зөв ажилласан.
+
+### RSS шалгалт (локал сүлжээ, 2026.10.21; GitHub Actions-оос Үе шат 3-т дахин шалгана)
+| Эх сурвалж | URL | Үр дүн | 7 хоногт | Шийдвэр |
+|---|---|---|---|---|
+| CoinDesk | `coindesk.com/arc/outboundfeeds/rss/` | ✓ RSS | 25 | ✅ |
+| Cointelegraph | `cointelegraph.com/rss` | ✓ | 30 | ✅ |
+| Decrypt | `decrypt.co/feed` | ✓ | 38 | ✅ |
+| The Block | `theblock.co/rss.xml` | ✓ | 18 | ✅ |
+| Bitcoin Magazine | `bitcoinmagazine.com/.rss/full/` | ✓ | 10 | ✅ |
+| CryptoSlate | `cryptoslate.com/feed/` | ✓ | 10 | ✅ |
+| U.S. SEC | `sec.gov/news/pressreleases.rss` | ✓ (имэйлгүй UA-д ч хариулсан) | 4 (крипто 0) | ✅ `CONTACT_EMAIL`-тэй үед л; зөвхөн крипто гарчиг (D24) |
+| МОНЦАМЭ | `montsame.mn/mn/rss`, `/rss` | ✗ HTTP 403 | — | ❌ |
+| Ikon.mn | `ikon.mn/rss` | ✓ RSS, ерөнхий мэдээ | 30 (крипто 0) | ✅ түлхүүр үгээр шүүнэ |
+| GoGo.mn | `gogo.mn/rss` | ✗ 404 | — | ❌ |
+| News.mn | `news.mn/feed/` | ✗ RSS биш (HTML хуудас) | — | ❌ |
+| Өнөөдөр | `unuudur.mn/feed` | ✗ 404 | — | ❌ |
+| Eguur.mn | `eguur.mn/feed/` | ✗ timeout | — | ❌ |
+| Bloomberg TV Mongolia | `bloombergtv.mn/feed/` | ✗ 404 | — | ❌ |
+
+### Нээлттэй асуулт 10-ын хэсэгчилсэн хариу
+- CoinGecko Demo: 10,000 дуудлага/сар, 100 дуудлага/мин, иш татах заавал (coingecko.com/en/api/pricing, 2026.10.21). Хамгийн хямд төлбөртэй нь Basic $35/сар. SPEC-тэй таарч байна. Бидний хэрэглээ: 3 дуудлага × 24 × 31 ≈ 2,232/сар.
+- EAS Free-ийн хязгаар ба Actions-ийн 60 хоногийн дүрмийг Үе шат 3 ба 5-д шалгана.
+
+### Шалгаагүй (хэрэглэгчийн алхам шаардлагатай)
+- CoinGecko-г Demo түлхүүртэйгээр бодитоор дуудаагүй. Задлагчийг бодит хариуны fixture-ээр шалгасан. Fixture-ийг түлхүүргүй нийтийн endpoint-оос авсан бөгөөд талбарууд нь ижил. `.env.local`-д `COINGECKO_DEMO_API_KEY=...` нэмээд `npm run data:live` ажиллуулбал баталгаажна.
+- SEC feed-ийг `CONTACT_EMAIL`-тэй ажиллуулаагүй.
+
+### Техникийн шийдвэрүүд (Үе шат 2)
+| # | Шийдвэр |
+|---|---|
+| D23 | `SourceStatus.id`-ууд: `coingecko`, `defillama-tvl`, `defillama-stablecoins`, `defillama-dexs`, `feargreed`, `fx` + feed бүрийн id. DefiLlama-г 3 хуваасан тул DEX унахад TVL шинэ хэвээр үлдэнэ. «Бүх зах зээлийн эх сурвалж унасан» = эхний 6 бүгд. |
+| D24 | SEC-ийн feed нь ерөнхий сэдэвтэй тул зөвхөн крипто түлхүүр үгтэй гарчгийг авна (`cryptoOnly`). SEC-ийн fair-access дүрмийн дагуу `CONTACT_EMAIL`-гүй бол дуудахгүй. |
+| D25 | Монгол эх сурвалж: одоогоор зөвхөн Ikon.mn (крипто түлхүүр үгээр шүүнэ; ихэнх долоо хоногт 0 гэж тооцно). Монгол мэдээг редактор тайланд гараар нэмнэ (SPEC §5.6). `classify`-д кирилл язгуур нэмсэн (`сзх`, `хууль`, `луйв` г.м.; JS-ийн `\b` кириллд ажилладаггүй тул дэд мөрөөр таарна). |
+| D26 | Өдрийн цэг: шинэ UTC өдрийн анхны ажиллалт өмнөх өдрийн цэгийг бичнэ (00:07 ажиллаагүй байсан ч дараагийнх нь бичнэ). 06:00 UTC хүртэл `null` талбарыг нөхөж болно. Цэгт зөвхөн энэ ажиллалтад шинээр татсан утга орно (хоцорсон → `null`). |
+| D27 | Мэдээний архивыг `publishedAt`-ийн ISO долоо хоногоор (UTC) хуваарилна. Төлөв нь одоогийн ба өмнөх долоо хоногийг ачаалж, архив бүрд 500 мэдээний хязгаартай. Анх бүртгэгдсэн хувилбар үлдэнэ. D5-ыг хэрэгжүүлсэн: store/ дахь хуучин долоо хоногуудыг Pages-д дахин нийтэлнэ. |
+| D28 | Fixture-ийг багасгасан: TVL ба стейблкойны цуваа 40 цэг, стейблкойны жагсаалт топ 12, trending 7. RSS-ийн тест нийлэг XML ашигладаг тул бодит мэдээний текст repo-д хадгалагдахгүй. Feed-ийн `description`/`content`-ийг задлахгүй (`stopNodes`). |
+| D29 | `public-data/` JSON-ийг шахсан (minified), `store/`-ийг уншихад хялбар (pretty) хадгална, ингэснээр git diff ойлгомжтой. |
+| D30 | CoinGecko-г дараалан 3 удаа дууддаг. Coins = топ 50 (SPEC §6), trending ≤7. |
+| D31 | `fast-xml-parser` v5-ийг `npm install -D`-ээр суулгасан (зөвхөн скрипт, клиент bundle-д орохгүй). |
 
 ## 2026.10.21 — Үе шат 1: Суурь ба UI
 
@@ -108,3 +177,4 @@ Template-ээс ирсэн (Expo SDK 58): expo, expo-router, react 19.3, react-n
 | `prettier` | dev | Формат (SPEC §3) |
 | `gray-matter` | dev | Тайлангийн `.md` frontmatter (SPEC §3) |
 | `@types/node` 24 | dev | Скрипт ба build-ийн Node төрөл (TS 6, D21) |
+| `fast-xml-parser` 5 | dev | RSS/Atom задлах (SPEC §3, D31) |

@@ -25,6 +25,12 @@ describe('classify', () => {
   it('том жижиг үсэг үл хамаарна', () => {
     expect(classify('HACKERS STEAL FUNDS')).toEqual(['security']);
   });
+
+  it('монгол гарчиг (кирилл дэд мөр)', () => {
+    expect(classify('СЗХ виртуал хөрөнгийн тухай хуулийн төсөл')).toEqual(['regulation']);
+    expect(classify('Крипто луйврын хэрэг илэрлээ')).toEqual(['security']);
+    expect(classify('Биткойны ханш өслөө')).toEqual(['market']);
+  });
 });
 
 describe('isMongolia', () => {

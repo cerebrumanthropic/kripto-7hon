@@ -4,12 +4,43 @@ import { T } from '@/components/ui/primitives';
 import { formatDateTime, isStale } from '@/lib/dates';
 import type { DataOrigin } from '@/lib/data-client';
 import { t } from '@/lib/i18n-mn';
+import { staleSources } from '@/lib/source-status';
+import type { SourceStatus } from '@/types/schemas';
 import { radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/use-theme';
 
-/** «Сүүлд шинэчилсэн …» + шар (хоцорсон) эсвэл саарал (fallback/sample) туз (SPEC §8). */
-export function LiveStatus({ updatedAt, origin }: { updatedAt?: string; origin?: DataOrigin }) {
+function Banner({ text, tone }: { text: string; tone: 'info' | 'warn' }) {
   const { c } = useTheme();
+  return (
+    <View
+      role="status"
+      style={{
+        backgroundColor: tone === 'warn' ? c.warnBg : c.infoBg,
+        borderRadius: radius.md,
+        paddingVertical: space.sm,
+        paddingHorizontal: space.md,
+        alignSelf: 'flex-start',
+      }}>
+      <T v="smallStrong" color={tone === 'warn' ? 'warnText' : 'infoText'}>
+        {text}
+      </T>
+    </View>
+  );
+}
+
+/**
+ * «Сүүлд шинэчилсэн …» + шар (хоцорсон) эсвэл саарал (fallback/sample) туз (SPEC §8).
+ * Эх сурвалж тус бүрийн «хоцорсон» тэмдэг (CLAUDE.md дүрэм 8).
+ */
+export function LiveStatus({
+  updatedAt,
+  origin,
+  sources,
+}: {
+  updatedAt?: string;
+  origin?: DataOrigin;
+  sources?: SourceStatus[];
+}) {
   if (!updatedAt || !origin) {
     return (
       <T v="small" color="textMuted">
@@ -18,34 +49,21 @@ export function LiveStatus({ updatedAt, origin }: { updatedAt?: string; origin?:
     );
   }
 
-  const banner =
-    origin === 'sample'
-      ? { text: t.live.sample, bg: c.infoBg, fg: 'infoText' as const }
-      : origin === 'fallback'
-        ? { text: t.live.fallback, bg: c.infoBg, fg: 'infoText' as const }
-        : isStale(updatedAt)
-          ? { text: t.live.staleWarning, bg: c.warnBg, fg: 'warnText' as const }
-          : null;
+  const stale = staleSources(sources ?? []);
 
   return (
     <View style={{ gap: space.sm }} aria-live="polite">
       <T v="small" color="textMuted" num>
         {t.live.updated}: {formatDateTime(updatedAt)}
       </T>
-      {banner ? (
-        <View
-          role="status"
-          style={{
-            backgroundColor: banner.bg,
-            borderRadius: radius.md,
-            paddingVertical: space.sm,
-            paddingHorizontal: space.md,
-            alignSelf: 'flex-start',
-          }}>
-          <T v="smallStrong" color={banner.fg}>
-            {banner.text}
-          </T>
-        </View>
+      {origin === 'sample' ? <Banner tone="info" text={t.live.sample} /> : null}
+      {origin === 'fallback' ? <Banner tone="info" text={t.live.fallback} /> : null}
+      {origin === 'live' && isStale(updatedAt) ? <Banner tone="warn" text={t.live.staleWarning} /> : null}
+      {stale.length > 0 ? (
+        <Banner
+          tone="warn"
+          text={`${t.live.staleSources}: ${stale.map((s) => `${s.name} (${formatDateTime(s.fetchedAt)})`).join(', ')}`}
+        />
       ) : null}
     </View>
   );

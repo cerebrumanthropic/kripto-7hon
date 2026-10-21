@@ -26,7 +26,10 @@ export default function News() {
   const shown = useMemo(() => filterNews(items, f), [items, f]);
 
   return (
-    <Page title={t.news.title} lead={t.news.lead} meta={<LiveStatus updatedAt={data?.data.updatedAt} origin={data?.origin} />}>
+    <Page
+      title={t.news.title}
+      lead={t.news.lead}
+      meta={<LiveStatus updatedAt={data?.data.updatedAt} origin={data?.origin} sources={data?.data.sources} />}>
       <Card tone="surfaceAlt">
         <T v="small">{t.news.notice}</T>
       </Card>

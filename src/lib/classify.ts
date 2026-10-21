@@ -3,13 +3,15 @@
 // Богино үгс (act, ban, fed …) бүтэн үгээр л таарна — «impact», «banner», «federal» буруу орохоос сэргийлнэ.
 import type { NewsTag } from '@/types/schemas';
 
-type Rule = { tag: Exclude<NewsTag, 'market'>; stems: string[]; words: string[] };
+// `mn`: кирилл үгийн хэсэг — JS-ийн \b нь кириллд ажилладаггүй тул дэд мөрөөр таарна.
+type Rule = { tag: Exclude<NewsTag, 'market'>; stems: string[]; words: string[]; mn?: string[] };
 
 const RULES: Rule[] = [
   {
     tag: 'regulation',
     stems: ['regulat', 'licen', 'lawsuit', 'sanction', 'legislat'],
     words: ['sec', 'cftc', 'law', 'laws', 'bill', 'act', 'mica', 'fatf', 'ban', 'bans', 'banned', 'court', 'tax', 'taxes'],
+    mn: ['сзх', 'хууль', 'зохицуул', 'зөвшөөрөл', 'татвар', 'шүүх'],
   },
   {
     tag: 'etf',
@@ -20,6 +22,8 @@ const RULES: Rule[] = [
     tag: 'security',
     stems: ['hack', 'exploit', 'drain', 'stolen', 'phishing', 'breach', 'attack', 'scam'],
     words: [],
+    // «луйвар» → «луйврын» (эгшиг гээгдэх) тул язгуур «луйв»
+    mn: ['хакер', 'луйв', 'залилан', 'хулгайл'],
   },
   {
     tag: 'macro',
@@ -30,6 +34,7 @@ const RULES: Rule[] = [
     tag: 'stablecoin',
     stems: ['stablecoin', 'tether'],
     words: ['usdt', 'usdc', 'circle'],
+    mn: ['стейблкойн'],
   },
   {
     tag: 'defi',
@@ -40,6 +45,7 @@ const RULES: Rule[] = [
     tag: 'mining',
     stems: ['mining', 'miner', 'hashrate', 'halving'],
     words: [],
+    mn: ['олборл'],
   },
 ];
 
@@ -48,7 +54,11 @@ const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const COMPILED = RULES.map((r) => ({
   tag: r.tag,
   re: new RegExp(
-    [...r.stems.map((s) => `\\b${escape(s)}`), ...r.words.map((w) => `\\b${escape(w)}\\b`)].join('|'),
+    [
+      ...r.stems.map((s) => `\\b${escape(s)}`),
+      ...r.words.map((w) => `\\b${escape(w)}\\b`),
+      ...(r.mn ?? []).map(escape),
+    ].join('|'),
     'i',
   ),
 }));

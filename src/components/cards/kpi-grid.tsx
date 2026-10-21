@@ -24,7 +24,7 @@ export function KpiGrid() {
 
   return (
     <View style={{ gap: space.md }}>
-      <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} />
+      <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} />
       <Grid cols={cols}>
         {[
           <KpiCard

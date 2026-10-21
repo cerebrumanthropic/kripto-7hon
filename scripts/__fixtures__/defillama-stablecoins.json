@@ -1,0 +1,266 @@
+{
+  "peggedAssets": [
+    {
+      "id": "1",
+      "name": "Tether",
+      "symbol": "USDT",
+      "gecko_id": "tether",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 182741151126.7975
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 182975071988.29993
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 183955501701.7293
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 183183307884.89853
+      },
+      "price": 0.9990691493351878
+    },
+    {
+      "id": "2",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "gecko_id": "usd-coin",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 72187171206.49341
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 72224193146.98485
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 73118983797.69878
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 74404848271.33955
+      },
+      "price": 0.9994751843669532
+    },
+    {
+      "id": "209",
+      "name": "Sky Dollar",
+      "symbol": "USDS",
+      "gecko_id": "usds",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "crypto-backed",
+      "circulating": {
+        "peggedUSD": 6820481604.077003
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 6741955719.806161
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 6967238412.821689
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 6537387414.925075
+      },
+      "price": 1.000017916200186
+    },
+    {
+      "id": "5",
+      "name": "Dai",
+      "symbol": "DAI",
+      "gecko_id": "dai",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "crypto-backed",
+      "circulating": {
+        "peggedUSD": 4751675073.190276
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 4729262057.640542
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 4741290446.667748
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 4799802916.7583475
+      },
+      "price": 1.000074176773442
+    },
+    {
+      "id": "146",
+      "name": "Ethena USDe",
+      "symbol": "USDe",
+      "gecko_id": "ethena-usde",
+      "pegType": "peggedUSD",
+      "priceSource": "coingecko",
+      "pegMechanism": "crypto-backed",
+      "circulating": {
+        "peggedUSD": 4661591262.314452
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 4674111383.674505
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 4761514903.273183
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 4874651413.068678
+      },
+      "price": 0.9994251073525048
+    },
+    {
+      "id": "262",
+      "name": "World Liberty Financial USD",
+      "symbol": "USD1",
+      "gecko_id": "usd1-wlfi",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 4011892231.242646
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 4023342678.3900185
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 4209267299.1254206
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 4367752623.613069
+      },
+      "price": 0.9987792222093735
+    },
+    {
+      "id": "286",
+      "name": "Global Dollar",
+      "symbol": "USDG",
+      "gecko_id": "global-dollar",
+      "pegType": "peggedUSD",
+      "priceSource": "coingecko",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 3065012315.3873296
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 3065250946.535224
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 3018934586.3237944
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 3193010515.0781746
+      },
+      "price": 1.0000782989230002
+    },
+    {
+      "id": "120",
+      "name": "PayPal USD",
+      "symbol": "PYUSD",
+      "gecko_id": "paypal-usd",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 2868617439.8188043
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 2856998261.7155595
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 2854558578.9851656
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 2776297900.739838
+      },
+      "price": 0.999312582754463
+    },
+    {
+      "id": "250",
+      "name": "Ripple USD",
+      "symbol": "RLUSD",
+      "gecko_id": "ripple-usd",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 2374754620.7864714
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 2402391182.9533825
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 2398688264.75591
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 2378937550.397603
+      },
+      "price": 1.0000183516388799
+    },
+    {
+      "id": "173",
+      "name": "BlackRock USD",
+      "symbol": "BUIDL",
+      "gecko_id": "blackrock-usd-institutional-digital-liquidity-fund",
+      "pegType": "peggedUSD",
+      "priceSource": "coingecko",
+      "pegMechanism": "fiat-backed",
+      "circulating": {
+        "peggedUSD": 2186226217.587649
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 2171005675.287649
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 2160841867.8276486
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 2311955108.110449
+      },
+      "price": 1
+    },
+    {
+      "id": "14",
+      "name": "USDD",
+      "symbol": "USDD",
+      "gecko_id": "usdd",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "crypto-backed",
+      "circulating": {
+        "peggedUSD": 1762175728.7214413
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 1766668141.2327273
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 1786770386.9059367
+      },
+      "circulatingPrevMonth": {},
+      "price": 0.9979296344432012
+    },
+    {
+      "id": "246",
+      "name": "Falcon USD",
+      "symbol": "USDf",
+      "gecko_id": "falcon-finance",
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "pegMechanism": "crypto-backed",
+      "circulating": {
+        "peggedUSD": 1718128801.387605
+      },
+      "circulatingPrevDay": {
+        "peggedUSD": 1718083158.2862904
+      },
+      "circulatingPrevWeek": {
+        "peggedUSD": 1643233393.8447578
+      },
+      "circulatingPrevMonth": {
+        "peggedUSD": 1206151146.7155633
+      },
+      "price": 0.9947405103306732
+    }
+  ]
+}

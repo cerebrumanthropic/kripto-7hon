@@ -108,22 +108,33 @@ export default function Market() {
   const points = history.data?.data.points ?? [];
 
   return (
-    <Page title={t.market.title} lead={t.market.lead} meta={<LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} />}>
+    <Page
+      title={t.market.title}
+      lead={t.market.lead}
+      meta={<LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} />}>
       {isError ? <LoadError /> : null}
       {m ? (
         <>
           <View>
             <SectionHeader title={t.market.top20} />
             <Card>
-              <CoinTable coins={m.coins} />
+              {m.coins.length > 0 ? (
+                <CoinTable coins={m.coins} />
+              ) : (
+                <T v="small" color="textMuted">
+                  {t.live.noData}
+                </T>
+              )}
               <Attribution sources={['coingecko', 'exchangerate']} />
             </Card>
           </View>
 
-          <View>
-            <Movers m={m} />
-            <Attribution sources={['coingecko']} />
-          </View>
+          {m.coins.length > 0 ? (
+            <View>
+              <Movers m={m} />
+              <Attribution sources={['coingecko']} />
+            </View>
+          ) : null}
 
           {m.fearGreed ? (
             <View>

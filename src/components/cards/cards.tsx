@@ -40,7 +40,7 @@ export function KpiCard({
           {sub}
         </T>
       ) : null}
-      {delta !== undefined ? <Delta value={delta} suffix={deltaLabel} /> : null}
+      {delta != null ? <Delta value={delta} suffix={deltaLabel} /> : null}
       {note ? (
         <T v="caption" color="textMuted">
           {note}

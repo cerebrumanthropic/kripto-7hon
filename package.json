@@ -34,6 +34,7 @@
   "devDependencies": {
     "@types/node": "^24.19.2",
     "@types/react": "~19.3.0",
+    "fast-xml-parser": "^5.11.2",
     "gray-matter": "^4.0.3",
     "prettier": "^3.9.10",
     "tsx": "^4.23.15",
@@ -43,10 +44,13 @@
   "scripts": {
     "start": "expo start",
     "web": "expo start --web",
+    "data:live": "tsx scripts/fetch-live.ts",
     "prebuild:web": "tsx scripts/prepare-build.ts",
     "export:web": "npm run prebuild:web && expo export -p web",
     "samples": "tsx scripts/dev/make-samples.ts",
     "check:links": "tsx scripts/dev/check-links.ts",
+    "fixtures:capture": "tsx scripts/dev/capture-fixtures.ts",
+    "feeds:probe": "tsx scripts/dev/probe-feeds.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "lint": "expo lint",
