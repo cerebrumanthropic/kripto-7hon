@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ВХ 7 хоног",
-    "slug": "kripto-7hon",
+    "slug": "vaspfrcweekly",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -45,7 +45,7 @@
         }
       },
       "eas": {
-        "projectId": "d2379ce3-e37e-410b-98a0-fabdba46fe30"
+        "projectId": "323bb14e-d044-4b8d-bacc-9c25156e9c24"
       }
     },
     "owner": "cerebrumanthropic"

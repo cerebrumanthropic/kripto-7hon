@@ -43,4 +43,6 @@ runs:
 
     - name: Export web
       shell: bash
-      run: npx expo export --platform web
+      run: |
+        npx expo export --platform web
+        npx tsx scripts/fix-static-index.ts

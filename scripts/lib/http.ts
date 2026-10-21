@@ -24,7 +24,7 @@ const realSleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 /** `kripto-7hon-bot/1.0 (+SITE_URL; CONTACT_EMAIL)` — CONTACT_EMAIL байхгүй бол зөвхөн URL. */
 export function userAgent(env: Record<string, string | undefined> = process.env): string {
-  const site = env.SITE_URL || env.EXPO_PUBLIC_SITE_URL || 'https://kripto-7hon.expo.app';
+  const site = env.SITE_URL || env.EXPO_PUBLIC_SITE_URL || 'https://vaspfrcweekly.expo.app';
   const contact = env.CONTACT_EMAIL ? `; ${env.CONTACT_EMAIL}` : '';
   return `kripto-7hon-bot/1.0 (+${site}${contact})`;
 }

@@ -8,7 +8,7 @@ export const DATA_BASE_URL = trimSlash(process.env.EXPO_PUBLIC_DATA_BASE_URL ?? 
 
 /** Сайтын үндсэн URL (OG, sitemap, «Текст хуулах»). */
 export const SITE_URL = trimSlash(
-  process.env.EXPO_PUBLIC_SITE_URL ?? 'https://kripto-7hon.expo.app',
+  process.env.EXPO_PUBLIC_SITE_URL ?? 'https://vaspfrcweekly.expo.app',
 );
 
 /** Клиент амьд датаг дахин унших давтамж (SPEC §1). */

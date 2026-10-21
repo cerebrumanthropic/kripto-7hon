@@ -20,7 +20,7 @@ for (const f of ['.env.local', '.env']) {
 
 const ROOT = process.cwd();
 const includeDrafts = process.argv.includes('--include-drafts');
-const SITE_URL = (process.env.EXPO_PUBLIC_SITE_URL ?? process.env.SITE_URL ?? 'https://kripto-7hon.expo.app').replace(/\/+$/, '');
+const SITE_URL = (process.env.EXPO_PUBLIC_SITE_URL ?? process.env.SITE_URL ?? 'https://vaspfrcweekly.expo.app').replace(/\/+$/, '');
 const DATA_BASE_URL = (process.env.EXPO_PUBLIC_DATA_BASE_URL ?? process.env.DATA_BASE_URL ?? '').replace(/\/+$/, '');
 
 const rel = (...p: string[]) => path.join(ROOT, ...p);

@@ -66,7 +66,7 @@ describe('http', () => {
 
   it('userAgent ба errorMessage', () => {
     expect(userAgent({ SITE_URL: 'https://s.app', CONTACT_EMAIL: 'a@b.c' })).toBe('kripto-7hon-bot/1.0 (+https://s.app; a@b.c)');
-    expect(userAgent({})).toBe('kripto-7hon-bot/1.0 (+https://kripto-7hon.expo.app)');
+    expect(userAgent({})).toBe('kripto-7hon-bot/1.0 (+https://vaspfrcweekly.expo.app)');
     expect(errorMessage(new HttpError('https://api.x.test/p?key=secret', 404))).toBe('HTTP 404 api.x.test/p');
   });
 });
