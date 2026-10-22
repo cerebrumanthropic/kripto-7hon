@@ -18,12 +18,9 @@ html, body { margin: 0; background: #F6F4EF; color: #14161B; }
 [data-lift]:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(11,26,61,.16); filter: brightness(1.04); }
 [data-news] a:hover { text-decoration-line: underline; }
 [data-news]:last-child { border-bottom-width: 0; }
-#live-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #4ADE80; animation: vh-ping 1.8s cubic-bezier(0,0,.2,1) infinite; }
-@keyframes vh-ping { 75%, 100% { transform: scale(2.6); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   [data-lift] { transition: none; }
   [data-lift]:hover { transform: none; }
-  #live-dot::after { animation: none; display: none; }
 }
 @media print {
   [role="banner"], [role="contentinfo"], .skip,

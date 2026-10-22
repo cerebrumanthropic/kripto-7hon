@@ -1,4 +1,5 @@
-import { Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
+import { Comfortaa_400Regular, Comfortaa_600SemiBold, Comfortaa_700Bold } from '@expo-google-fonts/comfortaa';
+import { Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FontDisplay, loadAsync } from 'expo-font';
 import { Slot } from 'expo-router';
@@ -9,22 +10,24 @@ import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import { useTheme } from '@/theme/use-theme';
 
-// Фонтыг hydration-ий дараа ачаална (PROGRESS D50):
-// - `useFonts` нь статик HTML-д 4 TTF-ийн preload (≈630 KB) оруулж, Chrome preload + `optional` фонтыг
-//   хүлээж анхны дүрслэлийг хаадаг байсан (Lighthouse FCP 4.2с).
-// - `optional`: тухайн ачаалалд фонт бэлэн биш бол fallback stack (tokens.fonts) үлдэнэ — текст дахин
-//   урсахгүй (CLS); дараагийн хуудсанд кэшээс Inter.
-const optional = (uri: number) => ({ uri, display: FontDisplay.OPTIONAL });
-const INTER = {
-  Inter_400Regular: optional(Inter_400Regular),
-  Inter_500Medium: optional(Inter_500Medium),
-  Inter_600SemiBold: optional(Inter_600SemiBold),
-  Inter_700Bold: optional(Inter_700Bold),
+// Фонтыг hydration-ий дараа ачаална (PROGRESS D50, D59):
+// - `useFonts` нь статик HTML-д TTF preload оруулж анхны дүрслэлийг хаадаг байсан (Lighthouse FCP 4.2с).
+// - `swap`: эхлээд систем фонт, Nunito/Comfortaa ирмэгц солигдоно. `optional` үед анхны айлчлалд
+//   фонт бараг харагддаггүй байсан. Мөрийн өндөр бүгд `lineHeight`-ээр тогтсон тул шилжилт бага.
+const swap = (uri: number) => ({ uri, display: FontDisplay.SWAP });
+const FONTS = {
+  Nunito_400Regular: swap(Nunito_400Regular),
+  Nunito_600SemiBold: swap(Nunito_600SemiBold),
+  Nunito_700Bold: swap(Nunito_700Bold),
+  Nunito_800ExtraBold: swap(Nunito_800ExtraBold),
+  Comfortaa_400Regular: swap(Comfortaa_400Regular),
+  Comfortaa_600SemiBold: swap(Comfortaa_600SemiBold),
+  Comfortaa_700Bold: swap(Comfortaa_700Bold),
 };
 
 export default function RootLayout() {
   useEffect(() => {
-    loadAsync(INTER).catch(() => {});
+    loadAsync(FONTS).catch(() => {});
   }, []);
   const [queryClient] = useState(() => new QueryClient());
   const { c } = useTheme();

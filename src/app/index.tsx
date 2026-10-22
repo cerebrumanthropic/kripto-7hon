@@ -10,7 +10,7 @@ import { useNews } from '@/lib/data-client';
 import { t } from '@/lib/i18n-mn';
 import { pageMeta } from '@/lib/meta';
 import type { NewsFeed } from '@/types/schemas';
-import { fonts, radius, space } from '@/theme/tokens';
+import { fonts, space } from '@/theme/tokens';
 import { useLayout, useTheme } from '@/theme/use-theme';
 
 export async function loader() {
@@ -33,31 +33,6 @@ export async function loader() {
 
 export function generateMetadata() {
   return pageMeta(t.site.name, t.site.tagline, '/');
-}
-
-/** «● Амьд дата» — цэг нь `+html.tsx`-ийн `#live-dot` CSS-ээр долгилно (reduced-motion үед зогсоно). */
-function LivePill() {
-  const { c } = useTheme();
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: space.sm,
-        alignSelf: 'flex-start',
-        paddingVertical: 5,
-        paddingHorizontal: space.md,
-        borderRadius: radius.pill,
-        backgroundColor: c.upBg,
-        borderWidth: 1,
-        borderColor: 'rgba(74,222,128,0.35)',
-      }}>
-      <View nativeID="live-dot" style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: '#4ADE80' }} />
-      <T v="smallStrong" style={{ color: c.upFg }}>
-        {t.home.livePill}
-      </T>
-    </View>
-  );
 }
 
 function LatestNews({ snapshot }: { snapshot: NewsFeed | null }) {
@@ -104,7 +79,7 @@ function ResearchTeaser({ examples, dataSources }: { examples: number; dataSourc
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.xxl }}>
         {stats.map(([n, label]) => (
           <View key={label}>
-            <T num style={{ fontFamily: fonts.bold, fontSize: 44, lineHeight: 48, letterSpacing: -1, color: c.brandText }}>
+            <T num style={{ fontFamily: fonts.displayBold, fontSize: 44, lineHeight: 50, letterSpacing: -0.5, color: c.brandText }}>
               {n}
             </T>
             <T v="small" color="textMuted">
@@ -128,7 +103,6 @@ export default function Home() {
   return (
     <Page
       size="hero"
-      kicker={<LivePill />}
       title={t.home.heroTitle}
       titleAccent={t.home.heroTitleAccent}
       lead={t.home.heroLead}
@@ -138,12 +112,7 @@ export default function Home() {
           <ButtonLink href="/zah-zeel" label={t.home.ctaMarket} />
         </View>
       }
-      band={
-        <View>
-          <SectionHeader title={t.home.kpiTitle} />
-          <KpiGrid snapshot={d.market} />
-        </View>
-      }>
+      band={<KpiGrid snapshot={d.market} />}>
       <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.xxl, alignItems: 'flex-start' }}>
         <View style={{ flex: isDesktop ? 5 : undefined, width: isDesktop ? undefined : '100%', gap: space.xxl }}>
           <View>

@@ -145,6 +145,7 @@
 | D56 | Нүүрний KPI мобайлд 2 баганатай. Тоо ба нэгжийг салгаж, 24px-ээр харуулна (2 баганат картад багтаахын тулд). |
 | D57 | **Paint-first:** `expo export`-ийн дараа `scripts/paint-first.ts` нь `<script defer>`-ийг жижиг loader-оор солино. Loader нь `first-contentful-paint` ажиглагдсаны дараа ижил скриптүүдийг `async=false`-оор ижил дарааллаар оруулна. Fallback: rAF + 400ms ба 2.5 сек. `<head>`-ийн preload хэвээр тул татан авалт эрт эхэлнэ. `build-web` action ба `export:web`-д `fix-static-index`-ээс өмнө ажиллана. Hero-ийн торон `repeating-linear-gradient`-ийг хассан (анхны frame ≈60ms). `content-visibility: auto`-г туршсан: хурдад ялгаагүй, судалгааны хуудсанд axe target-size алдаа (A11y 96) өгсөн тул хэрэглээгүй. |
 | D58 | `useTheme`/`useLayout`/`useHydrated` нь `useSyncExternalStore` ашиглана. Server snapshot нь `'light'`, `'mobile'`, `false`. Hydration-д статик HTML-тэй ижил утга өгч, клиентийн утга өөр үед л дахин render хийнэ. Клиент навигацид шинэ бүрэлдэхүүн шууд зөв горим/өргөнөөр зурагдана (өмнө нь мобайл/цайвар → шилжилт). `Layout`-аас `width`-ийг хассан (хэрэглэгддэггүй байсан). |
+| D59 | Фонт: Inter → **Nunito** (үндсэн текст, цэс, товч, тоо; 400/600/700/800) ба **Comfortaa** (гарчиг h1–h3, hero, лого; 400/600/700), хэрэглэгчийн шийдвэр. `@expo-google-fonts/*`-ийн TTF нь бүтэн тул latin, cyrillic, cyrillic-ext (Ө ө Ү ү) бүгд байгааг GlyphTypeface-ээр шалгасан. Hydration-ий дараа `loadAsync`-оор ачаална (D50), харин `display: swap` — `optional` үед анхны айлчлалд фонт бараг харагдахгүй. Инфографик Nunito-гоор (2 мөрийн гарчгийн тооцоо). og/favicon-ийг шинэ фонтоор дахин үүсгэсэн. Production Lighthouse (`7446d8d`, 2 ажиллалт): нүүр 96/94, зах зээл 96/95, мэдээ 94/95, судалгаа 96/97; TBT 180–230 ms (фонт жижиг: 109–129 KB vs Inter 335 KB); swap-ийн CLS 0.05–0.09 (<0.1). A11y/BP/SEO 100. |
 
 ## 2026.10.21 — Үе шат 6: QA ба баримт
 
@@ -522,7 +523,7 @@ Template-ээс ирсэн (Expo SDK 58): expo, expo-router, react 19.3, react-n
 | `@tanstack/react-query` | app | Амьд датаг 10 мин тутам дахин уншиж кэшлэх (SPEC §3) |
 | `zod` 4 | app+scripts | Схем шалгалт, апп ба скрипт хуваалцана (SPEC §3) |
 | `react-native-svg` | app | Хөнгөн графикууд (SPEC §3) |
-| `@expo-google-fonts/inter` | app | Кирилл үсэгтэй Inter фонт (SPEC §3) |
+| `@expo-google-fonts/nunito`, `@expo-google-fonts/comfortaa` | app | Nunito (текст) ба Comfortaa (гарчиг) — SIL OFL, бүтэн TTF (кирилл + Ө Ү). Inter-ийг сольсон (D59) |
 | `vitest` | dev | Тест (SPEC §3) |
 | `tsx` | dev | Скрипт ажиллуулах (SPEC §3) |
 | `prettier` | dev | Формат (SPEC §3) |

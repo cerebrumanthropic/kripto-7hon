@@ -13,9 +13,7 @@ const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> =
   { href: '/', label: t.nav.home, match: (p) => p === '/' },
   { href: '/zah-zeel', label: t.nav.market, match: (p) => p.startsWith('/zah-zeel') },
   { href: '/medee', label: t.nav.news, match: (p) => p.startsWith('/medee') },
-  { href: '/tailan', label: t.nav.reports, match: (p) => p.startsWith('/tailan') },
   { href: '/sudalgaa', label: t.nav.research, match: (p) => p.startsWith('/sudalgaa') },
-  { href: '/arga-zui', label: t.nav.method, match: (p) => p.startsWith('/arga-zui') },
 ];
 
 /** Хэлтсийн нэр + «7 хоногийн мэдээ» (PROGRESS D53). Мобайлд нэр 2 мөрт орно. */
@@ -25,10 +23,10 @@ export function BrandLockup({ compact }: { compact?: boolean }) {
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md, flexShrink: 1 }}>
       <BrandMark size={compact ? 38 : 42} />
       <View style={{ flexShrink: 1 }}>
-        <T style={{ fontFamily: fonts.bold, fontSize: compact ? 13 : 14, lineHeight: compact ? 16 : 18, color: c.text }}>
+        <T style={{ fontFamily: fonts.displayBold, fontSize: compact ? 13 : 14, lineHeight: compact ? 17 : 19, color: c.text }}>
           {t.site.org}
         </T>
-        <T style={{ fontFamily: fonts.semibold, fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
+        <T style={{ fontFamily: fonts.bold, fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
           {t.site.edition}
         </T>
       </View>
