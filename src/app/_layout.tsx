@@ -10,7 +10,7 @@ import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import { useTheme } from '@/theme/use-theme';
 
-// Фонтыг hydration-ий дараа ачаална (PROGRESS D50, D59):
+// Фонтыг hydration-ий дараа ачаална (PROGRESS D50, D65):
 // - `useFonts` нь статик HTML-д TTF preload оруулж анхны дүрслэлийг хаадаг байсан (Lighthouse FCP 4.2с).
 // - `swap`: эхлээд систем фонт, Nunito/Comfortaa ирмэгц солигдоно. `optional` үед анхны айлчлалд
 //   фонт бараг харагддаггүй байсан. Мөрийн өндөр бүгд `lineHeight`-ээр тогтсон тул шилжилт бага.

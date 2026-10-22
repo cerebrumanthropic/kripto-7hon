@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Google Cloud Run + Cloud Storage + Cloud Scheduler дээр backend-ийг байршуулна (PROGRESS D60, docs/CLOUD_RUN.md).
+# Google Cloud Run + Cloud Storage + Cloud Scheduler дээр backend-ийг байршуулна (PROGRESS D66, docs/CLOUD_RUN.md).
 # Google Cloud Shell-д ажиллуулна (gcloud, git, openssl бэлэн). Дахин ажиллуулахад аюулгүй — байгаа нөөцийг алгасна.
 #
 #   PROJECT_ID=minii-tusul bash backend/deploy/cloudrun.sh

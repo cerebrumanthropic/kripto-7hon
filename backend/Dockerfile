@@ -1,4 +1,4 @@
-# Cloud Run-д зориулсан image (PROGRESS D60). Build: `gcloud run deploy --source backend` (Cloud Build)
+# Cloud Run-д зориулсан image (PROGRESS D66). Build: `gcloud run deploy --source backend` (Cloud Build)
 # эсвэл локалд `docker build -t kripto-api backend`.
 FROM python:3.12-slim
 

@@ -1,4 +1,4 @@
-# Cloud Run-ийн диск түр зуурын (instance унтахад устна) тул төлвийг Cloud Storage bucket-д хадгална (PROGRESS D60).
+# Cloud Run-ийн диск түр зуурын (instance унтахад устна) тул төлвийг Cloud Storage bucket-д хадгална (PROGRESS D66).
 # Bucket дахь зам = локал зам: `public-data/<rel>` ↔ DATA_DIR/<rel>, `store/<rel>` ↔ STORE_DIR/<rel>.
 #   pull — cold start бүрд live ажиллалтад хэрэгтэй ≤9 файлыг л татна (жагсаалт хийхгүй, Class B үйлдэл цөөн).
 #   push — ажиллалтын дараа агуулга нь өөрчлөгдсөн файлыг л байршуулна (цагт ≈5 Class A, үнэгүй түвшинд багтана).

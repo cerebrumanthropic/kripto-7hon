@@ -2,7 +2,7 @@
 # EXPO_PUBLIC_DATA_BASE_URL-ийг энэ серверийн URL болгоход л хангалттай (src/lib/data-client.ts өөрчлөгдөхгүй).
 # ENABLE_SCHEDULER=true бол цаг бүрийн :07-д өөрөө татна (GitHub Actions-ийн live-data.yml-ийн оронд).
 # Cloud Run (STATE_BUCKET): instance хүсэлтгүй үед унтдаг тул scheduler-ийн оронд Cloud Scheduler нь
-# POST /admin/refresh-ийг дуудна; төлөв bucket-д хадгалагдана (state_sync.py, PROGRESS D60).
+# POST /admin/refresh-ийг дуудна; төлөв bucket-д хадгалагдана (state_sync.py, PROGRESS D66).
 import asyncio
 import contextlib
 import json

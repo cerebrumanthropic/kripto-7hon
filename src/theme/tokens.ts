@@ -145,7 +145,7 @@ const webStack = (face: string) => `"${face}", system-ui, -apple-system, "Segoe 
 const face = (name: string) => Platform.select({ web: webStack(name), default: name });
 
 /**
- * Google Fonts (SIL OFL, PROGRESS D59): Nunito — үндсэн текст, цэс, товч, тоо (400/600/700/800);
+ * Google Fonts (SIL OFL, PROGRESS D65): Nunito — үндсэн текст, цэс, товч, тоо (400/600/700/800);
  * Comfortaa — гарчиг ба лого (400/600/700). `@expo-google-fonts/*` нь бүтэн TTF тул latin, cyrillic,
  * cyrillic-ext (Ө ө Ү ү) бүгд орсон.
  */

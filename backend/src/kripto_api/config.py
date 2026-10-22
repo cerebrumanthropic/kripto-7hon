@@ -38,7 +38,7 @@ class ServerSettings:
     scheduler: bool
     admin_token: str | None
     cors_origins: list[str]
-    # Cloud Run: төлвийг энэ bucket-д хадгална (хоосон бол зөвхөн локал диск) — PROGRESS D60
+    # Cloud Run: төлвийг энэ bucket-д хадгална (хоосон бол зөвхөн локал диск) — PROGRESS D66
     state_bucket: str | None = None
     # Bucket хоосон (анхны ажиллалт) үед өмнөх төлвийг эндээс (GitHub Pages) нэг удаа уншина
     seed_base_url: str = ""
