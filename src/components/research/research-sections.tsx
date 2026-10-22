@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Pressable, View } from 'react-native';
 
+import { Icon, IconTile, type IconName } from '@/components/ui/icons';
 import { Badge, Bullet, Card, ExtLink, Grid, SectionHeader, T, webPress } from '@/components/ui/primitives';
 import { t } from '@/lib/i18n-mn';
 import type { Research } from '@/types/research';
@@ -25,10 +26,11 @@ export const SECTIONS = [
   { id: 'bibliography', title: r.bibliography },
 ] as const;
 
-function Section({ id, title, kicker, children }: { id: string; title: string; kicker?: string; children: ReactNode }) {
+/** Хэсгийн `id` нь дүрсний нэртэй ижил (icons.tsx). */
+function Section({ id, title, kicker, children }: { id: IconName; title: string; kicker?: string; children: ReactNode }) {
   return (
     <View style={{ gap: space.md }}>
-      <SectionHeader id={id} title={title} kicker={kicker} />
+      <SectionHeader id={id} title={title} kicker={kicker} icon={id} />
       {children}
     </View>
   );
@@ -87,7 +89,7 @@ export function Toc() {
       </T>
       <View role="list" style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.sm }}>
         {SECTIONS.map((s, i) => (
-          <View key={s.id} role="listitem">
+          <View key={s.id} role="listitem" style={{ maxWidth: '100%' }}>
             <Pressable
               role="link"
               onPress={() => scrollToSection(s.id)}
@@ -102,7 +104,10 @@ export function Toc() {
                 outlineWidth: webPress(st).focused ? 2 : 0,
                 outlineStyle: 'solid',
               })}>
-              <T v="small">{`${i + 1}. ${s.title}`}</T>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                <Icon name={s.id} size={16} />
+                <T v="small" style={{ flexShrink: 1 }}>{`${i + 1}. ${s.title}`}</T>
+              </View>
             </Pressable>
           </View>
         ))}
@@ -122,8 +127,13 @@ export function SummarySection({ d }: { d: Research }) {
       </View>
       <Grid cols={cols === 4 ? 3 : cols}>
         {d.keyFindings.map((k) => (
-          <Card key={k.title} style={{ gap: space.xs, height: '100%' }}>
-            <T v="h3">{k.title}</T>
+          <Card key={k.title} style={{ gap: space.sm, height: '100%' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.sm }}>
+              <Icon name="summary" size={20} />
+              <T v="h3" style={{ flexShrink: 1 }}>
+                {k.title}
+              </T>
+            </View>
             <T v="small" color="textMuted">
               {k.text}
             </T>
@@ -142,11 +152,14 @@ export function ExamplesSection({ d }: { d: Research }) {
       <Grid cols={cols === 4 ? 3 : cols}>
         {d.internationalExamples.map((e) => (
           <Card key={e.id} style={{ gap: space.sm, height: '100%' }}>
-            <View style={{ gap: 2 }}>
-              <T v="h3">{e.name}</T>
-              <T v="small" color="textMuted">
-                {e.publisher}
-              </T>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
+              <IconTile name="report" size={36} />
+              <View style={{ gap: 2, flexShrink: 1 }}>
+                <T v="h3">{e.name}</T>
+                <T v="small" color="textMuted">
+                  {e.publisher}
+                </T>
+              </View>
             </View>
             {e.verified2026 ? <Badge label={r.examplesNote} tone="brand" /> : <Badge label={r.unverified} tone="warn" />}
             <Field label={r.frequency}>{e.frequency}</Field>
@@ -177,7 +190,12 @@ export function RegulatorsSection({ d }: { d: Research }) {
       <Grid cols={cols === 1 ? 1 : 2}>
         {d.regulators.map((g) => (
           <Card key={g.id} style={{ gap: space.sm, height: '100%' }}>
-            <T v="h3">{g.name}</T>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md }}>
+              <IconTile name="regulators" size={36} />
+              <T v="h3" style={{ flexShrink: 1 }}>
+                {g.name}
+              </T>
+            </View>
             <Field label={r.frequency}>{g.frequency}</Field>
             <T v="small">{g.keyData}</T>
             {g.urls.map((u) => (
@@ -400,8 +418,9 @@ export function SourcesSection({ d }: { d: Research }) {
       <Grid cols={cols === 4 ? 3 : cols}>
         {d.dataSources.map((s) => (
           <Card key={s.name} style={{ gap: space.sm, height: '100%' }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: space.sm, alignItems: 'flex-start' }}>
-              <ExtLink href={s.url} v="bodyStrong" style={{ flexShrink: 1 }}>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', gap: space.sm, alignItems: 'center' }}>
+              <IconTile name="sources" size={32} />
+              <ExtLink href={s.url} v="bodyStrong" style={{ flexShrink: 1, flexGrow: 1 }}>
                 {s.name}
               </ExtLink>
               {s.usedByPlatform ? <Badge label={r.used} tone="brand" /> : null}

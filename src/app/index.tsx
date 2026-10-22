@@ -116,7 +116,7 @@ export default function Home() {
       <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.xxl, alignItems: 'flex-start' }}>
         <View style={{ flex: isDesktop ? 5 : undefined, width: isDesktop ? undefined : '100%', gap: space.xxl }}>
           <View>
-            <SectionHeader title={t.home.latestReport} />
+            <SectionHeader title={t.home.latestReport} icon="report" />
             {d.latest ? (
               <View style={{ gap: space.md }}>
                 <ReportCard entry={d.latest} takeaways={d.takeaways} />
@@ -130,13 +130,13 @@ export default function Home() {
           </View>
 
           <View>
-            <SectionHeader title={t.home.researchTitle} />
+            <SectionHeader title={t.home.researchTitle} icon="summary" />
             <ResearchTeaser examples={d.examples} dataSources={d.dataSources} />
           </View>
         </View>
 
         <View style={{ flex: isDesktop ? 7 : undefined, width: isDesktop ? undefined : '100%' }}>
-          <SectionHeader title={t.home.latestNews} right={<InLink href="/medee" v="smallStrong">{t.home.allNews}</InLink>} />
+          <SectionHeader title={t.home.latestNews} icon="news" right={<InLink href="/medee" v="smallStrong">{t.home.allNews}</InLink>} />
           <LatestNews snapshot={d.news} />
         </View>
       </View>

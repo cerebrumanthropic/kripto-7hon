@@ -12,6 +12,7 @@ import {
   type ViewStyle,
 } from 'react-native';
 
+import { IconTile, type IconName } from '@/components/ui/icons';
 import { arrow, direction, pct } from '@/lib/format';
 import { radius, space, type, type ThemeColors, type TypeVariant } from '@/theme/tokens';
 import { useTheme } from '@/theme/use-theme';
@@ -155,11 +156,14 @@ export function SectionHeader({
   kicker,
   id,
   right,
+  icon,
 }: {
   title: string;
   kicker?: string;
   id?: string;
   right?: ReactNode;
+  /** Гарчгийн өмнөх дүрс (байхгүй бол алтан зураас) */
+  icon?: IconName;
 }) {
   const { c } = useTheme();
   return (
@@ -179,8 +183,12 @@ export function SectionHeader({
             {kicker}
           </T>
         ) : null}
-        <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: space.sm }}>
-          <View aria-hidden style={{ width: 4, height: 20, marginTop: 4, borderRadius: 2, backgroundColor: c.accent }} />
+        <View style={{ flexDirection: 'row', alignItems: icon ? 'center' : 'flex-start', gap: icon ? space.md : space.sm }}>
+          {icon ? (
+            <IconTile name={icon} size={36} />
+          ) : (
+            <View aria-hidden style={{ width: 4, height: 20, marginTop: 4, borderRadius: 2, backgroundColor: c.accent }} />
+          )}
           <T v="h2" role="heading" aria-level={2} style={{ flexShrink: 1 }}>
             {title}
           </T>

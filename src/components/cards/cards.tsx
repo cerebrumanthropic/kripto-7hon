@@ -2,6 +2,7 @@ import { Link } from 'expo-router';
 import type { ReactNode } from 'react';
 import { Pressable, View } from 'react-native';
 
+import { IconTile } from '@/components/ui/icons';
 import { Badge, Card, dataAttrs, Delta, DeltaPill, ExtLink, T } from '@/components/ui/primitives';
 import { formatDateTime, relativeTime, weekLabel } from '@/lib/dates';
 import { int } from '@/lib/format';
@@ -93,27 +94,38 @@ export function CoinBadge({ symbol, stable }: { symbol: string; stable?: boolean
   );
 }
 
-/** Мэдээний мөр: гарчиг (гадагш), эх сурвалж, харьцангуй цаг, ангилал. */
+/** Мэдээний мөр: ангиллын дүрс, гарчиг (гадагш), эх сурвалж, харьцангуй цаг, ангилал. */
 export function NewsRow({ item, now }: { item: NewsItem; now?: Date }) {
   const { c } = useTheme();
+  const { isMobile } = useLayout();
   // «2 цагийн өмнө» нь build ба хөтчийн цагаас хамаардаг → hydration-ий дараа л (зөрүүгүй SSR)
   const hydrated = useHydrated();
   return (
     <View
       role="listitem"
       {...dataAttrs({ news: '' })}
-      style={{ paddingVertical: space.md, borderBottomWidth: 1, borderBottomColor: c.border, gap: 6 }}>
-      <ExtLink href={item.url} v="bodyStrong" color="text" style={{ textDecorationLine: 'none' }}>
-        {item.title}
-      </ExtLink>
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: space.sm }}>
-        <T v="caption" color="textMuted">
-          {item.source} · {hydrated ? relativeTime(item.publishedAt, now) : formatDateTime(item.publishedAt)}
-        </T>
-        {item.isMongolia ? <Badge label={t.news.mongoliaTag} tone="brand" /> : null}
-        {item.tags.map((tag) => (
-          <Badge key={tag} label={t.tags[tag]} />
-        ))}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        gap: space.md,
+        paddingVertical: space.md,
+        borderBottomWidth: 1,
+        borderBottomColor: c.border,
+      }}>
+      <IconTile name={item.isMongolia ? 'mongolia' : (item.tags[0] ?? 'news')} size={isMobile ? 36 : 40} />
+      <View style={{ flex: 1, minWidth: 0, gap: 6 }}>
+        <ExtLink href={item.url} v="bodyStrong" color="text" style={{ textDecorationLine: 'none' }}>
+          {item.title}
+        </ExtLink>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: space.sm }}>
+          <T v="caption" color="textMuted">
+            {item.source} · {hydrated ? relativeTime(item.publishedAt, now) : formatDateTime(item.publishedAt)}
+          </T>
+          {item.isMongolia ? <Badge label={t.news.mongoliaTag} tone="brand" /> : null}
+          {item.tags.map((tag) => (
+            <Badge key={tag} label={t.tags[tag]} />
+          ))}
+        </View>
       </View>
     </View>
   );
