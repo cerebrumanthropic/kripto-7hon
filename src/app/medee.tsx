@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { TextInput, View } from 'react-native';
 
 import { NewsRow } from '@/components/cards/cards';
+import { NewsMagazine } from '@/components/cards/news-magazine';
 import { LiveStatus, LoadError } from '@/components/layout/live-status';
 import { Page } from '@/components/layout/page';
 import { Card, Chip, T } from '@/components/ui/primitives';
@@ -13,6 +14,8 @@ import { EMPTY_FILTER, filterNews, toggleTag, type NewsFilter } from '@/lib/news
 import { NEWS_TAGS } from '@/types/schemas';
 import { fonts, radius, space } from '@/theme/tokens';
 import { useTheme } from '@/theme/use-theme';
+
+const MAGAZINE = 8;
 
 export function generateMetadata() {
   return pageMeta(t.news.title, t.news.lead, '/medee');
@@ -32,6 +35,8 @@ export default function News() {
   const items = data?.data.items ?? [];
   const sources = useMemo(() => [...new Set(items.map((i) => i.source))].sort(), [items]);
   const shown = useMemo(() => filterNews(items, f), [items, f]);
+  const unfiltered = f.tags.length === 0 && !f.source && !f.query && !f.mongoliaOnly;
+  const listed = unfiltered ? shown.slice(MAGAZINE) : shown;
 
   return (
     <Page
@@ -43,6 +48,9 @@ export default function News() {
       <Card tone="surfaceAlt">
         <T v="small">{t.news.notice}</T>
       </Card>
+
+      {/* Шүүлтгүй үед эхний 8 мэдээ сэтгүүлийн бүтэцтэй (PROGRESS D70), үлдсэн нь доорх жагсаалтад */}
+      {unfiltered && items.length > 0 ? <NewsMagazine items={items.slice(0, MAGAZINE)} /> : null}
 
       <View style={{ gap: space.md }} role="group" aria-label={t.news.search}>
         <TextInput
@@ -102,7 +110,7 @@ export default function News() {
           {t.news.count(shown.length)}
         </T>
         <View role="list">
-          {shown.map((item) => (
+          {listed.map((item) => (
             <NewsRow key={item.id} item={item} />
           ))}
         </View>
