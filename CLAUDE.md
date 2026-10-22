@@ -6,12 +6,13 @@
 
 ## Архитектур (товч)
 - **Вэб:** Expo (хамгийн сүүлийн SDK) + Expo Router + TypeScript, `expo.web.output: "static"` → `npx expo export -p web` → `eas deploy --prod` → EAS Hosting (`https://<нэр>.expo.app`).
-- **Амьд дата:** GitHub Actions цаг тутам `scripts/fetch-live.ts` ажиллуулж JSON-ийг **GitHub Pages**-д нийтэлнэ. Клиент Pages-аас 10 минут тутам уншина; алдаа гарвал build үеийн fallback.
-- **7 хоногийн тайлан:** Ням 23:55 UTC-д `scripts/build-weekly.ts` ноорог үүсгэж PR нээнэ → редактор засаад merge → `deploy.yml` EAS руу deploy.
+- **Дата backend:** Python 3.12 + FastAPI, `backend/` (uv). Дэлгэрэнгүй: `backend/README.md`.
+- **Амьд дата:** GitHub Actions цаг тутам `kripto live` (`backend/src/kripto_api/live.py`) ажиллуулж JSON-ийг **GitHub Pages**-д нийтэлнэ. FastAPI (`kripto serve`) мөн ижил замаар үйлчилж чадна (заавал биш). Клиент Pages-аас 10 минут тутам уншина; алдаа гарвал build үеийн fallback.
+- **7 хоногийн тайлан:** Ням 23:55 UTC-д `kripto weekly` ноорог үүсгэж PR нээнэ → редактор засаад merge → `deploy.yml` EAS руу deploy.
 - **Түүх:** `data-history` branch (өдөрт 1 commit) + Pages дээрх хувилбар.
 
 ## Үл зөрчих дүрэм
-1. Төлбөртэй үйлчилгээ/түвшин нэмэхгүй. EAS Free: 100k хүсэлт/сар, хүсэлтэд 10 CPU-ms, 10 subrequest, 1 GB → **API route (`+api.ts`) ашиглахгүй**, хүнд ажил бүгд GitHub Actions-д.
+1. Төлбөртэй үйлчилгээ/түвшин нэмэхгүй. EAS Free: 100k хүсэлт/сар, хүсэлтэд 10 CPU-ms, 10 subrequest, 1 GB → **API route (`+api.ts`) ашиглахгүй**, хүнд ажил бүгд GitHub Actions-д. FastAPI серверийг хостлох бол зөвхөн үнэгүй түвшинд.
 2. Нууц түлхүүр (`COINGECKO_DEMO_API_KEY`, `EXPO_TOKEN`) зөвхөн GitHub Secrets ба `.env.local`-д. `EXPO_PUBLIC_` угтвартай хувьсагчид нууц хэзээ ч бүү оруул. `.env.local`-ийн агуулгыг бүү хэвлэ, бүү commit хий.
 3. Дата эх сурвалж зөвхөн SPEC §5-д заасан үнэгүй API-ууд. Binance/Bybit/OKX futures API-г Actions-оос дуудахгүй (АНУ-ын IP хаадаг). HTML scrape хийхгүй.
 4. Мэдээ: зөвхөн гарчиг + эх сурвалж + огноо + холбоос. Тайлбар, зураг, бүрэн текст хуулахгүй.
@@ -28,15 +29,18 @@
 | `npx expo start --web` | Локал хөгжүүлэлт |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm test` | vitest |
-| `npm run data:live` | Амьд дата татаж `public-data/`-д бичнэ (`.env.local`-аас түлхүүр) |
+| `npm run data:live` | Амьд дата татаж `public-data/`-д бичнэ (`.env.local`-аас түлхүүр; Python) |
 | `npm run report:draft -- --week 2026-W43 [--dry-run] [--auto-publish]` | 7 хоногийн ноорог |
 | `npm run validate` | Нийтлэгдсэн тайлангуудыг шалгана |
+| `npm run test:backend` | Python backend: pytest + ruff + mypy |
+| `npm run api` | FastAPI сервер (`backend/README.md`) |
 | `npm run prebuild:web` | Тайлан, fallback, sitemap бэлтгэнэ |
 | `npx expo export -p web` | `dist/` үүсгэнэ |
 | `eas deploy --prod` | EAS Hosting руу (анхных нь хэрэглэгч өөрөө) |
 
 ## Хэв маяг
-- TypeScript strict; Zod схем `src/types/schemas.ts`-д (апп ба скрипт хуваалцана).
+- TypeScript strict; Zod схем `src/types/schemas.ts`-д. Backend нь түүний Pydantic хуулбар `backend/src/kripto_api/schemas.py`-г ашиглана — схем (мөн `classify`) өөрчилбөл хоёуланг нь хамт өөрчил.
+- Python: 3.12, `ruff` + `mypy` (`disallow_untyped_defs`), хамаарлыг `uv add`-аар нэмнэ.
 - Хамаарал нэмэхдээ `npx expo install`; том chart сан биш, `react-native-svg` дээр өөрсдийн хөнгөн компонент.
 - Тоо/огноог зөвхөн `src/lib/format.ts`, `src/lib/dates.ts`-ээр (цагийн бүс `Asia/Ulaanbaatar`; «$2.45 их наяд», «+4.2%», «−3.1%», «2026.10.21 14:07 (УБ)»).
 - Дизайн: `frontend-design` skill-ийг ашиглаж нэгдмэл, санаатай харагдах байдал сонго; template-ийн default төрхөөр бүү үлдээ. Expo-гийн албан ёсны skill-үүд (`expo` plugin) суусан бол Expo Router, EAS Hosting-ийн асуудалд тэдгээрийг ашигла.

@@ -14,6 +14,55 @@
 | 5 | EAS Hosting deploy | ✅ 2026.10.21 — хүлээн авсан |
 | 6 | QA ба баримт | ✅ 2026.10.21 — хүлээн авсан |
 | + | Дизайны сайжруулалт (брэнд, бараан хөх тууз) | ✅ 2026.10.21 — хүлээн авсан (хэрэглэгч одоогийн хурдыг хангалттай гэж үзсэн) |
+| + | Backend-ийг Python/FastAPI руу шилжүүлэх | 🟡 2026.10.22 — `fastapi-backend` branch, хэрэглэгчийн хяналт хүлээж байна |
+
+## 2026.10.22 — Backend-ийг Python/FastAPI руу шилжүүлэв
+
+Хэрэглэгчийн хүсэлт: «вэб аппын backend-ийг FastAPI болгох».
+
+### Хийсэн
+- **`backend/` (Python 3.12, uv):** `scripts/`-ийн дата хэсгийг (fetch-live, build-weekly, validate-reports, lib/*, sources/*, dev/probe-feeds, dev/capture-fixtures) `kripto_api` пакет руу шилжүүлэв. TS файлуудыг устгав.
+- **CLI `kripto`:** `live`, `weekly`, `validate`, `serve`, `feeds-probe`, `fixtures-capture`. Туг (flag) нь TS-тэй ижил.
+  - `npm run data:live`, `report:draft`, `validate`, `feeds:probe`, `fixtures:capture` нэрс хэвээр бөгөөд `uv run --project backend kripto …`-г дуудна.
+  - Шинэ: `npm run api`, `npm run test:backend`.
+- **FastAPI (`kripto serve`):**
+  - `/live/{market,news,status}.json`, `/history/daily.json`, `/news/<week>.json` — GitHub Pages-тэй ижил зам. CORS, `max-age=300`, ETag.
+  - `/healthz`; `POST /admin/refresh` (Bearer `ADMIN_TOKEN`).
+  - Сонголттой scheduler (`ENABLE_SCHEDULER`, цаг бүрийн :07).
+- **Workflow:**
+  - `live-data.yml`, `weekly-report.yml`: Node-ийн оронд `astral-sh/setup-uv@v10` + `kripto`.
+  - `build-web` action: pytest + ruff + mypy, `kripto validate`.
+- **Fixture:** `scripts/__fixtures__/*.json` (API) → `backend/tests/fixtures/`. `scripts/__fixtures__/reports/` хэвээр (TS `reports.test.ts` ба Python validate тест хоёул ашиглана).
+- **RSS:** Bitcoin Magazine-ийн `/.rss/full/` нь `/feed` руу 301 болсон. httpx-д Cloudflare challenge (403) буцаадаг тул шууд `https://bitcoinmagazine.com/feed` болгов.
+
+### Шалгалт
+- **Паритет:** TS (устгахаас өмнө) ба Python-ыг ижил оролтоор ажиллуулж JSON-ийг гүнзгий харьцуулсан — **0 зөрүү**. Оролт:
+  - fixture: `buildMarket` (бүгд амжилттай / CoinGecko+F&G унасан), `dailyValues`, `applyDailyClose`, `buildWeekly` (түүхтэй / түүхгүй, fx null), `.md` загвар (draft / auto-publish);
+  - **7 бодит RSS feed (167 мөр)**: `parseFeed`, `toNewsItems`, архив, `latestNews`, ангилал;
+  - мөн `canonicalUrl` (10 тохиолдол), ISO долоо хоног.
+- `npm run test:backend` ✅ pytest 83 тест (TS-ийн бүх backend тестийг шилжүүлж, live/API-ийн интеграцийн тест нэмэв) · ruff · mypy.
+- `npm run typecheck` ✅ · `npm test` ✅ 14 файл / 86 тест (үлдсэн web тестүүд).
+- `npm run data:live` (бодит API, `DATA_BASE_URL` = production Pages):
+  - Төлөвийн 5 файлыг Pages-ээс уншиж Pydantic-д тэнцсэн (TS-ийн гаргасан файлтай нийцтэй), exit 0.
+  - Локалд түлхүүргүй тул CoinGecko ба SEC нь «өмнөх утга (stale)».
+  - `feeds:probe`: идэвхтэй 8 feed бүгд ✓.
+- `kripto serve` + curl: бүх зам 200, буруу долоо хоног 404, `/admin/refresh` токенгүй 401, `/docs` 200.
+- `npm run validate` ✅ (нийтлэгдсэн 0). `report:draft --dry-run` түлхүүргүй үед TS-ийн адил алдаа өгч, exit 1.
+
+### Шалгаагүй / хэрэглэгчийн алхам
+- GitHub Actions дээр ажиллуулаагүй (push хийгээгүй). PR нээсний дараа `ci.yml`, merge-ийн дараа `live-data` (workflow_dispatch) ба `weekly-report` (`dry_run: true`)-ийг гараар нэг удаа ажиллуулж шалгах.
+- `report:draft`-ийг бодит CoinGecko түлхүүртэйгээр ажиллуулаагүй (локалд `.env.local` байхгүй). Логик нь fixture-ийн паритетаар шалгагдсан.
+- FastAPI-г хаана ч хостлоогүй. Одоогийн урсгал (Actions → Pages) хэвээр тул хостлох шаардлагагүй.
+
+### Техникийн шийдвэрүүд (backend)
+| # | Шийдвэр |
+|---|---|
+| D59 | Дата backend нь Python 3.12 + FastAPI (`backend/`, uv, `uv.lock`). Гаралтын JSON нь TS хувилбартай яг ижил тул аппын код ба Zod схем өөрчлөгдөхгүй. Web build хэрэгсэл (`prepare-build`, `paint-first`, `fix-static-index`, `lib/reports.ts`, `dev/make-samples`, `dev/check-links`) TS хэвээр — `expo export`-тэй нягт холбоотой. |
+| D60 | FastAPI нь Pages-тэй ижил замаар (`/live/market.json` …) үйлчилнэ. Ингэснээр `EXPO_PUBLIC_DATA_BASE_URL`-ийг солиход л клиент шилжинэ. Серверийн горимд төлөвийг Pages-ээс биш `STORE_DIR`/`DATA_DIR`-аас уншина. `ENABLE_SCHEDULER=true` бол `live-data.yml`-ийг унтраах (давхар ажиллалтаас сэргийлж). Үнэгүй дүрмийн дагуу серверийг заавал биш гэж үлдээв. |
+| D61 | Дотооддоо өгөгдлийг dict-ээр дамжуулж, хил дээр Pydantic (`parse`/`safe_parse`, `exclude_unset`)-аар шалгана. Ингэснээр Zod-ийн `.optional()` (түлхүүр байхгүй, null биш) яг хадгалагдана. `Num = int \| float` нь бүхэл тоог «1.0» болгохгүй. `write_json` нь бүхэл float-ыг int болгож `JSON.stringify`-тэй ижил гаралт өгнө. Файлыг түр файлаар дамжуулж (atomic) бичнэ — сервер хагас файл уншихгүй. |
+| D62 | `jsnum.py`: `toFixed` (Decimal, ROUND_HALF_UP — JS-ийн дүрэм), `Math.round`, `toPrecision`, `toISOString`-ийг дуурайна. Python-ы `round()`/`format()` нь тэнцүү зайд банкны дугуйлалт хийдэг тул монгол өгүүлбэр ба тоо зөрөхөөс сэргийлэв. |
+| D63 | RSS-ийг `lxml` (`resolve_entities=False`, `no_network=True`, `recover=True`)-ээр задална: XXE-гүй, эвдэрхий feed-ийг уншина. Feed-ийг bytes-ээр өгч XML-ийн encoding зарлалыг хүндэтгэнэ. Regex-ийн word boundary-г JS-ийн адил ASCII (`re.A`) болгож, кирилл хэсгийг тусад нь `re.I`-ээр таарна (`classify.py`, `isCryptoTitle`). `canonicalUrl` нь WHATWG URL-ийн percent-encode багцыг дуурайна. |
+| D64 | `classify.py` ба `schemas.py` нь апп дахь TS (`src/lib/classify.ts`, `src/types/schemas.ts`)-ийн хуулбар (апп ч ашигладаг). Өөрчлөхдөө хоёуланг нь хамт засах — CLAUDE.md-д тэмдэглэв. |
 
 ## 2026.10.21 — Дизайны сайжруулалт
 
@@ -479,5 +528,16 @@ Template-ээс ирсэн (Expo SDK 58): expo, expo-router, react 19.3, react-n
 | `prettier` | dev | Формат (SPEC §3) |
 | `gray-matter` | dev | Тайлангийн `.md` frontmatter (SPEC §3) |
 | `@types/node` 24 | dev | Скрипт ба build-ийн Node төрөл (TS 6, D21) |
-| `fast-xml-parser` 5 | dev | RSS/Atom задлах (SPEC §3, D31) |
+| ~~`fast-xml-parser` 5~~ | — | 2026.10.22 хасав — RSS-ийг Python backend (`lxml`) задална (D63) |
 | `html-to-image` 1.11 | app (lazy) | Инфографикийн PNG экспорт, зөвхөн вэб, товч дарахад ачаална (SPEC §3, D44) |
+
+### Python backend (`backend/pyproject.toml`, D59)
+| Пакет | Төрөл | Шалтгаан |
+|---|---|---|
+| `fastapi`, `uvicorn` | app | HTTP API (D60) |
+| `httpx` | app | Async HTTP клиент (давтан оролдлого, timeout — SPEC §7.2.2) |
+| `pydantic` 2 | app | Схем шалгалт (Zod-ийн хуулбар, D61) |
+| `lxml` | app | RSS/Atom задлах (D63) |
+| `pyyaml` | app | Тайлангийн `.md` frontmatter |
+| `python-dotenv` | app | `.env.local` (локал түлхүүр) |
+| `pytest`, `ruff`, `mypy`, `types-pyyaml`, `lxml-stubs` | dev | Тест, lint/формат, төрөл |

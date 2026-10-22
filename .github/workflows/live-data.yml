@@ -34,17 +34,14 @@ jobs:
           ref: data-history
           path: store
 
-      - name: Setup Node
-        uses: actions/setup-node@v7
+      - name: Setup uv (Python backend)
+        uses: astral-sh/setup-uv@v10
         with:
-          node-version: 24
-          cache: npm
-
-      - name: Install
-        run: npm ci --ignore-scripts --no-audit --no-fund
+          enable-cache: true
+          cache-dependency-glob: backend/uv.lock
 
       - name: Fetch live data
-        run: npm run data:live
+        run: uv run --project backend --locked --no-dev kripto live
         env:
           COINGECKO_DEMO_API_KEY: ${{ secrets.COINGECKO_DEMO_API_KEY }}
           CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}

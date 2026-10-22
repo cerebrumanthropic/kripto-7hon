@@ -355,6 +355,8 @@ corrections: []          # - date: "2026-10-27"  text: "..."
 
 ## 7. Скриптүүдийн үйлдэл
 
+> **2026.10.22-аас (PROGRESS D59):** §7.1–7.4 нь Python дээр хэрэгжинэ: `backend/src/kripto_api/` — `state.py`, `live.py`, `weekly_job.py`, `validate.py`. Командууд хэвээр (`npm run data:live` → `kripto live` г.м.), Zod-ийн оронд Pydantic (`schemas.py`). Доорх `scripts/*.ts` нэрс нь анхны тодорхойлолтын нэр. §7.5 (`prepare-build.ts`) TS хэвээр.
+
 ### 7.1 Төлөв (state) — `scripts/lib/state.ts`
 - Төлөв = `history/daily.json` + `news/<week>.json`.
 - **Ачаалах дараалал:** (1) GitHub Pages дээрх нийтлэгдсэн хувилбар (`$DATA_BASE_URL/...`) → (2) `store/` (data-history branch-ийн checkout) → (3) хоосон.

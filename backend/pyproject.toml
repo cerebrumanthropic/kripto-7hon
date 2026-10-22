@@ -1,0 +1,49 @@
+[project]
+name = "kripto-api"
+version = "1.0.0"
+description = "«Виртуал хөрөнгийн 7 хоног» — дата backend (FastAPI + CLI)"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.32",
+  "httpx>=0.28",
+  "pydantic>=2.9",
+  "lxml>=5.3",
+  "pyyaml>=6.0",
+  "python-dotenv>=1.0",
+]
+
+[project.scripts]
+kripto = "kripto_api.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3", "ruff>=0.8", "mypy>=1.13", "types-pyyaml", "lxml-stubs"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kripto_api"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = [
+  "E501",                       # мөрийн уртыг `ruff format` зохицуулна (урт мөр/URL үлдэнэ)
+  "RUF001", "RUF002", "RUF003", # кирилл үсэг латинтай төстэй гэсэн анхааруулга
+]
+
+[tool.mypy]
+python_version = "3.12"
+packages = ["kripto_api"]
+mypy_path = "src"
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_unused_ignores = true

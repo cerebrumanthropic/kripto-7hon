@@ -12,15 +12,17 @@
 ## Архитектур
 
 ```
-GitHub Actions ─┬─ live-data.yml (цаг бүр :07)  → scripts/fetch-live.ts → public-data/ → GitHub Pages (JSON, CORS *)
+GitHub Actions ─┬─ live-data.yml (цаг бүр :07)  → kripto live (Python) → public-data/ → GitHub Pages (JSON, CORS *)
                 │                                  └─ data-history branch (өдөрт 1 commit)
-                ├─ weekly-report.yml (Ням 23:55 UTC) → scripts/build-weekly.ts → Pull Request (редактор) 
+                ├─ weekly-report.yml (Ням 23:55 UTC) → kripto weekly (Python) → Pull Request (редактор) 
                 ├─ deploy.yml (main руу push / 1, 15-нд keepalive) → expo export → EAS Hosting
                 └─ ci.yml (PR) → шалгалт; report/* PR → preview deploy + comment
 Хөтөч ← EAS Hosting (статик HTML) ← амьд JSON-ийг Pages-ээс 10 мин тутам (алдаа гарвал build үеийн fallback)
+(сонголттой) FastAPI `kripto serve` — Pages-тэй ижил замаар үйлчилнэ; EXPO_PUBLIC_DATA_BASE_URL-ийг түүн рүү заана
 ```
 
 - **Вэб:** Expo SDK 58 + Expo Router, `web.output: "static"`, data loaders. API route байхгүй (EAS Free-ийн 10 CPU-ms хязгаар).
+- **Backend:** Python 3.12 + FastAPI + httpx + Pydantic (`backend/`, uv). Дэлгэрэнгүй: [backend/README.md](backend/README.md).
 - **Дата:** CoinGecko Demo (≤5 дуудлага/ажиллалт), DefiLlama, Alternative.me, open.er-api.com, RSS (CoinDesk, Cointelegraph, Decrypt, The Block, Bitcoin Magazine, CryptoSlate, SEC, Ikon.mn).
 - **Тайлан:** `content/reports/<week>.json` (автомат) + `<week>.md` (редакторын текст, скрипт хэзээ ч дарж бичихгүй).
 
@@ -31,8 +33,9 @@ src/app/            route-ууд (/, /zah-zeel, /medee, /tailan, /tailan/[week],
 src/components/     layout, charts (react-native-svg), cards, report (инфографик), research
 src/lib/            format, dates, i18n-mn, classify, data-client, report-view, share-text, server/content
 src/types/          Zod схемүүд (апп ба скрипт хуваалцана)
-scripts/            fetch-live, build-weekly, validate-reports, prepare-build, sources/*, lib/*
-scripts/__fixtures__/ API-ийн бодит хариуны жишээ (тестэд)
+backend/            Python дата backend: kripto CLI (live, weekly, validate, serve), FastAPI, sources/*
+backend/tests/      pytest; fixtures/ = API-ийн бодит хариуны жишээ
+scripts/            web build хэрэгсэл (TS): prepare-build, paint-first, fix-static-index, lib/reports
 content/            research.json (судалгаа), reports/ (7 хоногийн тайлан)
 docs/               SPEC, PROGRESS, EDITOR
 ```
@@ -41,12 +44,13 @@ docs/               SPEC, PROGRESS, EDITOR
 
 | Команд | Үйлдэл |
 |---|---|
-| `npm install` | Хамаарлууд (Node 24) |
+| `npm install` · `cd backend && uv sync` | Хамаарлууд (Node 24 · Python 3.12, [uv](https://docs.astral.sh/uv/)) |
 | `npx expo start --web` | Локал хөгжүүлэлт |
-| `npm run typecheck` · `npm test` | TypeScript · vitest |
+| `npm run typecheck` · `npm test` · `npm run test:backend` | TypeScript · vitest · pytest + ruff + mypy |
 | `npm run data:live` | Амьд дата татаж `public-data/`-д бичнэ (`--fail id` — эх сурвалжийг хүчээр унагах) |
 | `npm run report:draft -- --week 2026-W43 [--dry-run] [--auto-publish]` | 7 хоногийн ноорог |
 | `npm run validate` | Нийтлэгдсэн тайлангуудыг шалгана |
+| `npm run api` | FastAPI сервер (амьд датаг Pages-тэй ижил замаар) |
 | `npm run export:web` | prepare-build → `expo export` → `dist/` |
 | `npm run check:links` · `npm run feeds:probe` · `npm run fixtures:capture` | Судалгааны холбоос · RSS · API fixture шалгах |
 
@@ -70,7 +74,7 @@ Pages: **Settings → Pages → Source: GitHub Actions**.
 - **Scheduled workflow унтарвал:** Public repo 60 хоног идэвхгүй бол GitHub хуваарьт ажлыг унтраадаг. `data-history`-д өдөр бүр commit хийгддэг. Унтарсан тохиолдолд **Actions → live-data → Enable workflow** дарна.
 - **EAS хадгалах сан (Free 1 GB):** Production deployment-ууд устахгүй хуримтлагддаг. Нэг deploy ≈ 9 MB, сард 6–8 удаа → ≈1–1.5 жилд 1 GB-д хүрнэ. Хэрэглээг expo.dev → Hosting хэсгээс хянана. Хуучныг `npx eas-cli deploy:delete <id>`-ээр устгана.
 - **CoinGecko квот:** Сард ≈2,300 / 10,000 дуудлага. Developer Dashboard-оос хянана.
-- **RSS эх сурвалж ажиллахаа больсон бол:** `npm run feeds:probe` ажиллуулаад `scripts/sources/feeds.ts`-ийг засна.
+- **RSS эх сурвалж ажиллахаа больсон бол:** `npm run feeds:probe` ажиллуулаад `backend/src/kripto_api/sources/feeds.py`-ийг засна.
 
 ## Иш татах
 
