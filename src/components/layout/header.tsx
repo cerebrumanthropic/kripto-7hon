@@ -13,9 +13,7 @@ const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> =
   { href: '/', label: t.nav.home, match: (p) => p === '/' },
   { href: '/zah-zeel', label: t.nav.market, match: (p) => p.startsWith('/zah-zeel') },
   { href: '/medee', label: t.nav.news, match: (p) => p.startsWith('/medee') },
-  { href: '/tailan', label: t.nav.reports, match: (p) => p.startsWith('/tailan') },
   { href: '/sudalgaa', label: t.nav.research, match: (p) => p.startsWith('/sudalgaa') },
-  { href: '/arga-zui', label: t.nav.method, match: (p) => p.startsWith('/arga-zui') },
 ];
 
 /** Хэлтсийн нэр + «7 хоногийн мэдээ» (PROGRESS D53). Мобайлд нэр 2 мөрт орно. */
