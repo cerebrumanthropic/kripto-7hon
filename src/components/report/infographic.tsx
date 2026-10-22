@@ -11,7 +11,7 @@ import { formatDay, weekShortLabel } from '@/lib/dates';
 import { arrow, direction, groupDigits, mnt, pct, pctPlain, price, usdCompact } from '@/lib/format';
 import { t } from '@/lib/i18n-mn';
 import type { MergedReport } from '@/types/schemas';
-import { dark, fonts, light, type ThemeColors } from '@/theme/tokens';
+import { dark, font, type FontWeightName, light, type ThemeColors } from '@/theme/tokens';
 
 export const INFOGRAPHIC_W = 1080;
 export const INFOGRAPHIC_H = 1350;
@@ -25,8 +25,8 @@ export type ViewRef = ComponentRef<typeof View>;
 
 function useInk(variant: InfographicVariant) {
   const c: ThemeColors = variant === 'dark' ? dark : light;
-  const txt = (size: number, weight: keyof typeof fonts = 'regular', color = c.text): TextStyle => ({
-    fontFamily: fonts[weight],
+  const txt = (size: number, weight: FontWeightName = 'regular', color = c.text): TextStyle => ({
+    ...font(weight),
     fontSize: size,
     lineHeight: Math.round(size * 1.25),
     color,
@@ -37,7 +37,7 @@ function useInk(variant: InfographicVariant) {
   return { c, txt, dirColor };
 }
 
-/** 984px өргөнд Nunito Bold-ийн кирилл үсэг ≈0.56em — 2 мөрт багтах хамгийн том хэмжээ. */
+/** 984px өргөнд Helvetica/Arial Bold-ийн кирилл үсэг ≈0.56em — 2 мөрт багтах хамгийн том хэмжээ. */
 export function headlineFontSize(chars: number): number {
   if (chars <= 72) return 44;
   if (chars <= 92) return 38;

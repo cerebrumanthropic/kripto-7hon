@@ -141,46 +141,46 @@ export const radius = { sm: 4, md: 8, lg: 12, pill: 999 } as const;
 export const maxWidth = 1200;
 export const breakpoints = { tablet: 600, desktop: 1024 } as const;
 
-const webStack = (face: string) => `"${face}", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`;
-const face = (name: string) => Platform.select({ web: webStack(name), default: name });
-
 /**
- * Google Fonts (SIL OFL, PROGRESS D65): Nunito — үндсэн текст, цэс, товч, тоо (400/600/700/800);
- * Comfortaa — гарчиг ба лого (400/600/700). `@expo-google-fonts/*` нь бүтэн TTF тул latin, cyrillic,
- * cyrillic-ext (Ө ө Ү ү) бүгд орсон.
+ * Helvetica (хэрэглэгчийн шийдвэр, PROGRESS D69). Helvetica нь арилжааны фонт тул сайтад суулгахгүй —
+ * төхөөрөмжийн фонтыг stack-аар: Apple → Helvetica Neue / Helvetica, Windows/Android → Arial (Helvetica-тай
+ * ижил хэмжээстэй). Arial ба Segoe UI-д Ө ө Ү ү бий. Вэб фонт татахгүй тул хуудас хөнгөн.
  */
-export const fonts = {
-  regular: face('Nunito_400Regular'),
-  medium: face('Nunito_600SemiBold'),
-  semibold: face('Nunito_600SemiBold'),
-  bold: face('Nunito_700Bold'),
-  extrabold: face('Nunito_800ExtraBold'),
-  displayRegular: face('Comfortaa_400Regular'),
-  displaySemibold: face('Comfortaa_600SemiBold'),
-  displayBold: face('Comfortaa_700Bold'),
-} as const;
+const HELVETICA = Platform.select({
+  web: '"Helvetica Neue", Helvetica, Arial, "Segoe UI", system-ui, sans-serif',
+  default: 'System',
+}) as string;
+
+export const weights = { regular: '400', medium: '500', semibold: '600', bold: '700', extrabold: '800' } as const;
+export type FontWeightName = keyof typeof weights;
+
+/** fontFamily + fontWeight (нэг family, жинг fontWeight-ээр). */
+export const font = (w: FontWeightName) => ({ fontFamily: HELVETICA, fontWeight: weights[w] });
+
+/** Хуучин түлхүүрүүд (SVG текст г.м. зөвхөн family хэрэгтэй газарт). */
+export const fonts = { regular: HELVETICA } as const;
 
 export const type = {
-  heroLg: { fontFamily: fonts.displayBold, fontSize: 52, lineHeight: 62, letterSpacing: -1 },
-  hero: { fontFamily: fonts.displayBold, fontSize: 32, lineHeight: 40, letterSpacing: -0.5 },
-  display: { fontFamily: fonts.displayBold, fontSize: 38, lineHeight: 46, letterSpacing: -0.5 },
-  h1: { fontFamily: fonts.displayBold, fontSize: 28, lineHeight: 36, letterSpacing: -0.3 },
-  h2: { fontFamily: fonts.displayBold, fontSize: 21, lineHeight: 28, letterSpacing: -0.2 },
-  h3: { fontFamily: fonts.displayBold, fontSize: 17, lineHeight: 24 },
-  lead: { fontFamily: fonts.regular, fontSize: 18, lineHeight: 28 },
-  body: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 25 },
-  bodyStrong: { fontFamily: fonts.bold, fontSize: 16, lineHeight: 25 },
-  small: { fontFamily: fonts.regular, fontSize: 14, lineHeight: 20 },
-  smallStrong: { fontFamily: fonts.semibold, fontSize: 14, lineHeight: 20 },
-  caption: { fontFamily: fonts.regular, fontSize: 12, lineHeight: 17 },
+  heroLg: { ...font('bold'), fontSize: 54, lineHeight: 60, letterSpacing: -1.2 },
+  hero: { ...font('bold'), fontSize: 34, lineHeight: 40, letterSpacing: -0.6 },
+  display: { ...font('bold'), fontSize: 40, lineHeight: 46, letterSpacing: -0.6 },
+  h1: { ...font('bold'), fontSize: 30, lineHeight: 36, letterSpacing: -0.4 },
+  h2: { ...font('bold'), fontSize: 22, lineHeight: 28, letterSpacing: -0.2 },
+  h3: { ...font('bold'), fontSize: 17, lineHeight: 24 },
+  lead: { ...font('regular'), fontSize: 18, lineHeight: 28 },
+  body: { ...font('regular'), fontSize: 16, lineHeight: 25 },
+  bodyStrong: { ...font('bold'), fontSize: 16, lineHeight: 25 },
+  small: { ...font('regular'), fontSize: 14, lineHeight: 20 },
+  smallStrong: { ...font('bold'), fontSize: 14, lineHeight: 20 },
+  caption: { ...font('regular'), fontSize: 12, lineHeight: 17 },
   label: {
-    fontFamily: fonts.bold,
+    ...font('bold'),
     fontSize: 12,
     lineHeight: 16,
     letterSpacing: 1,
     textTransform: 'uppercase' as const,
   },
-  kpi: { fontFamily: fonts.extrabold, fontSize: 26, lineHeight: 32, letterSpacing: -0.3 },
+  kpi: { ...font('bold'), fontSize: 26, lineHeight: 32, letterSpacing: -0.5 },
 } as const;
 
 export type TypeVariant = keyof typeof type;
