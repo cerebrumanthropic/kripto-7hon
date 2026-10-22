@@ -6,7 +6,7 @@ import { Band } from '@/components/layout/band';
 import { BrandMark } from '@/components/ui/brand-mark';
 import { T, webPress } from '@/components/ui/primitives';
 import { t } from '@/lib/i18n-mn';
-import { fonts, maxWidth, radius, space, type } from '@/theme/tokens';
+import { font, maxWidth, radius, space, type } from '@/theme/tokens';
 import { useLayout, useTheme } from '@/theme/use-theme';
 
 const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> = [
@@ -23,10 +23,10 @@ export function BrandLockup({ compact }: { compact?: boolean }) {
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md, flexShrink: 1 }}>
       <BrandMark size={compact ? 38 : 42} />
       <View style={{ flexShrink: 1 }}>
-        <T style={{ fontFamily: fonts.displayBold, fontSize: compact ? 13 : 14, lineHeight: compact ? 17 : 19, color: c.text }}>
+        <T style={{ ...font('bold'), fontSize: compact ? 13 : 14, lineHeight: compact ? 17 : 19, color: c.text }}>
           {t.site.org}
         </T>
-        <T style={{ fontFamily: fonts.bold, fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
+        <T style={{ ...font('bold'), fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
           {t.site.edition}
         </T>
       </View>

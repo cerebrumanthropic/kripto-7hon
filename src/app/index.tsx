@@ -10,7 +10,7 @@ import { useNews } from '@/lib/data-client';
 import { t } from '@/lib/i18n-mn';
 import { pageMeta } from '@/lib/meta';
 import type { NewsFeed } from '@/types/schemas';
-import { fonts, space } from '@/theme/tokens';
+import { font, space } from '@/theme/tokens';
 import { useLayout, useTheme } from '@/theme/use-theme';
 
 export async function loader() {
@@ -79,7 +79,7 @@ function ResearchTeaser({ examples, dataSources }: { examples: number; dataSourc
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.xxl }}>
         {stats.map(([n, label]) => (
           <View key={label}>
-            <T num style={{ fontFamily: fonts.displayBold, fontSize: 44, lineHeight: 50, letterSpacing: -0.5, color: c.brandText }}>
+            <T num style={{ ...font('bold'), fontSize: 44, lineHeight: 50, letterSpacing: -0.5, color: c.brandText }}>
               {n}
             </T>
             <T v="small" color="textMuted">
