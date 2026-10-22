@@ -1,8 +1,9 @@
 import { useLoaderData } from 'expo-router';
 import { View } from 'react-native';
 
-import { NewsRow, ReportCard } from '@/components/cards/cards';
+import { ReportCard } from '@/components/cards/cards';
 import { KpiGrid } from '@/components/cards/kpi-grid';
+import { NewsMagazine } from '@/components/cards/news-magazine';
 import { LoadError } from '@/components/layout/live-status';
 import { Page } from '@/components/layout/page';
 import { ButtonLink, Card, InLink, SectionHeader, T } from '@/components/ui/primitives';
@@ -38,16 +39,7 @@ export function generateMetadata() {
 function LatestNews({ snapshot }: { snapshot: NewsFeed | null }) {
   const { data, isError } = useNews(snapshot);
   if (isError) return <LoadError />;
-  const items = data?.data.items.slice(0, 8) ?? [];
-  return (
-    <Card style={{ paddingVertical: space.xs }}>
-      <View role="list">
-        {items.map((item) => (
-          <NewsRow key={item.id} item={item} />
-        ))}
-      </View>
-    </Card>
-  );
+  return <NewsMagazine items={data?.data.items.slice(0, 8) ?? []} />;
 }
 
 function NoReport() {
@@ -113,8 +105,14 @@ export default function Home() {
         </View>
       }
       band={<KpiGrid snapshot={d.market} />}>
+      {/* Мэдээ — нүүрний эхний блок, сэтгүүлийн бүтэцтэй (PROGRESS D70) */}
+      <View>
+        <SectionHeader title={t.news.title} icon="news" right={<InLink href="/medee" v="smallStrong">{t.home.allNews}</InLink>} />
+        <LatestNews snapshot={d.news} />
+      </View>
+
       <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.xxl, alignItems: 'flex-start' }}>
-        <View style={{ flex: isDesktop ? 5 : undefined, width: isDesktop ? undefined : '100%', gap: space.xxl }}>
+        <View style={{ flex: isDesktop ? 1 : undefined, width: isDesktop ? undefined : '100%' }}>
           <View>
             <SectionHeader title={t.home.latestReport} icon="report" />
             {d.latest ? (
@@ -128,16 +126,11 @@ export default function Home() {
               <NoReport />
             )}
           </View>
-
-          <View>
-            <SectionHeader title={t.home.researchTitle} icon="summary" />
-            <ResearchTeaser examples={d.examples} dataSources={d.dataSources} />
-          </View>
         </View>
 
-        <View style={{ flex: isDesktop ? 7 : undefined, width: isDesktop ? undefined : '100%' }}>
-          <SectionHeader title={t.home.latestNews} icon="news" right={<InLink href="/medee" v="smallStrong">{t.home.allNews}</InLink>} />
-          <LatestNews snapshot={d.news} />
+        <View style={{ flex: isDesktop ? 1 : undefined, width: isDesktop ? undefined : '100%' }}>
+          <SectionHeader title={t.home.researchTitle} icon="summary" />
+          <ResearchTeaser examples={d.examples} dataSources={d.dataSources} />
         </View>
       </View>
     </Page>
