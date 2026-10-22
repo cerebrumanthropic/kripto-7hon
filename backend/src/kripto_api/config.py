@@ -38,6 +38,10 @@ class ServerSettings:
     scheduler: bool
     admin_token: str | None
     cors_origins: list[str]
+    # Cloud Run: төлвийг энэ bucket-д хадгална (хоосон бол зөвхөн локал диск) — PROGRESS D60
+    state_bucket: str | None = None
+    # Bucket хоосон (анхны ажиллалт) үед өмнөх төлвийг эндээс (GitHub Pages) нэг удаа уншина
+    seed_base_url: str = ""
 
     @classmethod
     def from_env(cls) -> "ServerSettings":
@@ -48,4 +52,6 @@ class ServerSettings:
             scheduler=_flag("ENABLE_SCHEDULER"),
             admin_token=os.environ.get("ADMIN_TOKEN") or None,
             cors_origins=[o.strip() for o in origins.split(",") if o.strip()],
+            state_bucket=os.environ.get("STATE_BUCKET") or None,
+            seed_base_url=_trim_slash(os.environ.get("SEED_BASE_URL", "")),
         )

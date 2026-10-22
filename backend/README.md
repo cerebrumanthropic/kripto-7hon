@@ -44,9 +44,19 @@ GitHub Pages-тэй **ижил замаар** үйлчилнэ. Тиймээс �
 | `ADMIN_TOKEN` | — | `/admin/refresh`-ийн токен |
 | `CORS_ORIGINS` | `*` | Таслалаар тусгаарлана |
 | `COINGECKO_DEMO_API_KEY` · `CONTACT_EMAIL` · `SITE_URL` | — | Эх сурвалжуудад |
+| `STATE_BUCKET` | — | Cloud Storage bucket. Тохируулсан бол төлвийг cold start бүрд bucket-аас татаж, ажиллалтын дараа өөрчлөгдсөн файлыг байршуулна (`state_sync.py`) |
+| `SEED_BASE_URL` | — | Bucket хоосон анхны ажиллалтад өмнөх түүхийг эндээс (GitHub Pages) нэг удаа уншина |
 
 Серверийн горимд өмнөх төлөвийг GitHub Pages-ээс уншихгүй. Төлөвийг `STORE_DIR` ба `DATA_DIR`-аас уншина (сервер өөрөө өгөгдлийн эх).
 Серверийг заавал ажиллуулах шаардлагагүй. Одоогийн GitHub Actions → Pages урсгал (`kripto live`) хэвээр ажиллана. Хостинг сонговол **зөвхөн үнэгүй түвшинд** (CLAUDE.md дүрэм 1).
+
+## Google Cloud Run (үнэгүй түвшин)
+
+`Dockerfile` + `deploy/cloudrun.sh`. Алхам алхмаар заавар: [docs/CLOUD_RUN.md](../docs/CLOUD_RUN.md).
+
+- Instance хүсэлтгүй үед унтдаг тул `ENABLE_SCHEDULER`-ийг ашиглахгүй. Cloud Scheduler цаг бүрийн :07-д `POST /admin/refresh`-ийг дуудна. Татлага хүсэлтийн дотор ажилладаг тул CPU зөвхөн тэр үед хуваарилагдана.
+- Диск түр зуурын тул төлвийг `STATE_BUCKET`-д хадгална. Bucket-ын зам нь локал замтай ижил: `public-data/…` ба `store/…`.
+- `max-instances 1`: bucket руу зэрэг хоёр instance бичихгүй.
 
 ## Бүтэц
 
@@ -54,6 +64,7 @@ GitHub Pages-тэй **ижил замаар** үйлчилнэ. Тиймээс �
 src/kripto_api/
   cli.py          kripto <команд>
   api.py          FastAPI апп + scheduler
+  gcs.py          Cloud Storage JSON API (httpx)   state_sync.py  төлөв ↔ bucket (Cloud Run)
   live.py         амьд дата (SPEC §7.2)        weekly_job.py  7 хоногийн ноорог (SPEC §7.3)
   state.py        Pages → store/ → локал         validate.py    тайлангийн шалгалт (SPEC §7.4)
   assemble.py     market.json, stale утга        weekly.py      WeeklyAuto (цэвэр функц)

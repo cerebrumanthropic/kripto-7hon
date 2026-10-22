@@ -1,6 +1,8 @@
 # FastAPI: амьд датаг GitHub Pages-тэй ИЖИЛ замаар (live/market.json …) үйлчилнэ — клиентийн
 # EXPO_PUBLIC_DATA_BASE_URL-ийг энэ серверийн URL болгоход л хангалттай (src/lib/data-client.ts өөрчлөгдөхгүй).
 # ENABLE_SCHEDULER=true бол цаг бүрийн :07-д өөрөө татна (GitHub Actions-ийн live-data.yml-ийн оронд).
+# Cloud Run (STATE_BUCKET): instance хүсэлтгүй үед унтдаг тул scheduler-ийн оронд Cloud Scheduler нь
+# POST /admin/refresh-ийг дуудна; төлөв bucket-д хадгалагдана (state_sync.py, PROGRESS D60).
 import asyncio
 import contextlib
 import json
@@ -19,7 +21,9 @@ from fastapi.responses import FileResponse
 
 from kripto_api import config
 from kripto_api.config import ServerSettings
+from kripto_api.gcs import GcsBucket
 from kripto_api.live import LiveConfig, LiveResult, run_live
+from kripto_api.state_sync import StateSync
 
 log = logging.getLogger("kripto_api")
 
@@ -30,23 +34,36 @@ RUN_MINUTE = 7  # цагийн эхний ачааллаас зайлсхийх 
 class Refresher:
     """Нэг зэрэг зөвхөн нэг live ажиллалт (scheduler ба /admin/refresh хуваалцана)."""
 
-    def __init__(self, settings: ServerSettings) -> None:
+    def __init__(self, settings: ServerSettings, sync: StateSync | None = None) -> None:
         self.settings = settings
+        self.sync = sync
         self.lock = asyncio.Lock()
         self.last_run: datetime | None = None
         self.last_code: int | None = None
+        self.has_history: bool | None = None  # bucket-д өдрийн түүх байсан эсэх (None = татаагүй)
+
+    async def pull(self) -> None:
+        if self.sync and not self.sync.pulled:
+            self.has_history = await self.sync.pull(datetime.now(UTC))
 
     async def run(self) -> LiveResult:
         async with self.lock:
-            # Сервер өөрөө өгөгдлийн эх тул төлөвийг Pages-ээс биш store/ ба DATA_DIR-аас уншина
+            await self.pull()
+            # Сервер өөрөө өгөгдлийн эх тул төлөвийг Pages-ээс биш store/ ба DATA_DIR-аас уншина.
+            # Bucket хоосон анхны ажиллалтад л SEED_BASE_URL (Pages)-ээс өмнөх түүхийг авна.
+            seed = self.settings.seed_base_url if self.sync and self.has_history is False else ""
             cfg = LiveConfig(
                 now=datetime.now(UTC),
                 out_dir=self.settings.data_dir,
                 store_dir=self.settings.store_dir,
+                data_base_url=seed,
                 api_key=config.coingecko_key(),
                 log=log.info,
             )
             result = await run_live(cfg)
+            if self.sync:
+                await self.sync.push()  # амжилтгүй бол алдаа гарч 500 → Cloud Scheduler дахин оролдоно
+                self.has_history = True
             self.last_run, self.last_code = cfg.now, result.code
             return result
 
@@ -75,10 +92,19 @@ async def _safe_run(refresher: Refresher) -> None:
 
 def create_app(settings: ServerSettings | None = None) -> FastAPI:
     settings = settings or ServerSettings.from_env()
-    refresher = Refresher(settings)
+    sync = (
+        StateSync(GcsBucket(settings.state_bucket), settings.data_dir, settings.store_dir, log.info)
+        if settings.state_bucket
+        else None
+    )
+    refresher = Refresher(settings, sync)
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
+        try:
+            await refresher.pull()  # cold start: сүүлийн датаг bucket-аас (уншигчдад шууд үйлчилнэ)
+        except Exception:
+            log.exception("[gcs] pull унав — дараагийн хүсэлтэд дахин оролдоно")
         task = asyncio.create_task(_schedule(refresher)) if settings.scheduler else None
         yield
         if task:
@@ -96,25 +122,28 @@ def create_app(settings: ServerSettings | None = None) -> FastAPI:
     app.state.refresher = refresher
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origins, allow_methods=["GET"], allow_headers=["*"])
 
-    def serve(rel: str) -> FileResponse:
+    async def serve(rel: str) -> FileResponse:
         file = settings.data_dir / rel
+        if not file.is_file() and sync:
+            with contextlib.suppress(Exception):
+                await sync.fetch(rel)  # хуучин долоо хоногийн архив
         if not file.is_file():
             raise HTTPException(404, f"{rel} одоогоор алга")
         return FileResponse(file, media_type="application/json", headers={"cache-control": f"public, max-age={CACHE_SECONDS}"})
 
     @app.get("/live/{name}.json", summary="Амьд дата (market, news, status)")
     async def live_json(name: Literal["market", "news", "status"]) -> FileResponse:
-        return serve(f"live/{name}.json")
+        return await serve(f"live/{name}.json")
 
     @app.get("/history/daily.json", summary="Өдрийн түүх (сүүлийн цэг нь provisional)")
     async def history_json() -> FileResponse:
-        return serve("history/daily.json")
+        return await serve("history/daily.json")
 
     @app.get("/news/{week}.json", summary="Долоо хоногийн мэдээний архив, жишээ нь 2026-W43")
     async def news_week_json(week: str) -> FileResponse:
         if not re.fullmatch(r"\d{4}-W\d{2}", week):
             raise HTTPException(404, "долоо хоног «2026-W43» хэлбэртэй байх ёстой")
-        return serve(f"news/{week}.json")
+        return await serve(f"news/{week}.json")
 
     @app.get("/healthz", summary="Төлөв")
     async def healthz() -> dict[str, Any]:
@@ -123,6 +152,7 @@ def create_app(settings: ServerSettings | None = None) -> FastAPI:
             "ok": updated_at is not None,
             "updatedAt": updated_at,
             "scheduler": settings.scheduler,
+            "stateBucket": bool(settings.state_bucket),
             "lastRun": refresher.last_run.isoformat() if refresher.last_run else None,
             "lastExitCode": refresher.last_code,
         }
