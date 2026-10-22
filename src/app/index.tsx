@@ -79,7 +79,7 @@ function ResearchTeaser({ examples, dataSources }: { examples: number; dataSourc
       <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.xxl }}>
         {stats.map(([n, label]) => (
           <View key={label}>
-            <T num style={{ fontFamily: fonts.bold, fontSize: 44, lineHeight: 48, letterSpacing: -1, color: c.brandText }}>
+            <T num style={{ fontFamily: fonts.displayBold, fontSize: 44, lineHeight: 50, letterSpacing: -0.5, color: c.brandText }}>
               {n}
             </T>
             <T v="small" color="textMuted">

@@ -23,10 +23,10 @@ export function BrandLockup({ compact }: { compact?: boolean }) {
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md, flexShrink: 1 }}>
       <BrandMark size={compact ? 38 : 42} />
       <View style={{ flexShrink: 1 }}>
-        <T style={{ fontFamily: fonts.bold, fontSize: compact ? 13 : 14, lineHeight: compact ? 16 : 18, color: c.text }}>
+        <T style={{ fontFamily: fonts.displayBold, fontSize: compact ? 13 : 14, lineHeight: compact ? 17 : 19, color: c.text }}>
           {t.site.org}
         </T>
-        <T style={{ fontFamily: fonts.semibold, fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
+        <T style={{ fontFamily: fonts.bold, fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
           {t.site.edition}
         </T>
       </View>

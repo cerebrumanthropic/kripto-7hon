@@ -1,10 +1,10 @@
 ﻿# public/og.png (1200×630), assets/images/favicon.png (48×48), assets/images/icon.png (1024×1024)-ийг
-# Inter фонтоор (node_modules/@expo-google-fonts/inter) System.Drawing ашиглан үүсгэнэ.
+# Comfortaa (гарчиг) ба Nunito (текст) фонтоор (node_modules/@expo-google-fonts) System.Drawing ашиглан үүсгэнэ.
 # Ажиллуулах (Windows PowerShell): powershell -ExecutionPolicy Bypass -File scripts/dev/make-brand-images.ps1
 # Анхаар: файл UTF-8 BOM-тэй байх ёстой (PowerShell 5.1 кириллийг зөв уншихын тулд).
 Add-Type -AssemblyName System.Drawing
 $root = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-$fontDir = Join-Path $root 'node_modules\@expo-google-fonts\inter'
+$fontDir = Join-Path $root 'node_modules\@expo-google-fonts'
 
 # Жин бүрийг тусдаа цуглуулгаас — нэг family-д холивол GDI+ Regular файлыг сонгодог
 function LoadFamily($file) {
@@ -12,8 +12,8 @@ function LoadFamily($file) {
   $pfc.AddFontFile((Join-Path $fontDir $file))
   return @{ pfc = $pfc; family = $pfc.Families[0] }
 }
-$regular = LoadFamily '400Regular\Inter_400Regular.ttf'
-$bold = LoadFamily '700Bold\Inter_700Bold.ttf'
+$regular = LoadFamily 'nunito\400Regular\Nunito_400Regular.ttf'
+$bold = LoadFamily 'comfortaa\700Bold\Comfortaa_700Bold.ttf'
 
 function Font($fam, $px) { New-Object System.Drawing.Font($fam.family, [single]$px, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel) }
 function Color($hex) { [System.Drawing.ColorTranslator]::FromHtml($hex) }

@@ -141,38 +141,46 @@ export const radius = { sm: 4, md: 8, lg: 12, pill: 999 } as const;
 export const maxWidth = 1200;
 export const breakpoints = { tablet: 600, desktop: 1024 } as const;
 
-const webStack = (face: string) =>
-  `"${face}", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`;
+const webStack = (face: string) => `"${face}", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`;
+const face = (name: string) => Platform.select({ web: webStack(name), default: name });
 
-/** Inter 400/500/600/700 (`@expo-google-fonts/inter`). Вэбд fallback stack-тай. */
+/**
+ * Google Fonts (SIL OFL, PROGRESS D59): Nunito — үндсэн текст, цэс, товч, тоо (400/600/700/800);
+ * Comfortaa — гарчиг ба лого (400/600/700). `@expo-google-fonts/*` нь бүтэн TTF тул latin, cyrillic,
+ * cyrillic-ext (Ө ө Ү ү) бүгд орсон.
+ */
 export const fonts = {
-  regular: Platform.select({ web: webStack('Inter_400Regular'), default: 'Inter_400Regular' }),
-  medium: Platform.select({ web: webStack('Inter_500Medium'), default: 'Inter_500Medium' }),
-  semibold: Platform.select({ web: webStack('Inter_600SemiBold'), default: 'Inter_600SemiBold' }),
-  bold: Platform.select({ web: webStack('Inter_700Bold'), default: 'Inter_700Bold' }),
+  regular: face('Nunito_400Regular'),
+  medium: face('Nunito_600SemiBold'),
+  semibold: face('Nunito_600SemiBold'),
+  bold: face('Nunito_700Bold'),
+  extrabold: face('Nunito_800ExtraBold'),
+  displayRegular: face('Comfortaa_400Regular'),
+  displaySemibold: face('Comfortaa_600SemiBold'),
+  displayBold: face('Comfortaa_700Bold'),
 } as const;
 
 export const type = {
-  heroLg: { fontFamily: fonts.bold, fontSize: 54, lineHeight: 60, letterSpacing: -1.4 },
-  hero: { fontFamily: fonts.bold, fontSize: 34, lineHeight: 40, letterSpacing: -0.8 },
-  display: { fontFamily: fonts.bold, fontSize: 40, lineHeight: 46, letterSpacing: -0.8 },
-  h1: { fontFamily: fonts.bold, fontSize: 30, lineHeight: 36, letterSpacing: -0.5 },
-  h2: { fontFamily: fonts.semibold, fontSize: 22, lineHeight: 28, letterSpacing: -0.3 },
-  h3: { fontFamily: fonts.semibold, fontSize: 17, lineHeight: 24 },
+  heroLg: { fontFamily: fonts.displayBold, fontSize: 52, lineHeight: 62, letterSpacing: -1 },
+  hero: { fontFamily: fonts.displayBold, fontSize: 32, lineHeight: 40, letterSpacing: -0.5 },
+  display: { fontFamily: fonts.displayBold, fontSize: 38, lineHeight: 46, letterSpacing: -0.5 },
+  h1: { fontFamily: fonts.displayBold, fontSize: 28, lineHeight: 36, letterSpacing: -0.3 },
+  h2: { fontFamily: fonts.displayBold, fontSize: 21, lineHeight: 28, letterSpacing: -0.2 },
+  h3: { fontFamily: fonts.displayBold, fontSize: 17, lineHeight: 24 },
   lead: { fontFamily: fonts.regular, fontSize: 18, lineHeight: 28 },
   body: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 25 },
-  bodyStrong: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 25 },
+  bodyStrong: { fontFamily: fonts.bold, fontSize: 16, lineHeight: 25 },
   small: { fontFamily: fonts.regular, fontSize: 14, lineHeight: 20 },
-  smallStrong: { fontFamily: fonts.medium, fontSize: 14, lineHeight: 20 },
+  smallStrong: { fontFamily: fonts.semibold, fontSize: 14, lineHeight: 20 },
   caption: { fontFamily: fonts.regular, fontSize: 12, lineHeight: 17 },
   label: {
-    fontFamily: fonts.semibold,
+    fontFamily: fonts.bold,
     fontSize: 12,
     lineHeight: 16,
     letterSpacing: 1,
     textTransform: 'uppercase' as const,
   },
-  kpi: { fontFamily: fonts.bold, fontSize: 26, lineHeight: 32, letterSpacing: -0.5 },
+  kpi: { fontFamily: fonts.extrabold, fontSize: 26, lineHeight: 32, letterSpacing: -0.3 },
 } as const;
 
 export type TypeVariant = keyof typeof type;

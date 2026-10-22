@@ -37,7 +37,7 @@ function useInk(variant: InfographicVariant) {
   return { c, txt, dirColor };
 }
 
-/** 984px өргөнд Inter Bold-ийн кирилл үсэг ≈0.56em — 2 мөрт багтах хамгийн том хэмжээ. */
+/** 984px өргөнд Nunito Bold-ийн кирилл үсэг ≈0.56em — 2 мөрт багтах хамгийн том хэмжээ. */
 export function headlineFontSize(chars: number): number {
   if (chars <= 72) return 44;
   if (chars <= 92) return 38;
