@@ -100,7 +100,7 @@ export default function Home() {
       lead={t.home.heroLead}
       meta={
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: space.md, marginTop: space.sm }}>
-          <ButtonLink href="/tailan" label={t.home.ctaReports} primary />
+          <ButtonLink href="/medee" label={t.home.ctaNews} primary />
           <ButtonLink href="/zah-zeel" label={t.home.ctaMarket} />
         </View>
       }
