@@ -17,6 +17,7 @@ export function Page({
   kicker,
   meta,
   band,
+  aside,
   size = 'page',
   children,
 }: {
@@ -27,6 +28,8 @@ export function Page({
   meta?: ReactNode;
   /** Туузны доод хэсэгт (гарчгийн блокоос өргөн) — нүүрний KPI */
   band?: ReactNode;
+  /** Гарчгийн блокийн баруун талд (нүүрний хөдөлгөөнт зураг) */
+  aside?: ReactNode;
   size?: 'hero' | 'page';
   children: ReactNode;
 }) {
@@ -39,33 +42,36 @@ export function Page({
     <View role="main" nativeID="main" style={{ width: '100%' }}>
       <Band pattern style={{ paddingTop: big ? space.xxxl : space.xxl, paddingBottom: big ? space.xxxl : space.xxl }}>
         <View style={{ width: '100%', maxWidth, alignSelf: 'center', paddingHorizontal: space.lg, gap: space.xxl }}>
-          <View style={{ gap: space.md, maxWidth: 860 }}>
-            {typeof kicker === 'string' ? (
-              <T v="label" color="accent">
-                {kicker}
-              </T>
-            ) : (
-              kicker
-            )}
-            <T role="heading" aria-level={1} style={titleStyle}>
-              {at > 0 && titleAccent ? (
-                <>
-                  {title.slice(0, at)}
-                  <T color="accent" style={titleStyle}>
-                    {titleAccent}
-                  </T>
-                  {title.slice(at + titleAccent.length)}
-                </>
+          <View style={aside ? { flexDirection: 'row', alignItems: 'center', gap: space.xl } : undefined}>
+            <View style={{ gap: space.md, maxWidth: 860, flex: aside ? 1 : undefined, minWidth: 0 }}>
+              {typeof kicker === 'string' ? (
+                <T v="label" color="accent">
+                  {kicker}
+                </T>
               ) : (
-                title
+                kicker
               )}
-            </T>
-            {lead ? (
-              <T v={big ? 'lead' : 'body'} color="textMuted">
-                {lead}
+              <T role="heading" aria-level={1} style={titleStyle}>
+                {at > 0 && titleAccent ? (
+                  <>
+                    {title.slice(0, at)}
+                    <T color="accent" style={titleStyle}>
+                      {titleAccent}
+                    </T>
+                    {title.slice(at + titleAccent.length)}
+                  </>
+                ) : (
+                  title
+                )}
               </T>
-            ) : null}
-            {meta}
+              {lead ? (
+                <T v={big ? 'lead' : 'body'} color="textMuted">
+                  {lead}
+                </T>
+              ) : null}
+              {meta}
+            </View>
+            {aside}
           </View>
           {band}
         </View>

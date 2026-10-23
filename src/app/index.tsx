@@ -6,6 +6,7 @@ import { KpiGrid } from '@/components/cards/kpi-grid';
 import { NewsMagazine } from '@/components/cards/news-magazine';
 import { LoadError } from '@/components/layout/live-status';
 import { Page } from '@/components/layout/page';
+import { HeroArt } from '@/components/ui/hero-art';
 import { ButtonLink, Card, InLink, SectionHeader, T } from '@/components/ui/primitives';
 import { useNews } from '@/lib/data-client';
 import { t } from '@/lib/i18n-mn';
@@ -104,6 +105,7 @@ export default function Home() {
           <ButtonLink href="/zah-zeel" label={t.home.ctaMarket} />
         </View>
       }
+      aside={isDesktop ? <HeroArt /> : null}
       band={<KpiGrid snapshot={d.market} />}>
       {/* Мэдээ — нүүрний эхний блок, сэтгүүлийн бүтэцтэй (PROGRESS D70) */}
       <View>
