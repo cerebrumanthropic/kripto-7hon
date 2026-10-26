@@ -37,12 +37,15 @@ export function LiveStatus({
   origin,
   sources,
   pending,
+  hideStale,
 }: {
   updatedAt?: string;
   origin?: DataOrigin;
   sources?: SourceStatus[];
   /** Build үеийн snapshot харагдаж, амьд дата хүлээгдэж байна — туз харуулахгүй (CLS) */
   pending?: boolean;
+  /** «Өгөгдөл хоцорч байж болзошгүй» тузыг харуулахгүй (нүүр, хэрэглэгчийн шийдвэр PROGRESS D72) */
+  hideStale?: boolean;
 }) {
   if (!updatedAt || !origin) {
     return (
@@ -68,7 +71,7 @@ export function LiveStatus({
       </T>
       {origin === 'sample' ? <Banner tone="info" text={t.live.sample} /> : null}
       {origin === 'fallback' ? <Banner tone="info" text={t.live.fallback} /> : null}
-      {origin === 'live' && isStale(updatedAt) ? <Banner tone="warn" text={t.live.staleWarning} /> : null}
+      {origin === 'live' && !hideStale && isStale(updatedAt) ? <Banner tone="warn" text={t.live.staleWarning} /> : null}
       {stale.length > 0 ? (
         <Banner
           tone="warn"
