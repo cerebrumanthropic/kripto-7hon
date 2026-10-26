@@ -26,7 +26,7 @@ export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
 
   return (
     <View style={{ gap: space.md }}>
-      <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} pending={isPlaceholderData} />
+      <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} pending={isPlaceholderData} hideStale />
       {/* Мобайлд 2 багана — 8 карт нэг дэлгэцэнд ойр багтана */}
       <Grid cols={cols === 1 ? 2 : cols}>
         {[
