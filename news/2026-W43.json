@@ -3,6 +3,212 @@
   "week": "2026-W43",
   "items": [
     {
+      "id": "46a3d8ce8acb",
+      "title": "AI agents help rescue ETH’s Glamsterdam fork, ‘Steal My Bitcoin’ site: Hodler’s Digest",
+      "url": "https://cointelegraph.com/magazine/ai-agents-help-rescue-eths-glamsterdam-fork-steal-my-bitcoin-site-hodlers-digest",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-25T22:48:40.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "aeb4a3affe02",
+      "title": "Paolo Ardoino wants AI to run Bitcoin mines. Who gets permission to act?",
+      "url": "https://cryptoslate.com/paolo-ardoino-wants-ai-to-run-bitcoin-mines-who-gets-permission-to-act",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T21:30:07.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "27dfb2781546",
+      "title": "Initia hack drove its USDC bridge reserve down to $63 as withdrawals failed",
+      "url": "https://cryptoslate.com/initia-hack-drove-its-usdc-bridge-reserve-down-to-63-as-withdrawals-failed",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T19:45:11.000Z",
+      "tags": [
+        "security",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9d2ad0b63bb3",
+      "title": "CoinDCX confirms $16 million loss from retired wallets days after CEO called breach reports a ‘false alarm’",
+      "url": "https://www.theblock.co/news/business/2026-10-25-coindcx-confirms-16-million-loss-from-retired-wallets-days-after-ceo-called-breach-reports-a-false-alarm-431617",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-25T18:46:21.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2505b92d4bca",
+      "title": "How $37 million stolen from Americans moved through a Bahamas bank into Tether’s USDT",
+      "url": "https://cryptoslate.com/how-37-million-stolen-from-americans-moved-through-a-bahamas-bank-into-tethers-usdt",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T18:40:29.000Z",
+      "tags": [
+        "security",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b61fce8eadd4",
+      "title": "Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks",
+      "url": "https://decrypt.co/381784/wells-fargo-cisco-intuit-more-companies-object-tokenized-stocks",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-25T16:01:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d37fddecc3cb",
+      "title": "Keystone customers say breach exposed data the hardware wallet maker promised to delete",
+      "url": "https://www.theblock.co/news/business/2026-10-25-keystone-customers-say-breach-exposed-data-the-hardware-wallet-maker-promised-to-delete-431613",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-25T15:56:30.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a02c144bb85b",
+      "title": "Pump.fun’s biggest winners may be impossible to copy as $752 million study exposes hidden trading gap",
+      "url": "https://cryptoslate.com/pump-funs-biggest-winners-may-be-impossible-to-copy-as-752-million-study-exposes-hidden-trading-gap",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T15:50:20.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f8f7d32c1a96",
+      "title": "ECB official sees digital euro as key to protecting EU ‘sovereignty’",
+      "url": "https://cointelegraph.com/news/ecb-official-sees-digital-euro-tool-to-protect-eu-sovereignty",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-25T15:11:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "12098990027f",
+      "title": "Latvia targets tokenization rules in 2027 with commercial property in focus",
+      "url": "https://www.coindesk.com/business/2026/10/25/latvia-targets-tokenization-rules-in-2027-with-commercial-property-in-focus",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-25T15:00:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b250a2a2099d",
+      "title": "Evernorth takes a page from Michael Saylor’s Bitcoin playbook with new $80 million XRP funding plan",
+      "url": "https://cryptoslate.com/evernorth-takes-a-page-from-michael-saylors-bitcoin-playbook-with-new-80-million-xrp-funding-plan",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T14:30:16.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2034bd41ea2c",
+      "title": "Bitcoin ETFs Snap Two-Week Losing Streak Despite Late-Week Slide",
+      "url": "https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-25T14:01:03.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "1fea58e4868e",
+      "title": "Hedge funds hold $2 trillion in US debt, but their next trade could require fewer bonds",
+      "url": "https://cryptoslate.com/hedge-funds-hold-2-trillion-in-us-debt-but-their-next-trade-could-require-fewer-bonds",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T13:00:52.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "48b8a283902e",
+      "title": "UK banks face 10,000 complaints in 3 months over crypto restrictions",
+      "url": "https://www.coindesk.com/policy/2026/10/22/uk-banks-face-10-000-complaints-in-3-months-over-crypto-restrictions",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-25T13:00:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ebe4a445c48a",
+      "title": "Netanyahu floats use of blockchain as solution to potential financial sanctions",
+      "url": "https://cointelegraph.com/news/netanyahu-floats-use-of-blockchain-as-solution-to-potential-financial-sanctions",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-25T11:42:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f31416f26881",
+      "title": "A 20-month Polkadot wallet breach reveals the dark side of faster crypto withdrawals",
+      "url": "https://cryptoslate.com/a-20-month-polkadot-wallet-breach-reveals-the-dark-side-of-faster-crypto-withdrawals",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T11:20:15.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b512493ef407",
+      "title": "Kraken wants to be your bank, but who will protect your money?",
+      "url": "https://cryptoslate.com/kraken-wants-to-be-your-bank-but-who-would-protect-your-money",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-25T08:00:04.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "c2c060619233",
       "title": "Firedancer makes bounty hunters burn 1 SOL even for duplicate bug reports",
       "url": "https://cryptoslate.com/firedancer-makes-bounty-hunters-burn-1-sol-even-for-duplicate-bug-reports",
