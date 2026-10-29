@@ -96,6 +96,18 @@
       "defiTvlUsd": 88525962686,
       "fearGreed": 51,
       "usdMnt": 3586.466388
+    },
+    {
+      "date": "2026-10-28",
+      "totalMarketCapUsd": 2740344292174.9204,
+      "totalVolume24hUsd": 69060449123.12079,
+      "btcDominancePct": 59.473902457648464,
+      "btcUsd": 81257,
+      "ethUsd": 2357.13,
+      "stablecoinsUsd": 303316280452.5399,
+      "defiTvlUsd": 88736232181,
+      "fearGreed": 51,
+      "usdMnt": 3586.466388
     }
   ]
 }
