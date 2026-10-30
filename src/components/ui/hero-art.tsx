@@ -1,26 +1,17 @@
-// Нүүрний hero-ийн баруун талын хөдөлгөөнт зураг (олон хэлтэй voicebot, PROGRESS D71).
-// Эх GIF 47.7 MB байсныг ffmpeg-ээр 560px animated WebP болгосон (тунгалаг дэвсгэр хадгалагдана).
-// Зөвхөн desktop-д (дуудагч нь `isDesktop` үед л render хийнэ) — мобайл болон Lighthouse-д татагдахгүй.
-// `prefers-reduced-motion` үед хөдөлгөөнгүй нэг кадр.
-import { useEffect, useState } from 'react';
-import { AccessibilityInfo, Image } from 'react-native';
+// Нүүрний hero-ийн баруун талын зураг (робот, PROGRESS D73). Зөвхөн desktop-д (дуудагч нь `isDesktop`
+// үед л render хийнэ). Зураг хөдөлгөөнгүй тул `+html.tsx`-ийн `[data-float]` CSS-ээр зөөлөн дээш доош
+// хөвнө; `prefers-reduced-motion` үед зогсоно. 640px WebP (≈30 KB, тунгалаг дэвсгэртэй).
+import { Image } from 'react-native';
 
-const ANIMATED = '/hero/voicebot.webp';
-const STILL = '/hero/voicebot-still.webp';
-const RATIO = 1310 / 1440; // эх зургийн өргөн/өндөр
+import { dataAttrs } from '@/components/ui/primitives';
 
-export function HeroArt({ width = 340 }: { width?: number }) {
-  const [still, setStill] = useState(false);
-  useEffect(() => {
-    AccessibilityInfo.isReduceMotionEnabled()
-      .then(setStill)
-      .catch(() => {});
-  }, []);
+export function HeroArt({ width = 320 }: { width?: number }) {
   return (
     <Image
       aria-hidden
-      source={{ uri: still ? STILL : ANIMATED }}
-      style={{ width, height: Math.round(width / RATIO), flexShrink: 0 }}
+      {...dataAttrs({ float: '' })}
+      source={{ uri: '/hero/robot.webp' }}
+      style={{ width, height: width, flexShrink: 0 }}
       resizeMode="contain"
     />
   );
