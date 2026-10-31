@@ -3,6 +3,1067 @@
   "week": "2026-W44",
   "items": [
     {
+      "id": "e4e9e8e63503",
+      "title": "OpenAI reportedly cuts fundraising and valuation targets amid AI jitters",
+      "url": "https://www.coindesk.com/business/2026/10/30/openai-reportedly-cuts-fundraising-target-amid-ai-jitters",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-31T00:48:56.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4223276be63d",
+      "title": "Maple locks $280M in XRP collateral and upcoming maturity dates threaten liquidations",
+      "url": "https://cryptoslate.com/maple-locks-280m-in-xrp-collateral-and-upcoming-maturity-dates-threaten-liquidations",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-31T00:10:43.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "05b5b88c47ee",
+      "title": "MetaMask adds Stellar integration, but cross-chain bridges require manual setup",
+      "url": "https://cryptoslate.com/metamask-adds-stellar-integration-but-cross-chain-bridges-require-manual-setup",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T22:50:38.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ec73f8415691",
+      "title": "Binance hackers raced to move billions before it could be frozen",
+      "url": "https://cointelegraph.com/magazine/binance-hackers-raced-to-move-billions-before-could-be-frozen",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T22:00:00.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e3814bab2e79",
+      "title": "Uniswap launches TJAR fee tool, but only fast searchers capture the hidden arbitrage profit",
+      "url": "https://cryptoslate.com/uniswap-launches-tjar-fee-tool-but-only-fast-searchers-capture-the-hidden-arbitrage-profit",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T21:40:32.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0b5f598e0819",
+      "title": "Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion",
+      "url": "https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T21:20:23.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "bc9d1f5a0e97",
+      "title": "Binance Hack Shows Why Offshore Exchanges Need US Oversight, CFTC Chair Says",
+      "url": "https://decrypt.co/382285/binance-hack-why-offshore-exchanges-need-us-oversight-cftc-chair",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T21:16:04.000Z",
+      "tags": [
+        "regulation",
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f29186eab69f",
+      "title": "President Trump says they’re looking into Binance hack as calls grow for crypto rules",
+      "url": "https://www.theblock.co/news/regulation/2026-10-30-trump-looking-into-binance-hack-calls-grow-for-crypto-rules-432236",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T21:06:03.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3cfc2caf1469",
+      "title": "Intel Stock Suffers Worst Crash in 50 Years as Weak Forecast Overshadows AI Chip Demand",
+      "url": "https://decrypt.co/382287/intel-stock-suffers-worst-crash-in-50-years-as-weak-forecast-overshadows-ai-chip-demand",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T20:53:23.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "40175c03a84d",
+      "title": "Binance hackers deploy never-seen-before laundering tactics to conceal $6.3 billion theft",
+      "url": "https://cryptoslate.com/binance-hackers-deploy-never-seen-before-laundering-tactics-to-conceal-6-3-billion-theft",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T20:30:08.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "980197f6015b",
+      "title": "Worried About Crypto Hacks? Buy Bitcoin Proxies in Stock Market Instead, Say Wall Street Firms",
+      "url": "https://decrypt.co/382282/crypto-hacks-buy-bitcoin-proxies-stock-market-wall-street",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T20:06:03.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5cb8608a5402",
+      "title": "Experts divided over Binance hack asset freezes, warn recovery is another matter",
+      "url": "https://www.coindesk.com/business/2026/10/30/experts-divided-over-binance-hack-asset-freezes-warn-recovery-is-another-matter",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T19:55:00.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b4cfce6e236d",
+      "title": "Binance gives 48-hour withdrawal target while Bitcoin deposits remain open",
+      "url": "https://cryptoslate.com/binance-gives-48-hour-withdrawal-target-while-bitcoin-deposits-remain-open",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T19:50:36.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cc9df4f7aea0",
+      "title": "Reddit Stock Plunges 30% as Google's AI Search Hits Traffic and User Growth",
+      "url": "https://decrypt.co/382276/reddit-stock-plunges-30-googles-ai-search",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T19:31:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d8a7ec228964",
+      "title": "Tether’s excess reserves nearly double to $8B as Q3 profit hits $1.5B",
+      "url": "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T19:01:58.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6d8f317e335c",
+      "title": "Coinbase (COIN) Misses Revenue Estimates as Users Fall, Armstrong Sets Up New Share Sales",
+      "url": "https://bitcoinmagazine.com/news/coinbase-falls-armstrong-sets-up-new-share",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T18:54:24.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "024feaf6953b",
+      "title": "Binance Hack: Why Bitcoin Didn't Crash Like It Did in 2018",
+      "url": "https://decrypt.co/382257/binance-hack-why-bitcoin-didnt-crash",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T18:45:03.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6a20d413c512",
+      "title": "Coinbase’s $719 million profit reveals a company caught between two crypto economies",
+      "url": "https://cryptoslate.com/coinbases-719-million-profit-reveals-a-company-caught-between-two-crypto-economies",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T18:40:11.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0e95054becea",
+      "title": "$8 Million Crypto Kidnapping Lands Texas Brothers 15-Year Prison Terms",
+      "url": "https://decrypt.co/382269/crypto-kidnapping-texas-brothers-15-year-prison",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T18:16:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f1eb9f90974b",
+      "title": "Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million",
+      "url": "https://decrypt.co/382268/secret-service-fbi-binance-hack-probe",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T17:50:26.000Z",
+      "tags": [
+        "security",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "21843d8df9de",
+      "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
+      "url": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T17:48:27.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6a67c2dcb633",
+      "title": "Lagarde to leave ECB with Europe’s tokenized-finance blueprint still undecided",
+      "url": "https://cryptoslate.com/lagarde-sets-her-exit-as-europe-weighs-who-controls-its-tokenized-money",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T17:30:21.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7d6f74b4a874",
+      "title": "Crypto Biz: Bitcoin’s quantum threat is becoming an economic problem",
+      "url": "https://cointelegraph.com/news/bitcoin-quantum-threat-ripple-bank-usdc-vaneck-crypto-biz",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T17:09:31.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7a77abea153d",
+      "title": "Recap: How Binance’s record $6.3B hack unfolded",
+      "url": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T16:53:46.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f7a11c959f39",
+      "title": "Binance Sets Aside $6.34B to Cover Hack Losses, CEO Says 'Your Assets Are Safe'",
+      "url": "https://decrypt.co/382237/binance-sets-aside-6-34b-to-cover-hack-losses-ceo-says-your-assets-are-safe",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T16:34:21.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6e10d3859b9b",
+      "title": "Binance uncovers wider breach in $6.3 billion exploit, targets Sunday withdrawal restart",
+      "url": "https://www.coindesk.com/tech/2026/10/30/binance-uncovers-wider-breach-in-usd6-3-billion-exploit-targets-sunday-withdrawal-restart",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T16:31:17.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4e111d8ff00d",
+      "title": "Texas brothers sentenced to 15 years for holding Minnesota family at gunpoint in $8 million crypto heist",
+      "url": "https://www.theblock.co/news/regulation/2026-10-30-texas-brothers-sentenced-15-years-8-million-crypto-robbery-minnesota-432221",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T16:26:07.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a59c27785290",
+      "title": "Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack",
+      "url": "https://decrypt.co/382236/elon-musk-cz-trade-blows-spacex-shares-binance-hack",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T16:25:06.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d601cecccf1f",
+      "title": "BOJ will more than double stock-fund sales from January",
+      "url": "https://cryptoslate.com/boj-more-than-doubles-planned-stock-fund-sales-as-bitcoin-faces-a-different-yen-risk-test",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T16:20:22.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "07c22c29bf9a",
+      "title": "Bitcoin risks worst October in 12 years as tech sell-off spreads to gold",
+      "url": "https://cointelegraph.com/markets/bitcoin-risks-worst-october-in-12-years-as-tech-sell-off-spreads-to-gold",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T16:06:28.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e317dadba9c5",
+      "title": "MEXC pulls out of four countries despite ambitious plan to rival global trading giants",
+      "url": "https://cryptoslate.com/mexc-pulls-out-of-four-countries-despite-ambitious-plan-to-rival-global-trading-giants",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T15:15:42.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d774354e1285",
+      "title": "SEC Charges Two Companies in $130 Million Crypto Trading Scheme",
+      "url": "https://bitcoinmagazine.com/news/sec-charges-companies-130-million-crypto",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T14:38:43.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c2064af9dbba",
+      "title": "Strategy’s preferred-stock fix sets up renewed bitcoin buying, analysts say",
+      "url": "https://www.theblock.co/news/business/2026-10-30-strategy-mstr-preferred-stock-bitcoin-buying-analysts-432214",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T14:30:49.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2b36940e3a32",
+      "title": "CZ asks Musk to stop trolling, saying ‘our’ SpaceX shares top $1 billion",
+      "url": "https://cryptoslate.com/cz-asks-musk-to-stop-trolling-saying-our-spacex-shares-top-1-billion",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T14:30:37.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6b1be1f91ba0",
+      "title": "What is EIP-7702? The Ethereum Upgrade Behind the $6.4B Binance Hack",
+      "url": "https://decrypt.co/resources/what-is-eip-7702-the-ethereum-upgrade-behind-the-6-4b-binance-hack",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T14:17:34.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9ff16ae2dca3",
+      "title": "Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack",
+      "url": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T14:13:34.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "140b51a88bcb",
+      "title": "Blockchain Firms Link North Korea to $6.3 Billion Binance Hack",
+      "url": "https://bitcoinmagazine.com/news/north-korea-6-3-billion-binance-hack",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T14:13:15.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "26618d512d83",
+      "title": "Bitcoin fell after the Fed’s pause, but blaming interest rates misses the Binance shock",
+      "url": "https://cryptoslate.com/bitcoin-fell-after-the-feds-pause-but-blaming-interest-rates-misses-the-binance-shock",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T14:00:23.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "436e3e74d095",
+      "title": "Tyler Evans: Bitcoin ETF Flows Flipped From “Highly Negative” to “Strong Accumulation”",
+      "url": "https://bitcoinmagazine.com/videos/tyler-evans-bitcoin-etf-flows-flipped-from-highly-negative-to-strong-accumulation",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T13:31:15.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5972de20dc71",
+      "title": "Will gold’s ‘infinite mint bug’ make Bitcoin more valuable?",
+      "url": "https://cointelegraph.com/magazine/will-golds-infinite-mint-bug-make-bitcoin-more-valuable",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T13:30:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d357e3f5ce1d",
+      "title": "Doomberg: US Treasury Sanctions are “Wildly Bullish” for Bitcoin & Gold",
+      "url": "https://bitcoinmagazine.com/videos/doomberg-us-treasury-sanctions-are-wildly-bullish-for-bitcoin-gold",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T13:26:43.000Z",
+      "tags": [
+        "regulation",
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "62042037776f",
+      "title": "Alex Thorn: 50-Week Signal Says Bitcoin’s Bottom is In",
+      "url": "https://bitcoinmagazine.com/videos/alex-thorn-50-week-signal-says-bitcoins-bottom-is-in",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T13:22:21.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6ba244585832",
+      "title": "Alexandre Laizet on The French Debt Crisis: “Europe is in Need of Bitcoin”",
+      "url": "https://bitcoinmagazine.com/videos/alexandre-laizet-on-the-french-debt-crisis-europe-is-in-need-of-bitcoin",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T13:17:11.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9d42a630a8ce",
+      "title": "Binance says it has $6.34 billion ready to cover hack losses",
+      "url": "https://www.theblock.co/news/ecosystems/2026-10-30-binance-says-it-has-6-34-billion-ready-to-cover-hack-losses-432208",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T13:14:56.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "36a051257df0",
+      "title": "Binance working with FBI to recover assets following $6.3B hack",
+      "url": "https://cointelegraph.com/news/binance-fbi-recover-assets-hack",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T13:11:10.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ae890e05afd4",
+      "title": "Israel Extradites Alleged Nomad Bridge Exploiter to US Over $2.8M Theft: Report",
+      "url": "https://decrypt.co/382230/israel-extradites-alleged-nomad-bridge-exploiter-to-us-over-2-8m-theft-report",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T13:00:09.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2693cc091598",
+      "title": "A $10 sports bet helped trigger 13 felony charges against Kalshi in Utah",
+      "url": "https://cryptoslate.com/a-10-sports-bet-helped-trigger-13-felony-charges-against-kalshi-in-utah",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T13:00:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4b99f03fa78d",
+      "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+      "url": "https://cointelegraph.com/news/binance-5-billion-replacement-crypto-in-custody",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T12:41:43.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "64f7e70132a4",
+      "title": "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day",
+      "url": "https://decrypt.co/382225/morning-minute-binances-6-4b-hack-overshadows-hyperliquids-biggest-day",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T12:31:30.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5e4ab4f104e4",
+      "title": "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+      "url": "https://decrypt.co/382224/trm-and-chainalysis-tie-6-4b-binance-hack-to-north-koreas-tradertraitor",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T12:22:04.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "16bb4140c583",
+      "title": "Binance arranges $6.34 billion to cover losses from record crypto hack",
+      "url": "https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T12:13:02.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0e0319f06b3a",
+      "title": "Here's how big bitcoin traders responded after the Binance hack hit",
+      "url": "https://www.coindesk.com/daybook-us/2026/10/30/here-s-how-big-bitcoin-traders-responded-after-the-binance-hack-hit",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T11:51:26.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f10e3c59a8bb",
+      "title": "Bitcoin mining difficulty hits 148 trillion as revenues fall to three-month lows",
+      "url": "https://cryptoslate.com/bitcoin-mining-difficulty-hits-148-trillion-as-revenues-fall-to-three-month-lows",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T11:50:29.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d3c2b9bdb679",
+      "title": "Zcash grants group offers $124M compromise as governance backlash grows",
+      "url": "https://cointelegraph.com/news/zcash-grants-46m-proposal-governance-backlash",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T11:36:23.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e3e972f430cf",
+      "title": "Here’s how an Ethereum upgrade helped drain part of Binance’s $6 billion loss",
+      "url": "https://www.coindesk.com/tech/2026/10/30/here-s-how-one-ethereum-permission-let-an-attacker-drain-usd2-5-billion-from-binance",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T11:35:16.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ddcd748016df",
+      "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
+      "url": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T11:29:23.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8ec8f3c5f385",
+      "title": "Binance uncovers more breach points in $6 billion hack",
+      "url": "https://cryptoslate.com/binance-breach-points-6-billion-hack",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T11:13:40.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3f6c4c27db19",
+      "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
+      "url": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T11:09:24.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9d267a38f010",
+      "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
+      "url": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T11:00:10.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d8992a880a69",
+      "title": "Binance hacker’s Bitcoin haul tops Coinbase’s corporate treasury",
+      "url": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T10:54:30.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ac53879d9001",
+      "title": "Polymarket suffers second multimillion-dollar security breach in just four months",
+      "url": "https://cryptoslate.com/polymarket-suffers-second-multimillion-dollar-security-breach-in-just-four-months",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T10:30:57.000Z",
+      "tags": [
+        "security",
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8f74fac40845",
+      "title": "Trezor Warns CryptoBilis Buyers After Report of Hardware Implant in Safe 5",
+      "url": "https://decrypt.co/382216/trezor-warns-cryptobilis-buyers-after-report-of-hardware-implant-in-safe-5",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T10:07:29.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "993e07a3a1cf",
+      "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
+      "url": "https://cointelegraph.com/markets/rune-token-surges-binance-hack",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T09:52:29.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "bc6dc704c91d",
+      "title": "Strategy CFO resigns as company posts record quarterly profit. MSTR stock falls 6%",
+      "url": "https://www.coindesk.com/markets/2026/10/30/strategy-cfo-resigns-as-company-posts-record-quarterly-profit-mstr-stock-falls-6",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T09:41:07.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cfb5d09af7d3",
+      "title": "Binance Finds 'Additional Points of Breach' in $6.3B Hack",
+      "url": "https://decrypt.co/382203/binance-finds-additional-points-of-breach-in-6-3b-hack",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-10-30T09:31:59.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5280e041471a",
+      "title": "Trezor warns CryptoBilis buyers to move funds over suspected implant",
+      "url": "https://cointelegraph.com/news/trezor-cryptobilis-wallet-implant-funds-warning",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T09:26:45.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "059fc66e66a2",
+      "title": "Walmart, Microsoft and JPMorgan block NYSE-backed venture from tokenizing their shares",
+      "url": "https://cryptoslate.com/walmart-microsoft-and-jpmorgan-block-nyse-backed-venture-from-tokenizing-their-shares",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T09:10:06.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3a8f5c45bf96",
+      "title": "Live updates: Binance uncovers more breach points in $6.3B hack",
+      "url": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T09:08:25.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9a13e0150a0d",
+      "title": "Coinbase Q3 net income jumps 66% as prediction markets gain traction",
+      "url": "https://www.theblock.co/news/business/2026-10-30-coinbase-q3-net-income-jumps-432189",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T08:57:09.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "23232f0b3d20",
+      "title": "Trezor reports suspected hardware implant in Safe 5 sold by CryptoBilis",
+      "url": "https://www.theblock.co/news/ecosystems/2026-10-30-trezor-reports-suspected-hardware-implant-432196",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-10-30T08:55:39.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "dcd76d02d623",
+      "title": "Live updates: Binance finds more breaches in $6.3 billion hack; AI spending fears hit tech",
+      "url": "https://www.coindesk.com/markets/2026/10/30/live-news-binance-hack-rattles-crypto-as-intel-plunges-and-ai-spending-fears-hit-tech",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T08:36:52.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "aa2500a96145",
+      "title": "Circle and ACI plan USDC settlement pilot alongside Colombia’s payment rails",
+      "url": "https://cryptoslate.com/aci-circle-usdc-settlement-pilot-colombia",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T08:00:23.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a48c8846de69",
+      "title": "Binance hacker dumps a little-known 2017 token and it crashes 90%",
+      "url": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-dumps-a-little-known-2017-token-and-it-crashes-90",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T07:54:07.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "939c87e3f88c",
+      "title": "Central banks map their role in a payments system shared with stablecoins",
+      "url": "https://cryptoslate.com/central-banks-map-their-role-in-a-payments-system-shared-with-stablecoins",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T06:30:55.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c5292045f46b",
+      "title": "Bitcoin, ether and XRP selloff wipes out $1.5 billion in leveraged crypto bets",
+      "url": "https://www.coindesk.com/markets/2026/10/30/bitcoin-ether-and-xrp-selloff-wipes-out-usd1-5-billion-in-leveraged-crypto-bets",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T06:22:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e64c5b0907a1",
+      "title": "Strategy eyes more Bitcoin buys as Saylor touts $30B credit capacity",
+      "url": "https://cointelegraph.com/news/strategy-30-billion-digital-credit-capacity-bitcoin-buys",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T05:53:07.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0b98c16996a4",
+      "title": "North Korea’s TraderTraitor linked to $6.3B Binance hack",
+      "url": "https://cointelegraph.com/news/north-korea-linked-to-63b-binance-hack-by-crypto-investigators",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T05:51:41.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8a7f40bfabbf",
+      "title": "XRP Ledger developers tighten the rules for who can hold 'restricted' tokens",
+      "url": "https://www.coindesk.com/tech/2026/10/30/xrp-ledger-developers-tighten-the-rules-for-who-can-hold-restricted-tokens",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T05:45:27.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "005fcf424dee",
+      "title": "Binance hack bites India's largest crypto exchange as it curbs futures trading",
+      "url": "https://www.coindesk.com/markets/2026/10/30/coindcx-halts-new-crypto-futures-bets-as-binance-incident-disrupts-liquidity",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T05:43:07.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6eac899f58ad",
+      "title": "Binance hack began with a $296 million XRP drain after 36-hour preparation",
+      "url": "https://cryptoslate.com/binance-hack-began-with-a-296-million-xrp-drain-after-36-hour-preparation",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T05:40:52.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d59eca628e48",
+      "title": "Circle starts cutting legacy USDC app transfer limits on October 31",
+      "url": "https://cryptoslate.com/circle-starts-cutting-legacy-usdc-app-transfer-limits-on-october-31",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T05:00:43.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a30053a4a6b3",
+      "title": "Binance hacker splits $1.4 billion of bitcoin into 19 wallets that no one can freeze",
+      "url": "https://www.coindesk.com/markets/2026/10/30/binance-hacker-splits-usd1-4-billion-of-bitcoin-into-19-wallets-that-no-one-can-freeze",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T04:50:42.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "22f24bcb266c",
+      "title": "Bitcoin Price Briefly Slides to $76,300 as Binance Confirms Hack Estimated at $6.3 Billion",
+      "url": "https://bitcoinmagazine.com/news/bitcoin-price-slides-near-76000-binance",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-10-30T04:05:40.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "784c4585f197",
+      "title": "Standard Chartered sees more pain after $6 billion Binance hack sends bitcoin lower",
+      "url": "https://www.coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T04:00:43.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e8faf700cb8a",
+      "title": "Institutional crypto investors rush to pull funds from exchanges after Binance hack",
+      "url": "https://www.coindesk.com/markets/2026/10/30/institutional-crypto-investors-rush-to-pull-funds-from-exchanges-after-binance-hack",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T03:56:40.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0d48792c2f79",
+      "title": "Hackers drain 9,400 SOL from bot wallets, and a copied key is blamed",
+      "url": "https://cryptoslate.com/hackers-drain-9400-sol-from-bot-wallets-and-a-copied-key-is-blamed",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-10-30T03:50:49.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "65fce25f6ef4",
+      "title": "Binance hack could accelerate shift to DEXs: Standard Chartered",
+      "url": "https://cointelegraph.com/news/binance-hack-could-accelerate-shift-to-dexs-standard-chartered",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-10-30T03:47:01.000Z",
+      "tags": [
+        "security",
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3366d82cd930",
+      "title": "Crypto's longtime foe, North Korea's Lazarus Group, likely behind Binance hack: blockchain sleuths",
+      "url": "https://www.coindesk.com/policy/2026/10/29/crypto-s-longtime-foe-north-korea-s-lazarus-group-likely-behind-binance-hack-blockchain-sleuths",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-10-30T03:36:11.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "247cfb5880c3",
       "title": "Allium restores 18 major chains, but only specific platforms are safe",
       "url": "https://cryptoslate.com/allium-restores-18-major-chains-but-only-specific-platforms-are-safe",
