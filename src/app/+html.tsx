@@ -15,7 +15,6 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     radial-gradient(760px 560px at 88% -8%, rgba(79,124,255,0.55), transparent 62%),
     radial-gradient(680px 560px at -12% 38%, rgba(139,92,246,0.42), transparent 60%),
     radial-gradient(860px 680px at 72% 108%, rgba(56,189,248,0.30), transparent 62%); }
-[data-glass] { -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%); }
 #root { display: flex; min-height: 100vh; flex-direction: column; }
 :focus-visible { outline: 2px solid #9DB2FF; outline-offset: 2px; }
 [id] { scroll-margin-top: 96px; }

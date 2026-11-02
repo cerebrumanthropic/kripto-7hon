@@ -38,8 +38,9 @@ export function useTheme(): { c: ThemeColors; scheme: Scheme } {
   const forced = useContext(Forced);
   const scheme = useSyncExternalStore(subscribeScheme, getScheme, () => 'light' as const);
   if (forced) return { c: forced, scheme: 'dark' };
-  // Glassy dashboard: үргэлж бараан (PROGRESS D75); `scheme`-ийг зөвхөн мэдээлэл болгон буцаана
-  return { c: glass, scheme };
+  // Glassy dashboard: үргэлж бараан (PROGRESS D75) — дүрсний өнгө г.м. бараан хувилбараа сонгоно
+  void scheme;
+  return { c: glass, scheme: 'dark' };
 }
 
 export type Layout = {

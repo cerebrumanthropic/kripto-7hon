@@ -145,7 +145,8 @@ export const glass: ThemeColors = {
   infoText: '#C9D4FF',
   warnBg: 'rgba(250,204,21,0.14)',
   warnText: '#FDE68A',
-  shadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 32px rgba(0,0,0,0.32)',
+  // Зөвхөн нимгэн дээд гэрэл: blur-тэй сүүдэр ба backdrop-filter нь анхны frame-ийг ≈1.2с удаашруулсан (D75)
+  shadow: 'inset 0 1px 0 rgba(255,255,255,0.07)',
 };
 
 /**
@@ -153,7 +154,7 @@ export const glass: ThemeColors = {
  * frame-ийг ≈60ms удаашруулж Lighthouse FCP-г унагасан тул хассан (PROGRESS D57).
  */
 export const inkBand = {
-  color: 'rgba(7,11,31,0.72)', // толгой/хөл: тунгалаг шил (`[data-glass]` blur)
+  color: 'rgba(7,11,31,0.88)', // толгой/хөл: хагас тунгалаг (blur-гүй — хурдны улмаас)
   image: [
     'radial-gradient(900px 420px at 88% -12%, rgba(91,140,255,0.26), transparent 62%)',
     'radial-gradient(700px 320px at -8% 112%, rgba(242,196,107,0.12), transparent 60%)',

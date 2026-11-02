@@ -7,7 +7,7 @@ import { ThemeScope } from '@/theme/use-theme';
 
 /**
  * Бүтэн өргөнтэй тууз (толгой, hero, хөл). Дотор нь `useTheme` → `glass` палитр (PROGRESS D75).
- * `pattern` (hero) — тунгалаг, body-ийн гэрэлтэх дэвсгэр харагдана; бусад нь blur-тэй шил (`[data-glass]`).
+ * `pattern` (hero) — тунгалаг, body-ийн гэрэлтэх дэвсгэр харагдана; бусад нь хагас тунгалаг.
  * Хэвлэхэд цагаан болно (`+html.tsx`, `[data-band]`).
  */
 export function Band({
@@ -25,7 +25,7 @@ export function Band({
     <ThemeScope colors={glass}>
       <View
         role={role}
-        {...dataAttrs(pattern ? { band: '' } : { band: '', glass: '' })}
+        {...dataAttrs({ band: '' })}
         style={[{ backgroundColor: pattern ? 'transparent' : inkBand.color }, style]}>
         {children}
       </View>
