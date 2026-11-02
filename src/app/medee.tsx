@@ -1,21 +1,19 @@
 import { useLoaderData } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { TextInput, View } from 'react-native';
+import { Pressable, TextInput, View } from 'react-native';
 
 import { NewsRow } from '@/components/cards/cards';
-import { NewsMagazine } from '@/components/cards/news-magazine';
 import { LiveStatus, LoadError } from '@/components/layout/live-status';
 import { Page } from '@/components/layout/page';
 import { Card, Chip, T } from '@/components/ui/primitives';
 import { useNews } from '@/lib/data-client';
 import { t } from '@/lib/i18n-mn';
 import { pageMeta } from '@/lib/meta';
+import { splitBySentiment, type Sentiment } from '@/lib/sentiment';
 import { EMPTY_FILTER, filterNews, toggleTag, type NewsFilter } from '@/lib/news-filter';
-import { NEWS_TAGS } from '@/types/schemas';
+import { NEWS_TAGS, type NewsItem } from '@/types/schemas';
 import { fonts, radius, space } from '@/theme/tokens';
-import { useTheme } from '@/theme/use-theme';
-
-const MAGAZINE = 8;
+import { useLayout, useTheme } from '@/theme/use-theme';
 
 export function generateMetadata() {
   return pageMeta(t.news.title, t.news.lead, '/medee');
@@ -35,8 +33,10 @@ export default function News() {
   const items = data?.data.items ?? [];
   const sources = useMemo(() => [...new Set(items.map((i) => i.source))].sort(), [items]);
   const shown = useMemo(() => filterNews(items, f), [items, f]);
-  const unfiltered = f.tags.length === 0 && !f.source && !f.query && !f.mongoliaOnly;
-  const listed = unfiltered ? shown.slice(MAGAZINE) : shown;
+  // Эерэг / сөрөг / төвийг сахисан (гарчгийн түлхүүр үгээр, PROGRESS D74)
+  const groups = useMemo(() => splitBySentiment(shown), [shown]);
+  const [showNeutral, setShowNeutral] = useState(false);
+  const { isDesktop } = useLayout();
 
   return (
     <Page
@@ -48,9 +48,6 @@ export default function News() {
       <Card tone="surfaceAlt">
         <T v="small">{t.news.notice}</T>
       </Card>
-
-      {/* Шүүлтгүй үед эхний 8 мэдээ сэтгүүлийн бүтэцтэй (PROGRESS D70), үлдсэн нь доорх жагсаалтад */}
-      {unfiltered && items.length > 0 ? <NewsMagazine items={items.slice(0, MAGAZINE)} /> : null}
 
       <View style={{ gap: space.md }} role="group" aria-label={t.news.search}>
         <TextInput
@@ -109,11 +106,32 @@ export default function News() {
         <T v="small" color="textMuted" aria-live="polite">
           {t.news.count(shown.length)}
         </T>
-        <View role="list">
-          {listed.map((item) => (
-            <NewsRow key={item.id} item={item} />
-          ))}
+        <T v="caption" color="textMuted" style={{ marginTop: 2 }}>
+          {t.news.sentimentNote}
+        </T>
+        <View style={{ flexDirection: isDesktop ? 'row' : 'column', gap: space.xl, marginTop: space.lg, alignItems: 'flex-start' }}>
+          <SentimentColumn kind="positive" items={groups.positive} />
+          <SentimentColumn kind="negative" items={groups.negative} />
         </View>
+        {groups.neutral.length > 0 ? (
+          <View style={{ marginTop: space.xl }}>
+            <Pressable
+              role="button"
+              aria-expanded={showNeutral}
+              onPress={() => setShowNeutral((v) => !v)}
+              style={{
+                alignSelf: 'flex-start',
+                borderWidth: 1,
+                borderColor: c.borderStrong,
+                borderRadius: radius.md,
+                paddingVertical: space.sm,
+                paddingHorizontal: space.md,
+              }}>
+              <T v="smallStrong">{showNeutral ? t.news.hideNeutral : t.news.showNeutral(groups.neutral.length)}</T>
+            </Pressable>
+            {showNeutral ? <SentimentColumn kind="neutral" items={groups.neutral} /> : null}
+          </View>
+        ) : null}
         {data && shown.length === 0 ? (
           <T color="textMuted" style={{ marginTop: space.md }}>
             {t.news.empty}
@@ -121,5 +139,47 @@ export default function News() {
         ) : null}
       </View>
     </Page>
+  );
+}
+
+const SENTIMENT_META: Record<Sentiment, { title: string; mark: string; tone: 'positiveText' | 'negativeText' | 'textMuted' }> = {
+  positive: { title: t.news.positive, mark: '▲', tone: 'positiveText' },
+  negative: { title: t.news.negative, mark: '▼', tone: 'negativeText' },
+  neutral: { title: t.news.neutral, mark: '●', tone: 'textMuted' },
+};
+
+/** Нэг өнгө аясын багана: өнгөт толгой (тэмдэг + нэр + тоо) ба мэдээний жагсаалт. */
+function SentimentColumn({ kind, items }: { kind: Sentiment; items: NewsItem[] }) {
+  const { c } = useTheme();
+  const m = SENTIMENT_META[kind];
+  return (
+    <View style={{ flex: 1, width: '100%', minWidth: 0, marginTop: kind === 'neutral' ? space.lg : 0 }}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: space.sm,
+          paddingBottom: space.sm,
+          borderBottomWidth: 3,
+          borderBottomColor: c[m.tone],
+        }}>
+        <T v="h3" color={m.tone} role="heading" aria-level={2}>
+          {`${m.mark} ${m.title}`}
+        </T>
+        <T v="smallStrong" color="textMuted">
+          {t.news.count(items.length)}
+        </T>
+      </View>
+      <View role="list">
+        {items.map((item) => (
+          <NewsRow key={item.id} item={item} />
+        ))}
+      </View>
+      {items.length === 0 ? (
+        <T v="small" color="textMuted" style={{ marginTop: space.md }}>
+          {t.news.noneInGroup}
+        </T>
+      ) : null}
+    </View>
   );
 }
