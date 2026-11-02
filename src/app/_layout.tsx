@@ -15,7 +15,7 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{ flex: 1, minHeight: '100%', backgroundColor: c.bg }}>
+      <View style={{ flex: 1, minHeight: '100%', backgroundColor: 'transparent' }}>
         <Header />
         <View style={{ flex: 1 }}>
           <Slot />
