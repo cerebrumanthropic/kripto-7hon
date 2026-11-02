@@ -6,11 +6,18 @@ import { t } from '@/lib/i18n-mn';
 // Зөвхөн Node.js-д build үед ажиллана. ScrollViewStyleReset-ийг ашиглахгүй —
 // body өөрөө гүйлгэгдэнэ (браузерийн scroll, anchor, хэвлэлт хэвийн ажиллана).
 const css = `
-html, body { margin: 0; background: #F6F4EF; color: #14161B; }
-@media (prefers-color-scheme: dark) { html, body { background: #0B1220; color: #E8ECF4; } }
+html { background: #070B1F; color-scheme: dark; }
+/* body тунгалаг — эс бөгөөс body-ийн дэвсгэр z-index:-1 бөмбөлгийг дардаг */
+body { margin: 0; background: transparent; color: #EEF1FA; }
+/* Glassy dashboard (PROGRESS D75): гэрэлтэх бөмбөлгүүд — fixed давхарга тул гүйлгэхэд дахин зурагдахгүй */
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(760px 560px at 88% -8%, rgba(79,124,255,0.55), transparent 62%),
+    radial-gradient(680px 560px at -12% 38%, rgba(139,92,246,0.42), transparent 60%),
+    radial-gradient(860px 680px at 72% 108%, rgba(56,189,248,0.30), transparent 62%); }
+[data-glass] { -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%); }
 #root { display: flex; min-height: 100vh; flex-direction: column; }
-:focus-visible { outline: 2px solid #2457C5; outline-offset: 2px; }
-[data-band] :focus-visible { outline-color: #F2C46B; }
+:focus-visible { outline: 2px solid #9DB2FF; outline-offset: 2px; }
 [id] { scroll-margin-top: 96px; }
 .skip { position: absolute; left: -9999px; top: 8px; z-index: 100; padding: 8px 12px; background: #2457C5; color: #fff; border-radius: 6px; font-family: system-ui, sans-serif; }
 .skip:focus { left: 8px; }
@@ -28,7 +35,8 @@ html, body { margin: 0; background: #F6F4EF; color: #14161B; }
 @media print {
   [role="banner"], [role="contentinfo"], .skip,
   #report-actions, #copy-text, #infographic-controls, #report-nav { display: none !important; }
-  html, body { background: #fff !important; }
+  html, body { background: #fff !important; color: #14161B !important; }
+  body::before { display: none; }
   [data-band] { background: none !important; }
   [data-band] * { color: #14161B !important; }
   [role="img"], [role="table"] { break-inside: avoid; }
@@ -44,8 +52,8 @@ export default function Root({ children }: PropsWithChildren) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#0B1A3D" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="theme-color" content="#070B1F" />
         <style dangerouslySetInnerHTML={{ __html: css }} />
         {headNodes}
       </head>

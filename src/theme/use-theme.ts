@@ -1,7 +1,7 @@
 import { createContext, createElement, useContext, useSyncExternalStore, type ReactNode } from 'react';
 import { Appearance, Dimensions } from 'react-native';
 
-import { breakpoints, dark, light, type ThemeColors } from './tokens';
+import { breakpoints, glass, type ThemeColors } from './tokens';
 
 /*
  * Статик HTML нь сервер дээр цайвар горим ба мобайл өргөнөөр үүснэ. `useSyncExternalStore`-ийн server
@@ -38,7 +38,8 @@ export function useTheme(): { c: ThemeColors; scheme: Scheme } {
   const forced = useContext(Forced);
   const scheme = useSyncExternalStore(subscribeScheme, getScheme, () => 'light' as const);
   if (forced) return { c: forced, scheme: 'dark' };
-  return { c: scheme === 'dark' ? dark : light, scheme };
+  // Glassy dashboard: үргэлж бараан (PROGRESS D75); `scheme`-ийг зөвхөн мэдээлэл болгон буцаана
+  return { c: glass, scheme };
 }
 
 export type Layout = {

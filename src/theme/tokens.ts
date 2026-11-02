@@ -124,11 +124,36 @@ export const ink: ThemeColors = {
 };
 
 /**
+ * Glassy dashboard (хэрэглэгчийн шийдвэр, PROGRESS D75): сайт үргэлж бараан. Дэвсгэр нь `+html.tsx`-ийн
+ * гэрэлтэх хөх/ягаан бөмбөлөгтэй гүн хөх; карт нь тунгалаг цагаан давхарга + нимгэн хүрээ + сүүдэр.
+ * Текстийн тодрол хамгийн цайвар туяан дээр ч ≥4.5:1.
+ */
+export const glass: ThemeColors = {
+  ...dark,
+  bg: '#070B1F',
+  surface: 'rgba(255,255,255,0.05)',
+  surfaceAlt: 'rgba(255,255,255,0.09)',
+  border: 'rgba(255,255,255,0.10)',
+  borderStrong: 'rgba(255,255,255,0.24)',
+  text: '#EEF1FA',
+  textMuted: '#A9B3CC',
+  brand: '#6E8BFF',
+  brandText: '#9DB2FF',
+  onBrand: '#0A0F24',
+  accent: '#B4A1FF',
+  infoBg: 'rgba(110,139,255,0.16)',
+  infoText: '#C9D4FF',
+  warnBg: 'rgba(250,204,21,0.14)',
+  warnText: '#FDE68A',
+  shadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 32px rgba(0,0,0,0.32)',
+};
+
+/**
  * Туузны дэвсгэр: хөх/алтан туяа (зөвхөн вэб CSS). Торон `repeating-linear-gradient` нь анхны
  * frame-ийг ≈60ms удаашруулж Lighthouse FCP-г унагасан тул хассан (PROGRESS D57).
  */
 export const inkBand = {
-  color: ink.bg,
+  color: 'rgba(7,11,31,0.72)', // толгой/хөл: тунгалаг шил (`[data-glass]` blur)
   image: [
     'radial-gradient(900px 420px at 88% -12%, rgba(91,140,255,0.26), transparent 62%)',
     'radial-gradient(700px 320px at -8% 112%, rgba(242,196,107,0.12), transparent 60%)',
@@ -137,7 +162,7 @@ export const inkBand = {
 };
 
 export const space = { xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 32, xxxl: 48 } as const;
-export const radius = { sm: 4, md: 8, lg: 12, pill: 999 } as const;
+export const radius = { sm: 4, md: 10, lg: 16, pill: 999 } as const;
 export const maxWidth = 1200;
 export const breakpoints = { tablet: 600, desktop: 1024 } as const;
 
