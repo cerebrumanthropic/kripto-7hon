@@ -3,6 +3,1281 @@
   "week": "2026-W45",
   "items": [
     {
+      "id": "3741f4d8284b",
+      "title": "French bank resumes transfers after $133 million attack but leaves crypto loss unconfirmed",
+      "url": "https://cryptoslate.com/french-bank-resumes-transfers-after-133-million-attack-but-leaves-crypto-loss-unconfirmed",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-05T02:30:38.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "10f9568c71a6",
+      "title": "India warns AI-powered hackers targeting crypto exchanges at ‘machine speed’",
+      "url": "https://cointelegraph.com/news/india-warns-ai-powered-hackers-targeting-crypto-exchanges-at-machine-speed",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-05T01:51:21.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b75d9a997d6e",
+      "title": "American Bitcoin (ABTC) Posts $126 Million Profit as Holdings Gain $197 Million",
+      "url": "https://bitcoinmagazine.com/news/american-bitcoin-126m-q3-profit",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-05T01:44:49.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "22f07be6230d",
+      "title": "Weekend stock tokens predict Monday open, but guessing up scores 55%",
+      "url": "https://cryptoslate.com/weekend-stock-tokens-predict-monday-open-but-guessing-up-scores-55",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-05T00:20:37.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cfb37fdca78d",
+      "title": "Mercado Bitcoin says phased reopening to begin Monday, will cover losses",
+      "url": "https://cointelegraph.com/news/mercado-bitcoin-phased-reopening-to-begin-monday-pledges-to-cover-losses",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T23:20:17.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3d0d20cafe4d",
+      "title": "Tokenization and stablecoins may weather Democrats' sweep as broader crypto rules face uncertainty",
+      "url": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T22:55:00.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4dbf617f078d",
+      "title": "Crypto's Washington hopes fade, but Grayscale and BlackRock see growth ahead",
+      "url": "https://www.coindesk.com/business/2026/11/04/crypto-s-washington-hopes-fade-but-grayscale-and-blackrock-see-growth-ahead",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T22:51:42.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7e2c06d091dc",
+      "title": "Why Bitcoin's Next Soft Fork Could Feel Like a Practice Run",
+      "url": "https://decrypt.co/382568/why-bitcoin-next-soft-fork-could-feel-like-practice-run",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T22:46:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "38099a1c247d",
+      "title": "BitMart founder says security team ‘severely understaffed’ after new hack",
+      "url": "https://cointelegraph.com/news/bitmart-hack-security-staffing-crypto-exchange-restructuring",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T22:31:58.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0f2e3941bc6b",
+      "title": "Nvidia stock tokens show price spreads, but slippage crushes the arbitrage",
+      "url": "https://cryptoslate.com/nvidia-stock-tokens-show-price-spreads-but-slippage-crushes-the-arbitrage",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T22:30:48.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "930d681fc4ab",
+      "title": "Crypto PACs eye 2028 ‘new map’ as Democrats take Congress",
+      "url": "https://cointelegraph.com/news/crypto-superpac-midterms",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T22:17:33.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b4c325bc26b0",
+      "title": "ChatGPT Is Getting a GIF Maker Powered by OpenAI's Unannounced Images 2.6 Model",
+      "url": "https://decrypt.co/382574/chatgpt-gif-maker-openai-unannounced-images-2-6-model",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T22:16:05.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8110411c48bd",
+      "title": "Judge Lets Stock Perpetual Futures Keep Trading but Says CFTC Likely Overstepped Its Authority",
+      "url": "https://bitcoinmagazine.com/news/judge-lets-stock-perps-keep-trading-cftc",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T22:00:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8a6a18aacc75",
+      "title": "Democratic sweep of Congress forces crypto industry to rethink Washington strategy",
+      "url": "https://www.theblock.co/news/regulation/2026-11-04-democratic-sweep-congress-forces-crypto-industry-rethink-washington-strategy-434362",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T21:54:49.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "17a28d4deea0",
+      "title": "How Aussie Bitcoiners can avoid 2027’s shock CGT hike: Part 1",
+      "url": "https://cointelegraph.com/magazine/how-aussie-bitcoiners-can-avoid-2027s-shock-cgt-increase-part-1",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T21:30:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6336c16886e2",
+      "title": "Google Tells Schools They Can Reject AI—But They'll Lose Search, Too",
+      "url": "https://decrypt.co/382572/google-schools-reject-ai-but-lose-search",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T21:16:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5d62b18e348b",
+      "title": "Huizenga Loses House Seat Despite $1 Million From Crypto PAC Fairshake",
+      "url": "https://bitcoinmagazine.com/news/huizenga-loses-despite-fairshake",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T21:09:04.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b3b1edafe87d",
+      "title": "Pro-crypto candidates sweep 241 seats as Congress shifts power",
+      "url": "https://cryptoslate.com/pro-crypto-candidates-sweep-241-seats-as-congress-shifts-power",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T21:00:44.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "70e04cc20abf",
+      "title": "French Bank Credit Mutuel Arkea Confirms Cyberattack as ZachXBT Puts Losses Above $133 Million",
+      "url": "https://bitcoinmagazine.com/news/credit-mutuel-arkea-hack-133-million",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T20:57:01.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4cba76145b2a",
+      "title": "House Democrats Eye Their Own Crypto Market Structure Bill With a Bigger SEC Role After Sweep",
+      "url": "https://bitcoinmagazine.com/news/house-democrats-crypto-market-structure",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T20:52:54.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7fad956103e3",
+      "title": "Coinbase Says 99% of Customer Crypto Is Offline and Out of Hackers’ Reach",
+      "url": "https://decrypt.co/382570/coinbase-99-percent-customer-crypto-offline-binance-hack",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T20:46:03.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "062fddc4b137",
+      "title": "Bitcoin Price Holds Near $80,000 as Democratic Sweep Sparks Short Squeeze",
+      "url": "https://bitcoinmagazine.com/markets/bitcoin-price-holds-near-80000-short",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T20:32:51.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "fdf8f2ade7a2",
+      "title": "Crypto's powerhouse super PAC suffers costly setback as Democrats sweep Congress",
+      "url": "https://www.coindesk.com/news-analysis/2026/11/04/crypto-s-powerhouse-super-pac-fairshake-found-its-kryptonite",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T20:29:12.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c445b29267fd",
+      "title": "Bitcoin rebounds past $80,000 as markets shrug off midterms and Binance hack",
+      "url": "https://www.theblock.co/news/markets/2026-11-04-bitcoin-price-midterm-elections-binance-hack-recovery-433030",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T20:09:58.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2d638160b120",
+      "title": "US Bank Regulator Issues First AI Framework as Banks Battle Rogue Agents",
+      "url": "https://decrypt.co/382560/us-bank-regulator-issues-first-ai-framework-banks-battle-rogue-agents",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T19:57:18.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "206e2d84c2e3",
+      "title": "Aave and Lido lose $1.7B in massive DeFi capital drop after the Binance hack",
+      "url": "https://cryptoslate.com/aave-and-lido-lose-1-7b-in-massive-defi-capital-drop-after-the-binance-hack",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T19:50:13.000Z",
+      "tags": [
+        "security",
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "605d38f7d267",
+      "title": "Trump-linked tokens lead crypto losses after Democrats sweep in the US midterms",
+      "url": "https://cointelegraph.com/news/trump-linked-tokens-lead-crypto-losses-after-democrats-sweep-in-the-us-midterms",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T19:15:39.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ddf15687a9d1",
+      "title": "French Hill’s race still too close to call as House flips, changing the direction of crypto legislation",
+      "url": "https://www.theblock.co/news/regulation/2026-11-04-french-hill-too-close-to-call-house-flips-changing-crypto-legislation-432572",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T19:02:05.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f9f3bca6c782",
+      "title": "Kamino links most of CEO’s KMNO vesting to valuation while holders have no foundation revenue claim",
+      "url": "https://cryptoslate.com/kamino-ties-most-of-weiszs-kmno-allocation-to-valuation-but-holders-have-no-foundation-revenue-claim",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T18:50:41.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "df36f8a9d26a",
+      "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
+      "url": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T18:47:56.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "00d935ce019f",
+      "title": "US Voters Back AI Data Center Restrictions in At Least 29 Communities",
+      "url": "https://decrypt.co/382556/us-voters-back-ai-data-center-restrictions",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T18:46:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6b46131907d7",
+      "title": "Matt Corallo Flags Critical Linux Kernel Flaw; Lightning Labs Ships LND Mitigation",
+      "url": "https://bitcoinmagazine.com/news/matt-corallo-flags-critical-linux-kernel-flaw-lightning-labs-ships-lnd-mitigation",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T18:31:56.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "223e53de5120",
+      "title": "Strategy’s STRC Hits $100 Par for First Time Since May After Over $2 Billion in Buybacks",
+      "url": "https://bitcoinmagazine.com/news/strategys-strc-hits-100-par-may",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T18:29:01.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3c98d176091e",
+      "title": "Bitcoin rockets above $80,000 for first time since Binance hack despite Democrats sweep, but a historical crash looms",
+      "url": "https://cryptoslate.com/bitcoin-rockets-above-80000-for-first-time-since-binance-hack-despite-democrats-sweep-but-a-historical-crash-looms",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T18:20:58.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0339eb963c38",
+      "title": "Canton Coin Gets SEC Nod as Wall Street Tokenization Heats Up",
+      "url": "https://decrypt.co/382554/canton-coin-sec-no-action-wall-street-tokenization",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T18:16:02.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cd140d529a5c",
+      "title": "Jack Dorsey’s Block (XYZ) Sets Aside $764 Million for DOJ Settlement as Bitcoin Profit Halves",
+      "url": "https://bitcoinmagazine.com/news/block-xyz-sets-aside-764-million",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T18:11:38.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2ab5eb8e955d",
+      "title": "Circle’s ARC token sale lifts earnings as lower yields weigh on USDC income",
+      "url": "https://cointelegraph.com/news/circles-arc-token-sale-earnings-yields-usdc-income",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T18:02:42.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "94a9ac75f340",
+      "title": "Librería de Satoshi Rebrands to ISMOS, Launches Global Platform to Train One Million Bitcoin Developers",
+      "url": "https://bitcoinmagazine.com/news/libreria-de-satoshi-rebrands-to-ismos-launches-global-platform-to-train-one-million-bitcoin-developers",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T18:00:34.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0578b102ca9b",
+      "title": "What Is x402? How AI Agents Pay With Crypto",
+      "url": "https://decrypt.co/resources/what-is-x402-how-ai-agents-pay-with-crypto",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T17:59:09.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cb6f6a5680e2",
+      "title": "Democrats to Target Trump’s Crypto Ventures After Taking Congress",
+      "url": "https://bitcoinmagazine.com/news/democrats-to-target-trumps-crypto-venture",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T17:56:30.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9ef37aa7f8ab",
+      "title": "US stock perpetuals win clearance, but stock-market halts can still block exits",
+      "url": "https://cryptoslate.com/us-stock-perpetuals-win-clearance-but-stock-market-halts-can-still-block-exits",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T17:50:12.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "43b86fc04807",
+      "title": "Tech, AI Stocks Split After Democratic Sweep: Microsoft Jumps, Tesla and Nvidia Tank",
+      "url": "https://decrypt.co/382528/tech-ai-stocks-split-democratic-microsoft-jumps-tesla-nvidia-tank",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T17:06:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0f1d74559104",
+      "title": "Coinbase says 99% of customer assets sit in cold storage after Binance’s $6.3 billion breach",
+      "url": "https://www.theblock.co/news/ecosystems/2026-11-04-coinbase-security-cold-storage-binance-hack-432880",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T16:58:42.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "dfb5a1f3e7f5",
+      "title": "Bitcoin miners’ daily revenue per unit of computing power falls 8.7%",
+      "url": "https://cryptoslate.com/bitcoins-mining-hedge-market-prices-a-winter-pause-after-difficultys-16-rebound",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T16:50:39.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "15600c90c47d",
+      "title": "Bitcoin Rebounds After Democratic Midterm Sweep, But Crypto Faces Tougher Fight in Washington",
+      "url": "https://decrypt.co/382515/bitcoin-rebounds-democratic-midterm-sweep-crypto-washington",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T16:49:31.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "477ed8e6de42",
+      "title": "Wall Street’s Plumbing Goes Onchain as Morgan Stanley Tokenizes Securities",
+      "url": "https://decrypt.co/382513/wall-streets-plumbing-onchain-morgan-stanley-tokenizes-securities",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T16:29:36.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "458d23b811f2",
+      "title": "Schroders launches tokenized emerging markets debt fund on Solana with Centrifuge",
+      "url": "https://www.theblock.co/news/business/2026-11-04-schroders-centrifuge-tokenized-emerging-markets-debt-fund-solana-432878",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T16:27:49.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "af0fc0fa28d9",
+      "title": "U.S. Democratic sweep could be the final nail in the ‘Clarity Act’s coffin’",
+      "url": "https://www.coindesk.com/policy/2026/11/04/u-s-democratic-sweep-could-be-the-final-nail-in-the-clarity-act-s-coffin",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T16:11:29.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2f103d7b67ba",
+      "title": "Wall Street rethinks AI data center boom as Texas election raises new risks",
+      "url": "https://www.coindesk.com/markets/2026/11/04/wall-street-cuts-bitcoin-miner-price-targets-after-democrats-texas-win-threatens-ai-data-center-boom",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T16:08:14.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "22023e844195",
+      "title": "TD Cowen: Democratic Sweep Makes a Crypto-Backed CLARITY Act ‘Impossible’",
+      "url": "https://bitcoinmagazine.com/news/td-cowen-democratic-sweep-clarity",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T15:51:48.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "29ec388d9201",
+      "title": "Evernorth’s XRP funding plan could raise $18 million less at lower share price",
+      "url": "https://cryptoslate.com/evernorths-xrp-funding-clears-a-hurdle-as-weaker-shares-reduce-what-it-could-raise",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T15:50:35.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "06bf119e4dbb",
+      "title": "Crédit Mutuel Arkéa Confirms Cyberattack After ZachXBT Ties It to $133M Crypto Theft",
+      "url": "https://decrypt.co/382486/zachxbt-names-french-bank-credit-mutuel-arkea-as-alleged-victim-of-133m-crypto-theft",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T15:30:31.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "311bbe306359",
+      "title": "Bitcoin hits $80.5K as US stocks rally on midterm election results",
+      "url": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T15:29:23.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "362970b17d72",
+      "title": "Crypto Long & Short: ICE is betting on retail’s appetite for quick outcomes",
+      "url": "https://www.coindesk.com/coindesk-indices/2026/11/04/crypto-long-and-short-ice-is-betting-on-retail-s-appetite-for-quick-outcomes",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T15:27:20.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a68b0353100d",
+      "title": "Riot (RIOT) and Hut 8 (HUT) Sell Thousands of Bitcoin to Fund AI Ventures, Share Buybacks",
+      "url": "https://bitcoinmagazine.com/news/riot-and-hut-8-sell-thousands-of-bitcoin",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T15:17:29.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "1f08275a3d76",
+      "title": "Polkadot lost $1.38 million after hacker exploited security flaw fixed four months earlier",
+      "url": "https://cryptoslate.com/polkadot-lost-1-38-million-after-hacker-exploited-security-flaw-fixed-four-months-earlier",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T14:50:52.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5c0045f9264c",
+      "title": "Circle (CRCL) Cuts About 5% of Workforce as Q3 Revenue Hits $865M",
+      "url": "https://bitcoinmagazine.com/news/circle-crcl-cuts-about-5-of-workforce",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T14:39:56.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d19693c4c650",
+      "title": "The election changes Washington. The work on crypto continues",
+      "url": "https://www.coindesk.com/opinion/2026/11/04/the-election-changes-washington-the-work-on-crypto-continues",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T14:25:12.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "10778f13cef9",
+      "title": "Bitcoin Price Soars Above $79,000 After Democratic Sweep of Congress",
+      "url": "https://bitcoinmagazine.com/news/bitcoin-trades-above-78000-after-dem-sweep",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-04T14:21:35.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "21abd1d308a9",
+      "title": "Live updates: Bitcoin and stocks post big gains, reversing overnight plunge following Blue Wave landslide",
+      "url": "https://www.coindesk.com/tech/2026/11/04/live-updates-bitcoin-and-stocks-reverse-overnight-plunge-following-blue-wave-landslide",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T14:00:53.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5fa18f8605f6",
+      "title": "France backs reporting for self-custodied crypto worth 100K euros or more",
+      "url": "https://cointelegraph.com/news/france-approves-amendment-self-custodied-crypto-wallets-100k",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T13:44:52.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "07ef352bb10e",
+      "title": "Why rising XRP whale counts are a fake bullish signal",
+      "url": "https://cryptoslate.com/why-rising-xrp-whale-counts-are-a-fake-bullish-signal",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T13:40:13.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a7f080b27919",
+      "title": "Morning Minute: CFTC Clears Stock Perps, Gets Sued the Same Day",
+      "url": "https://decrypt.co/382497/morning-minute-cftc-clears-stock-perps-gets-sued-the-same-day",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T13:25:01.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e633bed50f47",
+      "title": "Circle reports $865 million in Q3 revenue and reserve income, discloses 5% workforce reduction",
+      "url": "https://www.theblock.co/news/business/2026-11-04-circle-reports-865-million-in-q3-revenue-and-reserve-income-discloses-5-workforce-reduction-432671",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T13:17:31.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d219b0200ce5",
+      "title": "Bitcoin Shrugs Off Midterms as Experts Say Democratic Sweep Was 'Priced In'",
+      "url": "https://decrypt.co/382492/bitcoin-shrugs-off-midterms-as-experts-say-democratic-sweep-was-priced-in",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T13:13:24.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6b98a34bec59",
+      "title": "Global asset manager Schroders brings emerging market bond fund to Solana",
+      "url": "https://www.coindesk.com/business/2026/11/04/global-asset-manager-schroders-brings-emerging-market-bond-fund-to-solana",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T13:00:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d7b8d00d6c25",
+      "title": "THORChain's RUNE jumps 10% as North Korean hackers resume laundering Binance loot",
+      "url": "https://www.coindesk.com/markets/2026/11/04/thorchain-s-rune-jumps-10-as-north-korean-hackers-resume-laundering-binance-loot",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T12:49:56.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "52f7a32c50cc",
+      "title": "USDC Issuer Circle Quietly Cuts 5% of Staff in Profitable Quarter",
+      "url": "https://decrypt.co/382493/usdc-issuer-circle-quietly-cuts-5-of-staff-in-profitable-quarter",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T12:44:00.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5bcf97450afb",
+      "title": "Circle beats earnings expectations on strong revenue, but cuts 5% of its workforce",
+      "url": "https://www.coindesk.com/business/2026/11/04/circle-beats-earnings-and-revenue-estimates-on-soaring-usdc-transaction-volume",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T12:33:54.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ba4662dcff0b",
+      "title": "Bitcoin rebounds after Democratic sweep despite three days of ETF outflows",
+      "url": "https://cryptoslate.com/bitcoin-rebounds-after-democratic-sweep-despite-three-days-of-etf-outflows",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T12:30:18.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "22412ddb3f0e",
+      "title": "Here's how analysts are reacting to the new blue Congress",
+      "url": "https://www.coindesk.com/daybook-us/2026/11/04/here-s-how-analysts-are-reacting-to-the-new-blue-congress",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T12:14:11.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "41ce444c8f89",
+      "title": "Canton’s CC rises 4% as SEC staff view it as ‘digital commodity’",
+      "url": "https://cointelegraph.com/markets/cantons-cc-rises-sec-no-action-letter-digital-commodity",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T12:12:15.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "153b13deba43",
+      "title": "BitGo launches institutional trading and financial solutions business led by former NYDIG executive",
+      "url": "https://www.theblock.co/news/business/2026-11-04-bitgo-launches-institutional-trading-and-financial-solutions-business-led-by-former-nydig-executive-432646",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5b20d498f874",
+      "title": "Midterms Blue Wave Makes $917K for One Polymarket Trader, If Alaska Doesn’t Flip",
+      "url": "https://decrypt.co/382489/midterms-blue-wave-makes-917k-for-one-polymarket-trader-if-alaska-doesnt-flip",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T11:48:50.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e7338ea14c61",
+      "title": "Binance hack may be ‘temporary setback’ for crypto, Grayscale’s Pandl says",
+      "url": "https://cointelegraph.com/markets/crypto-market-recovery-grayscale-binance-hack-temporary-setback",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T11:11:57.000Z",
+      "tags": [
+        "etf",
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4f0d588c9010",
+      "title": "Binance reports $11 billion withdrawn in 46 hours as Zhao says few funds went to rivals",
+      "url": "https://cryptoslate.com/binance-reports-11-billion-withdrawn-in-46-hours-as-zhao-says-few-funds-went-to-rivals",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T11:10:32.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2dc60aa5f239",
+      "title": "DeFi Explained",
+      "url": "https://www.theblock.co/learn/defi/defi-explained-432391",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T11:05:30.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a3fb67c609bb",
+      "title": "Bitcoin rebounds from midterm dip as DeFi leads gains",
+      "url": "https://www.coindesk.com/markets/2026/11/04/bitcoin-rebounds-from-midterm-dip-as-defi-leads-gains",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T10:38:58.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2345bd2ddfa3",
+      "title": "Judge Orders Bitcoin Wallet Returned to Family of Convicted Canadian Killer",
+      "url": "https://decrypt.co/382484/judge-orders-bitcoin-wallet-returned-to-family-of-convicted-canadian-killer",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-04T10:35:01.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "63778a7f1cd9",
+      "title": "Justin Sun seeks $264K sanctions over World Liberty’s UAE disclosure",
+      "url": "https://cointelegraph.com/news/justin-sun-world-liberty-264k-sanctions-uae-disclosure",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T10:30:42.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2565f2242d9a",
+      "title": "ZachXBT names French bank Crédit Mutuel Arkéa as suspected victim of $133 million crypto theft",
+      "url": "https://www.coindesk.com/business/2026/11/04/zachxbt-names-french-bank-credit-mutuel-arkea-as-suspected-victim-of-usd133-million-crypto-theft",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T10:18:50.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b34a761c02de",
+      "title": "SEC ruling lifts Canton Coin 6% as a16z sees pathway out of securities laws",
+      "url": "https://cryptoslate.com/sec-ruling-lifts-canton-coin-6-as-a16z-sees-pathway-out-of-securities-laws",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T10:10:35.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a5d695e30015",
+      "title": "Elon Musk floats space data centers as Democratic sweep puts pressure on AI trade",
+      "url": "https://www.coindesk.com/markets/2026/11/04/elon-musk-floats-space-data-centers-as-democratic-sweep-puts-pressure-on-ai-trade",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T10:03:33.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8f31915f7235",
+      "title": "Bitcoin ETFs lose $1.16B as Bitwise calls selling ‘short-term’",
+      "url": "https://cointelegraph.com/markets/bitcoin-etf-shed-1-16-billion-bitwise-short-term-risk-off",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T09:38:07.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "21928dd951bf",
+      "title": "Morgan Stanley among first banks to tokenize US equities, Treasurys through DTCC’s service",
+      "url": "https://www.theblock.co/news/markets/2026-11-04-morgan-stanley-among-first-banks-to-tokenize-us-equities-treasurys-through-dtccs-service-432633",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T09:37:45.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a16ad4cf5c65",
+      "title": "Morgan Stanley says it is among the first banks to tokenize real world assets",
+      "url": "https://www.coindesk.com/markets/2026/11/04/morgan-stanley-says-it-is-among-the-first-banks-to-put-u-s-stocks-and-treasuries-on-a-blockchain",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T09:22:58.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "989fdcb245d2",
+      "title": "Binance hackers move 81% of stolen Solana, route funds via THORChain",
+      "url": "https://cointelegraph.com/news/binance-hackers-move-81-stolen-solana-route-thorchain",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T09:15:55.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "78a2cc751a0f",
+      "title": "South Korea orders massive crypto wallet lockdown following the Binance hack",
+      "url": "https://cryptoslate.com/south-korea-orders-massive-crypto-wallet-lockdown-following-the-binance-hack",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T08:20:08.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6fdbbfd4410f",
+      "title": "Zcash grants committee drops plan to redirect 98,000 ZEC to future mining rewards",
+      "url": "https://www.coindesk.com/markets/2026/11/04/zcash-grants-committee-drops-plan-to-redirect-98-000-zec-to-future-mining-rewards",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T08:04:04.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "97e3e7265e06",
+      "title": "Democrats win US House to secure control of Congress in midterms",
+      "url": "https://cointelegraph.com/news/democrats-win-us-house-congress-control",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T07:50:27.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "53cd91c5f7b7",
+      "title": "Bitcoin bounces from 7-week low under $76K as Democrats sweep Congress",
+      "url": "https://cointelegraph.com/markets/bitcoin-bounces-from-7-week-low-under-76k-as-democrats-eye-congress-sweep",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T07:25:47.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2414b64ba794",
+      "title": "Liquid restores 1:1 Bitcoin backing, but wallet refills remain manual",
+      "url": "https://cryptoslate.com/liquid-restores-11-bitcoin-backing-but-wallet-refills-remain-manual",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T06:30:52.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b7b2d0cff9e1",
+      "title": "Bitcoin surges to $78,300 in V-shaped comeback as midterm election uncertainty fades",
+      "url": "https://www.coindesk.com/markets/2026/11/04/bitcoin-knocks-on-usd78-000-in-v-shaped-comeback-as-midterm-uncertainty-fades",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T06:16:40.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7def0e22de6b",
+      "title": "Jack Dorsey's Block faces $764 million DOJ settlement as bitcoin profit plunges 50%",
+      "url": "https://www.coindesk.com/markets/2026/11/04/jack-dorsey-s-block-faces-usd764-million-doj-settlement-as-bitcoin-profit-plunges-50",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T06:06:04.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e0037dc936b8",
+      "title": "Ethereum dev targets 2028 for quantum resistance, a year early",
+      "url": "https://cointelegraph.com/news/ethereum-post-quantum-transition-2028-target",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T05:46:33.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "01ec4634a12f",
+      "title": "U.S.-sanctioned Moscow Exchange to list bitcoin and Tether’s USDT in December",
+      "url": "https://www.coindesk.com/markets/2026/11/04/u-s-sanctioned-moscow-exchange-to-list-bitcoin-and-tether-s-usdt-in-december",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T05:14:12.000Z",
+      "tags": [
+        "regulation",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b6db9fb0b8d0",
+      "title": "South Korea's ruling party wants to delay its crypto tax again",
+      "url": "https://www.coindesk.com/policy/2026/11/04/south-korea-s-ruling-party-wants-to-put-off-its-crypto-tax-again",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T05:09:40.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "af9f018eee96",
+      "title": "French bank Crédit Mutuel Arkéa exploited for over $133 million, ZachXBT says",
+      "url": "https://www.theblock.co/news/web3/2026-11-03-french-bank-credit-mutuel-arkea-exploited-zachxbt-432607",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T04:57:41.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "26cb9026faf1",
+      "title": "Democrats surge toward Senate, House majorities, with crypto braced for new direction",
+      "url": "https://www.coindesk.com/policy/2026/11/03/democrats-surge-toward-senate-house-majorities-with-crypto-braced-for-new-direction",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T04:55:11.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a85cf31c2ca2",
+      "title": "Bitcoin briefly sinks to $75,700 as bets on a Democratic sweep rattle markets",
+      "url": "https://www.coindesk.com/markets/2026/11/04/bitcoin-briefly-sinks-to-usd75-700-as-bets-on-a-democratic-sweep-rattle-markets",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-04T04:48:16.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d35ab711e3e4",
+      "title": "Democrats claim control of the US Senate",
+      "url": "https://cointelegraph.com/news/democrats-flip-us-senate-as-crypto-industry-faces-policy-reset",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T04:40:44.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "68e526d99101",
+      "title": "Former Sen. Sherrod Brown defeats Jon Husted, dealing a blow to crypto PAC Fairshake",
+      "url": "https://www.theblock.co/news/regulation/2026-11-03-sherrod-brown-defeats-jon-husted-432495",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T04:35:48.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e8d56281b706",
+      "title": "Block Inc. shares rise 6% after-hours as it raises full-year profit forecast",
+      "url": "https://www.theblock.co/news/business/2026-11-03-block-q3-earnings-shares-rise-432585",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T04:13:10.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e81a11e7d203",
+      "title": "ZachXBT identifies French bank as alleged victim of $133M crypto theft",
+      "url": "https://cointelegraph.com/news/zachxbt-french-bank-credit-mutuel-arkea-133m-crypto-theft",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-04T03:35:30.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a0956afa4145",
+      "title": "Justin Sun demands court sanctions over Trump-linked World Liberty Financial’s hidden UAE owners",
+      "url": "https://cryptoslate.com/justin-sun-demands-court-sanctions-over-trump-linked-world-liberty-financials-hidden-uae-owners",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-04T03:20:42.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c6ac32ce991a",
+      "title": "South Korea’s ruling party formally proposes deferral of crypto income tax",
+      "url": "https://www.theblock.co/news/regulation/2026-11-03-south-koreas-ruling-party-proposes-deferral-crypto-income-tax-432580",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-04T02:51:52.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "357aadd05e56",
       "title": "US midterms election 2026 live: Crypto-backed Andy Barr wins Kentucky Senate seat",
       "url": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto",
