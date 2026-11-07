@@ -21,6 +21,21 @@ body { margin: 0; background: transparent; color: #EEF1FA; }
 [data-news]:last-child { border-bottom-width: 0; }
 [data-float] { animation: vh-float 4.5s ease-in-out infinite; }
 @keyframes vh-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-2deg); } }
+/* Desktop (≥1024px) хэмжээг CSS-ээр: статик HTML мобайл өргөнөөр үүсдэг тул JS breakpoint-оор сольвол desktop-д
+   hydration-ий дараа агуулга үсэрдэг (CLS, PROGRESS D77). Утгууд нь tokens.ts-ийн heroLg/display/small-тай ижил. */
+@media (max-width: 1023.98px) { [data-desktop="only"] { display: none !important; } }
+@media (min-width: 1024px) {
+  [data-desktop="hide"] { display: none !important; }
+  [data-title="hero"] { font-size: 54px !important; line-height: 60px !important; letter-spacing: -1.2px !important; }
+  [data-title="page"] { font-size: 40px !important; line-height: 46px !important; letter-spacing: -0.6px !important; }
+  [data-grid-desktop="2"] > * { flex-basis: 48% !important; }
+  [data-grid-desktop="3"] > * { flex-basis: 31.3333% !important; }
+  [data-grid-desktop="4"] > * { flex-basis: 23% !important; }
+  [data-kpi="label"] { font-size: 14px !important; line-height: 20px !important; }
+  [data-kpi="value"] { font-size: 28px !important; line-height: 34px !important; }
+  [data-brand="mark"] { zoom: 1.10526; }
+  [data-brand="org"] { font-size: 14px !important; line-height: 19px !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   [data-lift] { transition: none; }
   [data-lift]:hover { transform: none; }

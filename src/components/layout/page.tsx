@@ -2,9 +2,8 @@ import type { ReactNode } from 'react';
 import { View } from 'react-native';
 
 import { Band } from '@/components/layout/band';
-import { T } from '@/components/ui/primitives';
+import { dataAttrs, T } from '@/components/ui/primitives';
 import { maxWidth, space, type } from '@/theme/tokens';
-import { useLayout } from '@/theme/use-theme';
 
 /**
  * Хуудасны контейнер: бараан хөх тууз (kicker, гарчиг, оршил, meta, `band`) + max-width 1200 агуулга.
@@ -33,9 +32,10 @@ export function Page({
   size?: 'hero' | 'page';
   children: ReactNode;
 }) {
-  const { isDesktop } = useLayout();
   const big = size === 'hero';
-  const titleStyle = big ? (isDesktop ? type.heroLg : type.hero) : isDesktop ? type.display : type.h1;
+  // Мобайл хэмжээ; desktop-ийнхийг (heroLg/display) `[data-title]` CSS өгнө — hydration-ий дараа үсрэхгүй (D77)
+  const titleStyle = big ? type.hero : type.h1;
+  const titleData = dataAttrs({ title: big ? 'hero' : 'page' });
   const at = titleAccent ? title.lastIndexOf(titleAccent) : -1;
 
   return (
@@ -51,11 +51,11 @@ export function Page({
               ) : (
                 kicker
               )}
-              <T role="heading" aria-level={1} style={titleStyle}>
+              <T role="heading" aria-level={1} style={titleStyle} {...titleData}>
                 {at > 0 && titleAccent ? (
                   <>
                     {title.slice(0, at)}
-                    <T color="accent" style={titleStyle}>
+                    <T color="accent" style={titleStyle} {...titleData}>
                       {titleAccent}
                     </T>
                     {title.slice(at + titleAccent.length)}

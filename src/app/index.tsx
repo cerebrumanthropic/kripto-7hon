@@ -105,7 +105,7 @@ export default function Home() {
           <ButtonLink href="/zah-zeel" label={t.home.ctaMarket} />
         </View>
       }
-      aside={isDesktop ? <HeroArt /> : null}
+      aside={<HeroArt />}
       band={<KpiGrid snapshot={d.market} />}>
       {/* Мэдээ — нүүрний эхний блок, сэтгүүлийн бүтэцтэй (PROGRESS D70) */}
       <View>
