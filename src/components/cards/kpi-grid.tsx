@@ -8,14 +8,13 @@ import { groupDigits, mnt, pctPlain, price, usdCompact } from '@/lib/format';
 import { fearGreedMn, t } from '@/lib/i18n-mn';
 import type { LiveMarket } from '@/types/schemas';
 import { space } from '@/theme/tokens';
-import { useLayout, useTheme } from '@/theme/use-theme';
+import { useTheme } from '@/theme/use-theme';
 
 import { KpiCard } from './cards';
 
 /** Нүүрний 8 KPI карт (SPEC §8.1.2). */
 export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
   const { data, isError, isPlaceholderData } = useMarket(snapshot);
-  const { cols } = useLayout();
   const { c } = useTheme();
   if (isError) return <LoadError />;
 
@@ -27,8 +26,8 @@ export function KpiGrid({ snapshot }: { snapshot?: LiveMarket | null }) {
   return (
     <View style={{ gap: space.md }}>
       <LiveStatus updatedAt={m?.updatedAt} origin={data?.origin} sources={m?.sources} pending={isPlaceholderData} hideStale />
-      {/* Мобайлд 2 багана — 8 карт нэг дэлгэцэнд ойр багтана */}
-      <Grid cols={cols === 1 ? 2 : cols}>
+      {/* Мобайл/таблетад 2 багана — 8 карт нэг дэлгэцэнд ойр багтана; desktop-д 4 (CSS, D77) */}
+      <Grid cols={2} desktopCols={4}>
         {[
           <KpiCard
             key="mcap"

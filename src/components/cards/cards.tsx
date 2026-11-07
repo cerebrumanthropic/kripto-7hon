@@ -37,14 +37,14 @@ export function KpiCard({
   meter?: ReactNode;
   footer?: ReactNode;
 }) {
-  const { isDesktop } = useLayout();
   const [num, unit] = splitUnit(value);
+  // Мобайл хэмжээ; desktop-ийнхийг (14/20, 28/34) `[data-kpi]` CSS өгнө — hydration-ий дараа үсрэхгүй (D77)
   return (
     <Card style={{ gap: space.xs, height: '100%', padding: 14 }}>
-      <T v={isDesktop ? 'small' : 'caption'} color="textMuted" numberOfLines={2}>
+      <T v="caption" color="textMuted" numberOfLines={2} {...dataAttrs({ kpi: 'label' })}>
         {label}
       </T>
-      <T v="kpi" num style={{ fontSize: isDesktop ? 28 : 24, lineHeight: isDesktop ? 34 : 30 }}>
+      <T v="kpi" num style={{ fontSize: 24, lineHeight: 30 }} {...dataAttrs({ kpi: 'value' })}>
         {num}
         {unit ? (
           <T v="smallStrong" color="textMuted">

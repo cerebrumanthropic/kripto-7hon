@@ -4,10 +4,10 @@ import { Pressable, View } from 'react-native';
 
 import { Band } from '@/components/layout/band';
 import { BrandMark } from '@/components/ui/brand-mark';
-import { T, webPress } from '@/components/ui/primitives';
+import { dataAttrs, T, webPress } from '@/components/ui/primitives';
 import { t } from '@/lib/i18n-mn';
 import { font, maxWidth, radius, space, type } from '@/theme/tokens';
-import { useLayout, useTheme } from '@/theme/use-theme';
+import { useTheme } from '@/theme/use-theme';
 
 const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> = [
   { href: '/', label: t.nav.home, match: (p) => p === '/' },
@@ -16,14 +16,22 @@ const NAV: Array<{ href: Href; label: string; match: (p: string) => boolean }> =
   { href: '/sudalgaa', label: t.nav.research, match: (p) => p.startsWith('/sudalgaa') },
 ];
 
-/** Хэлтсийн нэр + «7 хоногийн мэдээ» (PROGRESS D53). Мобайлд нэр 2 мөрт орно. */
-export function BrandLockup({ compact }: { compact?: boolean }) {
+/**
+ * Хэлтсийн нэр + «7 хоногийн мэдээ» (PROGRESS D53). Мобайлд нэр 2 мөрт орно.
+ * `responsive` (толгой) — мобайлын жижиг хэмжээ, ≥1024px-д `[data-brand]` CSS-ээр томорно (D77).
+ */
+export function BrandLockup({ responsive }: { responsive?: boolean }) {
   const { c } = useTheme();
+  const compact = !!responsive;
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: space.md, flexShrink: 1 }}>
-      <BrandMark size={compact ? 38 : 42} />
+      <View {...(responsive ? dataAttrs({ brand: 'mark' }) : {})}>
+        <BrandMark size={compact ? 38 : 42} />
+      </View>
       <View style={{ flexShrink: 1 }}>
-        <T style={{ ...font('bold'), fontSize: compact ? 13 : 14, lineHeight: compact ? 17 : 19, color: c.text }}>
+        <T
+          {...(responsive ? dataAttrs({ brand: 'org' }) : {})}
+          style={{ ...font('bold'), fontSize: compact ? 13 : 14, lineHeight: compact ? 17 : 19, color: c.text }}>
           {t.site.org}
         </T>
         <T style={{ ...font('bold'), fontSize: 13, lineHeight: 17, color: c.accent, marginTop: 2 }}>
@@ -34,11 +42,11 @@ export function BrandLockup({ compact }: { compact?: boolean }) {
   );
 }
 
-function Logo({ compact }: { compact: boolean }) {
+function Logo() {
   return (
     // Нэр нь харагдах текстээс — aria-label өөр байвал label-content-name-mismatch
     <Link href="/" style={{ textDecorationLine: 'none', flexShrink: 1 }}>
-      <BrandLockup compact={compact} />
+      <BrandLockup responsive />
     </Link>
   );
 }
@@ -110,7 +118,6 @@ function MenuButton({ open, onPress }: { open: boolean; onPress: () => void }) {
 }
 
 export function Header() {
-  const { isDesktop } = useLayout();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -138,21 +145,27 @@ export function Header() {
           justifyContent: 'space-between',
           gap: space.md,
         }}>
-        <Logo compact={!isDesktop} />
-        {isDesktop ? (
-          <View role="navigation" aria-label={t.nav.label} style={{ flexDirection: 'row', gap: space.xs, flexShrink: 0 }}>
-            {NAV.map((n) => (
-              <NavLink key={n.label} href={n.href} label={n.label} active={n.match(pathname)} />
-            ))}
-          </View>
-        ) : (
-          <MenuButton open={open} onPress={() => setOpen((o) => !o)} />
-        )}
-      </View>
-      {!isDesktop && open ? (
+        <Logo />
+        {/* Desktop цэс ба мобайл товч хоёулаа HTML-д байж CSS-ээр (≥1024px) сонгогдоно — статик HTML мобайл
+            өргөнөөр үүсдэг тул JS-ээр сольвол desktop-д hydration-ий дараа толгой үсэрдэг (D77) */}
         <View
           role="navigation"
           aria-label={t.nav.label}
+          {...dataAttrs({ desktop: 'only' })}
+          style={{ flexDirection: 'row', gap: space.xs, flexShrink: 0 }}>
+          {NAV.map((n) => (
+            <NavLink key={n.label} href={n.href} label={n.label} active={n.match(pathname)} />
+          ))}
+        </View>
+        <View {...dataAttrs({ desktop: 'hide' })} style={{ flexShrink: 0 }}>
+          <MenuButton open={open} onPress={() => setOpen((o) => !o)} />
+        </View>
+      </View>
+      {open ? (
+        <View
+          role="navigation"
+          aria-label={t.nav.label}
+          {...dataAttrs({ desktop: 'hide' })}
           style={{ paddingHorizontal: space.lg, paddingBottom: space.md, gap: space.xs }}>
           {NAV.map((n) => (
             <NavLink

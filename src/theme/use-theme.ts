@@ -62,6 +62,10 @@ const getBreakpoint = (): Breakpoint => {
   return w >= breakpoints.desktop ? 'desktop' : w >= breakpoints.tablet ? 'tablet' : 'mobile';
 };
 
+/**
+ * Дэлгэцийн дээд хэсгийн (толгой, гарчиг, hero, KPI) desktop хэмжээг энэ hook биш, `+html.tsx`-ийн
+ * `[data-desktop]`/`[data-title]`/… CSS өгнө — эс бөгөөс desktop-д hydration-ий дараа агуулга үсэрдэг (D77).
+ */
 export function useLayout(): Layout {
   const bp = useSyncExternalStore(subscribeWidth, getBreakpoint, () => 'mobile' as const);
   return {
@@ -70,4 +74,19 @@ export function useLayout(): Layout {
     isDesktop: bp === 'desktop',
     cols: bp === 'desktop' ? 4 : bp === 'tablet' ? 2 : 1,
   };
+}
+
+// CSS-ийн `(min-width: 1024px)`-тэй яг ижил (scrollbar-ийг оруулж тооцно; `useLayout` нь түүнийг хасдаг)
+const DESKTOP_MQ = `(min-width: ${breakpoints.desktop}px)`;
+const desktopMq = () =>
+  typeof window !== 'undefined' && typeof window.matchMedia === 'function' ? window.matchMedia(DESKTOP_MQ) : null;
+const subscribeDesktopMq = (cb: () => void) => {
+  const m = desktopMq();
+  m?.addEventListener('change', cb);
+  return () => m?.removeEventListener('change', cb);
+};
+
+/** `[data-desktop="only"]` CSS-тэй зэрэгцэх зүйлд (жишээ нь зөвхөн desktop-д ачаалах зураг). SSR/hydration үед false. */
+export function useDesktopMedia(): boolean {
+  return useSyncExternalStore(subscribeDesktopMq, () => desktopMq()?.matches ?? false, () => false);
 }

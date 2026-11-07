@@ -333,18 +333,25 @@ export function Badge({ label, tone = 'neutral' }: { label: string; tone?: 'neut
   );
 }
 
-/** Responsive grid: `cols` багана, `gap` зай. */
+/**
+ * Responsive grid: `cols` багана, `gap` зай. `desktopCols` — ≥1024px-д `+html.tsx`-ийн CSS-ээр солих баганын тоо
+ * (JS breakpoint-оор сольвол desktop-д hydration-ий дараа агуулга үсэрдэг, D77).
+ */
 export function Grid({
   cols,
+  desktopCols,
   gap = space.md,
   children,
 }: {
   cols: number;
+  desktopCols?: 2 | 3 | 4;
   gap?: number;
   children: ReactNode[];
 }) {
   return (
-    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap }}>
+    <View
+      {...(desktopCols ? dataAttrs({ gridDesktop: String(desktopCols) }) : {})}
+      style={{ flexDirection: 'row', flexWrap: 'wrap', gap }}>
       {children.map((child, i) => (
         <View
           key={i}
