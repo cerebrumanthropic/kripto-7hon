@@ -5,6 +5,7 @@ import { View } from 'react-native';
 
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { Sky } from '@/components/layout/sky';
 import { useTheme } from '@/theme/use-theme';
 
 // Фонт: төхөөрөмжийн Helvetica/Arial (tokens.ts, PROGRESS D69) — вэб фонт ачаалахгүй.
@@ -16,6 +17,7 @@ export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <View style={{ flex: 1, minHeight: '100%', backgroundColor: 'transparent' }}>
+        <Sky />
         <Header />
         <View style={{ flex: 1 }}>
           <Slot />
