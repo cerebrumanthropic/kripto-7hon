@@ -6,15 +6,10 @@ import { t } from '@/lib/i18n-mn';
 // Зөвхөн Node.js-д build үед ажиллана. ScrollViewStyleReset-ийг ашиглахгүй —
 // body өөрөө гүйлгэгдэнэ (браузерийн scroll, anchor, хэвлэлт хэвийн ажиллана).
 const css = `
-html { background: #070B1F; color-scheme: dark; }
-/* body тунгалаг — эс бөгөөс body-ийн дэвсгэр z-index:-1 бөмбөлгийг дардаг */
+html { background: #000; color-scheme: dark; }
+/* body тунгалаг — эс бөгөөс body-ийн дэвсгэр z-index:-1 тэнгэрийг (Sky) дардаг */
 body { margin: 0; background: transparent; color: #EEF1FA; }
-/* Glassy dashboard (PROGRESS D75): гэрэлтэх бөмбөлгүүд — fixed давхарга тул гүйлгэхэд дахин зурагдахгүй */
-body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    radial-gradient(760px 560px at 88% -8%, rgba(79,124,255,0.55), transparent 62%),
-    radial-gradient(680px 560px at -12% 38%, rgba(139,92,246,0.42), transparent 60%),
-    radial-gradient(860px 680px at 72% 108%, rgba(56,189,248,0.30), transparent 62%); }
+/* Дэвсгэр: одот тэнгэр + гаригийн ягаан хүрээ (src/components/layout/sky.web.tsx) */
 #root { display: flex; min-height: 100vh; flex-direction: column; }
 :focus-visible { outline: 2px solid #9DB2FF; outline-offset: 2px; }
 [id] { scroll-margin-top: 96px; }
@@ -35,7 +30,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   [role="banner"], [role="contentinfo"], .skip,
   #report-actions, #copy-text, #infographic-controls, #report-nav { display: none !important; }
   html, body { background: #fff !important; color: #14161B !important; }
-  body::before { display: none; }
+  [data-sky] { display: none !important; }
   [data-band] { background: none !important; }
   [data-band] * { color: #14161B !important; }
   [role="img"], [role="table"] { break-inside: avoid; }
@@ -52,7 +47,7 @@ export default function Root({ children }: PropsWithChildren) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="color-scheme" content="dark" />
-        <meta name="theme-color" content="#070B1F" />
+        <meta name="theme-color" content="#000000" />
         <style dangerouslySetInnerHTML={{ __html: css }} />
         {headNodes}
       </head>

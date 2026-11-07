@@ -124,8 +124,8 @@ export const ink: ThemeColors = {
 };
 
 /**
- * Glassy dashboard (хэрэглэгчийн шийдвэр, PROGRESS D75): сайт үргэлж бараан. Дэвсгэр нь `+html.tsx`-ийн
- * гэрэлтэх хөх/ягаан бөмбөлөгтэй гүн хөх; карт нь тунгалаг цагаан давхарга + нимгэн хүрээ + сүүдэр.
+ * Glassy dashboard (хэрэглэгчийн шийдвэр, PROGRESS D75): сайт үргэлж бараан. Дэвсгэр нь хар одот тэнгэр +
+ * ягаан гаригийн хүрээ (`layout/sky.web.tsx`, D76); карт нь тунгалаг цагаан давхарга + нимгэн хүрээ + сүүдэр.
  * Текстийн тодрол хамгийн цайвар туяан дээр ч ≥4.5:1.
  */
 export const glass: ThemeColors = {
@@ -154,7 +154,7 @@ export const glass: ThemeColors = {
  * frame-ийг ≈60ms удаашруулж Lighthouse FCP-г унагасан тул хассан (PROGRESS D57).
  */
 export const inkBand = {
-  color: 'rgba(7,11,31,0.88)', // толгой/хөл: хагас тунгалаг (blur-гүй — хурдны улмаас)
+  color: 'rgba(0,0,0,0.78)', // толгой/хөл: хагас тунгалаг (blur-гүй — хурдны улмаас)
   image: [
     'radial-gradient(900px 420px at 88% -12%, rgba(91,140,255,0.26), transparent 62%)',
     'radial-gradient(700px 320px at -8% 112%, rgba(242,196,107,0.12), transparent 60%)',
