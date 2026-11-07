@@ -19,8 +19,6 @@ body { margin: 0; background: transparent; color: #EEF1FA; }
 [data-lift]:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(11,26,61,.16); filter: brightness(1.04); }
 [data-news] a:hover { text-decoration-line: underline; }
 [data-news]:last-child { border-bottom-width: 0; }
-[data-float] { animation: vh-float 4.5s ease-in-out infinite; }
-@keyframes vh-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-2deg); } }
 /* Desktop (≥1024px) хэмжээг CSS-ээр: статик HTML мобайл өргөнөөр үүсдэг тул JS breakpoint-оор сольвол desktop-д
    hydration-ий дараа агуулга үсэрдэг (CLS, PROGRESS D77). Утгууд нь tokens.ts-ийн heroLg/display/small-тай ижил. */
 @media (max-width: 1023.98px) { [data-desktop="only"] { display: none !important; } }
@@ -39,7 +37,6 @@ body { margin: 0; background: transparent; color: #EEF1FA; }
 @media (prefers-reduced-motion: reduce) {
   [data-lift] { transition: none; }
   [data-lift]:hover { transform: none; }
-  [data-float] { animation: none; }
 }
 @media print {
   [role="banner"], [role="contentinfo"], .skip,

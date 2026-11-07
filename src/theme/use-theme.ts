@@ -76,17 +76,30 @@ export function useLayout(): Layout {
   };
 }
 
+/** CSS media query-ийн store (вэб; native-д үргэлж false). */
+function mediaQueryStore(query: string) {
+  const mql = () =>
+    typeof window !== 'undefined' && typeof window.matchMedia === 'function' ? window.matchMedia(query) : null;
+  return {
+    subscribe: (cb: () => void) => {
+      const m = mql();
+      m?.addEventListener('change', cb);
+      return () => m?.removeEventListener('change', cb);
+    },
+    get: () => mql()?.matches ?? false,
+  };
+}
+
 // CSS-ийн `(min-width: 1024px)`-тэй яг ижил (scrollbar-ийг оруулж тооцно; `useLayout` нь түүнийг хасдаг)
-const DESKTOP_MQ = `(min-width: ${breakpoints.desktop}px)`;
-const desktopMq = () =>
-  typeof window !== 'undefined' && typeof window.matchMedia === 'function' ? window.matchMedia(DESKTOP_MQ) : null;
-const subscribeDesktopMq = (cb: () => void) => {
-  const m = desktopMq();
-  m?.addEventListener('change', cb);
-  return () => m?.removeEventListener('change', cb);
-};
+const desktopStore = mediaQueryStore(`(min-width: ${breakpoints.desktop}px)`);
+const reducedMotionStore = mediaQueryStore('(prefers-reduced-motion: reduce)');
 
 /** `[data-desktop="only"]` CSS-тэй зэрэгцэх зүйлд (жишээ нь зөвхөн desktop-д ачаалах зураг). SSR/hydration үед false. */
 export function useDesktopMedia(): boolean {
-  return useSyncExternalStore(subscribeDesktopMq, () => desktopMq()?.matches ?? false, () => false);
+  return useSyncExternalStore(desktopStore.subscribe, desktopStore.get, () => false);
+}
+
+/** Хэрэглэгч хөдөлгөөн багасгахыг хүссэн эсэх (`prefers-reduced-motion`). SSR/hydration үед false. */
+export function useReducedMotion(): boolean {
+  return useSyncExternalStore(reducedMotionStore.subscribe, reducedMotionStore.get, () => false);
 }
