@@ -3,6 +3,345 @@
   "week": "2026-W45",
   "items": [
     {
+      "id": "e7b575121dba",
+      "title": "Thailand is cutting off Bitget. Users have until December 5 to prepare",
+      "url": "https://cryptoslate.com/thailand-is-cutting-off-bitget-users-have-until-december-5-to-prepare",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T22:00:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e2a2deda2482",
+      "title": "Binance CFO steps down nine days after record hack; co-CEO says transition was planned six months ago",
+      "url": "https://www.theblock.co/news/business/2026-11-07-binance-cfo-steps-down-nine-days-after-record-hack-co-ceo-says-transition-was-planned-six-months-ago-435992",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-07T21:57:58.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d76bb7b419f8",
+      "title": "Ex-FBI agent pleads guilty to stealing $2.47 million in crypto from wallets tied to 35 investigations",
+      "url": "https://www.theblock.co/news/regulation/2026-11-07-ex-fbi-agent-pleads-guilty-to-stealing-2-47-million-in-crypto-from-wallets-tied-to-35-investigations-435988",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-07T20:59:47.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7e076636df73",
+      "title": "US sanctions hit 41 companies accused of keeping Prince Group’s scam network running",
+      "url": "https://cryptoslate.com/us-sanctions-hit-41-companies-accused-of-keeping-prince-groups-scam-network-running",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T20:30:48.000Z",
+      "tags": [
+        "regulation",
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "27e10c5869da",
+      "title": "Zcash’s new security fund is 99.7% old money",
+      "url": "https://cryptoslate.com/zcashs-new-security-fund-is-99-7-old-money",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T19:20:50.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2a70a9bf3c53",
+      "title": "Binance users in some European countries told to pull crypto before fees kick in, with accounts closing by year end",
+      "url": "https://www.coindesk.com/business/2026/11/07/binance-users-in-some-european-countries-told-to-pull-crypto-before-fees-kick-in-with-accounts-closing-by-year-end",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-07T19:13:16.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cb14daf61ac3",
+      "title": "Higher wages don’t have to mean higher inflation. That could matter for Bitcoin",
+      "url": "https://cryptoslate.com/higher-wages-dont-have-to-mean-higher-inflation-that-could-matter-for-bitcoin",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T18:15:46.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "41fe170edde9",
+      "title": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
+      "url": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-07T17:36:46.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b82d0e7c5454",
+      "title": "Bitcoin traders could mistake this Binance data change for a rush to sell",
+      "url": "https://cryptoslate.com/bitcoin-traders-could-mistake-this-binance-data-change-for-a-rush-to-sell",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T17:10:30.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "43206ebba159",
+      "title": "Apple Completes the Set: Every Magnificent Seven Stock Opts Out of OKX-ICE Venue",
+      "url": "https://decrypt.co/382768/apple-meta-every-magnificent-seven-stock-opts-out-okx-ice-venue",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-07T17:01:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "90f0649e191d",
+      "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
+      "url": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-07T16:51:00.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8c9ba8df454b",
+      "title": "Bitcoin ETFs flip negative for 2026 after $1.28 billion outflow week, worst since June",
+      "url": "https://www.theblock.co/news/markets/2026-11-07-bitcoin-etfs-flip-negative-for-2026-after-1-28-billion-outflow-week-worst-since-june-435984",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-07T16:46:02.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f303a6519345",
+      "title": "Wall Street can stop a tokenized share, but can it stop a stock perp?",
+      "url": "https://cryptoslate.com/wall-street-can-stop-a-tokenized-share-but-can-it-stop-a-stock-perp",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T16:10:46.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "62e0ab775402",
+      "title": "AI Chip Stocks Bounce After Global Rout—But Is the Bubble Starting to Burst?",
+      "url": "https://decrypt.co/382770/ai-chip-stocks-bounce-global-rout-bubble-starting-burst",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-07T16:01:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4d73bcf4e483",
+      "title": "MEXC sees $126 million outflows as US targets exchange over $16.7 billion in suspected illicit transactions",
+      "url": "https://cryptoslate.com/mexc-sees-126-million-outflows-as-us-targets-exchange-over-16-7-billion-in-suspected-illicit-transactions",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T15:10:42.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "481388aa43d9",
+      "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
+      "url": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-07T14:16:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cc9155509296",
+      "title": "Sony Axing Game Discs Will Have Outsized Impact on Low-Income Gamers, Experts Say",
+      "url": "https://decrypt.co/382714/sony-axing-game-discs-will-have-outsized-impact-on-low-income-gamers-experts-say",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-07T14:01:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ddcb2c16e0dd",
+      "title": "Bitcoin holders have received eCash — What can you do with it?",
+      "url": "https://cointelegraph.com/magazine/bitcoin-holders-have-received-ecash-what-can-you-with-it",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-07T13:30:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f3c5bd120f89",
+      "title": "Stablecoin contraction forces Bitcoin drop despite Fed reserve gains",
+      "url": "https://cryptoslate.com/stablecoin-contraction-forces-bitcoin-drop-despite-fed-reserve-gains",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T12:40:07.000Z",
+      "tags": [
+        "macro",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "61bfb9c58a1d",
+      "title": "US sanctions Canadian money-exchange firms over Iran ties",
+      "url": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-07T11:10:47.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "035bceadd540",
+      "title": "Morpho loan stress exposes cbXRP, but spares native XRP",
+      "url": "https://cryptoslate.com/morpho-loan-stress-exposes-cbxrp-but-spares-native-xrp",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T10:30:51.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e9e1e5a2daff",
+      "title": "Suspicious prediction market activity seen before election poll release: NYT",
+      "url": "https://cointelegraph.com/news/suspicious-prediction-market-activity-seen-before-election-poll-release-nyt",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-07T09:10:35.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d5e1dea1ebc7",
+      "title": "Millions watched Kalshi’s election odds without betting a dollar",
+      "url": "https://cryptoslate.com/millions-watched-kalshis-election-odds-without-betting-a-dollar",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T08:20:10.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "24ee93e7c69d",
+      "title": "Nvidia may face a more hostile post-election Washington: Report",
+      "url": "https://cointelegraph.com/news/nvidia-may-be-facing-a-more-hostile-post-election-washington-report",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-07T07:45:24.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6c5e798a5309",
+      "title": "EIP-8037 state-gas rules force Ethereum dApps to rewrite billing",
+      "url": "https://cryptoslate.com/eip-8037-state-gas-rules-force-ethereum-dapps-to-rewrite-billing",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T06:10:22.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e5e065dffe76",
+      "title": "Moscow Exchange sets Dec. 1 to launch Bitcoin and Ethereum trading",
+      "url": "https://cryptoslate.com/moscow-exchange-sets-dec-1-to-launch-bitcoin-and-ethereum-trading",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T04:40:10.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "345fe2258b3f",
+      "title": "Zero-click iOS exploits drain $4M USDT from active TRON wallets",
+      "url": "https://cryptoslate.com/zero-click-ios-exploits-drain-4m-usdt-from-active-tron-wallets",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T03:30:04.000Z",
+      "tags": [
+        "security",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4a7cb9646c0b",
+      "title": "Samsung teams with Stripe to bring USDC to 82M phones",
+      "url": "https://cryptoslate.com/samsung-teams-with-stripe-to-bring-usdc-to-82m-phones",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-07T02:10:27.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "d34b775726c7",
       "title": "Bitcoin faces $70,000 risk as investors realize $2 billion in losses and US jobs shock deepens pressure",
       "url": "https://cryptoslate.com/bitcoin-faces-70000-risk-as-investors-realize-2-billion-in-losses-and-us-jobs-shock-deepens-pressure",
@@ -5683,343 +6022,6 @@
       "publishedAt": "2026-11-02T13:09:43.000Z",
       "tags": [
         "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "bec9c5f5f9da",
-      "title": "FATF targets crypto hubs in review of money laundering controls",
-      "url": "https://cointelegraph.com/news/fatf-targeted-crypto-compliance-jurisdiction-reviews",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T12:56:07.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "585b48afd1d7",
-      "title": "Binance hackers begin swapping stolen Solana tokens for Bitcoin: Chainalysis",
-      "url": "https://cointelegraph.com/news/binance-hackers-solana-new-phase-laundering-chainalysis",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T12:40:45.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5fdec0656a28",
-      "title": "Bitcoin catches a break from falling oil prices, but OPEC+ raises new Fed concerns",
-      "url": "https://cryptoslate.com/bitcoin-catches-a-break-from-falling-oil-prices-but-opec-raises-new-fed-concerns",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-02T12:40:41.000Z",
-      "tags": [
-        "macro"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "53e52d4b792e",
-      "title": "XRP Ledger set to fix flaw that could have let stablecoin partners print new tokens",
-      "url": "https://www.coindesk.com/tech/2026/11/02/xrp-ledger-set-to-fix-flaw-that-could-let-stablecoin-partners-print-new-tokens",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T12:37:24.000Z",
-      "tags": [
-        "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "ea21cd4dceee",
-      "title": "Bitcoin's 'volatility curve' has a midterm bump",
-      "url": "https://www.coindesk.com/daybook-us/2026/11/02/bitcoin-s-volatility-curve-has-a-midterm-bump",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T12:30:17.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "ae4bd1676164",
-      "title": "BTCPay Tells Merchants to Switch Off Servers Amid Hot Wallet Attack Reports",
-      "url": "https://decrypt.co/382324/btcpay-tells-merchants-to-switch-off-servers-amid-hot-wallet-attack-reports",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-02T12:24:18.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "72a08151ac3d",
-      "title": "No proof of AI in North Korean hackers move of stolen Binance funds",
-      "url": "https://www.coindesk.com/tech/2026/11/02/no-proof-of-ai-in-north-korean-hackers-move-of-stolen-binance-funds-through-thousands-of-wallets",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T11:57:45.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "7518271afdf6",
-      "title": "Bitcoin eases to $77,900 as Binance customers pull $3.6 billion after withdrawals reopen",
-      "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-eases-to-usd77-900-as-binance-customers-pull-usd3-6-billion-after-withdrawals-reopen",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T11:30:00.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "6cd0ebf94665",
-      "title": "Solana validators told to act immediately as critical Linux vulnerability emerges",
-      "url": "https://cryptoslate.com/solana-validators-told-to-act-immediately-as-critical-linux-vulnerability-emerges",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-02T11:20:48.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "22785e3e1669",
-      "title": "From Uptober to Hacktober: Are Bitcoin’s seasonal patterns becoming obsolete?",
-      "url": "https://cointelegraph.com/markets/uptober-hacktober-bitcoin-seasonal-pattern",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T11:19:18.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "80c62c06d4e3",
-      "title": "Trezor lifts password ceiling after Coldcard’s $100M wallet thefts",
-      "url": "https://cointelegraph.com/news/trezor-wallet-passphrase-limit-128-characters-coldcard-attacks",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T10:46:59.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "84fb8a86c748",
-      "title": "FBI Blames North Korea for $6B Binance Hack as Exchange Reopens Withdrawals",
-      "url": "https://decrypt.co/382316/fbi-blames-north-korea-for-6b-binance-hack-as-exchange-reopens-withdrawals",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-02T10:36:19.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5e1276b370a7",
-      "title": "Hong Kong takes tokenized settlement to 24/7, plans stablecoin trials",
-      "url": "https://cointelegraph.com/news/hong-kong-24-7-tokenized-settlements-stablecoin-trials",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T10:14:55.000Z",
-      "tags": [
-        "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "82cff33a2304",
-      "title": "Polygon brings US banking access to Solana’s $15 billion stablecoin market",
-      "url": "https://cryptoslate.com/polygon-brings-us-banking-access-to-solanas-15-billion-stablecoin-market",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-02T10:00:53.000Z",
-      "tags": [
-        "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "05fe1e445e21",
-      "title": "BTC heads into US midterm showdown: Three things to know in Bitcoin this week",
-      "url": "https://cointelegraph.com/markets/btc-price-script-midterms-three-things-bitcoin-week",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T09:41:36.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "feb393580eeb",
-      "title": "Metals.io issues tokens backed by 25 tonnes of physical copper stored in Germany",
-      "url": "https://www.coindesk.com/markets/2026/11/02/metals-io-issues-tokens-backed-by-25-tonnes-of-physical-copper-stored-in-germany",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T09:33:20.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "8e0608db9928",
-      "title": "Binance hack fallout, U.S. midterms and jobs report: Crypto Week Ahead",
-      "url": "https://www.coindesk.com/markets/2026/11/02/binance-hack-fallout-u-s-midterms-and-jobs-report-crypto-week-ahead",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T09:04:49.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "16760acb7991",
-      "title": "OKX draws $445M in net inflows as Binance outflows exceed $7B",
-      "url": "https://cointelegraph.com/news/okx-leads-crypto-exchanges-445m-inflows",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T08:56:03.000Z",
-      "tags": [
-        "etf"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "c4b9c4ca87c1",
-      "title": "Bitcoin Lightning’s year-old security fixes still missing from 71% of flagged nodes",
-      "url": "https://cryptoslate.com/bitcoin-lightnings-year-old-security-fixes-still-missing-from-71-of-flagged-nodes",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-02T08:55:32.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "98995fa1bd39",
-      "title": "Live updates: Binance records $6 billion outflows after starting withdrawals, less then 4% of total holdings",
-      "url": "https://www.coindesk.com/markets/2026/11/02/live-updates-binance-records-usd6-billion-outflows-after-starting-withdrawals-less-then-4-of-total-holdings",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T08:49:30.000Z",
-      "tags": [
-        "etf"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "aaaea2a59746",
-      "title": "China’s Communist Party calls for a crackdown on corruption that uses crypto and blockchain",
-      "url": "https://www.coindesk.com/markets/2026/11/02/china-s-communist-party-calls-for-a-crackdown-on-corruption-that-uses-crypto-and-blockchain",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T08:41:28.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "2eb5261b5943",
-      "title": "Why stealing billions from a crypto exchange can be harder to stop than a bank theft",
-      "url": "https://www.coindesk.com/business/2026/11/02/why-crypto-exchange-hacks-can-be-harder-to-contain-versus-global-banks",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T08:32:01.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "037b60f72d72",
-      "title": "Bitcoin ETFs sink into October outflows with $643M exit after Binance hack",
-      "url": "https://cointelegraph.com/markets/bitcoin-etfs-october-red-binance-hack-outflows",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T07:50:36.000Z",
-      "tags": [
-        "etf",
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "6ca2be323bbb",
-      "title": "Treasury dealers’ financing burden can outlast their bond holdings, Fed study finds",
-      "url": "https://cryptoslate.com/treasury-dealers-financing-burden-can-outlast-their-bond-holdings-fed-study-finds",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-02T07:00:53.000Z",
-      "tags": [
-        "macro"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "1547210f4826",
-      "title": "Bitcoin ETFs lost $643 million in outflows Friday, and 2026 is barely green now",
-      "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-etfs-lost-usd643-million-in-outflows-friday-and-2026-is-barely-green-now",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T06:46:41.000Z",
-      "tags": [
-        "etf"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "32b4567c9c71",
-      "title": "BTCPay Server warns of hot wallet thefts running on outdated software",
-      "url": "https://cointelegraph.com/news/btcpay-server-hot-wallet-thefts-older-versions",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-02T05:34:02.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "351b681a82af",
-      "title": "Strangers are begging the Binance hacker for bitcoin, one ‘help me bro’ at a time",
-      "url": "https://www.coindesk.com/tech/2026/11/02/strangers-are-begging-the-binance-hacker-for-bitcoin-one-help-me-bro-at-a-time",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T05:18:12.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "b9f9806ef54e",
-      "title": "Bitcoin claws back toward $79,000 as markets shake off crypto's biggest hack",
-      "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-claws-back-toward-usd79-000-as-markets-shake-off-crypto-s-biggest-hack",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-02T04:42:22.000Z",
-      "tags": [
-        "security"
       ],
       "isMongolia": false
     }
