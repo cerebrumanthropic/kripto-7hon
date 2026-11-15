@@ -3,6 +3,403 @@
   "week": "2026-W46",
   "items": [
     {
+      "id": "ba339d409294",
+      "title": "Bitcoin drops below $64,000 as bullish bets get wiped out over the weekend",
+      "url": "https://cryptoslate.com/bitcoin-drops-below-66000-as-bullish-bets-get-wiped-out",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T23:40:35.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3ce3646c46f5",
+      "title": "Kava Lend loses roughly $3.8 million to hack, sending KAVA token down nearly 40%",
+      "url": "https://www.theblock.co/news/defi/2026-11-14-kava-lend-loses-roughly-3-8-million-to-hack-sending-kava-token-down-nearly-40-440350",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-14T23:07:35.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "aba9e6de2538",
+      "title": "Peter Schiff argues Bitcoin may fall below $16,500 by year-end if $50,000 breaks next",
+      "url": "https://cryptoslate.com/peter-schiff-argues-bitcoin-may-fall-below-16500-by-year-end-if-50000-breaks-next",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T22:40:39.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0e54bbf9ddd3",
+      "title": "Crypto’s $168 million election: 78 winners, 13 newcomers and one costly defeat",
+      "url": "https://cryptoslate.com/cryptos-168-million-election-78-winners-13-newcomers-and-one-costly-defeat",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T21:40:06.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8e1af667a7da",
+      "title": "Evernorth’s $35 million fundraising could buy 35 million XRP, but there’s a catch",
+      "url": "https://cryptoslate.com/evernorths-35-million-fundraising-could-buy-35-million-xrp-but-theres-a-catch",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T20:40:16.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "4572591653f4",
+      "title": "Your wallet may show a dollar balance for fake USDT that you cannot sell",
+      "url": "https://cryptoslate.com/your-wallet-may-show-a-dollar-balance-for-fake-usdt-that-you-cannot-sell",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T19:40:06.000Z",
+      "tags": [
+        "macro",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "063b626dfff6",
+      "title": "Louisiana AG calls CFTC chair an ‘obsequious standard bearer’ for prediction markets following agency lawsuit",
+      "url": "https://www.theblock.co/news/regulation/2026-11-14-louisiana-ag-calls-cftc-chair-an-obsequious-standard-bearer-for-prediction-markets-following-agency-lawsuit-440342",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-14T19:06:59.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0a9ac72a18d0",
+      "title": "MiCA gave crypto a passport, but customers still face borders",
+      "url": "https://cryptoslate.com/mica-gave-crypto-a-passport-but-customers-still-face-borders",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T18:40:48.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2bd65f4f0cce",
+      "title": "The Week Jensen Huang Fell: How a Spy Scandal Toppled Nvidia’s CEO",
+      "url": "https://decrypt.co/383280/the-week-jensen-huang-fell-how-spy-scandal-toppled-nvidia-ceo",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-14T18:01:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ce7bf9209c74",
+      "title": "Bitcoin ETFs lose $1 billion for the second week in a row as crypto funds, except one, continue bleeding",
+      "url": "https://www.theblock.co/news/markets/2026-11-14-bitcoin-etfs-lose-1-billion-for-the-second-week-in-a-row-as-crypto-funds-except-one-continue-bleeding-440337",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-14T17:50:41.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ebbfd17b55f8",
+      "title": "Binance says stolen crypto has been replaced but some customers have to wait",
+      "url": "https://cryptoslate.com/binance-says-stolen-crypto-has-been-replaced-but-some-customers-have-to-wait",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T17:20:40.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "10f1e096d4b9",
+      "title": "OpenAI, Anthropic, Google and Other AI Giants Face Lawsuit Demanding Development Freeze",
+      "url": "https://decrypt.co/383270/openai-anthropic-google-ai-giants-lawsuit-development-freeze",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-14T17:01:02.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6639c3891073",
+      "title": "Bitcoin slides to 3-month low of $65,000 as analyst flags fourth capitulation wave",
+      "url": "https://www.coindesk.com/markets/2026/11/14/bitcoin-drifts-back-to-usd65-000-deep-value-zone-says-analyst",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T16:33:29.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "487c7aec411f",
+      "title": "Ethereum scaling project MegaETH slashes staff by 20% as it pursues AI business",
+      "url": "https://www.coindesk.com/business/2026/11/14/ethereum-scaling-project-megaeth-slashes-staff-by-20-as-it-pursues-ai-business",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T16:33:23.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a4b05712f093",
+      "title": "Bitcoin’s $67,000 crash puts $57 billion holder cluster at risk as ETF investors flee",
+      "url": "https://cryptoslate.com/bitcoins-67000-crash-puts-57-billion-holder-cluster-at-risk-as-etf-investors-flee",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T16:20:11.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9aa29a9320be",
+      "title": "What Is Canton Network? The Privacy Blockchain Built for Wall Street",
+      "url": "https://decrypt.co/resources/what-is-canton-network-the-privacy-blockchain-built-for-wall-street",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-14T16:01:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b918d6c7270c",
+      "title": "Kazakhstan plans tokenized government bonds in first quarter after $22 million note sale",
+      "url": "https://www.coindesk.com/business/2026/11/14/kazakhstan-plans-tokenized-government-bonds-in-first-quarter-after-usd22-million-note-sale",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T15:38:27.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "00199b9e7668",
+      "title": "Bitcoin Price Falls 14% in a Week to $65,000 as Weekend Selling Breaks Friday’s Low",
+      "url": "https://bitcoinmagazine.com/markets/bitcoin-price-crashes-13-percent-65600",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-14T15:27:33.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "615f41a33ad3",
+      "title": "Wall Street wants 24/7 trading, but somebody has to bankroll the weekend",
+      "url": "https://cryptoslate.com/wall-street-wants-24-7-trading-but-somebody-has-to-bankroll-the-weekend",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T15:20:06.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c6edf19e65a2",
+      "title": "UK, Singapore, and Thailand central banks test cross-border FX settlement as stablecoins gain ground",
+      "url": "https://www.coindesk.com/policy/2026/11/14/uk-singapore-and-thailand-central-banks-test-cross-border-fx-settlement-as-stablecoins-gain-ground",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T15:00:00.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3baeba662fbe",
+      "title": "OpenAI Launches ChatGPT Wallet to Let AI Agents Shop—Without Crypto",
+      "url": "https://decrypt.co/383278/openai-chatgpt-wallet-ai-agents-shop-without-crypto",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-14T14:01:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "131f72e070b5",
+      "title": "Microsoft found a way to turn a helpful AI into a sleeper agent",
+      "url": "https://cryptoslate.com/microsoft-found-a-way-to-turn-a-helpful-ai-into-a-sleeper-agent",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T13:20:37.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "fc787b1b4f9e",
+      "title": "Britain could turn wasted Scottish wind power into bitcoin to cut its $1.3 billion grid bill",
+      "url": "https://www.coindesk.com/policy/2026/11/13/britain-could-turn-wasted-scottish-wind-power-into-bitcoin-to-cut-its-usd1-3-billion-grid-bill",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T13:00:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "11d1aef5934d",
+      "title": "A behind the scenes force may amplify bitcoin and ether price volatility",
+      "url": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T12:57:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "eb9366ea0274",
+      "title": "50,000 people installed this Bitcoin browser extension. Now control of it is up for sale",
+      "url": "https://cryptoslate.com/50000-people-installed-this-bitcoin-browser-extension-now-control-of-it-is-up-for-sale",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T11:34:23.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0997694df5e3",
+      "title": "Microsoft confirms global outage resolved, rules out cyberattack",
+      "url": "https://cointelegraph.com/news/microsoft-365-outage-resolved-cyberattack-ruled-out",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-14T10:34:06.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f078d10e6bd6",
+      "title": "MegaETH parent cuts 20% of staff amid restructuring, AI push",
+      "url": "https://cointelegraph.com/news/megaeth-parent-cuts-20-percent-staff-ai-push",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-14T08:12:30.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c36221500829",
+      "title": "Elizabeth Warren could reopen crypto’s banking fight without changing a single law",
+      "url": "https://cryptoslate.com/warren-could-reopen-crypto-banking-fight-without-changing-a-single-law",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T08:10:11.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "dcc873f4af45",
+      "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
+      "url": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-14T06:33:13.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0bb88d19cd0f",
+      "title": "Meta tests prediction-market app, DOJ moves to seize $1.2 billion from Binance hack, and more",
+      "url": "https://www.theblock.co/newsletters/the-daily/2026-11-14-meta-prediction-market-app-doj-binance-hack-more-crypto-news-440304",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-14T05:40:00.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0fa04236c498",
+      "title": "Coinbase AI trading tool pauses bots, but leaves orders open",
+      "url": "https://cryptoslate.com/coinbase-ai-trading-tool-pauses-bots-but-leaves-orders-open",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T04:30:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "54fea6baff58",
+      "title": "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
+      "url": "https://www.coindesk.com/markets/2026/11/13/satoshi-era-wallet-served-in-a-usd260-billion-lawsuit-moves-75-btc-it-held-since-2011",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T04:30:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "431afd1329f2",
+      "title": "Unocoin halts all services after hackers bypass BitGo freeze",
+      "url": "https://cryptoslate.com/unocoin-halts-all-services-after-hackers-bypass-bitgo-freeze",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T02:10:17.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "f0fdfb9cf35c",
       "title": "US courts target $1.2B in stolen Binance funds, yet victims face a new hurdle",
       "url": "https://cryptoslate.com/binance-funds-theft-us-court-orders-cover-over-1-2-billion-with-return-unresolved",
@@ -5616,403 +6013,6 @@
       "tags": [
         "macro",
         "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "41527d53eabd",
-      "title": "Prediction market broker River Markets registers affiliate as CFTC futures commission merchant",
-      "url": "https://www.theblock.co/news/regulation/2026-11-09-river-markets-prediction-market-prime-brokerage-cftc-fcm-registration-436266",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T15:05:02.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "be05809028a6",
-      "title": "North Korean hackers are creating memecoins to wash loot from $6.3 billion Binance hack",
-      "url": "https://www.coindesk.com/business/2026/11/09/north-korean-hackers-are-creating-memecoins-to-wash-loot-from-usd6-3-billion-binance-hack",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T15:00:44.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "b38a14ced4b7",
-      "title": "U.S. Regulators Drop $250 Travel Rule Plan, Crypto Language Too",
-      "url": "https://bitcoinmagazine.com/news/fincen-fed-withdraw-travel-rule-250",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-09T15:00:00.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "43789d499eba",
-      "title": "Kraken’s Dave Ripley: “That Was the Bear Market” and Bitcoin Is “On Our Way Out of It”",
-      "url": "https://bitcoinmagazine.com/videos/krakens-dave-ripley-that-was-the-bear-market-and-bitcoin-is-on-our-way-out-of-it",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-09T14:37:05.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "2132f3e3e14a",
-      "title": "Coinbase’s blockchain got faster. Some apps can still connect but get no data",
-      "url": "https://cryptoslate.com/coinbases-blockchain-got-faster-some-apps-can-still-connect-but-get-no-data",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-09T14:35:11.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "d6d98495070d",
-      "title": "Tom Lee’s Bitmine nears 5% Ethereum supply target with $20 million ETH buy as he predicts tokenization and AI ‘supercycle’",
-      "url": "https://www.theblock.co/news/business/2026-11-09-tom-lee-bitmine-nears-ethereum-supply-target-20-million-eth-tokenization-ai-supercycle-436219",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T14:32:40.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "e5ceba554d6f",
-      "title": "Strive (ASST) Adds 29 Bitcoin for $2.2 Million as Weekly Buys Slow After Crossing 43,000",
-      "url": "https://bitcoinmagazine.com/news/strive-asst-adds-29-bitcoin-holdings-43153",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-09T14:26:32.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "dd5d02fc46a5",
-      "title": "Coinbase Wins Full Federal Trust Charter From OCC",
-      "url": "https://bitcoinmagazine.com/news/coinbase-full-occ-national-trust-charter",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-09T14:18:31.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "8c419d30a671",
-      "title": "NYSE to settle tokenized stocks on Avalanche in planned 24/7 market",
-      "url": "https://www.theblock.co/news/business/2026-11-09-nyse-settle-tokenized-stocks-avalanche-planned-24-7-market-436208",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T14:07:27.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "9d227f77438c",
-      "title": "Bitcoin traders face an eight-hour blind spot as Deribit prepares to delay key market data",
-      "url": "https://cryptoslate.com/bitcoin-traders-face-an-eight-hour-blind-spot-as-deribit-prepares-to-delay-key-market-data",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-09T14:00:34.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "65d47153cfb7",
-      "title": "Analysts see no broader ‘contagion’ from $6.3B Binance hack",
-      "url": "https://cointelegraph.com/markets/analysts-no-contagion-effect-63b-binance-hack",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-09T13:52:46.000Z",
-      "tags": [
-        "security"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "45915490a9d1",
-      "title": "NYSE picks Avalanche to settle tokenized stocks amid Wall Street's blockchain race",
-      "url": "https://www.coindesk.com/business/2026/11/09/nyse-picks-avalanche-to-settle-tokenized-stocks-amid-wall-street-s-blockchain-race",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T13:40:06.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "7b217044466a",
-      "title": "The $2.85B Binance hackers lost shows why the UK needs stablecoin freeze rules",
-      "url": "https://cointelegraph.com/opinion/285b-binance-hackers-lost-shows-why-uk-needs-stablecoin-freeze-rules",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-09T13:30:00.000Z",
-      "tags": [
-        "security",
-        "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "3c9ec6425a65",
-      "title": "Strategy buys 1,036 Bitcoin as BTC holdings climb to 850,364",
-      "url": "https://cointelegraph.com/news/strategy-buy-1036-bitcoin-holdings-850364-btc",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-09T13:29:47.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "a10134be6a96",
-      "title": "Strategy Buys $82M in Bitcoin, Buys Back $188M of STRC",
-      "url": "https://decrypt.co/382820/strategy-buys-82m-in-bitcoin-buys-back-188m-of-strc",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-09T13:24:29.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "d8d4e036e394",
-      "title": "‘Connecting the dots’: Michael Saylor’s Strategy buys another 1,036 bitcoin for $82 million as holdings top 850,000 BTC",
-      "url": "https://www.theblock.co/news/business/2026-11-09-connecting-the-dots-michael-saylor-strategy-bitcoin-436094",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T13:10:42.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "de42bd9ab88b",
-      "title": "Bitcoin loses 50-week moving average as 24-hour crypto long liquidations top $1 billion",
-      "url": "https://www.theblock.co/news/markets/2026-11-09-bitcoin-loses-50-week-moving-average-as-24-hour-crypto-long-liquidations-top-1-billion-436102",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T13:04:21.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "f3ba0004b7f1",
-      "title": "Microsoft-Backed Space and Time Launches Platform to Let AI Agents Verify Private Data",
-      "url": "https://decrypt.co/382697/microsoft-backed-space-and-time-launches-platform-to-let-ai-agents-verify-private-data",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-09T13:01:02.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "53e2e4ed8d44",
-      "title": "Solana set for its first tokenized stock venue under SEC framework, listing Galaxy",
-      "url": "https://www.coindesk.com/business/2026/11/06/solana-lset-for-its-first-tokenized-stock-venue-under-sec-framework-listing-galaxy",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T12:41:35.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "d72cb38278b3",
-      "title": "Trump says he knows ‘nothing’ about World Liberty’s UAE ties as Justin Sun challenges filings",
-      "url": "https://www.coindesk.com/business/2026/11/09/trump-says-he-knows-nothing-about-world-liberty-s-uae-ties-as-justin-sun-challenges-filings",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T12:37:13.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5429d8337cda",
-      "title": "Bitcoin bulls can't rely on ETF flows",
-      "url": "https://www.coindesk.com/daybook-us/2026/11/09/bitcoin-bulls-can-t-rely-on-etf-flows",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T12:30:00.000Z",
-      "tags": [
-        "etf"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "bd9a77895fac",
-      "title": "Formation notifies SEC to operate first tokenized securities venue on Solana",
-      "url": "https://www.theblock.co/news/defi/2026-11-09-formation-tokenized-securities-solana-436060",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T12:30:00.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "ba0742147b98",
-      "title": "EU taps industry to set standards for tokenized securities",
-      "url": "https://cointelegraph.com/news/eu-nominations-tokenization-standards-group",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-09T12:27:06.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "deed4acec81e",
-      "title": "Coinbase Joins Circle, Ripple With Final OCC Approval for Federal Trust Bank Charter",
-      "url": "https://decrypt.co/382816/coinbase-joins-circle-ripple-with-final-occ-approval-for-federal-trust-bank-charter",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-09T11:50:36.000Z",
-      "tags": [
-        "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "74f89718a7ce",
-      "title": "Nvidia-led tech selloff weighs on crypto majors",
-      "url": "https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T11:42:04.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "295aa3149b13",
-      "title": "Coinbase’s US national trust bank charter takes effect",
-      "url": "https://cointelegraph.com/news/coinbase-occ-approval-national-trust-bank-charter",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-09T11:38:52.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "c0e46d88a628",
-      "title": "Trump Says He Knows 'Nothing' About World Liberty Financial as He Defends UAE Ties",
-      "url": "https://decrypt.co/382813/trump-says-he-knows-nothing-about-world-liberty-financial-as-he-defends-uae-ties",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-09T11:26:27.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "0918c70732d4",
-      "title": "Robinhood opens access to US IPOs for UK retail investors",
-      "url": "https://cointelegraph.com/news/robinhood-us-ipo-access-uk-retail-investors",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-09T11:14:08.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "1d842796ce1f",
-      "title": "Why Wall Street can use Ethereum without betting on ETH",
-      "url": "https://cryptoslate.com/why-wall-street-can-use-ethereum-without-betting-on-eth",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-09T10:53:54.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5f65c5631083",
-      "title": "Zcash developers want 20-second blocks just days after major speed upgrade",
-      "url": "https://www.coindesk.com/tech/2026/11/09/zcash-developers-want-20-second-blocks-just-days-after-major-speed-upgrade",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T10:52:49.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "01c68ac41714",
-      "title": "Live news: Nvidia slides on CEO allegations as bitcoin hovers just above its 200-day average",
-      "url": "https://www.coindesk.com/tech/2026/11/09/live-news-nvidia-slides-on-ceo-allegations-as-bitcoin-hovers-just-above-its-200-day-average",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T10:51:48.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "fb29e3794d49",
-      "title": "Crypto-friendly Robinhood brings US IPO access to UK retail investors",
-      "url": "https://www.theblock.co/news/business/2026-11-09-crypto-friendly-robinhood-brings-us-ipo-access-to-uk-retail-investors-436089",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T10:48:31.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "23e5d5fbc546",
-      "title": "Trump says he knows ‘nothing’ about UAE-linked investment in his crypto firm",
-      "url": "https://www.theblock.co/news/business/2026-11-09-trump-says-he-knows-nothing-about-uae-linked-investment-in-his-crypto-firm-436079",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-09T10:33:55.000Z",
-      "tags": [
-        "market"
       ],
       "isMongolia": false
     }
