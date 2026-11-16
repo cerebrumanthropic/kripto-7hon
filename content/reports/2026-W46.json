@@ -1,0 +1,1122 @@
+{
+  "schemaVersion": 1,
+  "week": "2026-W46",
+  "periodStart": "2026-11-09",
+  "periodEnd": "2026-11-15",
+  "cutoffUtc": "2026-11-15T23:59:59Z",
+  "fetchedAt": "2026-11-16T03:15:49.477Z",
+  "global": {
+    "totalMarketCapUsd": 2192240365391.3699,
+    "totalMarketCapUsd7dAgo": 2505119982503,
+    "change7dPct": -12.49,
+    "change7dMethod": "history",
+    "btcDominancePct": 59.41,
+    "btcDominancePct7dAgo": 60.24,
+    "ethDominancePct": 10.11,
+    "totalVolume24hUsd": 73242144180.202
+  },
+  "majors": [
+    {
+      "symbol": "BTC",
+      "priceUsd": 65087,
+      "priceMnt": 234965324,
+      "change7dPct": -13.34,
+      "change30dPct": -20.03,
+      "chart30d": [
+        {
+          "date": "2026-10-18",
+          "priceUsd": 81408.35
+        },
+        {
+          "date": "2026-10-19",
+          "priceUsd": 82019.58
+        },
+        {
+          "date": "2026-10-20",
+          "priceUsd": 81875.26
+        },
+        {
+          "date": "2026-10-21",
+          "priceUsd": 82943.83
+        },
+        {
+          "date": "2026-10-22",
+          "priceUsd": 84082.27
+        },
+        {
+          "date": "2026-10-23",
+          "priceUsd": 81328.21
+        },
+        {
+          "date": "2026-10-24",
+          "priceUsd": 81102.31
+        },
+        {
+          "date": "2026-10-25",
+          "priceUsd": 80810.57
+        },
+        {
+          "date": "2026-10-26",
+          "priceUsd": 80048.85
+        },
+        {
+          "date": "2026-10-27",
+          "priceUsd": 80029.43
+        },
+        {
+          "date": "2026-10-28",
+          "priceUsd": 80800.83
+        },
+        {
+          "date": "2026-10-29",
+          "priceUsd": 81274.37
+        },
+        {
+          "date": "2026-10-30",
+          "priceUsd": 77838.81
+        },
+        {
+          "date": "2026-10-31",
+          "priceUsd": 77275.05
+        },
+        {
+          "date": "2026-11-01",
+          "priceUsd": 77520.89
+        },
+        {
+          "date": "2026-11-02",
+          "priceUsd": 78293.84
+        },
+        {
+          "date": "2026-11-03",
+          "priceUsd": 76709.41
+        },
+        {
+          "date": "2026-11-04",
+          "priceUsd": 77384.59
+        },
+        {
+          "date": "2026-11-05",
+          "priceUsd": 80442.71
+        },
+        {
+          "date": "2026-11-06",
+          "priceUsd": 76005.51
+        },
+        {
+          "date": "2026-11-07",
+          "priceUsd": 75775.28
+        },
+        {
+          "date": "2026-11-08",
+          "priceUsd": 75776.38
+        },
+        {
+          "date": "2026-11-09",
+          "priceUsd": 74740.42
+        },
+        {
+          "date": "2026-11-10",
+          "priceUsd": 75266.77
+        },
+        {
+          "date": "2026-11-11",
+          "priceUsd": 73721.18
+        },
+        {
+          "date": "2026-11-12",
+          "priceUsd": 73974.39
+        },
+        {
+          "date": "2026-11-13",
+          "priceUsd": 71371.98
+        },
+        {
+          "date": "2026-11-14",
+          "priceUsd": 68313.71
+        },
+        {
+          "date": "2026-11-15",
+          "priceUsd": 64120.24
+        },
+        {
+          "date": "2026-11-16",
+          "priceUsd": 65100.61
+        }
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "priceUsd": 1822.3,
+      "priceMnt": 6578538,
+      "change7dPct": -14.87,
+      "change30dPct": -24.04,
+      "chart30d": [
+        {
+          "date": "2026-10-18",
+          "priceUsd": 2400.31
+        },
+        {
+          "date": "2026-10-19",
+          "priceUsd": 2407.84
+        },
+        {
+          "date": "2026-10-20",
+          "priceUsd": 2405.92
+        },
+        {
+          "date": "2026-10-21",
+          "priceUsd": 2446.49
+        },
+        {
+          "date": "2026-10-22",
+          "priceUsd": 2472.68
+        },
+        {
+          "date": "2026-10-23",
+          "priceUsd": 2386.48
+        },
+        {
+          "date": "2026-10-24",
+          "priceUsd": 2384.75
+        },
+        {
+          "date": "2026-10-25",
+          "priceUsd": 2356.57
+        },
+        {
+          "date": "2026-10-26",
+          "priceUsd": 2326.83
+        },
+        {
+          "date": "2026-10-27",
+          "priceUsd": 2320.67
+        },
+        {
+          "date": "2026-10-28",
+          "priceUsd": 2347.32
+        },
+        {
+          "date": "2026-10-29",
+          "priceUsd": 2357.47
+        },
+        {
+          "date": "2026-10-30",
+          "priceUsd": 2249.48
+        },
+        {
+          "date": "2026-10-31",
+          "priceUsd": 2242.5
+        },
+        {
+          "date": "2026-11-01",
+          "priceUsd": 2254.13
+        },
+        {
+          "date": "2026-11-02",
+          "priceUsd": 2273.92
+        },
+        {
+          "date": "2026-11-03",
+          "priceUsd": 2250.22
+        },
+        {
+          "date": "2026-11-04",
+          "priceUsd": 2273.63
+        },
+        {
+          "date": "2026-11-05",
+          "priceUsd": 2423.08
+        },
+        {
+          "date": "2026-11-06",
+          "priceUsd": 2235.77
+        },
+        {
+          "date": "2026-11-07",
+          "priceUsd": 2236.28
+        },
+        {
+          "date": "2026-11-08",
+          "priceUsd": 2237.05
+        },
+        {
+          "date": "2026-11-09",
+          "priceUsd": 2124.38
+        },
+        {
+          "date": "2026-11-10",
+          "priceUsd": 2132.14
+        },
+        {
+          "date": "2026-11-11",
+          "priceUsd": 2050.34
+        },
+        {
+          "date": "2026-11-12",
+          "priceUsd": 2055.37
+        },
+        {
+          "date": "2026-11-13",
+          "priceUsd": 2017.35
+        },
+        {
+          "date": "2026-11-14",
+          "priceUsd": 1932.28
+        },
+        {
+          "date": "2026-11-15",
+          "priceUsd": 1768.45
+        },
+        {
+          "date": "2026-11-16",
+          "priceUsd": 1823.33
+        }
+      ]
+    }
+  ],
+  "topGainers": [
+    {
+      "symbol": "PIEVERSE",
+      "name": "Pieverse",
+      "priceUsd": 1.82,
+      "change7dPct": 24.26,
+      "marketCapUsd": 501158881
+    },
+    {
+      "symbol": "NIGHT",
+      "name": "Midnight",
+      "priceUsd": 0.04720919,
+      "change7dPct": 20.39,
+      "marketCapUsd": 784021913
+    },
+    {
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "priceUsd": 0.263074,
+      "change7dPct": 11.41,
+      "marketCapUsd": 873241094
+    },
+    {
+      "symbol": "GRAM",
+      "name": "Gram (prev. Toncoin)",
+      "priceUsd": 1.058,
+      "change7dPct": 4.63,
+      "marketCapUsd": 3023893035
+    },
+    {
+      "symbol": "JST",
+      "name": "JUST",
+      "priceUsd": 0.144901,
+      "change7dPct": 2.44,
+      "marketCapUsd": 1161815804
+    }
+  ],
+  "topLosers": [
+    {
+      "symbol": "BTW",
+      "name": "Bitway",
+      "priceUsd": 0.48421,
+      "change7dPct": -56.18,
+      "marketCapUsd": 729117196
+    },
+    {
+      "symbol": "RAIN",
+      "name": "Rain",
+      "priceUsd": 0.0034635,
+      "change7dPct": -29.96,
+      "marketCapUsd": 2474359185
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "priceUsd": 896.24,
+      "change7dPct": -27.42,
+      "marketCapUsd": 15275484545
+    },
+    {
+      "symbol": "PEPE",
+      "name": "Pepe",
+      "priceUsd": 0.00000383,
+      "change7dPct": -25.18,
+      "marketCapUsd": 1612538621
+    },
+    {
+      "symbol": "UNI",
+      "name": "Uniswap",
+      "priceUsd": 5.2,
+      "change7dPct": -25.06,
+      "marketCapUsd": 3161180522
+    }
+  ],
+  "heatmapTop20": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "priceUsd": 65087,
+      "change7dPct": -13.34,
+      "marketCapUsd": 1309078933291
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "priceUsd": 1822.3,
+      "change7dPct": -14.87,
+      "marketCapUsd": 222729610891
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "priceUsd": 593.72,
+      "change7dPct": -13.6,
+      "marketCapUsd": 78080037838
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "priceUsd": 0.964466,
+      "change7dPct": -13.38,
+      "marketCapUsd": 61259617369
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "priceUsd": 72.12,
+      "change7dPct": -17.83,
+      "marketCapUsd": 42669875726
+    },
+    {
+      "symbol": "TRX",
+      "name": "TRON",
+      "priceUsd": 0.303626,
+      "change7dPct": -4.75,
+      "marketCapUsd": 28857474366
+    },
+    {
+      "symbol": "FIGR_HELOC",
+      "name": "Figure Heloc",
+      "priceUsd": 1.057,
+      "change7dPct": -0.83,
+      "marketCapUsd": 28185645764
+    },
+    {
+      "symbol": "HYPE",
+      "name": "Hyperliquid",
+      "priceUsd": 66.54,
+      "change7dPct": -10.92,
+      "marketCapUsd": 15818708745
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "priceUsd": 896.24,
+      "change7dPct": -27.42,
+      "marketCapUsd": 15275484545
+    },
+    {
+      "symbol": "XMR",
+      "name": "Monero",
+      "priceUsd": 499.5,
+      "change7dPct": -17.25,
+      "marketCapUsd": 9406300081
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "priceUsd": 0.05935,
+      "change7dPct": -14.92,
+      "marketCapUsd": 9304015949
+    },
+    {
+      "symbol": "LEO",
+      "name": "LEO Token",
+      "priceUsd": 9.17,
+      "change7dPct": -1.37,
+      "marketCapUsd": 8433373780
+    },
+    {
+      "symbol": "WBT",
+      "name": "WhiteBIT Coin",
+      "priceUsd": 62.97,
+      "change7dPct": -13.17,
+      "marketCapUsd": 7472208474
+    },
+    {
+      "symbol": "LINK",
+      "name": "Chainlink",
+      "priceUsd": 9.22,
+      "change7dPct": -12.59,
+      "marketCapUsd": 7072231239
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "priceUsd": 0.154091,
+      "change7dPct": -13.07,
+      "marketCapUsd": 5789662532
+    },
+    {
+      "symbol": "XLM",
+      "name": "Stellar",
+      "priceUsd": 0.139811,
+      "change7dPct": -5.3,
+      "marketCapUsd": 4950379254
+    },
+    {
+      "symbol": "BCH",
+      "name": "Bitcoin Cash",
+      "priceUsd": 209.26,
+      "change7dPct": -13.26,
+      "marketCapUsd": 4209792542
+    },
+    {
+      "symbol": "NEAR",
+      "name": "NEAR Protocol",
+      "priceUsd": 3.21,
+      "change7dPct": -11.61,
+      "marketCapUsd": 4205986234
+    },
+    {
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "priceUsd": 45.06,
+      "change7dPct": -11.12,
+      "marketCapUsd": 3507239048
+    },
+    {
+      "symbol": "CC",
+      "name": "Canton",
+      "priceUsd": 0.084118,
+      "change7dPct": -7.24,
+      "marketCapUsd": 3369810232
+    }
+  ],
+  "stablecoins": {
+    "totalUsd": 288855963584.86993,
+    "change7dPct": -1.42,
+    "top": [
+      {
+        "symbol": "USDT",
+        "circulatingUsd": 175355245222.3266,
+        "change7dPct": -0.87
+      },
+      {
+        "symbol": "USDC",
+        "circulatingUsd": 69307842617.03989,
+        "change7dPct": -1.74
+      },
+      {
+        "symbol": "USDS",
+        "circulatingUsd": 5351096149.199845,
+        "change7dPct": -1.48
+      },
+      {
+        "symbol": "USDe",
+        "circulatingUsd": 4877422840.809477,
+        "change7dPct": -1.85
+      },
+      {
+        "symbol": "DAI",
+        "circulatingUsd": 4623177391.452245,
+        "change7dPct": -1
+      }
+    ],
+    "series30d": [
+      {
+        "date": "2026-10-18",
+        "value": 304234859109
+      },
+      {
+        "date": "2026-10-19",
+        "value": 304187024875
+      },
+      {
+        "date": "2026-10-20",
+        "value": 303297185335
+      },
+      {
+        "date": "2026-10-21",
+        "value": 303092726177
+      },
+      {
+        "date": "2026-10-22",
+        "value": 303264583111
+      },
+      {
+        "date": "2026-10-23",
+        "value": 302822665559
+      },
+      {
+        "date": "2026-10-24",
+        "value": 302390435292
+      },
+      {
+        "date": "2026-10-25",
+        "value": 302193414728
+      },
+      {
+        "date": "2026-10-26",
+        "value": 301871823819
+      },
+      {
+        "date": "2026-10-27",
+        "value": 301141433757
+      },
+      {
+        "date": "2026-10-28",
+        "value": 301174159649
+      },
+      {
+        "date": "2026-10-29",
+        "value": 299685267493
+      },
+      {
+        "date": "2026-10-30",
+        "value": 299345985858
+      },
+      {
+        "date": "2026-10-31",
+        "value": 298726686711
+      },
+      {
+        "date": "2026-11-01",
+        "value": 298136559808
+      },
+      {
+        "date": "2026-11-02",
+        "value": 297394739109
+      },
+      {
+        "date": "2026-11-03",
+        "value": 296480640536
+      },
+      {
+        "date": "2026-11-04",
+        "value": 295630877665
+      },
+      {
+        "date": "2026-11-05",
+        "value": 295146308907
+      },
+      {
+        "date": "2026-11-06",
+        "value": 294343170279
+      },
+      {
+        "date": "2026-11-07",
+        "value": 293221007236
+      },
+      {
+        "date": "2026-11-08",
+        "value": 293277298096
+      },
+      {
+        "date": "2026-11-09",
+        "value": 293005626593
+      },
+      {
+        "date": "2026-11-10",
+        "value": 292141224007
+      },
+      {
+        "date": "2026-11-11",
+        "value": 291229500972
+      },
+      {
+        "date": "2026-11-12",
+        "value": 290839665828
+      },
+      {
+        "date": "2026-11-13",
+        "value": 289529915113
+      },
+      {
+        "date": "2026-11-14",
+        "value": 288797138894
+      },
+      {
+        "date": "2026-11-15",
+        "value": 288843433295
+      },
+      {
+        "date": "2026-11-16",
+        "value": 288855963584.86993
+      }
+    ]
+  },
+  "defi": {
+    "tvlUsd": 71345982533,
+    "change7dPct": -9.77,
+    "dexVolume7dUsd": 62579148647.22,
+    "dexChange7dPct": 3.45,
+    "series30d": [
+      {
+        "date": "2026-10-18",
+        "value": 87065935234
+      },
+      {
+        "date": "2026-10-19",
+        "value": 87746120475
+      },
+      {
+        "date": "2026-10-20",
+        "value": 87391272027
+      },
+      {
+        "date": "2026-10-21",
+        "value": 88710762276
+      },
+      {
+        "date": "2026-10-22",
+        "value": 89237622729
+      },
+      {
+        "date": "2026-10-23",
+        "value": 87136695470
+      },
+      {
+        "date": "2026-10-24",
+        "value": 86786904795
+      },
+      {
+        "date": "2026-10-25",
+        "value": 86569456329
+      },
+      {
+        "date": "2026-10-26",
+        "value": 85844514779
+      },
+      {
+        "date": "2026-10-27",
+        "value": 85317124928
+      },
+      {
+        "date": "2026-10-28",
+        "value": 85737426972
+      },
+      {
+        "date": "2026-10-29",
+        "value": 85937609962
+      },
+      {
+        "date": "2026-10-30",
+        "value": 81456155137
+      },
+      {
+        "date": "2026-10-31",
+        "value": 82252557900
+      },
+      {
+        "date": "2026-11-01",
+        "value": 82269772424
+      },
+      {
+        "date": "2026-11-02",
+        "value": 82642097805
+      },
+      {
+        "date": "2026-11-03",
+        "value": 81877849434
+      },
+      {
+        "date": "2026-11-04",
+        "value": 81866734519
+      },
+      {
+        "date": "2026-11-05",
+        "value": 85037358319
+      },
+      {
+        "date": "2026-11-06",
+        "value": 80824763793
+      },
+      {
+        "date": "2026-11-07",
+        "value": 80835315181
+      },
+      {
+        "date": "2026-11-08",
+        "value": 80867964626
+      },
+      {
+        "date": "2026-11-09",
+        "value": 79073057186
+      },
+      {
+        "date": "2026-11-10",
+        "value": 78879928939
+      },
+      {
+        "date": "2026-11-11",
+        "value": 77351196013
+      },
+      {
+        "date": "2026-11-12",
+        "value": 77819793576
+      },
+      {
+        "date": "2026-11-13",
+        "value": 76590134839
+      },
+      {
+        "date": "2026-11-14",
+        "value": 74329799089
+      },
+      {
+        "date": "2026-11-15",
+        "value": 70225425288
+      },
+      {
+        "date": "2026-11-16",
+        "value": 71345982533
+      }
+    ]
+  },
+  "fearGreed": {
+    "value": 10,
+    "labelMn": "Хэт айдас",
+    "value7dAgo": 29,
+    "series7d": [
+      {
+        "date": "2026-11-10",
+        "value": 32
+      },
+      {
+        "date": "2026-11-11",
+        "value": 29
+      },
+      {
+        "date": "2026-11-12",
+        "value": 28
+      },
+      {
+        "date": "2026-11-13",
+        "value": 20
+      },
+      {
+        "date": "2026-11-14",
+        "value": 13
+      },
+      {
+        "date": "2026-11-15",
+        "value": 10
+      },
+      {
+        "date": "2026-11-16",
+        "value": 10
+      }
+    ]
+  },
+  "fx": {
+    "usdMnt": 3610.019261,
+    "source": "exchangerate-api",
+    "asOf": "2026-11-16T00:02:31.000Z"
+  },
+  "trending": [
+    {
+      "symbol": "PENGU",
+      "name": "Pudgy Penguins"
+    },
+    {
+      "symbol": "DACITYCOIN",
+      "name": "AudaCity"
+    },
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana"
+    },
+    {
+      "symbol": "ASTER",
+      "name": "Aster"
+    },
+    {
+      "symbol": "MACCA",
+      "name": "Macca the Gator"
+    },
+    {
+      "symbol": "HYPE",
+      "name": "Hyperliquid"
+    }
+  ],
+  "newsCandidates": [
+    {
+      "id": "9c0bc3792dd2",
+      "title": "СЗХ-ны зохицуулалт бүхий байгууллагуудаас УИХ-ын даргад хандан хүсэлт хүргүүлж байна",
+      "url": "https://ikon.mn/n/3rmf",
+      "source": "Ikon.mn",
+      "sourceUrl": "https://ikon.mn",
+      "publishedAt": "2026-11-11T04:01:00.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": true
+    },
+    {
+      "id": "063b626dfff6",
+      "title": "Louisiana AG calls CFTC chair an ‘obsequious standard bearer’ for prediction markets following agency lawsuit",
+      "url": "https://www.theblock.co/news/regulation/2026-11-14-louisiana-ag-calls-cftc-chair-an-obsequious-standard-bearer-for-prediction-markets-following-agency-lawsuit-440342",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-14T19:06:59.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "bc12da510cb0",
+      "title": "Tether wants its gold token to rival ETFs",
+      "url": "https://cryptoslate.com/tether-wants-its-gold-token-to-rival-etfs",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-15T17:25:18.000Z",
+      "tags": [
+        "etf",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "94375fcedff7",
+      "title": "Coinone warns of phishing, identity theft after customer data breach",
+      "url": "https://cointelegraph.com/news/coinone-data-breach-phishing-identity-theft-customer-information",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-15T08:07:58.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "3368737bc3df",
+      "title": "How Wall Street Is Racing to Claim the Onchain Dollar",
+      "url": "https://decrypt.co/383284/how-wall-street-racing-onchain-dollar-stablecoins",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-15T16:01:02.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9290f661ffd2",
+      "title": "How $10,000 in stablecoins would have gained €420 without earning interest",
+      "url": "https://cryptoslate.com/how-10000-in-stablecoins-would-have-gained-e420-without-earning-interest",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-15T16:30:56.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "9812bf8e36aa",
+      "title": "Lido’s lending plan could block loan repayments without stopping interest",
+      "url": "https://cryptoslate.com/lidos-lending-plan-could-block-loan-repayments-without-stopping-interest",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-15T08:00:11.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5694955e7c25",
+      "title": "Bitcoin miners pay Paraguay $350 million a year, but AI is pushing them out",
+      "url": "https://www.coindesk.com/tech/2026/11/13/bitcoin-miners-pay-paraguay-usd350-million-a-year-but-ai-is-pushing-them-out",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-13T23:30:00.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "568fb5b209f1",
+      "title": "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
+      "url": "https://cointelegraph.com/magazine/us-sellers-drive-bitcoin-crash-jensen-plots-comeback-hodlers-digest",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-15T22:50:59.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0a9ac72a18d0",
+      "title": "MiCA gave crypto a passport, but customers still face borders",
+      "url": "https://cryptoslate.com/mica-gave-crypto-a-passport-but-customers-still-face-borders",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-14T18:40:48.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "194e451348a0",
+      "title": "Bitcoin now looks cheap by one measure after $1 billion in ETF outflows",
+      "url": "https://cryptoslate.com/bitcoins-new-value-alert-still-needs-proof-that-buyers-can-absorb-supply",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-15T15:35:58.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b1a1485a5283",
+      "title": "AI helped hackers gain access at 10 unnamed organizations, researchers say",
+      "url": "https://cryptoslate.com/ai-helped-hackers-gain-access-at-10-organizations-researchers-say",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-15T05:20:04.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "feee366f7624",
+      "title": "The Fed could rescue bond markets and still make life harder for Bitcoin",
+      "url": "https://cryptoslate.com/fed-bond-market-rescue-could-still-hurt-bitcoin",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-15T12:50:56.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c6edf19e65a2",
+      "title": "UK, Singapore, and Thailand central banks test cross-border FX settlement as stablecoins gain ground",
+      "url": "https://www.coindesk.com/policy/2026/11/14/uk-singapore-and-thailand-central-banks-test-cross-border-fx-settlement-as-stablecoins-gain-ground",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-14T15:00:00.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0379a2dfbd75",
+      "title": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
+      "url": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-15T06:27:26.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    }
+  ],
+  "hacks": [
+    {
+      "name": "Hyprearn Perps",
+      "date": "2026-11-14",
+      "amountUsd": null
+    },
+    {
+      "name": "Kava Lend",
+      "date": "2026-11-14",
+      "amountUsd": 3700000
+    },
+    {
+      "name": "Pennysia",
+      "date": "2026-11-13",
+      "amountUsd": 5131
+    },
+    {
+      "name": "Edel",
+      "date": "2026-11-12",
+      "amountUsd": 300000
+    },
+    {
+      "name": "Rujira AMM Strategies",
+      "date": "2026-11-11",
+      "amountUsd": 200000
+    },
+    {
+      "name": "Arcus Perps",
+      "date": "2026-11-10",
+      "amountUsd": 2234391
+    },
+    {
+      "name": "Across",
+      "date": "2026-11-10",
+      "amountUsd": null
+    },
+    {
+      "name": "Initia",
+      "date": "2026-11-10",
+      "amountUsd": 615000
+    },
+    {
+      "name": "Ankr Bridge",
+      "date": "2026-11-09",
+      "amountUsd": 304500
+    }
+  ],
+  "suggestedSentences": [
+    "Биткойн 7 хоногт 13.3 хувиар буурч, 65,087 ам.долларт хүрлээ.",
+    "Криптогийн нийт зах зээлийн үнэлгээ 2.19 их наяд ам.доллар болж, 7 хоногт 12.5 хувиар буурлаа.",
+    "Биткойны давамгайлал 59.4 хувь боллоо (өмнөх 7 хоногт 60.2 хувь).",
+    "Стейблкойны нийт нийлүүлэлт 288.9 тэрбум ам.доллар, 7 хоногт 1.4 хувиар буурлаа.",
+    "Айдас ба шунахайн индекс 10 (Хэт айдас) байна, өмнөх 7 хоногт 29 байсан.",
+    "DeFi-д түгжигдсэн нийт хөрөнгө (TVL) 71.3 тэрбум ам.доллар байна, 7 хоногт 9.8 хувиар буурлаа.",
+    "Этериум 7 хоногт 14.9 хувиар буурч, 1,822 ам.долларт хүрлээ.",
+    "Топ 100-аас хамгийн их өссөн нь PIEVERSE (+24.3%)."
+  ],
+  "sources": [
+    {
+      "id": "coingecko",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    },
+    {
+      "id": "defillama-tvl",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    },
+    {
+      "id": "defillama-stablecoins",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    },
+    {
+      "id": "feargreed",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    },
+    {
+      "id": "defillama-dexs",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    },
+    {
+      "id": "fx",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    },
+    {
+      "id": "defillama-hacks",
+      "ok": true,
+      "fetchedAt": "2026-11-16T03:15:49.477Z"
+    }
+  ]
+}
