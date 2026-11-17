@@ -112,6 +112,18 @@
       "isMongolia": false
     },
     {
+      "id": "99e5597ef4c6",
+      "title": "Peruvian Bull: The Yen Carry Trade and Bitcoin’s Road to $300k",
+      "url": "https://bitcoinmagazine.com/videos/peruvian-bull-the-yen-carry-trade-and-bitcoins-road-to-300k",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-15T15:00:05.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "edeff92cb23b",
       "title": "Robots now run AI-written code without an AI calling the shots, succeeding 92% of the time",
       "url": "https://cryptoslate.com/robot-code-runs-without-ai-calling-the-shots",
@@ -228,6 +240,18 @@
       "publishedAt": "2026-11-15T08:00:11.000Z",
       "tags": [
         "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "eb6b4e9ad5b2",
+      "title": "Changing of Lagarde: How the candidates to be next ECB president view bitcoin, stablecoins and CBDCs",
+      "url": "https://www.coindesk.com/policy/2026/11/14/changing-of-lagarde-how-the-candidates-to-be-next-ecb-president-view-bitcoin-stablecoins-and-cbdcs",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-15T07:00:00.000Z",
+      "tags": [
+        "stablecoin"
       ],
       "isMongolia": false
     },
@@ -5987,30 +6011,6 @@
       "publishedAt": "2026-11-09T19:52:34.000Z",
       "tags": [
         "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "ea0e58439c3e",
-      "title": "Robinhood backs tokenization of its stock on OKX–ICE platform even as most companies opt out",
-      "url": "https://www.coindesk.com/business/2026/11/09/robinhood-backs-tokenization-of-its-stock-on-okx-ice-platform-even-as-most-companies-opt-out",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-09T19:36:15.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "4a0064c977d5",
-      "title": "Binance Hack Launderers Mint Elon Musk and Animal Meme Coins to Move Stolen Crypto",
-      "url": "https://decrypt.co/382873/binance-hack-elon-musk-animal-meme-coins-launder-stolen-crypto",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-09T19:36:02.000Z",
-      "tags": [
-        "security"
       ],
       "isMongolia": false
     }
