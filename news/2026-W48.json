@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "week": "2026-W48",
+  "items": [
+    {
+      "id": "10f4b55b116b",
+      "title": "Repaying a Bitcoin-backed loan on Sui can leave you waiting to withdraw native BTC",
+      "url": "https://cryptoslate.com/repaying-a-bitcoin-backed-loan-on-sui-can-leave-you-waiting-to-withdraw-native-btc",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-23T02:05:39.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "56387471accc",
+      "title": "Claude-assisted proof of Riemann hypothesis validated by independent checkers",
+      "url": "https://cryptoslate.com/claude-assisted-proof-of-riemann-hypothesis-validated-by-independent-checkers",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-23T01:05:55.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b0bf6395d760",
+      "title": "Half of wallets on Trump’s dinner list got tokens from non-US exchanges",
+      "url": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-23T00:53:49.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "1dc46cd0d692",
+      "title": "AI banking agent scored 100% on its own tests then failed 92 of 97 real-world simulations",
+      "url": "https://cryptoslate.com/ai-banking-agent-scored-100-on-its-own-tests-then-failed-92-of-97-real-world-simulations",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-23T00:05:40.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    }
+  ]
+}

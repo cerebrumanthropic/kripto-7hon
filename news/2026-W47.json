@@ -3,6 +3,307 @@
   "week": "2026-W47",
   "items": [
     {
+      "id": "a79e8b82803b",
+      "title": "A $2 million exploit leads to a $3.7 million free-for-all as traders empty Fusionist’s ACE bridge",
+      "url": "https://www.theblock.co/news/defi/2026-11-22-a-2-million-exploit-leads-to-a-3-7-million-free-for-all-as-traders-empty-fusionists-ace-bridge-444838",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-22T23:17:08.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "59f1dacec26d",
+      "title": "Bithumb halts CYBER deposits and withdrawals while trading stays open",
+      "url": "https://cryptoslate.com/bithumb-halts-cyber-deposits-and-withdrawals-while-trading-stays-open",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T23:05:26.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a4537224b7d2",
+      "title": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
+      "url": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-22T22:47:09.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6def0838b47a",
+      "title": "Senators want state-licensed firms to keep issuing stablecoins after Jan. 18",
+      "url": "https://cryptoslate.com/senators-want-state-licensed-firms-to-keep-issuing-stablecoins-after-jan-18",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T22:05:49.000Z",
+      "tags": [
+        "regulation",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "7469cb374616",
+      "title": "XRP Ledger trial settled 213,000 paid AI requests in 6,324 transactions",
+      "url": "https://cryptoslate.com/xrp-ledger-trial-settled-213000-paid-ai-requests-in-6324-transactions",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T21:05:16.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b24568265a76",
+      "title": "Trump to host second memecoin dinner tonight with TRUMP down 99% from peak",
+      "url": "https://www.theblock.co/news/ecosystems/2026-11-22-trump-to-host-second-memecoin-dinner-tonight-with-trump-down-99-from-peak-444828",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-22T20:58:33.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d234370a1c21",
+      "title": "AI just exposed a major weakness in anonymous peer reviews",
+      "url": "https://cryptoslate.com/ai-just-exposed-a-major-weakness-in-anonymous-peer-reviews",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T20:05:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "940e55205b44",
+      "title": "More on the pending oversight hearings: State of Crypto",
+      "url": "https://www.coindesk.com/",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-22T19:30:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8ae3a6d89b36",
+      "title": "Wagyu’s $13.5 million token crash exposes another coin with 99.9% held by one wallet",
+      "url": "https://cryptoslate.com/wagyus-13-5-million-token-crash-exposes-another-coin-with-99-9-held-by-one-wallet",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T19:05:03.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2507a52e30d1",
+      "title": "Chainflip’s losses climb to $12 million after protocol discloses 122.9 BTC theft, offers hacker bounty",
+      "url": "https://www.theblock.co/news/defi/2026-11-22-chainflips-losses-climb-to-12-million-after-protocol-discloses-122-9-btc-theft-offers-hacker-bounty-444829",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-22T18:58:57.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6a00a45d63ca",
+      "title": "UK to ban crypto exchanges from making markets on their own platforms as Bitcoin rules change",
+      "url": "https://cryptoslate.com/uk-to-ban-crypto-exchanges-from-making-markets-on-their-own-platforms-as-bitcoin-rules-change",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T18:05:49.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "5dc5d1594d8f",
+      "title": "XRP’s institutional adoption story has a catch that investors may be overlooking",
+      "url": "https://cryptoslate.com/xrps-institutional-adoption-story-has-a-catch-that-investors-may-be-overlooking",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T17:05:07.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "846af37f07d5",
+      "title": "Chainflip users face frozen withdrawals after $4.86 million vanishes from Ethereum vault",
+      "url": "https://cryptoslate.com/chainflip-users-face-frozen-withdrawals-after-4-86-million-vanishes-from-ethereum-vault",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T16:05:55.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6318dc36fd47",
+      "title": "AI agents built their own scientific journal and found that reviewing research was harder than expected",
+      "url": "https://cryptoslate.com/ai-reviewers-flagged-corrected-drafts-almost-as-often-as-flawed-ones",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T15:00:11.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "15d3f0ab77c8",
+      "title": "Bitcoin reclaims $61,000 before giving back a third of the weekend rally",
+      "url": "https://cryptoslate.com/bitcoin-reclaims-61000-before-giving-back-a-third-of-that-rally",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T14:30:34.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "e617de6ab327",
+      "title": "The future of onchain FX could start with users, not institutional liquidity",
+      "url": "https://cointelegraph.com/opinion/future-onchain-fx-could-start-with-users-not-institutional-liquidity",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-22T14:30:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d85a97bebee8",
+      "title": "Google's Quantum Chip Beats Classical Limits in 'Impossible' Game",
+      "url": "https://decrypt.co/383743/googles-quantum-chip-beats-classical-limits-in-impossible-game-tests-105-qubits",
+      "source": "Decrypt",
+      "sourceUrl": "https://decrypt.co",
+      "publishedAt": "2026-11-22T14:01:02.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "22898468999e",
+      "title": "Deribit outage hit Bitcoin hedgers on Coinbase",
+      "url": "https://cryptoslate.com/deribit-outage-hit-bitcoin-hedgers-on-coinbase",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T14:00:44.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "ffae009bc0b1",
+      "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
+      "url": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-22T14:00:00.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "15d34d215af7",
+      "title": "Bitcoin’s next big threat could come from two oil tankers in the Middle East",
+      "url": "https://cryptoslate.com/two-hormuz-tanker-strikes-threaten-a-potential-source-of-relief-for-bitcoin",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T13:00:09.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "80b4b29a9acf",
+      "title": "Bitcoin’s $60,000 breakdown puts December Fed decision under the spotlight",
+      "url": "https://cryptoslate.com/bitcoin-below-60000-fed-half-point-cpi",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T12:00:04.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8169d7dc0073",
+      "title": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
+      "url": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-22T09:33:06.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c3430f9ace58",
+      "title": "Bitcoin shorts collapsed 79% in five weeks, then the market turned lower",
+      "url": "https://cryptoslate.com/bitcoin-shorts-collapsed-79-in-five-weeks-then-the-market-turned-lower",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T09:30:45.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "802a4c21fbe8",
+      "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
+      "url": "https://cointelegraph.com/news/upbit-bithumb-suspend-cyber-transfers-bridge-exploit",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-22T07:24:05.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0985b71f3d0a",
+      "title": "Chainflip confirms $12M hack, offers attacker 10% bounty",
+      "url": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-22T05:28:43.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "750c7aa546d4",
       "title": "Hackers swapped a hosted DeepSeek model for 53 hours and stripped away its safety protections",
       "url": "https://cryptoslate.com/hackers-swapped-a-hosted-deepseek-model-for-53-hours-and-stripped-away-its-safety-protections",
@@ -193,6 +494,18 @@
       "source": "Decrypt",
       "sourceUrl": "https://decrypt.co",
       "publishedAt": "2026-11-21T14:01:06.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "0e90985b9591",
+      "title": "OpenAI, Anthropic and rivals seek AI agent rules to prevent commerce chaos",
+      "url": "https://www.coindesk.com/tech/2026/11/21/openai-anthropic-and-rivals-seek-ai-agent-rules-to-prevent-commerce-chaos",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-21T14:00:00.000Z",
       "tags": [
         "market"
       ],
@@ -5707,319 +6020,6 @@
       "source": "CoinDesk",
       "sourceUrl": "https://www.coindesk.com",
       "publishedAt": "2026-11-16T20:35:21.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "3c96d9ffd0f3",
-      "title": "Rob Hamilton: The AI “Black Hole” is Pulling Liquidity Away from Bitcoin",
-      "url": "https://bitcoinmagazine.com/videos/rob-hamilton-the-ai-black-hole-is-pulling-liquidity-away-from-bitcoin",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-16T20:35:17.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "c7826edae999",
-      "title": "Peraire-Bueno brothers acquitted of wire fraud in $25 million Ethereum MEV case",
-      "url": "https://www.theblock.co/news/regulation/2026-11-16-peraire-bueno-brothers-acquitted-ethereum-mev-wire-fraud-441425",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-16T20:30:37.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "04d9d2c3d1a7",
-      "title": "Bitwise sees Solana reaching $1,100 by 2031 in bull case as onchain trading grows",
-      "url": "https://www.theblock.co/news/markets/2026-11-16-bitwise-solana-price-prediction-1100-2031-441407",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-16T20:27:32.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "facc098f1ecd",
-      "title": "Boris Johnson says UK must lead blockchain development despite crypto doubts",
-      "url": "https://cointelegraph.com/news/boris-johnson-uk-must-lead-blockchain-development-despite-crypto-doubts",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-16T20:18:02.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "cab2ac1828a8",
-      "title": "XRP’s proposed upgrade could improve trading without boosting token demand",
-      "url": "https://cryptoslate.com/xrps-proposed-upgrade-could-improve-trading-without-boosting-token-demand",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-16T20:10:19.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "f4d94c9f6613",
-      "title": "Coinbase and Broadridge propose standard for tokenized stock disclosures",
-      "url": "https://cointelegraph.com/news/coinbase-broadridge-tokenized-stock-shareholder-notices",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-16T19:56:18.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "451e7eea40fb",
-      "title": "T. Rowe Price’s Blue Macellari: Institutions “Not Backing Away” From Bitcoin",
-      "url": "https://bitcoinmagazine.com/videos/t-rowe-prices-blue-macellari-institutions-not-backing-away-from-bitcoin",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-16T19:44:40.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "95c9bc0e6110",
-      "title": "Jensen Huang has just 14% chance of Nvidia return this year despite Trump backing",
-      "url": "https://cryptoslate.com/jensen-huang-has-just-14-chance-of-nvidia-return-this-year-despite-trump-backing",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-16T19:40:56.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5871a52638e2",
-      "title": "Clarity Act Defeat ‘Failure of American Leadership’: Trump’s Former Crypto Chief",
-      "url": "https://decrypt.co/383356/clarity-act-defeat-failure-of-american-leadership-trumps-former-crypto-chief",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-16T19:36:03.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "11e42e22712c",
-      "title": "$36B Wealth Firm Strategist: Bitcoin’s Supercycle Is “Still Intact”",
-      "url": "https://bitcoinmagazine.com/videos/36b-wealth-firm-strategist-bitcoins-supercycle-is-still-intact",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-16T19:17:14.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "d5e6a22f64dc",
-      "title": "Bitcoin flashes false recovery warning as $64 billion futures frenzy masks weak demand",
-      "url": "https://cryptoslate.com/bitcoin-flashes-false-recovery-warning-as-64-billion-futures-frenzy-masks-weak-demand",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-16T19:10:29.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "be016cb5410c",
-      "title": "Trump Backs Jensen Huang’s Return to Nvidia as Sam Altman Says 'Heroes Have Flaws'",
-      "url": "https://decrypt.co/383351/trump-elon-musk-sam-altman-jensen-huang-nvidia",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-16T19:05:02.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "f8d0d161b4be",
-      "title": "Solflare CEO says AI security reviews are essential, touts ‘bunker mode’ and MoneyGram deal",
-      "url": "https://www.theblock.co/news/defi/2026-11-16-solflare-ceo-ai-security-reviews-bunker-mode-moneygram-441396",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-16T18:59:21.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "60f1cc93369f",
-      "title": "U.S. Senate Democrats tell CFTC to back off its demand prediction markets defy bans",
-      "url": "https://www.coindesk.com/policy/2026/11/16/u-s-senate-democrats-tell-cftc-to-back-off-its-demand-prediction-markets-defy-bans",
-      "source": "CoinDesk",
-      "sourceUrl": "https://www.coindesk.com",
-      "publishedAt": "2026-11-16T18:54:19.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "1525a2484977",
-      "title": "Winklevoss-backed Cypherpunk buys Zcash dip as mining debut delivers $2.6 million operating profit",
-      "url": "https://www.theblock.co/news/business/2026-11-16-winklevoss-cypherpunk-buys-zcash-dip-mining-debut-delivers-2-6-million-operating-profit-441392",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-16T18:43:19.000Z",
-      "tags": [
-        "mining"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "8196e223df90",
-      "title": "Fed Is Modeling AI 'Super Intelligence' Scenarios, Including Job Losses and a Stock Market Slump",
-      "url": "https://decrypt.co/383354/fed-modeling-ai-super-intelligence-scenarios-job-losses-stock-market",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-16T18:36:44.000Z",
-      "tags": [
-        "macro"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "29bdc630e50f",
-      "title": "German Bundestag Lets Customs Freeze Crypto Over €100,000 Without a Criminal Case as the Bill Goes to the Bundesrat",
-      "url": "https://bitcoinmagazine.com/news/german-bundestag-crypto-over-100000",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-16T18:15:00.000Z",
-      "tags": [
-        "regulation"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "278b7bf3d26d",
-      "title": "Nvidia turmoil tests Bitcoin miners’ AI funding plans",
-      "url": "https://cointelegraph.com/news/nvidia-turmoil-tests-bitcoin-miners-ai-funding-plans",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-16T18:07:49.000Z",
-      "tags": [
-        "mining"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "be534489f18c",
-      "title": "Nvidia Stock Has a 20% Rebound in Sight—If Bulls Can Clear a Hurdle",
-      "url": "https://decrypt.co/383334/nvidia-stock-rebound-in-sight-if-bulls-can-clear-hurdle",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-16T18:06:03.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "b76b61d35197",
-      "title": "Trezor patches crypto wallet spy chips but warns users a new device may not be enough",
-      "url": "https://cryptoslate.com/trezor-patches-crypto-wallet-spy-chips-but-warns-users-a-new-device-may-not-be-enough",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-16T18:00:03.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "1f18a0d9fe63",
-      "title": "Standard Chartered says Japan’s bond tokenization plans could help drive RWA market to $2 trillion",
-      "url": "https://www.theblock.co/news/web3/2026-11-16-japan-tokenized-government-bonds-standard-chartered-rwa-2-trillion-441384",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-16T17:54:24.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "e99907ece023",
-      "title": "Safe wallet reportedly loses $6.5M as Zodiac suspects key compromise",
-      "url": "https://cointelegraph.com/news/safe-wallet-reportedly-loses-millions-after-key-compromise",
-      "source": "Cointelegraph",
-      "sourceUrl": "https://cointelegraph.com",
-      "publishedAt": "2026-11-16T17:49:13.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "a793d93bdfb8",
-      "title": "Privacy on Solana is ‘non-negotiable’ for institutional adoption, Mert Mumtaz says",
-      "url": "https://www.theblock.co/news/ecosystems/2026-11-16-privacy-solana-non-negotiable-institutional-adoption-mert-mumtaz-says-441363",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-16T17:22:19.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "c406a83b0447",
-      "title": "Saylor’s Strategy Keeps Buying Bitcoin, Adding 'A Little Orange' Through the Dip",
-      "url": "https://decrypt.co/383347/saylor-strategy-buying-bitcoin-adding-little-orange-dip",
-      "source": "Decrypt",
-      "sourceUrl": "https://decrypt.co",
-      "publishedAt": "2026-11-16T17:20:26.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "c37214d8a86f",
-      "title": "Kava moves to shut down lending platform after hackers drain nearly $4 million",
-      "url": "https://cryptoslate.com/kava-moves-to-shut-down-lending-platform-after-hackers-drain-nearly-4-million",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-16T17:20:16.000Z",
-      "tags": [
-        "security",
-        "defi"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "6f9337b41017",
-      "title": "George Mekhail: Bitcoin’s Price Is a “Distraction” as Wall Street Quietly Accumulates",
-      "url": "https://bitcoinmagazine.com/videos/george-mekhail-bitcoins-price-is-a-distraction-as-wall-street-quietly-accumulates",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-16T17:15:17.000Z",
       "tags": [
         "market"
       ],
