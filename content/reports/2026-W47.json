@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": 1,
+  "week": "2026-W47",
+  "periodStart": "2026-11-16",
+  "periodEnd": "2026-11-22",
+  "cutoffUtc": "2026-11-22T23:59:59Z",
+  "fetchedAt": "2026-11-23T04:05:47.988Z",
+  "global": {
+    "totalMarketCapUsd": 2089071632172.2947,
+    "totalMarketCapUsd7dAgo": 2178235361669,
+    "change7dPct": -4.09,
+    "change7dMethod": "history",
+    "btcDominancePct": 58.86,
+    "btcDominancePct7dAgo": 59.29,
+    "ethDominancePct": 10.11,
+    "totalVolume24hUsd": 59979542107.67436
+  },
+  "majors": [
+    {
+      "symbol": "BTC",
+      "priceUsd": 61212,
+      "priceMnt": 221957645,
+      "change7dPct": -5.98,
+      "change30dPct": -24.24,
+      "chart30d": [
+        {
+          "date": "2026-10-25",
+          "priceUsd": 80810.57
+        },
+        {
+          "date": "2026-10-26",
+          "priceUsd": 80048.85
+        },
+        {
+          "date": "2026-10-27",
+          "priceUsd": 80029.43
+        },
+        {
+          "date": "2026-10-28",
+          "priceUsd": 80800.83
+        },
+        {
+          "date": "2026-10-29",
+          "priceUsd": 81274.37
+        },
+        {
+          "date": "2026-10-30",
+          "priceUsd": 77838.81
+        },
+        {
+          "date": "2026-10-31",
+          "priceUsd": 77275.05
+        },
+        {
+          "date": "2026-11-01",
+          "priceUsd": 77520.89
+        },
+        {
+          "date": "2026-11-02",
+          "priceUsd": 78293.84
+        },
+        {
+          "date": "2026-11-03",
+          "priceUsd": 76709.41
+        },
+        {
+          "date": "2026-11-04",
+          "priceUsd": 77384.59
+        },
+        {
+          "date": "2026-11-05",
+          "priceUsd": 80442.71
+        },
+        {
+          "date": "2026-11-06",
+          "priceUsd": 76005.51
+        },
+        {
+          "date": "2026-11-07",
+          "priceUsd": 75775.28
+        },
+        {
+          "date": "2026-11-08",
+          "priceUsd": 75776.38
+        },
+        {
+          "date": "2026-11-09",
+          "priceUsd": 74740.42
+        },
+        {
+          "date": "2026-11-10",
+          "priceUsd": 75266.77
+        },
+        {
+          "date": "2026-11-11",
+          "priceUsd": 73721.18
+        },
+        {
+          "date": "2026-11-12",
+          "priceUsd": 73974.39
+        },
+        {
+          "date": "2026-11-13",
+          "priceUsd": 71371.98
+        },
+        {
+          "date": "2026-11-14",
+          "priceUsd": 68313.71
+        },
+        {
+          "date": "2026-11-15",
+          "priceUsd": 64120.24
+        },
+        {
+          "date": "2026-11-16",
+          "priceUsd": 65305.28
+        },
+        {
+          "date": "2026-11-17",
+          "priceUsd": 64840.87
+        },
+        {
+          "date": "2026-11-18",
+          "priceUsd": 64889.41
+        },
+        {
+          "date": "2026-11-19",
+          "priceUsd": 62996.68
+        },
+        {
+          "date": "2026-11-20",
+          "priceUsd": 61921.36
+        },
+        {
+          "date": "2026-11-21",
+          "priceUsd": 58817.93
+        },
+        {
+          "date": "2026-11-22",
+          "priceUsd": 60121.3
+        },
+        {
+          "date": "2026-11-23",
+          "priceUsd": 61220.35
+        }
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "priceUsd": 1730.8,
+      "priceMnt": 6275964,
+      "change7dPct": -5.09,
+      "change30dPct": -26.54,
+      "chart30d": [
+        {
+          "date": "2026-10-25",
+          "priceUsd": 2356.57
+        },
+        {
+          "date": "2026-10-26",
+          "priceUsd": 2326.83
+        },
+        {
+          "date": "2026-10-27",
+          "priceUsd": 2320.67
+        },
+        {
+          "date": "2026-10-28",
+          "priceUsd": 2347.32
+        },
+        {
+          "date": "2026-10-29",
+          "priceUsd": 2357.47
+        },
+        {
+          "date": "2026-10-30",
+          "priceUsd": 2249.48
+        },
+        {
+          "date": "2026-10-31",
+          "priceUsd": 2242.5
+        },
+        {
+          "date": "2026-11-01",
+          "priceUsd": 2254.13
+        },
+        {
+          "date": "2026-11-02",
+          "priceUsd": 2273.92
+        },
+        {
+          "date": "2026-11-03",
+          "priceUsd": 2250.22
+        },
+        {
+          "date": "2026-11-04",
+          "priceUsd": 2273.63
+        },
+        {
+          "date": "2026-11-05",
+          "priceUsd": 2423.08
+        },
+        {
+          "date": "2026-11-06",
+          "priceUsd": 2235.77
+        },
+        {
+          "date": "2026-11-07",
+          "priceUsd": 2236.28
+        },
+        {
+          "date": "2026-11-08",
+          "priceUsd": 2237.05
+        },
+        {
+          "date": "2026-11-09",
+          "priceUsd": 2124.38
+        },
+        {
+          "date": "2026-11-10",
+          "priceUsd": 2132.14
+        },
+        {
+          "date": "2026-11-11",
+          "priceUsd": 2050.34
+        },
+        {
+          "date": "2026-11-12",
+          "priceUsd": 2055.37
+        },
+        {
+          "date": "2026-11-13",
+          "priceUsd": 2017.35
+        },
+        {
+          "date": "2026-11-14",
+          "priceUsd": 1932.28
+        },
+        {
+          "date": "2026-11-15",
+          "priceUsd": 1768.45
+        },
+        {
+          "date": "2026-11-16",
+          "priceUsd": 1834.53
+        },
+        {
+          "date": "2026-11-17",
+          "priceUsd": 1819.45
+        },
+        {
+          "date": "2026-11-18",
+          "priceUsd": 1822.96
+        },
+        {
+          "date": "2026-11-19",
+          "priceUsd": 1775.1
+        },
+        {
+          "date": "2026-11-20",
+          "priceUsd": 1755.59
+        },
+        {
+          "date": "2026-11-21",
+          "priceUsd": 1619.51
+        },
+        {
+          "date": "2026-11-22",
+          "priceUsd": 1682.85
+        },
+        {
+          "date": "2026-11-23",
+          "priceUsd": 1731.09
+        }
+      ]
+    }
+  ],
+  "topGainers": [
+    {
+      "symbol": "PIEVERSE",
+      "name": "Pieverse",
+      "priceUsd": 3.58,
+      "change7dPct": 90.12,
+      "marketCapUsd": 980964549
+    },
+    {
+      "symbol": "BTW",
+      "name": "Bitway",
+      "priceUsd": 0.709278,
+      "change7dPct": 40.23,
+      "marketCapUsd": 1070184031
+    },
+    {
+      "symbol": "VVV",
+      "name": "Venice Token",
+      "priceUsd": 26.85,
+      "change7dPct": 32.79,
+      "marketCapUsd": 1318316758
+    },
+    {
+      "symbol": "PEARL",
+      "name": "Pearl",
+      "priceUsd": 2.07,
+      "change7dPct": 26.87,
+      "marketCapUsd": 802530162
+    },
+    {
+      "symbol": "NIGHT",
+      "name": "Midnight",
+      "priceUsd": 0.04931253,
+      "change7dPct": 5.22,
+      "marketCapUsd": 818514922
+    }
+  ],
+  "topLosers": [
+    {
+      "symbol": "SKY",
+      "name": "Sky",
+      "priceUsd": 0.04106579,
+      "change7dPct": -23.9,
+      "marketCapUsd": 959245531
+    },
+    {
+      "symbol": "ENA",
+      "name": "Ethena",
+      "priceUsd": 0.101461,
+      "change7dPct": -15.32,
+      "marketCapUsd": 1369363421
+    },
+    {
+      "symbol": "LIT",
+      "name": "Lighter",
+      "priceUsd": 2.37,
+      "change7dPct": -15.13,
+      "marketCapUsd": 591827498
+    },
+    {
+      "symbol": "ARB",
+      "name": "Arbitrum",
+      "priceUsd": 0.115259,
+      "change7dPct": -14.8,
+      "marketCapUsd": 805989276
+    },
+    {
+      "symbol": "PUMP",
+      "name": "Pump.fun",
+      "priceUsd": 0.00252948,
+      "change7dPct": -13.36,
+      "marketCapUsd": 892831600
+    }
+  ],
+  "heatmapTop20": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "priceUsd": 61212,
+      "change7dPct": -5.98,
+      "marketCapUsd": 1231010420398
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "priceUsd": 1730.8,
+      "change7dPct": -5.09,
+      "marketCapUsd": 211481842076
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "priceUsd": 557.45,
+      "change7dPct": -6.29,
+      "marketCapUsd": 73281466382
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "priceUsd": 0.931892,
+      "change7dPct": -3.46,
+      "marketCapUsd": 59172869121
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "priceUsd": 71.28,
+      "change7dPct": -1.2,
+      "marketCapUsd": 42176855508
+    },
+    {
+      "symbol": "TRX",
+      "name": "TRON",
+      "priceUsd": 0.305101,
+      "change7dPct": 0.42,
+      "marketCapUsd": 29003874843
+    },
+    {
+      "symbol": "FIGR_HELOC",
+      "name": "Figure Heloc",
+      "priceUsd": 1.056,
+      "change7dPct": -0.91,
+      "marketCapUsd": 28644056454
+    },
+    {
+      "symbol": "HYPE",
+      "name": "Hyperliquid",
+      "priceUsd": 62.72,
+      "change7dPct": -5.98,
+      "marketCapUsd": 14903325855
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "priceUsd": 790.94,
+      "change7dPct": -11.97,
+      "marketCapUsd": 13467281708
+    },
+    {
+      "symbol": "XMR",
+      "name": "Monero",
+      "priceUsd": 498.44,
+      "change7dPct": 0.27,
+      "marketCapUsd": 9383201624
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "priceUsd": 0.055361,
+      "change7dPct": -6.71,
+      "marketCapUsd": 8682276112
+    },
+    {
+      "symbol": "LEO",
+      "name": "LEO Token",
+      "priceUsd": 9.06,
+      "change7dPct": -1.16,
+      "marketCapUsd": 8338129880
+    },
+    {
+      "symbol": "WBT",
+      "name": "WhiteBIT Coin",
+      "priceUsd": 58.74,
+      "change7dPct": -6.8,
+      "marketCapUsd": 6964931516
+    },
+    {
+      "symbol": "LINK",
+      "name": "Chainlink",
+      "priceUsd": 8.86,
+      "change7dPct": -4.04,
+      "marketCapUsd": 6793696338
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "priceUsd": 0.144272,
+      "change7dPct": -6.58,
+      "marketCapUsd": 5418403212
+    },
+    {
+      "symbol": "XLM",
+      "name": "Stellar",
+      "priceUsd": 0.12698,
+      "change7dPct": -9.36,
+      "marketCapUsd": 4501427679
+    },
+    {
+      "symbol": "BCH",
+      "name": "Bitcoin Cash",
+      "priceUsd": 197.65,
+      "change7dPct": -5.83,
+      "marketCapUsd": 3975544875
+    },
+    {
+      "symbol": "NEAR",
+      "name": "NEAR Protocol",
+      "priceUsd": 3.01,
+      "change7dPct": -5.99,
+      "marketCapUsd": 3949647883
+    },
+    {
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "priceUsd": 40.27,
+      "change7dPct": -10.66,
+      "marketCapUsd": 3134574048
+    },
+    {
+      "symbol": "CC",
+      "name": "Canton",
+      "priceUsd": 0.075483,
+      "change7dPct": -10.44,
+      "marketCapUsd": 3024668647
+    }
+  ],
+  "stablecoins": {
+    "totalUsd": 284430709304.95013,
+    "change7dPct": -1.53,
+    "top": [
+      {
+        "symbol": "USDT",
+        "circulatingUsd": 174580569891.80865,
+        "change7dPct": -0.37
+      },
+      {
+        "symbol": "USDC",
+        "circulatingUsd": 68688739464.03174,
+        "change7dPct": -0.93
+      },
+      {
+        "symbol": "USDe",
+        "circulatingUsd": 4874008746.797749,
+        "change7dPct": -0.23
+      },
+      {
+        "symbol": "DAI",
+        "circulatingUsd": 4538046278.210363,
+        "change7dPct": -1.8
+      },
+      {
+        "symbol": "USDS",
+        "circulatingUsd": 3266110480.006211,
+        "change7dPct": -39.03
+      }
+    ],
+    "series30d": [
+      {
+        "date": "2026-10-25",
+        "value": 302208033897
+      },
+      {
+        "date": "2026-10-26",
+        "value": 301886437117
+      },
+      {
+        "date": "2026-10-27",
+        "value": 301156014258
+      },
+      {
+        "date": "2026-10-28",
+        "value": 301188743762
+      },
+      {
+        "date": "2026-10-29",
+        "value": 299699834680
+      },
+      {
+        "date": "2026-10-30",
+        "value": 299360566988
+      },
+      {
+        "date": "2026-10-31",
+        "value": 298741250411
+      },
+      {
+        "date": "2026-11-01",
+        "value": 298151099794
+      },
+      {
+        "date": "2026-11-02",
+        "value": 297409248555
+      },
+      {
+        "date": "2026-11-03",
+        "value": 296495249428
+      },
+      {
+        "date": "2026-11-04",
+        "value": 295645454146
+      },
+      {
+        "date": "2026-11-05",
+        "value": 295160842186
+      },
+      {
+        "date": "2026-11-06",
+        "value": 294152145386
+      },
+      {
+        "date": "2026-11-07",
+        "value": 293235528202
+      },
+      {
+        "date": "2026-11-08",
+        "value": 293291753925
+      },
+      {
+        "date": "2026-11-09",
+        "value": 293020090497
+      },
+      {
+        "date": "2026-11-10",
+        "value": 292155709033
+      },
+      {
+        "date": "2026-11-11",
+        "value": 291242293545
+      },
+      {
+        "date": "2026-11-12",
+        "value": 290852526300
+      },
+      {
+        "date": "2026-11-13",
+        "value": 289542867690
+      },
+      {
+        "date": "2026-11-14",
+        "value": 288810067598
+      },
+      {
+        "date": "2026-11-15",
+        "value": 288856369643
+      },
+      {
+        "date": "2026-11-16",
+        "value": 288861011367
+      },
+      {
+        "date": "2026-11-17",
+        "value": 288200227208
+      },
+      {
+        "date": "2026-11-18",
+        "value": 288020380414
+      },
+      {
+        "date": "2026-11-19",
+        "value": 286985011215
+      },
+      {
+        "date": "2026-11-20",
+        "value": 285188117495
+      },
+      {
+        "date": "2026-11-21",
+        "value": 284267045398
+      },
+      {
+        "date": "2026-11-22",
+        "value": 284251361807
+      },
+      {
+        "date": "2026-11-23",
+        "value": 284430709304.95013
+      }
+    ]
+  },
+  "defi": {
+    "tvlUsd": 68941085621,
+    "change7dPct": -2.84,
+    "dexVolume7dUsd": 61288800285.81997,
+    "dexChange7dPct": -2.43,
+    "series30d": [
+      {
+        "date": "2026-10-25",
+        "value": 85901444301
+      },
+      {
+        "date": "2026-10-26",
+        "value": 85180350618
+      },
+      {
+        "date": "2026-10-27",
+        "value": 84657610546
+      },
+      {
+        "date": "2026-10-28",
+        "value": 85083845834
+      },
+      {
+        "date": "2026-10-29",
+        "value": 85286390777
+      },
+      {
+        "date": "2026-10-30",
+        "value": 80835640642
+      },
+      {
+        "date": "2026-10-31",
+        "value": 81633311897
+      },
+      {
+        "date": "2026-11-01",
+        "value": 81640919647
+      },
+      {
+        "date": "2026-11-02",
+        "value": 82009752241
+      },
+      {
+        "date": "2026-11-03",
+        "value": 81253647849
+      },
+      {
+        "date": "2026-11-04",
+        "value": 81243733084
+      },
+      {
+        "date": "2026-11-05",
+        "value": 84403310341
+      },
+      {
+        "date": "2026-11-06",
+        "value": 80214829077
+      },
+      {
+        "date": "2026-11-07",
+        "value": 80207613140
+      },
+      {
+        "date": "2026-11-08",
+        "value": 80241181378
+      },
+      {
+        "date": "2026-11-09",
+        "value": 78497442950
+      },
+      {
+        "date": "2026-11-10",
+        "value": 78303257018
+      },
+      {
+        "date": "2026-11-11",
+        "value": 76782122679
+      },
+      {
+        "date": "2026-11-12",
+        "value": 77257926477
+      },
+      {
+        "date": "2026-11-13",
+        "value": 76037863879
+      },
+      {
+        "date": "2026-11-14",
+        "value": 73795769041
+      },
+      {
+        "date": "2026-11-15",
+        "value": 69662129687
+      },
+      {
+        "date": "2026-11-16",
+        "value": 70954331671
+      },
+      {
+        "date": "2026-11-17",
+        "value": 70970364003
+      },
+      {
+        "date": "2026-11-18",
+        "value": 71320256986
+      },
+      {
+        "date": "2026-11-19",
+        "value": 70299794066
+      },
+      {
+        "date": "2026-11-20",
+        "value": 69562151174
+      },
+      {
+        "date": "2026-11-21",
+        "value": 66501221624
+      },
+      {
+        "date": "2026-11-22",
+        "value": 67680621444
+      },
+      {
+        "date": "2026-11-23",
+        "value": 68941085621
+      }
+    ]
+  },
+  "fearGreed": {
+    "value": 11,
+    "labelMn": "Хэт айдас",
+    "value7dAgo": 10,
+    "series7d": [
+      {
+        "date": "2026-11-17",
+        "value": 12
+      },
+      {
+        "date": "2026-11-18",
+        "value": 11
+      },
+      {
+        "date": "2026-11-19",
+        "value": 10
+      },
+      {
+        "date": "2026-11-20",
+        "value": 12
+      },
+      {
+        "date": "2026-11-21",
+        "value": 12
+      },
+      {
+        "date": "2026-11-22",
+        "value": 11
+      },
+      {
+        "date": "2026-11-23",
+        "value": 11
+      }
+    ]
+  },
+  "fx": {
+    "usdMnt": 3626.047912,
+    "source": "exchangerate-api",
+    "asOf": "2026-11-23T00:02:32.000Z"
+  },
+  "trending": [
+    {
+      "symbol": "VVV",
+      "name": "Venice Token"
+    },
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin"
+    },
+    {
+      "symbol": "HYPE",
+      "name": "Hyperliquid"
+    },
+    {
+      "symbol": "ONDO",
+      "name": "Ondo"
+    },
+    {
+      "symbol": "TRUMP",
+      "name": "Official Trump"
+    },
+    {
+      "symbol": "PENGU",
+      "name": "Pudgy Penguins"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum"
+    }
+  ],
+  "newsCandidates": [
+    {
+      "id": "6def0838b47a",
+      "title": "Senators want state-licensed firms to keep issuing stablecoins after Jan. 18",
+      "url": "https://cryptoslate.com/senators-want-state-licensed-firms-to-keep-issuing-stablecoins-after-jan-18",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T22:05:49.000Z",
+      "tags": [
+        "regulation",
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "59cd1d5801d0",
+      "title": "XRP falls 10% as long bets unwind and ETF assets slip below $1 billion",
+      "url": "https://www.coindesk.com/markets/2026/11/21/xrp-falls-10-as-long-bets-unwind-and-etf-assets-slip-below-usd1-billion",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-21T05:59:19.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "a79e8b82803b",
+      "title": "A $2 million exploit leads to a $3.7 million free-for-all as traders empty Fusionist’s ACE bridge",
+      "url": "https://www.theblock.co/news/defi/2026-11-22-a-2-million-exploit-leads-to-a-3-7-million-free-for-all-as-traders-empty-fusionists-ace-bridge-444838",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-22T23:17:08.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "80b4b29a9acf",
+      "title": "Bitcoin’s $60,000 breakdown puts December Fed decision under the spotlight",
+      "url": "https://cryptoslate.com/bitcoin-below-60000-fed-half-point-cpi",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T12:00:04.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "353fe9f3a397",
+      "title": "Aave’s $4 billion USDC borrow cap could leave just $190 million available for withdrawals",
+      "url": "https://cryptoslate.com/aaves-4-billion-usdc-borrow-cap-could-leave-just-190-million-available-for-withdrawals",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-21T18:40:32.000Z",
+      "tags": [
+        "stablecoin",
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "81cd51963d40",
+      "title": "Sky offers nearly 30% yield but 99.96% of its lending vault is unavailable for immediate withdrawals",
+      "url": "https://cryptoslate.com/sky-offers-nearly-30-yield-but-99-96-of-its-lending-vault-is-unavailable-for-immediate-withdrawals",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-21T04:10:34.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "48a93f1c7f94",
+      "title": "Bitcoin miners face a new profitability cliff as difficulty heads for an 8.5% jump",
+      "url": "https://cryptoslate.com/bitcoin-miners-face-shrinking-revenue-and-tighter-electricity-margins-as-a-projected-difficulty-increase-threatens-less-efficient-machines",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-20T22:50:55.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "59f1dacec26d",
+      "title": "Bithumb halts CYBER deposits and withdrawals while trading stays open",
+      "url": "https://cryptoslate.com/bithumb-halts-cyber-deposits-and-withdrawals-while-trading-stays-open",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T23:05:26.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "6a00a45d63ca",
+      "title": "UK to ban crypto exchanges from making markets on their own platforms as Bitcoin rules change",
+      "url": "https://cryptoslate.com/uk-to-ban-crypto-exchanges-from-making-markets-on-their-own-platforms-as-bitcoin-rules-change",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-22T18:05:49.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f9ec9f7ea7d7",
+      "title": "Bitcoin ETF investors have a way to hedge during Thanksgiving’s 40+ hour trading gap",
+      "url": "https://cryptoslate.com/bitcoin-etf-investors-have-a-way-to-hedge-during-thanksgivings-40-hour-trading-gap",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-20T19:15:10.000Z",
+      "tags": [
+        "etf"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "2507a52e30d1",
+      "title": "Chainflip’s losses climb to $12 million after protocol discloses 122.9 BTC theft, offers hacker bounty",
+      "url": "https://www.theblock.co/news/defi/2026-11-22-chainflips-losses-climb-to-12-million-after-protocol-discloses-122-9-btc-theft-offers-hacker-bounty-444829",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-22T18:58:57.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "60d4a1429942",
+      "title": "Tracy Schuchart: Bitcoin Trading “Like a Risk Asset” as Fed Hikes Loom",
+      "url": "https://bitcoinmagazine.com/videos/tracy-schuchart-bitcoin-trading-like-a-risk-asset-as-fed-hikes-loom",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-20T22:10:11.000Z",
+      "tags": [
+        "macro"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "be8309ae5212",
+      "title": "Singapore wants to test stablecoin payments by AI agents",
+      "url": "https://cryptoslate.com/singapore-wants-to-test-stablecoin-payments-by-ai-agents",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-21T17:40:11.000Z",
+      "tags": [
+        "stablecoin"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "b333d94b1654",
+      "title": "The DeFi protocol powering $1.6 billion in Coinbase loans as crypto lending goes mainstream",
+      "url": "https://cryptoslate.com/the-defi-protocol-powering-1-6-billion-in-coinbase-loans-as-crypto-lending-goes-mainstream",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-20T15:00:30.000Z",
+      "tags": [
+        "defi"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c1116129f80e",
+      "title": "DCG’s Zcash miner Fortitude clears vote for Nasdaq listing as ZEC retreats from all-time high",
+      "url": "https://www.theblock.co/news/business/2026-11-20-dcgs-zcash-miner-fortitude-clears-vote-nasdaq-listing-zec-retreats-all-time-high-444784",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-20T21:40:01.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    }
+  ],
+  "hacks": [
+    {
+      "name": "Endurance Bridge",
+      "date": "2026-11-22",
+      "amountUsd": 1040000
+    },
+    {
+      "name": "CyberConnect",
+      "date": "2026-11-21",
+      "amountUsd": 968000
+    },
+    {
+      "name": "Chainflip AMM",
+      "date": "2026-11-21",
+      "amountUsd": 11960000
+    },
+    {
+      "name": "Wagyu (XMR1)",
+      "date": "2026-11-20",
+      "amountUsd": 13510000
+    },
+    {
+      "name": "Fluidkey",
+      "date": "2026-11-19",
+      "amountUsd": 1600000
+    },
+    {
+      "name": "CALC",
+      "date": "2026-11-19",
+      "amountUsd": 26900
+    },
+    {
+      "name": "The Moats",
+      "date": "2026-11-19",
+      "amountUsd": 600000
+    },
+    {
+      "name": "Gonka AI",
+      "date": "2026-11-18",
+      "amountUsd": 1050000
+    },
+    {
+      "name": "RNT Lend",
+      "date": "2026-11-18",
+      "amountUsd": 954703
+    },
+    {
+      "name": "K3 Capital",
+      "date": "2026-11-18",
+      "amountUsd": 3420000
+    },
+    {
+      "name": "Peapods Finance",
+      "date": "2026-11-18",
+      "amountUsd": null
+    },
+    {
+      "name": "LUKSO",
+      "date": "2026-11-18",
+      "amountUsd": 496000
+    },
+    {
+      "name": "B18 TimeBank",
+      "date": "2026-11-17",
+      "amountUsd": 404540
+    },
+    {
+      "name": "Lighter Perps",
+      "date": "2026-11-16",
+      "amountUsd": 10393057
+    },
+    {
+      "name": "MORE Markets",
+      "date": "2026-11-16",
+      "amountUsd": 308000
+    },
+    {
+      "name": "Optimizely (OPTIMJACK)",
+      "date": "2026-11-16",
+      "amountUsd": 2260
+    }
+  ],
+  "suggestedSentences": [
+    "Биткойн 7 хоногт 6.0 хувиар буурч, 61,212 ам.долларт хүрлээ.",
+    "Криптогийн нийт зах зээлийн үнэлгээ 2.09 их наяд ам.доллар болж, 7 хоногт 4.1 хувиар буурлаа.",
+    "Биткойны давамгайлал 58.9 хувь боллоо (өмнөх 7 хоногт 59.3 хувь).",
+    "Стейблкойны нийт нийлүүлэлт 284.4 тэрбум ам.доллар, 7 хоногт 1.5 хувиар буурлаа.",
+    "Айдас ба шунахайн индекс 11 (Хэт айдас) байна, өмнөх 7 хоногт 10 байсан.",
+    "DeFi-д түгжигдсэн нийт хөрөнгө (TVL) 68.9 тэрбум ам.доллар байна, 7 хоногт 2.8 хувиар буурлаа.",
+    "Этериум 7 хоногт 5.1 хувиар буурч, 1,731 ам.долларт хүрлээ.",
+    "Топ 100-аас хамгийн их өссөн нь PIEVERSE (+90.1%)."
+  ],
+  "sources": [
+    {
+      "id": "coingecko",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    },
+    {
+      "id": "defillama-tvl",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    },
+    {
+      "id": "defillama-stablecoins",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    },
+    {
+      "id": "feargreed",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    },
+    {
+      "id": "defillama-dexs",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    },
+    {
+      "id": "fx",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    },
+    {
+      "id": "defillama-hacks",
+      "ok": true,
+      "fetchedAt": "2026-11-23T04:05:47.988Z"
+    }
+  ]
+}
