@@ -423,13 +423,13 @@
     },
     {
       "date": "2026-11-24",
-      "totalMarketCapUsd": 2061792491698.91,
-      "totalVolume24hUsd": 68916817763.19386,
-      "btcDominancePct": 57.772358449460995,
-      "btcUsd": 59420,
-      "ethUsd": 1663.82,
-      "stablecoinsUsd": 284188542508.5499,
-      "defiTvlUsd": 67943415613,
+      "totalMarketCapUsd": 2021587119620.313,
+      "totalVolume24hUsd": 69288968032.71698,
+      "btcDominancePct": 57.58597783209122,
+      "btcUsd": 58181,
+      "ethUsd": 1633.29,
+      "stablecoinsUsd": 284193588683.0098,
+      "defiTvlUsd": 67579915207,
       "fearGreed": 13,
       "usdMnt": 3624.889904
     }
