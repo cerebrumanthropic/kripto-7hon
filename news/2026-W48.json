@@ -3,6 +3,138 @@
   "week": "2026-W48",
   "items": [
     {
+      "id": "5c5c8149f73d",
+      "title": "1Password hacker stole customer names and emails, but vaults safe",
+      "url": "https://cointelegraph.com/news/1password-hacker-stole-customer-names-and-emails-but-vaults-safe",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-26T04:55:16.000Z",
+      "tags": [
+        "security"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "90c96db823e2",
+      "title": "Bill to lock up U.S. government bitcoin for 20 years advances to full House",
+      "url": "https://www.coindesk.com/policy/2026/11/26/strategic-bitcoin-reserve-bill-to-lock-up-u-s-government-held-bitcoin-for-20-years-goes-to-full-house",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-11-26T04:46:01.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "20688144ef4e",
+      "title": "SBI brings Japanese stocks to Solana but investors face a five-day wait to cash out",
+      "url": "https://cryptoslate.com/sbi-brings-japanese-stocks-to-solana-but-investors-face-a-five-day-wait-to-cash-out",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-26T04:30:59.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "de92652f87df",
+      "title": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions",
+      "url": "https://cointelegraph.com/news/senate-democrats-urge-sec-to-scrap-crypto-tokenized-stock-exemptions",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-26T04:24:45.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "67aca5f34a64",
+      "title": "Crypto host who once promoted a $50 billion memecoin vision now tells traders to get out",
+      "url": "https://cryptoslate.com/crypto-host-who-once-promoted-a-50-billion-memecoin-vision-now-tells-traders-to-get-out",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-26T03:20:59.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "52dc201b7e90",
+      "title": "House Committee advances Strategic Bitcoin Reserve bill with narrow path to passage",
+      "url": "https://www.theblock.co/news/regulation/2026-11-25-house-committee-advances-strategic-bitcoin-reserve-bill-446778",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-26T03:03:01.000Z",
+      "tags": [
+        "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "f5ba222be897",
+      "title": "LayerZero adds Samsung Card, Kakao Pay, ZAN as validators for upcoming Zero blockchain",
+      "url": "https://www.theblock.co/news/business/2026-11-25-layerzero-kakaopay-samsung-446770",
+      "source": "The Block",
+      "sourceUrl": "https://www.theblock.co",
+      "publishedAt": "2026-11-26T02:22:43.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "8c6d8022541b",
+      "title": "Lido tightens Ethereum staking penalties as operators gain access to larger validators",
+      "url": "https://cryptoslate.com/lido-tightens-ethereum-staking-penalties-as-operators-gain-access-to-larger-validators",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-26T01:50:48.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "d1204617545d",
+      "title": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says",
+      "url": "https://cointelegraph.com/news/ai-labs-likely-sitting-on-cryptography-bombshells-computer-scientist-says",
+      "source": "Cointelegraph",
+      "sourceUrl": "https://cointelegraph.com",
+      "publishedAt": "2026-11-26T01:33:20.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c1178a567543",
+      "title": "Bitcoin Lightning operators could recover stuck payments even after losing channel data",
+      "url": "https://cryptoslate.com/bitcoin-lightning-operators-could-recover-stuck-payments-even-after-losing-channel-data",
+      "source": "CryptoSlate",
+      "sourceUrl": "https://cryptoslate.com",
+      "publishedAt": "2026-11-26T00:20:15.000Z",
+      "tags": [
+        "market"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "cd6623eca608",
+      "title": "Bitcoin is Vanishing into “Deep Storage” Faster than Miners Make It",
+      "url": "https://bitcoinmagazine.com/videos/bitcoin-is-vanishing-into-deep-storage-faster-than-miners-make-it",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-25T23:30:12.000Z",
+      "tags": [
+        "mining"
+      ],
+      "isMongolia": false
+    },
+    {
       "id": "99225488faaa",
       "title": "Bitcoin has fallen so far that its original Rainbow Chart has run out of colors",
       "url": "https://cryptoslate.com/bitcoin-has-fallen-so-far-that-its-original-rainbow-chart-has-run-out-of-colors",
@@ -35,6 +167,18 @@
       "publishedAt": "2026-11-25T22:20:02.000Z",
       "tags": [
         "regulation"
+      ],
+      "isMongolia": false
+    },
+    {
+      "id": "c3c61df7a29f",
+      "title": "Stanford Professor Reveals “Praxis” Bitcoin Cryptography Breakthrough",
+      "url": "https://bitcoinmagazine.com/videos/stanford-professor-reveals-praxis-bitcoin-cryptography-breakthrough",
+      "source": "Bitcoin Magazine",
+      "sourceUrl": "https://bitcoinmagazine.com",
+      "publishedAt": "2026-11-25T22:15:26.000Z",
+      "tags": [
+        "market"
       ],
       "isMongolia": false
     },
@@ -547,18 +691,6 @@
       "isMongolia": false
     },
     {
-      "id": "f8b9a8c64d82",
-      "title": "Bitcoin’s selloff deepens as Trump tariffs and hot inflation revive market fears",
-      "url": "https://cryptoslate.com/bitcoins-selloff-deepens-as-trump-tariffs-and-hot-inflation-revive-market-fears",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-25T15:49:19.000Z",
-      "tags": [
-        "macro"
-      ],
-      "isMongolia": false
-    },
-    {
       "id": "a6912a01382f",
       "title": "Next Technology (NXTT) Sells 500 Bitcoin to Fund AI Push",
       "url": "https://bitcoinmagazine.com/news/next-technology-nxtt-sells-500-bitcoin",
@@ -571,48 +703,12 @@
       "isMongolia": false
     },
     {
-      "id": "f4e2ffb2803f",
-      "title": "Sky’s withdrawal crisis tests confidence as its stablecoin supply shrinks by nearly $6 billion",
-      "url": "https://cryptoslate.com/skys-withdrawal-crisis-tests-confidence-as-its-stablecoin-supply-shrinks-by-nearly-6-billion",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-25T15:15:08.000Z",
-      "tags": [
-        "stablecoin"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5707d00e6244",
-      "title": "Square’s NATIONWIDE Bitcoin Payments Rollout: What People Are Actually Buying",
-      "url": "https://bitcoinmagazine.com/videos/squares-nationwide-bitcoin-payments-rollout-what-people-are-actually-buying",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-25T15:15:01.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
       "id": "3749c6800cd7",
       "title": "NovaTech founders ordered to pay $1.3 billion over crypto Ponzi scheme targeting Haitian investors",
       "url": "https://www.theblock.co/news/regulation/2026-11-25-novatech-founders-ordered-pay-1-3-million-crypto-ponzi-scheme-haitian-investors-446643",
       "source": "The Block",
       "sourceUrl": "https://www.theblock.co",
       "publishedAt": "2026-11-25T15:02:10.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "5fda68b26cd2",
-      "title": "Bitcoin Price Slumps Below $57,500 as Nasdaq Sinks 4% at Open",
-      "url": "https://bitcoinmagazine.com/markets/bitcoin-price-falls-57500-nasdaq",
-      "source": "Bitcoin Magazine",
-      "sourceUrl": "https://bitcoinmagazine.com",
-      "publishedAt": "2026-11-25T14:54:01.000Z",
       "tags": [
         "market"
       ],
@@ -667,18 +763,6 @@
       "isMongolia": false
     },
     {
-      "id": "170dea985027",
-      "title": "Bitcoin is struggling around $60,000 but exchange reserves are telling a different story",
-      "url": "https://cryptoslate.com/bitcoin-is-struggling-around-60000-but-exchange-reserves-are-telling-a-different-story",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-25T14:00:05.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
       "id": "62f5e52fa9f6",
       "title": "Morning Minute: Ethereum Focuses on Security As AI Threats Rise",
       "url": "https://decrypt.co/383945/morning-minute-ethereum-focuses-on-security-as-ai-threats-rise",
@@ -699,18 +783,6 @@
       "publishedAt": "2026-11-25T13:15:24.000Z",
       "tags": [
         "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "32c648038fc8",
-      "title": "Bitcoin’s crash protection could make its next selloff worse as US inflation data looms",
-      "url": "https://cryptoslate.com/bitcoins-crash-protection-could-make-its-next-selloff-worse-as-us-inflation-data-looms",
-      "source": "CryptoSlate",
-      "sourceUrl": "https://cryptoslate.com",
-      "publishedAt": "2026-11-25T13:10:14.000Z",
-      "tags": [
-        "macro"
       ],
       "isMongolia": false
     },
@@ -1100,18 +1172,6 @@
       "isMongolia": false
     },
     {
-      "id": "4fb0b473069c",
-      "title": "Utah moves to drop criminal charges against Kalshi after platform halts operations",
-      "url": "https://www.theblock.co/news/regulation/2026-11-24-utah-moves-to-drop-criminal-charges-kalshi-446090",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-25T03:59:52.000Z",
-      "tags": [
-        "market"
-      ],
-      "isMongolia": false
-    },
-    {
       "id": "adc7421c0f74",
       "title": "Trump says he's willing to give Nvidia's Huang a pardon, doesn't think he needs one",
       "url": "https://www.coindesk.com/policy/2026/11/24/trump-says-he-s-willing-to-give-nvidia-s-huang-a-pardon-doesn-t-think-he-needs-one",
@@ -1120,18 +1180,6 @@
       "publishedAt": "2026-11-25T03:35:20.000Z",
       "tags": [
         "market"
-      ],
-      "isMongolia": false
-    },
-    {
-      "id": "8929d058d8c3",
-      "title": "New York senator proposes 10% tax on prediction market fees to fund universal pre-K",
-      "url": "https://www.theblock.co/news/regulation/2026-11-24-new-york-proposal-prediction-market-tax-446082",
-      "source": "The Block",
-      "sourceUrl": "https://www.theblock.co",
-      "publishedAt": "2026-11-25T02:46:14.000Z",
-      "tags": [
-        "regulation"
       ],
       "isMongolia": false
     },
